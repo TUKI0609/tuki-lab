@@ -35,8 +35,8 @@
     <div class="dock-line"></div>
     <a href="./projects/#play" title="게임하기"><b>▶</b><span>PLAY</span></a>
     <a href="./projects/#read" title="작품 읽기"><b>◇</b><span>READ</span></a>
-    <a href="#activity" data-dock-section="activity" title="최근 활동"><b>◉</b><span>WATCH</span></a>
-    <a href="#lab" data-dock-section="lab" title="제작 기록"><b>⌁</b><span>BUILD</span></a>
+    <a href="#deck" data-open-tab="activity" title="최근 활동"><b>◉</b><span>WATCH</span></a>
+    <a href="#deck" data-open-tab="lab" title="제작 기록"><b>⌁</b><span>BUILD</span></a>
     <a href="./lab/" title="TUKI LAB"><b>＋</b><span>LAB</span></a>
   </aside>
 
@@ -85,7 +85,7 @@
 
         <div class="hero-actions">
           <a class="btn primary" href="./projects/">ENTER WORLD <span>↗</span></a>
-          <a class="btn ghost" href="#activity">LATEST SIGNALS</a>
+          <a class="btn ghost" href="#deck" data-open-tab="activity">LATEST SIGNALS</a>
         </div>
 
         <div class="hero-note">
@@ -119,8 +119,8 @@
         <div class="console-portals">
           <a href="./projects/#play"><span>01</span><b>PLAY</b></a>
           <a href="./projects/#read"><span>02</span><b>READ</b></a>
-          <a href="#activity"><span>03</span><b>WATCH</b></a>
-          <a href="./lab/"><span>04</span><b>BUILD</b></a>
+          <a href="#deck" data-open-tab="activity"><span>03</span><b>WATCH</b></a>
+          <a href="#deck" data-open-tab="lab"><span>04</span><b>BUILD</b></a>
         </div>
       </aside>
     </section>
@@ -165,7 +165,7 @@
       </div>
     </section>
 
-    <section class="wrap compact-world-strip">
+    <section id="channels" class="wrap compact-world-strip">
       <div class="compact-crew">
         <div class="compact-strip-head">
           <div><p class="eyebrow">WORLD CREW</p><h2>이 세계의 얼굴들.</h2></div>

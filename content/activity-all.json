@@ -81,7 +81,7 @@
     "sourceLabel": "YouTube",
     "kind": "VIDEO",
     "route": "WATCH",
-    "project": null,
+    "project": "lutratide-survivors",
     "title": "GPT-6 Astra로 만든 게임, 이번엔 진화 차이를 키웠습니다 #AI게임 #게임개발 #인디게임 #GPTAstra #Shorts",
     "summary": "",
     "url": "https://www.youtube.com/shorts/BrBawuxsBy0",
@@ -90,8 +90,8 @@
     "manual": false,
     "editorial": {
       "decision": "include",
-      "reason": "maker-content",
-      "score": 80
+      "reason": "project:lutratide-survivors",
+      "score": 100
     }
   },
   {
@@ -556,7 +556,7 @@
     "sourceLabel": "YouTube",
     "kind": "VIDEO",
     "route": "WATCH",
-    "project": null,
+    "project": "lutratide-survivors",
     "title": "9분 50초 만에 만든 게임, 업데이트 후 이렇게 달라졌습니다",
     "summary": "",
     "url": "https://www.youtube.com/shorts/PrqgIoBEZoE",
@@ -565,8 +565,8 @@
     "manual": false,
     "editorial": {
       "decision": "include",
-      "reason": "maker-content",
-      "score": 80
+      "reason": "project:lutratide-survivors",
+      "score": 100
     }
   },
   {

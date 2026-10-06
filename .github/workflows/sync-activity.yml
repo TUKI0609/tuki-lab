@@ -7,6 +7,7 @@ on:
   push:
     paths:
       - "automation/sources.json"
+      - "automation/editorial-rules.json"
       - "scripts/sync-activity.mjs"
       - ".github/workflows/sync-activity.yml"
 
@@ -35,13 +36,13 @@ jobs:
       - name: Commit changes
         shell: bash
         run: |
-          if git diff --quiet -- content/activity.json; then
+          if git diff --quiet -- content/activity.json content/activity-all.json content/activity-review.json; then
             echo "No activity changes."
             exit 0
           fi
           git config user.name "tuki-world-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add content/activity.json
+          git add content/activity.json content/activity-all.json content/activity-review.json
           git commit -m "Sync public activity"
           git fetch origin main
           git rebase origin/main

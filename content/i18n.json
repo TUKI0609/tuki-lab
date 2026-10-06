@@ -1,0 +1,451 @@
+{
+  "defaultLanguage": "ko",
+  "supportedLanguages": [
+    "ko",
+    "en"
+  ],
+  "strings": {
+    "ko": {
+      "nav.home": "홈",
+      "nav.projects": "프로젝트",
+      "nav.lab": "제작실",
+      "nav.about": "소개",
+      "language.switch": "EN",
+      "language.aria": "영어로 보기",
+      "brand.sub": "AI와 만들고, 툭이가 고칩니다.",
+      "home.sync": "자동 동기화 켜짐",
+      "home.activity": "활동",
+      "dock.world": "월드",
+      "dock.play": "게임",
+      "dock.read": "읽기",
+      "dock.watch": "활동",
+      "dock.build": "제작",
+      "dock.lab": "작업실",
+      "now.live": "실시간",
+      "now.title": "툭이 지금",
+      "now.latestProject": "최근 프로젝트",
+      "now.activity": "활동",
+      "now.labQueue": "제작실 대기",
+      "now.projects": "프로젝트",
+      "now.lab": "제작실",
+      "hero.system": "TUKI WORLD // 실시간 제작 시스템",
+      "hero.workspace": "공개 작업실 · v2",
+      "hero.eyebrow": "툭이의 제작 세계",
+      "hero.projects": "프로젝트",
+      "hero.sync": "동기화",
+      "hero.on": "켜짐",
+      "hero.labQueue": "제작실 대기",
+      "hero.enter": "세계 들어가기",
+      "hero.latest": "최근 활동",
+      "hero.note": "완성품만 전시하지 않습니다. 실패, 수정, 중단, 다시 만든 이유까지 이곳에 남깁니다.",
+      "showcase.now": "지금 제작 중",
+      "showcase.note": "시도 / 수정 / 제작",
+      "showcase.detail": "프로젝트 상세 ↗",
+      "deck.eyebrow": "한눈에 보기",
+      "deck.title": "길게 내리지 말고, 여기서 바로 골라봅니다.",
+      "deck.projects": "프로젝트",
+      "deck.activity": "활동",
+      "deck.lab": "제작실",
+      "deck.activeProjects": "01 / 진행 중인 프로젝트",
+      "deck.nowMaking": "지금 만들고 있는 것",
+      "deck.allProjects": "모든 프로젝트 ↗",
+      "deck.latestSignals": "02 / 최근 활동",
+      "deck.outside": "밖에서 이어진 최근 활동",
+      "deck.allActivity": "전체 활동 ↗",
+      "deck.buildNotes": "03 / 제작 노트",
+      "deck.shortChanges": "짧게 남긴 제작 변화",
+      "deck.openLab": "TUKI LAB 열기 ↗",
+      "crew.eyebrow": "월드 크루",
+      "crew.title": "이 세계의 얼굴들.",
+      "crew.guides": "가이드와 캐릭터",
+      "follow.eyebrow": "채널",
+      "follow.title": "밖에서도 계속 이어집니다.",
+      "footer.routes": "게임 · 읽기 · 활동 · 제작",
+      "footer.built": "함께 만들고 공개합니다.",
+      "projects.eyebrow": "프로젝트",
+      "projects.title": "지금 만들고 있는 것들.",
+      "projects.desc": "프로젝트마다 상태, 공개 여부, 플랫폼, 현재 초점을 같은 규격으로 보여줍니다.",
+      "activity.eyebrow": "최근 활동",
+      "activity.title": "흩어진 활동을 한곳에서.",
+      "activity.desc": "외부 채널에 새 글이나 영상이 올라오면 TUKI WORLD가 공개 피드를 확인해 이 타임라인을 갱신합니다. 모든 활동이 TUKI LAB 글이 되는 것은 아닙니다.",
+      "lab.eyebrow": "TUKI LAB",
+      "lab.title": "만드는 과정도 결과물입니다.",
+      "lab.desc": "제작 기록, 실험, 수정, 공개, 회고, 결정을 한곳에 쌓습니다.",
+      "lab.published": "정식 제작 기록",
+      "lab.approved": "승인된 제작 기록.",
+      "lab.approvedDesc": "외부 활동을 그대로 복사하지 않고, 변화의 이유와 배운 점을 다시 정리한 정식 글입니다.",
+      "lab.timeline": "변화 기록",
+      "lab.timelineTitle": "짧은 변화 기록.",
+      "lab.timelineDesc": "사이트 구조 변경, 수정, 결정처럼 긴 글이 필요하지 않은 이력까지 함께 남깁니다.",
+      "about.eyebrow": "TUKI WORLD 소개",
+      "about.desc": "TUKI WORLD는 게임, 오리지널 IP, AI 활용 실험을 하나의 공개 제작 세계로 묶는 허브입니다.",
+      "about.channels": "공식 채널",
+      "project.currentFocus": "현재 작업",
+      "project.status": "상태",
+      "project.logs": "TUKI LAB",
+      "project.logsTitle": "이 프로젝트의 정식 제작 기록.",
+      "project.logsDesc": "승인된 기록만 여기에 연결됩니다.",
+      "project.related": "관련 활동",
+      "project.relatedTitle": "밖에서 이어진 최근 활동.",
+      "project.relatedDesc": "블로그와 영상에서 이 프로젝트와 자동 연결된 흔적입니다.",
+      "article.sourceTrail": "출처 연결",
+      "article.sourceTitle": "이 기록의 바깥 흔적.",
+      "common.details": "상세 보기 →",
+      "common.read": "읽기 →",
+      "common.source": "출처",
+      "common.openOriginal": "원문 보기 ↗",
+      "common.emptyLab": "아직 승인된 정식 LAB 글이 없습니다. 후보 승인 후 이곳에 쌓입니다.",
+      "common.emptyActivity": "아직 자동 수집된 활동이 없습니다. 첫 동기화 후 여기에 표시됩니다.",
+      "project.selected": "선택됨",
+      "project.tryAgain": "다시 시도",
+      "project.nowFixing": "지금 고치는 중"
+    },
+    "en": {
+      "nav.home": "Home",
+      "nav.projects": "Projects",
+      "nav.lab": "Lab",
+      "nav.about": "About",
+      "language.switch": "한글",
+      "language.aria": "View in Korean",
+      "brand.sub": "Made with AI, fixed by TUKI.",
+      "home.sync": "Auto sync on",
+      "home.activity": "Activity",
+      "dock.world": "World",
+      "dock.play": "Play",
+      "dock.read": "Read",
+      "dock.watch": "Watch",
+      "dock.build": "Build",
+      "dock.lab": "Lab",
+      "now.live": "Live",
+      "now.title": "TUKI Now",
+      "now.latestProject": "Latest project",
+      "now.activity": "Activity",
+      "now.labQueue": "Lab queue",
+      "now.projects": "Projects",
+      "now.lab": "Lab",
+      "hero.system": "TUKI WORLD // LIVE BUILD SYSTEM",
+      "hero.workspace": "Public workspace · v2",
+      "hero.eyebrow": "Welcome to my building world",
+      "hero.projects": "Projects",
+      "hero.sync": "Sync",
+      "hero.on": "On",
+      "hero.labQueue": "Lab queue",
+      "hero.enter": "Enter world",
+      "hero.latest": "Latest signals",
+      "hero.note": "This is not a finished-work showcase. Failures, fixes, pauses, and rebuilds stay visible here.",
+      "showcase.now": "Now building",
+      "showcase.note": "Try / Fix / Build",
+      "showcase.detail": "Project detail ↗",
+      "deck.eyebrow": "World deck",
+      "deck.title": "Choose what you need here, without a long scroll.",
+      "deck.projects": "Projects",
+      "deck.activity": "Activity",
+      "deck.lab": "Lab",
+      "deck.activeProjects": "01 / Active projects",
+      "deck.nowMaking": "What I am building now",
+      "deck.allProjects": "All projects ↗",
+      "deck.latestSignals": "02 / Latest signals",
+      "deck.outside": "Recent activity outside TUKI WORLD",
+      "deck.allActivity": "All activity ↗",
+      "deck.buildNotes": "03 / Build notes",
+      "deck.shortChanges": "Short build changes",
+      "deck.openLab": "Open TUKI LAB ↗",
+      "crew.eyebrow": "World crew",
+      "crew.title": "Faces of this world.",
+      "crew.guides": "Guides & characters",
+      "follow.eyebrow": "Follow",
+      "follow.title": "The work continues elsewhere too.",
+      "footer.routes": "Play · Read · Watch · Build",
+      "footer.built": "Built in public.",
+      "projects.eyebrow": "Projects",
+      "projects.title": "What I am building now.",
+      "projects.desc": "Each project shows status, availability, platform, and current focus in one format.",
+      "activity.eyebrow": "Latest activity",
+      "activity.title": "Scattered activity, one place.",
+      "activity.desc": "When a new public post or video appears, TUKI WORLD checks the feed and updates this timeline. Not every activity becomes a TUKI LAB post.",
+      "lab.eyebrow": "TUKI LAB",
+      "lab.title": "The process is part of the work.",
+      "lab.desc": "Build logs, experiments, fixes, releases, postmortems, and decisions live here.",
+      "lab.published": "Published lab",
+      "lab.approved": "Approved build records.",
+      "lab.approvedDesc": "These are rewritten as original build notes about what changed, why it mattered, and what was learned.",
+      "lab.timeline": "Timeline",
+      "lab.timelineTitle": "Short change log.",
+      "lab.timelineDesc": "Smaller changes such as site fixes, structural changes, and decisions live here too.",
+      "about.eyebrow": "About TUKI WORLD",
+      "about.desc": "TUKI WORLD is a public maker hub connecting games, original IP, and AI experiments.",
+      "about.channels": "Official channels",
+      "project.currentFocus": "Current focus",
+      "project.status": "Status",
+      "project.logs": "TUKI LAB",
+      "project.logsTitle": "Published records for this project.",
+      "project.logsDesc": "Only approved records are connected here.",
+      "project.related": "Related activity",
+      "project.relatedTitle": "Recent activity outside the site.",
+      "project.relatedDesc": "Blog posts and videos automatically linked to this project.",
+      "article.sourceTrail": "Source trail",
+      "article.sourceTitle": "The traces outside this record.",
+      "common.details": "Details →",
+      "common.read": "Read →",
+      "common.source": "Source",
+      "common.openOriginal": "Open original ↗",
+      "common.emptyLab": "No approved LAB posts yet. Approved candidates will appear here.",
+      "common.emptyActivity": "No synced activity yet. It will appear after the first sync.",
+      "project.selected": "Selected",
+      "project.tryAgain": "Try again",
+      "project.nowFixing": "Now fixing"
+    }
+  },
+  "terms": {
+    "ko": {
+      "HOME": "홈",
+      "PROJECTS": "프로젝트",
+      "PROJECT": "프로젝트",
+      "LAB": "제작실",
+      "ABOUT": "소개",
+      "ACTIVITY": "활동",
+      "PLAY": "플레이",
+      "READ": "읽기",
+      "WATCH": "활동",
+      "BUILD": "제작",
+      "GAME": "게임",
+      "ORIGINAL IP": "오리지널 IP",
+      "IN DEVELOPMENT": "개발 중",
+      "EARLY RELEASE": "초기 공개",
+      "PLAYABLE": "플레이 가능",
+      "NOT YET PUBLIC": "아직 비공개",
+      "READING AVAILABLE": "연재 중",
+      "BUILD LOG": "제작 기록",
+      "FIX": "수정",
+      "DECISION": "결정",
+      "RELEASE": "공개",
+      "POSTMORTEM": "회고",
+      "EXPERIMENT": "실험",
+      "POST": "글",
+      "VIDEO": "영상",
+      "WORLD GUIDE": "월드 가이드",
+      "COMPANION": "동반자",
+      "PLAYABLE HERO": "플레이어블 캐릭터",
+      "SOURCE": "출처",
+      "DETAILS": "상세 보기"
+    },
+    "en": {
+      "HOME": "Home",
+      "PROJECTS": "Projects",
+      "PROJECT": "Project",
+      "LAB": "Lab",
+      "ABOUT": "About",
+      "ACTIVITY": "Activity",
+      "PLAY": "Play",
+      "READ": "Read",
+      "WATCH": "Watch",
+      "BUILD": "Build",
+      "GAME": "Game",
+      "ORIGINAL IP": "Original IP",
+      "IN DEVELOPMENT": "In development",
+      "EARLY RELEASE": "Early release",
+      "PLAYABLE": "Playable",
+      "NOT YET PUBLIC": "Not yet public",
+      "READING AVAILABLE": "Reading available",
+      "BUILD LOG": "Build log",
+      "FIX": "Fix",
+      "DECISION": "Decision",
+      "RELEASE": "Release",
+      "POSTMORTEM": "Postmortem",
+      "EXPERIMENT": "Experiment",
+      "POST": "Post",
+      "VIDEO": "Video",
+      "WORLD GUIDE": "World guide",
+      "COMPANION": "Companion",
+      "PLAYABLE HERO": "Playable hero",
+      "SOURCE": "Source",
+      "DETAILS": "Details"
+    }
+  },
+  "projects": {
+    "momo": {
+      "ko": {
+        "tagline": "기억하고 반응하며 함께 생활하는 반려형 가상 펫.",
+        "currentFocus": "공개 전 사용성 점검과 실제 플레이 테스트"
+      },
+      "en": {
+        "tagline": "A companion pet that remembers, reacts, and lives alongside you.",
+        "currentFocus": "Pre-release UX and hands-on play QA"
+      }
+    },
+    "lutratide-survivors": {
+      "ko": {
+        "tagline": "자동 공격과 성장 선택을 중심으로 한 브라우저 액션 서바이벌 게임.",
+        "currentFocus": "전투 감각, HUD, 콘텐츠 완성도 개선"
+      },
+      "en": {
+        "tagline": "A browser action-survival game built around auto attacks and upgrade choices.",
+        "currentFocus": "Improving combat feel, HUD, and content polish"
+      }
+    },
+    "aevowake": {
+      "ko": {
+        "tagline": "웹소설을 중심으로 게임까지 확장하고 있는 오리지널 세계관.",
+        "currentFocus": "웹소설 연재와 게임 프로토타입 제작"
+      },
+      "en": {
+        "tagline": "An original universe expanding from web fiction into a game project.",
+        "currentFocus": "Web-fiction serialization and game prototyping"
+      }
+    }
+  },
+  "characters": {
+    "tuki": {
+      "ko": {
+        "role": "월드 가이드",
+        "description": "TUKI WORLD 전체를 안내하는 대표 가이드."
+      },
+      "en": {
+        "role": "World guide",
+        "description": "The main guide for all of TUKI WORLD."
+      }
+    },
+    "momo": {
+      "ko": {
+        "role": "동반자",
+        "description": "기억, 친밀도, 생활 이벤트를 중심으로 함께 살아가는 가상 펫."
+      },
+      "en": {
+        "role": "Companion",
+        "description": "A virtual pet built around memory, affection, and daily life events."
+      }
+    },
+    "luna": {
+      "ko": {
+        "role": "플레이어블 캐릭터",
+        "description": "LUTRATIDE SURVIVORS에서 활약하는 플레이어블 캐릭터 중 하나."
+      },
+      "en": {
+        "role": "Playable hero",
+        "description": "One of the playable characters in LUTRATIDE SURVIVORS."
+      }
+    },
+    "aevowake": {
+      "ko": {
+        "role": "오리지널 IP",
+        "description": "리안과 비인간 Anchor Creature 미라가 작품 세계로 들어가는 첫 얼굴."
+      },
+      "en": {
+        "role": "Original IP",
+        "description": "Lian and the non-human Anchor Creature Mira are the first faces of this world."
+      }
+    }
+  },
+  "channels": {
+    "youtube": {
+      "ko": {
+        "role": "개발 변화, 플레이 영상, 쇼츠"
+      },
+      "en": {
+        "role": "Build updates, gameplay, and Shorts"
+      }
+    },
+    "x": {
+      "ko": {
+        "role": "AI 시행착오와 짧은 제작 기록"
+      },
+      "en": {
+        "role": "AI experiments and short build notes"
+      }
+    },
+    "naver-ai": {
+      "ko": {
+        "name": "네이버 블로그 · AI / 제작",
+        "role": "AI 활용, 제작 과정, 디지털 실험"
+      },
+      "en": {
+        "name": "Naver Blog · AI / Making",
+        "role": "AI workflows, making process, and digital experiments"
+      }
+    },
+    "naver-game": {
+      "ko": {
+        "name": "네이버 블로그 · 게임",
+        "role": "게임 정보와 플레이 콘텐츠"
+      },
+      "en": {
+        "name": "Naver Blog · Games",
+        "role": "Game information and play content"
+      }
+    }
+  },
+  "devlog": {
+    "1": {
+      "en": {
+        "title": "Started treating the AI-making process as a reusable record asset",
+        "summary": "Decided to publish not only finished work but also experiments, failures, and fixes."
+      }
+    },
+    "2": {
+      "en": {
+        "title": "Reorganized projects across product, IP, and content axes",
+        "summary": "Created a classification system for managing separate work inside one TUKI ecosystem."
+      }
+    },
+    "3": {
+      "en": {
+        "title": "Built the TUKI LAB repository and operating structure",
+        "summary": "Created the first public-hub structure on GitHub Pages."
+      }
+    },
+    "4": {
+      "en": {
+        "title": "Redefined TUKI LAB as the workshop inside TUKI WORLD",
+        "summary": "Separated roles: WORLD is the public hub and LAB is the build-history space."
+      }
+    },
+    "5": {
+      "en": {
+        "title": "Connected playable, publishing, and social links",
+        "summary": "Linked only verified public destinations that can actually be visited."
+      }
+    },
+    "6": {
+      "en": {
+        "title": "Integrated project visuals and character areas into TUKI WORLD",
+        "summary": "Connected real visual assets to project cards and the character section."
+      }
+    },
+    "7": {
+      "en": {
+        "title": "Applied official MOMO sprite and TUKI mascot, corrected game name",
+        "summary": "Fixed incorrect character art and corrected the LUTRATIDE SURVIVORS name."
+      }
+    },
+    "8": {
+      "en": {
+        "title": "Applied TUKI WORLD Foundation v1.0 to the live structure",
+        "summary": "Started normalizing navigation, statuses, assets, and content data under shared rules."
+      }
+    },
+    "9": {
+      "en": {
+        "title": "Built the Activity → Project → LAB approval pipeline",
+        "summary": "External activity is linked to projects, grouped into LAB candidates, and only approved records become official posts and project history."
+      }
+    },
+    "10": {
+      "en": {
+        "title": "First TUKI WORLD UI v2 redesign",
+        "summary": "Added a live banner, sticky world dock, floating TUKI NOW panel, and a console-style hero to move beyond a standard portfolio layout."
+      }
+    },
+    "11": {
+      "en": {
+        "title": "Condensed the TUKI WORLD home into a tabbed world deck",
+        "summary": "Removed overlapping START HERE and EXPLORE flows and merged Projects, Activity, and Lab into one tabbed area to reduce scrolling and complexity."
+      }
+    },
+    "12": {
+      "en": {
+        "title": "Shifted TUKI WORLD from shape-led UI to real project imagery",
+        "summary": "Reduced hero text collisions and made real project assets the visual focus with a project slider, large selector, signal timeline, and build-note UI."
+      }
+    }
+  }
+}

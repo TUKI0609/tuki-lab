@@ -1,5 +1,13 @@
 [
   {
+    "id": 12,
+    "date": "2026-10-06",
+    "type": "FIX",
+    "project": null,
+    "title": "TUKI WORLD를 도형 중심에서 실제 프로젝트 이미지 중심으로 전환",
+    "summary": "Hero 글자 충돌을 줄이고 대표 프로젝트 슬라이더, 큰 프로젝트 선택 화면, Signal Timeline, 제작 노트 UI를 적용해 사이트의 시각적 주인공을 실제 제작물로 바꿨다."
+  },
+  {
     "id": 11,
     "date": "2026-10-06",
     "type": "FIX",

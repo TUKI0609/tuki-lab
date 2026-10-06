@@ -13,7 +13,7 @@ async function boot() {
 
   if (page === "projects") {
     const projects = await loadJson(base + "content/projects.json");
-    renderProjectGrid(projects, "#all-projects");
+    renderProjectGrid(projects, "#all-projects", base);
     await hydrateAssets(document, base);
   }
 

@@ -4,6 +4,13 @@ async function loadJson(path) {
   return response.json();
 }
 
+function projectSymbol(name) {
+  if (name === "MOMO") return "M";
+  if (name === "LUNA") return "L";
+  if (name === "AEVOWAKE") return "A";
+  return "T";
+}
+
 function renderProjects(projects) {
   const root = document.querySelector("#project-grid");
   root.innerHTML = projects.map(project => `
@@ -12,6 +19,7 @@ function renderProjects(projects) {
         <span class="tag">${project.type}</span>
         <span class="status">${project.status}</span>
       </div>
+      <div class="project-symbol" aria-hidden="true">${projectSymbol(project.name)}</div>
       <h3>${project.name}</h3>
       <p>${project.description}</p>
       <div class="meta">${project.focus}</div>

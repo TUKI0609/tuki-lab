@@ -1,37 +1,66 @@
 [
   {
+    "id": 8,
+    "date": "2026-10-06",
+    "type": "DECISION",
+    "project": null,
+    "title": "TUKI WORLD Foundation v1.0을 실제 운영 구조에 적용",
+    "summary": "내비게이션, 상태값, 자산, 콘텐츠 데이터를 공통 규격으로 정리하기 시작했다."
+  },
+  {
     "id": 7,
-    "title": "MOMO 공식 스프라이트와 새 툭이 마스코트 적용, 게임명 정정",
-    "date": "2026-10-06"
+    "date": "2026-10-06",
+    "type": "FIX",
+    "project": null,
+    "title": "MOMO 공식 스프라이트와 툭이 마스코트 적용, 게임명 정정",
+    "summary": "잘못된 캐릭터 이미지와 LUTRATIDE SURVIVORS 명칭을 바로잡았다."
   },
   {
     "id": 6,
-    "title": "툭이·MOMO·LUTRATIDE SURVIVORS·AEVOWAKE 비주얼과 명칭 수정",
-    "date": "2026-10-06"
+    "date": "2026-10-06",
+    "type": "BUILD LOG",
+    "project": null,
+    "title": "프로젝트 비주얼과 캐릭터 영역을 TUKI WORLD에 통합",
+    "summary": "프로젝트 카드와 캐릭터 섹션에 실제 시각 자산을 연결했다."
   },
   {
     "id": 5,
-    "title": "실제 플레이·연재·SNS 공개 링크를 TUKI WORLD에 연결",
-    "date": "2026-10-06"
+    "date": "2026-10-06",
+    "type": "RELEASE",
+    "project": null,
+    "title": "플레이·연재·SNS 공개 링크 연결",
+    "summary": "실제로 방문 가능한 외부 목적지만 검증해 연결했다."
   },
   {
     "id": 4,
-    "title": "TUKI LAB을 TUKI WORLD 중앙 허브 구조로 확장",
-    "date": "2026-10-06"
+    "date": "2026-10-06",
+    "type": "DECISION",
+    "project": null,
+    "title": "TUKI LAB을 TUKI WORLD 내부 작업실로 재정의",
+    "summary": "WORLD는 공개 허브, LAB은 제작 기록 공간으로 역할을 분리했다."
   },
   {
     "id": 3,
+    "date": "2026-10-06",
+    "type": "BUILD LOG",
+    "project": null,
     "title": "TUKI LAB 저장소와 운영 구조 만들기",
-    "date": "2026-10-06"
+    "summary": "GitHub Pages를 기반으로 공개 허브의 첫 구조를 만들었다."
   },
   {
     "id": 2,
-    "title": "프로젝트를 제품·IP·콘텐츠 축으로 다시 정리하기",
-    "date": "2026-10-06"
+    "date": "2026-10-06",
+    "type": "DECISION",
+    "project": null,
+    "title": "프로젝트를 제품·IP·콘텐츠 축으로 다시 정리",
+    "summary": "개별 작업을 하나의 TUKI 생태계 안에서 관리하기 위한 분류를 잡았다."
   },
   {
     "id": 1,
+    "date": "2026-10-06",
+    "type": "DECISION",
+    "project": null,
     "title": "AI 제작 과정을 하나의 기록 자산으로 묶기 시작",
-    "date": "2026-10-06"
+    "summary": "완성 결과뿐 아니라 시행착오와 수정도 공개 자산으로 남기기로 했다."
   }
 ]

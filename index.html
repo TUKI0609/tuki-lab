@@ -7,7 +7,7 @@
   <title>TUKI WORLD</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="home-v4">
   <header class="site-header">
     <div class="wrap nav">
       <a class="brand" href="./" aria-label="TUKI WORLD 홈">
@@ -30,65 +30,30 @@
     </div>
   </div>
 
-  <aside class="world-dock" aria-label="TUKI WORLD 빠른 이동">
-    <a class="dock-logo is-active" href="#top" data-dock-section="top"><span>TW</span><small data-i18n="dock.world">월드</small></a>
-    <div class="dock-line"></div>
-    <a href="./projects/#play" title="게임하기"><b>▶</b><span data-i18n="dock.play">게임</span></a>
-    <a href="./projects/#read" title="작품 읽기"><b>◇</b><span data-i18n="dock.read">읽기</span></a>
-    <a href="#deck" data-open-tab="activity" title="최근 활동"><b>◉</b><span data-i18n="dock.watch">활동</span></a>
-    <a href="#deck" data-open-tab="lab" title="제작 기록"><b>⌁</b><span data-i18n="dock.build">제작</span></a>
-    <a href="./lab/" title="TUKI LAB"><b>＋</b><span data-i18n="dock.lab">작업실</span></a>
-  </aside>
-
-  <aside class="tuki-now" id="tuki-now" aria-label="TUKI NOW 상태 패널">
-    <button class="tuki-now-toggle" id="tuki-now-toggle" type="button" aria-label="TUKI NOW 패널 접기">×</button>
-    <div class="tuki-now-head">
-      <div class="tuki-now-avatar"><img data-asset="tuki" alt="" /></div>
-      <div>
-        <span class="signal"><i></i> <span data-i18n="now.live">실시간</span></span>
-        <strong data-i18n="now.title">툭이 지금</strong>
-      </div>
-    </div>
-    <div class="tuki-now-body">
-      <p class="tuki-now-label" data-i18n="now.latestProject">최근 프로젝트</p>
-      <a id="tuki-now-project" class="tuki-now-project" href="./projects/">불러오는 중...</a>
-      <p id="tuki-now-focus" class="tuki-now-focus"></p>
-      <div class="tuki-now-stats">
-        <div><b id="tuki-now-activity">0</b><span data-i18n="now.activity">활동</span></div>
-        <div><b id="tuki-now-candidates">0</b><span data-i18n="now.labQueue">제작실 대기</span></div>
-      </div>
-      <div class="tuki-now-actions">
-        <a href="./projects/" data-i18n="now.projects">프로젝트</a>
-        <a href="./lab/" data-i18n="now.lab">제작실</a>
-      </div>
-    </div>
-    <button class="tuki-now-restore" id="tuki-now-restore" type="button" aria-label="TUKI NOW 패널 열기"><span data-i18n="now.title">툭이 지금</span> <span>●</span></button>
-  </aside>
-
   <main>
-    <section class="hero hero-v2 wrap" id="top">
-      <div class="hero-copyblock hero-console-copy">
+    <section class="hero hero-v4 wrap" id="top">
+      <div class="hero-copyblock hero-v4-copy">
         <div class="hero-system-line">
           <span class="system-chip" data-i18n="hero.system">TUKI WORLD // 실시간 제작 시스템</span>
           <span class="system-time" data-i18n="hero.workspace">공개 작업실 · v2</span>
         </div>
 
-        <p class="eyebrow" data-i18n="hero.eyebrow">툭이의 제작 세계</p>
-        <h1 class="hero-title" data-i18n-html="hero.titleHtml">만들고, <span>망해보고,</span><br>다시 고칩니다.</h1>
-        <p class="hero-copy hero-copy-short" data-i18n="hero.copyShort">게임, 이야기, AI 실험을 직접 만들고 고쳐가는 제작 세계입니다.</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">게임 · 이야기 · AI 실험을 만드는 공개 작업실</p>
+        <h1 class="hero-title" data-i18n-html="hero.titleHtml">만들고,<br><span>망해보고,</span><br>다시 고칩니다.</h1>
+        <p class="hero-copy hero-copy-short" data-i18n="hero.copyShort">완성된 결과만 보여주지 않습니다. 만들고 실패하고 다시 고치는 과정까지 TUKI WORLD에 남깁니다.</p>
 
         <div class="hero-actions">
-          <a class="btn primary" href="./projects/"><span data-i18n="hero.enter">세계 들어가기</span> <span>↗</span></a>
-          <a class="btn ghost" href="#deck" data-open-tab="activity" data-i18n="hero.latest">최근 활동</a>
+          <a class="btn primary" href="./projects/"><span data-i18n="hero.enter">프로젝트 보기</span> <span>↗</span></a>
+          <a class="btn ghost" href="#overview" data-i18n="hero.latest">최근 제작 기록</a>
         </div>
 
         <div class="hero-note">
           <span>※</span>
-          <p data-i18n="hero.note">완성품만 전시하지 않습니다. 실패, 수정, 중단, 다시 만든 이유까지 이곳에 남깁니다.</p>
+          <p data-i18n="hero.note">완성품보다 과정에 더 많은 흔적이 남습니다.</p>
         </div>
       </div>
 
-      <aside class="hero-project-showcase" aria-label="대표 프로젝트">
+      <aside class="hero-project-showcase hero-v4-showcase" aria-label="대표 프로젝트">
         <div class="showcase-top">
           <div>
             <span data-i18n="showcase.now">지금 제작 중</span>
@@ -101,123 +66,83 @@
         </div>
 
         <div class="showcase-visual" id="hero-showcase-visual">
-          <div class="showcase-paper-note" data-i18n="showcase.note">시도 / 수정 / 제작</div>
           <div id="hero-showcase-images" class="showcase-images"></div>
-          <span class="showcase-stamp" id="hero-showcase-status">IN DEVELOPMENT</span>
+          <span class="showcase-stamp" id="hero-showcase-status">개발 중</span>
         </div>
 
         <div class="showcase-info">
           <div class="showcase-kicker">
-            <span id="hero-showcase-route">PLAY · GAME</span>
+            <span id="hero-showcase-route">플레이 · 게임</span>
             <span id="hero-showcase-platform">VERSE8</span>
           </div>
           <h2 id="hero-showcase-name">MOMO</h2>
-          <p id="hero-showcase-tagline">기억하고 반응하며 함께 생활하는 Companion Pet.</p>
+          <p id="hero-showcase-tagline">기억하고 반응하며 함께 생활하는 반려형 가상 펫.</p>
           <div class="showcase-bottom">
             <a id="hero-showcase-detail" href="./projects/"><span data-i18n="showcase.detail">프로젝트 상세 ↗</span></a>
-            <span id="hero-showcase-focus">공개 전 UX와 실제 플레이 QA</span>
+            <span id="hero-showcase-focus">공개 전 사용성 점검과 실제 플레이 테스트</span>
           </div>
         </div>
       </aside>
     </section>
 
-    <section class="values-section wrap" id="values">
-      <div class="values-intro">
-        <p class="eyebrow" data-i18n="values.eyebrow">TUKI WORLD의 방식</p>
-        <h2 data-i18n="values.title">우리는 이렇게 만듭니다.</h2>
+    <section class="ethos-ribbon wrap" aria-label="TUKI WORLD 가치관">
+      <p data-i18n="values.eyebrow">TUKI WORLD의 방식</p>
+      <div>
+        <span><b>01</b><strong data-i18n="values.oneTitle">직접 만든다</strong></span>
+        <i>·</i>
+        <span><b>02</b><strong data-i18n="values.twoTitle">실패도 남긴다</strong></span>
+        <i>·</i>
+        <span><b>03</b><strong data-i18n="values.threeTitle">다시 고친다</strong></span>
       </div>
-
-      <div class="values-list">
-        <article class="value-item">
-          <div class="value-no">01</div>
-          <div class="value-copy">
-            <span class="value-mark" data-i18n="values.oneMark">MAKE</span>
-            <h3 data-i18n="values.oneTitle">직접 만든다</h3>
-            <p data-i18n="values.oneDesc">아이디어만 던져두지 않습니다. 게임이든 이야기든 실제 결과물까지 만들어봅니다.</p>
-          </div>
-        </article>
-
-        <article class="value-item">
-          <div class="value-no">02</div>
-          <div class="value-copy">
-            <span class="value-mark" data-i18n="values.twoMark">FAIL</span>
-            <h3 data-i18n="values.twoTitle">실패도 남긴다</h3>
-            <p data-i18n="values.twoDesc">잘된 결과만 골라 보여주지 않습니다. 막힌 과정과 실패도 다음 제작을 위한 기록입니다.</p>
-          </div>
-        </article>
-
-        <article class="value-item">
-          <div class="value-no">03</div>
-          <div class="value-copy">
-            <span class="value-mark" data-i18n="values.threeMark">FIX</span>
-            <h3 data-i18n="values.threeTitle">다시 고친다</h3>
-            <p data-i18n="values.threeDesc">한 번 만들었다고 끝내지 않습니다. 직접 써보고, 플레이하고, 다시 뜯어고칩니다.</p>
-          </div>
-        </article>
-      </div>
+      <a href="./about/" data-i18n="common.details">상세 보기 →</a>
     </section>
 
-    <section id="deck" class="section wrap world-deck">
-      <div class="deck-head">
+    <section id="overview" class="home-overview wrap">
+      <div class="overview-head">
         <div>
-          <p class="eyebrow" data-i18n="deck.eyebrow">한눈에 보기</p>
-          <h2 data-i18n="deck.title">길게 내리지 말고, 여기서 바로 골라봅니다.</h2>
+          <p class="eyebrow" data-i18n="overview.eyebrow">지금의 TUKI WORLD</p>
+          <h2 data-i18n="overview.title">한눈에 보는 현재 상태.</h2>
         </div>
-        <div class="deck-tabs" role="tablist" aria-label="TUKI WORLD 주요 콘텐츠">
-          <button class="deck-tab is-active" type="button" role="tab" aria-selected="true" data-world-tab="projects"><span data-i18n="deck.projects">프로젝트</span> <span id="tab-project-count">0</span></button>
-          <button class="deck-tab" type="button" role="tab" aria-selected="false" data-world-tab="activity"><span data-i18n="deck.activity">활동</span> <span id="tab-activity-count">0</span></button>
-          <button class="deck-tab" type="button" role="tab" aria-selected="false" data-world-tab="lab"><span data-i18n="deck.lab">제작실</span> <span id="tab-lab-count">0</span></button>
-        </div>
+        <p data-i18n="overview.desc">프로젝트 수, 최근 변화, 다음 이동만 남겼습니다.</p>
       </div>
 
-      <div class="deck-shell">
-        <section id="projects" class="deck-panel is-active" data-world-panel="projects" role="tabpanel">
-          <div class="deck-panel-head">
-            <div><span data-i18n="deck.activeProjects">01 / 진행 중인 프로젝트</span><strong data-i18n="deck.nowMaking">지금 만들고 있는 것</strong></div>
-            <a href="./projects/" data-i18n="deck.allProjects">모든 프로젝트 ↗</a>
+      <div class="overview-grid">
+        <section class="recent-changes">
+          <div class="panel-head">
+            <div>
+              <span data-i18n="overview.recentLabel">최근 변화</span>
+              <strong data-i18n="overview.recentTitle">지금 막 바뀐 것들</strong>
+            </div>
+            <a href="./lab/" data-i18n="overview.allChanges">전체 기록 →</a>
           </div>
-          <div class="project-picker">
-            <div id="project-picker-tabs" class="project-picker-tabs" role="tablist" aria-label="프로젝트 선택"></div>
-            <div id="project-stage" class="project-stage" aria-live="polite"></div>
-          </div>
+          <div id="home-change-list" class="change-list" aria-live="polite"></div>
         </section>
 
-        <section id="activity" class="deck-panel" data-world-panel="activity" role="tabpanel" hidden>
-          <div class="deck-panel-head">
-            <div><span data-i18n="deck.latestSignals">02 / 최근 활동</span><strong data-i18n="deck.outside">밖에서 이어진 최근 활동</strong></div>
-            <a href="./activity/" data-i18n="deck.allActivity">전체 활동 ↗</a>
+        <aside class="world-snapshot">
+          <div class="snapshot-head">
+            <span data-i18n="overview.snapshotLabel">한눈에</span>
+            <strong>TUKI WORLD</strong>
           </div>
-          <div id="activity-list" class="signal-timeline" aria-live="polite"></div>
-        </section>
 
-        <section id="lab" class="deck-panel" data-world-panel="lab" role="tabpanel" hidden>
-          <div class="deck-panel-head">
-            <div><span data-i18n="deck.buildNotes">03 / 제작 노트</span><strong data-i18n="deck.shortChanges">짧게 남긴 제작 변화</strong></div>
-            <a href="./lab/" data-i18n="deck.openLab">TUKI LAB 열기 ↗</a>
+          <div class="snapshot-stats">
+            <div><b id="snapshot-project-count">0</b><span data-i18n="overview.projects">프로젝트</span></div>
+            <div><b id="snapshot-activity-count">0</b><span data-i18n="overview.activities">최근 활동</span></div>
+            <div><b id="snapshot-queue-count">0</b><span data-i18n="overview.queue">제작실 대기</span></div>
           </div>
-          <div id="devlog-list" class="build-notes" aria-live="polite"></div>
-        </section>
+
+          <div class="snapshot-projects">
+            <p data-i18n="overview.jump">바로 프로젝트로</p>
+            <div id="home-project-shortcuts"></div>
+          </div>
+
+          <div class="snapshot-links">
+            <a href="./projects/" data-i18n="overview.projectsLink">프로젝트 전체 보기</a>
+            <a href="./activity/" data-i18n="overview.activityLink">활동 보기</a>
+            <a href="./lab/" data-i18n="overview.labLink">제작실 보기</a>
+          </div>
+        </aside>
       </div>
     </section>
-
-    <section id="channels" class="wrap compact-world-strip">
-      <div class="compact-crew">
-        <div class="compact-strip-head">
-          <div><p class="eyebrow" data-i18n="crew.eyebrow">월드 크루</p><h2 data-i18n="crew.title">이 세계의 얼굴들.</h2></div>
-          <span data-i18n="crew.guides">가이드와 캐릭터</span>
-        </div>
-        <div id="character-grid" class="character-grid compact-character-grid"></div>
-      </div>
-
-      <div class="compact-follow">
-        <div>
-          <p class="eyebrow" data-i18n="follow.eyebrow">채널</p>
-          <h2 data-i18n="follow.title">밖에서도 계속 이어집니다.</h2>
-        </div>
-        <div id="channel-list" class="channel-list compact-channel-list" aria-live="polite"></div>
-      </div>
-    </section>
-
   </main>
 
   <footer>
@@ -229,6 +154,13 @@
       <span>© <span data-year></span> TUKI. <span data-i18n="footer.built">함께 만들고 공개합니다.</span></span>
     </div>
   </footer>
+
+  <nav class="mobile-bottom-nav" aria-label="모바일 빠른 메뉴">
+    <a class="is-active" href="./"><b>⌂</b><span data-i18n="nav.home">홈</span></a>
+    <a href="./projects/"><b>◇</b><span data-i18n="nav.projects">프로젝트</span></a>
+    <a href="./activity/"><b>●</b><span data-i18n="home.activity">활동</span></a>
+    <a href="./lab/"><b>＋</b><span data-i18n="nav.lab">제작실</span></a>
+  </nav>
 
   <script type="module" src="js/app.js"></script>
 </body>

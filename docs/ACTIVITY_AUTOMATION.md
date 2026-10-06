@@ -64,3 +64,34 @@ The GitHub Action checks public feeds every three hours.
 It only commits when content/activity.json actually changes.
 
 No API passwords or private project credentials are required for the current RSS/feed adapters.
+
+
+## Editorial gate v2
+
+The collector now has three layers:
+
+- `content/activity-all.json` — raw collected activity with editorial decisions
+- `content/activity.json` — public, curated activity shown on TUKI WORLD
+- `content/activity-review.json` — ambiguous items for later AI or human review
+
+Rules live in `automation/editorial-rules.json`.
+
+### Important policy
+
+Generic third-party game news, coupon/event posts, sports results, and unrelated game guides are collected only as raw feed data and are not shown publicly by default.
+
+The game-information blog is allowed into TUKI WORLD when the post is about:
+- TUKI's own game/project
+- a direct review or retrospective of a TUKI-made game
+- a maker/development post clearly tied to TUKI's work
+
+This keeps TUKI WORLD as a creator ecosystem instead of turning it into a mirror of every external post.
+
+### Project attribution
+
+Known project keywords automatically attach activity to:
+- MOMO
+- LUTRATIDE SURVIVORS
+- AEVOWAKE
+
+Items with uncertain relevance go to the review queue rather than being published automatically.

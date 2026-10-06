@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "note": "Public-source ingestion only. No passwords or private credentials are stored here.",
+  "sources": [
+    {
+      "id": "naver-ai",
+      "kind": "naver-rss",
+      "label": "Naver Blog · AI / 제작",
+      "url": "https://rss.blog.naver.com/ty_free.xml",
+      "route": "BUILD",
+      "project": null,
+      "enabled": true
+    },
+    {
+      "id": "naver-game",
+      "kind": "naver-rss",
+      "label": "Naver Blog · 게임",
+      "url": "https://rss.blog.naver.com/abb7664.xml",
+      "route": "PLAY",
+      "project": null,
+      "enabled": true
+    },
+    {
+      "id": "youtube",
+      "kind": "youtube-handle",
+      "label": "YouTube",
+      "handle": "ty_tuki0609",
+      "route": "WATCH",
+      "project": null,
+      "enabled": true,
+      "note": "Best-effort channel ID discovery from the public handle page. If YouTube blocks automated discovery, set channelId later."
+    },
+    {
+      "id": "x",
+      "kind": "external-api",
+      "label": "X · @Ty_Tuki0609",
+      "route": "WATCH",
+      "project": null,
+      "enabled": false,
+      "note": "Requires an authenticated X/Metricool integration. Disabled until connected."
+    }
+  ]
+}

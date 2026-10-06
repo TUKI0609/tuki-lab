@@ -5,47 +5,55 @@
   "primaryAccent": "mint",
   "navigation": [
     {
-      "label": "HOME",
-      "href": "./"
+      "label": "홈",
+      "href": "./",
+      "i18n": "nav.home"
     },
     {
-      "label": "PROJECTS",
-      "href": "./projects/"
+      "label": "프로젝트",
+      "href": "./projects/",
+      "i18n": "nav.projects"
     },
     {
-      "label": "LAB",
-      "href": "./lab/"
+      "label": "제작실",
+      "href": "./lab/",
+      "i18n": "nav.lab"
     },
     {
-      "label": "ABOUT",
-      "href": "./about/"
+      "label": "소개",
+      "href": "./about/",
+      "i18n": "nav.about"
     }
   ],
   "routes": [
     {
       "id": "play",
-      "label": "PLAY",
+      "label": "플레이",
+      "i18n": "dock.play",
       "title": "게임하기",
       "description": "지금 플레이하거나 개발 중인 게임으로 들어갑니다.",
       "target": "./projects/#play"
     },
     {
       "id": "read",
-      "label": "READ",
+      "label": "읽기",
+      "i18n": "dock.read",
       "title": "작품 읽기",
       "description": "웹소설과 오리지널 IP를 따라갑니다.",
       "target": "./projects/#read"
     },
     {
       "id": "watch",
-      "label": "WATCH",
+      "label": "활동",
+      "i18n": "dock.watch",
       "title": "과정 보기",
       "description": "영상과 SNS에서 제작 변화를 봅니다.",
       "target": "#channels"
     },
     {
       "id": "build",
-      "label": "BUILD",
+      "label": "제작",
+      "i18n": "dock.build",
       "title": "만드는 과정",
       "description": "실패와 수정까지 남기는 TUKI LAB.",
       "target": "./lab/"

@@ -522,6 +522,12 @@
         "title": "Applied the bright TUKI WORLD studio theme",
         "summary": "Reduced the dark-background footprint and shifted the site toward an ivory, mint, and yellow studio palette. Dark areas now remain mainly where they help project artwork stand out."
       }
+    },
+    "15": {
+      "en": {
+        "title": "Applied a values-first night-workshop theme to TUKI WORLD",
+        "summary": "Pulled back the overly bright theme, returned to a mid-dark workshop palette, simplified the hero, and added the values 'make it · keep the failures · fix it again' directly below the first screen."
+      }
     }
   }
 }

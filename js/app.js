@@ -1,16 +1,17 @@
 import {
   loadJson, renderNav, renderProjectGrid, renderLabList,
-  renderChannels, renderCharacters, hydrateAssets, setYear
+  renderChannels, renderCharacters, renderActivityList, hydrateAssets, setYear
 } from "./core.js";
 
 async function boot() {
   try {
-    const [site, projects, logs, channels, characters] = await Promise.all([
+    const [site, projects, logs, channels, characters, activity] = await Promise.all([
       loadJson("content/site.json"),
       loadJson("content/projects.json"),
       loadJson("content/devlog.json"),
       loadJson("content/channels.json"),
-      loadJson("content/characters.json")
+      loadJson("content/characters.json"),
+      loadJson("content/activity.json")
     ]);
 
     document.querySelectorAll("[data-site-name]").forEach(el => el.textContent = site.name);
@@ -22,6 +23,7 @@ async function boot() {
     renderLabList(logs, "#devlog-list", 5);
     renderChannels(channels);
     renderCharacters(characters);
+    renderActivityList(activity, "#activity-list", 6);
 
     const routeRoot = document.querySelector("#route-grid");
     routeRoot.innerHTML = site.routes.map(route => `

@@ -3,70 +3,199 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AI로 직접 만들고, 실패하고, 고쳐서 완성해가는 TUKI의 제작 실험실" />
-  <title>TUKI LAB</title>
+  <meta name="description" content="게임, 오리지널 IP, 웹툰, 웹소설, AI 제작 기록을 한곳에서 탐험하는 TUKI WORLD" />
+  <title>TUKI WORLD</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="TUKI LAB 홈">TUKI LAB</a>
+      <a class="brand" href="#top" aria-label="TUKI WORLD 홈">
+        <span>TUKI WORLD</span>
+        <small>MADE WITH AI, FIXED BY TUKI</small>
+      </a>
       <nav aria-label="주요 메뉴">
+        <a href="#start">Start</a>
+        <a href="#explore">Explore</a>
         <a href="#projects">Projects</a>
-        <a href="#devlog">Dev Log</a>
-        <a href="#about">About</a>
+        <a href="#lab">Lab</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
     <section class="hero wrap">
-      <p class="eyebrow">AI × BUILD × RECORD</p>
-      <h1>AI에게 시켜보고,<br>실패하고, 고쳐서<br><span>실제로 만듭니다.</span></h1>
-      <p class="hero-copy">게임, 오리지널 IP, 콘텐츠를 직접 만들며 생긴 시행착오와 결과를 기록하는 TUKI의 제작 실험실입니다.</p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#projects">프로젝트 보기</a>
-        <a class="btn ghost" href="#devlog">최근 기록 보기</a>
+      <div class="hero-copyblock">
+        <p class="eyebrow">WELCOME TO TUKI WORLD</p>
+        <h1>만들고,<br>망해보고,<br><span>다시 고칩니다.</span></h1>
+        <p class="hero-copy">게임, 오리지널 IP, 웹소설, 웹툰, 영상과 콘텐츠까지. AI와 함께 실제로 만들고 공개하는 TUKI의 제작 세계입니다.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#start">처음 오셨나요?</a>
+          <a class="btn ghost" href="#projects">지금 만드는 것 보기</a>
+        </div>
+      </div>
+      <aside class="guide-card" aria-label="TUKI WORLD 안내">
+        <div class="guide-orbit">
+          <div class="guide-avatar">T</div>
+          <span class="orbit-dot dot-a"></span>
+          <span class="orbit-dot dot-b"></span>
+          <span class="orbit-dot dot-c"></span>
+        </div>
+        <p class="guide-label">WORLD GUIDE · TUKI</p>
+        <strong>“여기서 뭘 하는지<br>10초 안에 보여줄게.”</strong>
+        <p>각 프로젝트의 캐릭터들이 자기 구역의 안내자가 되는 구조로 확장 중입니다.</p>
+      </aside>
+    </section>
+
+    <section id="start" class="section wrap start-here">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">START HERE</p>
+          <h2>처음 오셨다면 여기부터.</h2>
+        </div>
+        <p>이름을 몰라도 괜찮아요. 하고 싶은 행동으로 들어가면 됩니다.</p>
+      </div>
+
+      <div class="start-grid">
+        <article>
+          <span class="step">01</span>
+          <h3>무엇을 하나요?</h3>
+          <p>AI와 함께 게임과 IP를 만들고, 실패와 수정 과정까지 공개합니다.</p>
+        </article>
+        <article>
+          <span class="step">02</span>
+          <h3>어디서 이어지나요?</h3>
+          <p>게임은 빌드 환경과 GitHub, 작품은 연재 플랫폼, 제작 기록은 TUKI LAB에서 이어집니다.</p>
+        </article>
+        <article>
+          <span class="step">03</span>
+          <h3>어디까지 왔나요?</h3>
+          <p>각 프로젝트 카드에 현재 단계와 지금 손보는 부분을 계속 갱신합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="explore" class="section wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">EXPLORE</p>
+          <h2>뭘 하고 싶으세요?</h2>
+        </div>
+        <p>TUKI WORLD는 프로젝트 이름보다 방문자의 목적을 먼저 보여줍니다.</p>
+      </div>
+
+      <div class="route-grid">
+        <a class="route-card play" href="#projects">
+          <span class="route-kicker">PLAY</span>
+          <strong>게임하기</strong>
+          <p>MOMO, LUNA와 앞으로 공개될 브라우저 게임.</p>
+          <span class="route-arrow">→</span>
+        </a>
+        <a class="route-card read" href="#projects">
+          <span class="route-kicker">READ</span>
+          <strong>작품 읽기</strong>
+          <p>AEVOWAKE 웹소설, 웹툰과 오리지널 세계관.</p>
+          <span class="route-arrow">→</span>
+        </a>
+        <a class="route-card watch" href="#channels">
+          <span class="route-kicker">WATCH</span>
+          <strong>과정 보기</strong>
+          <p>YouTube, Shorts, X, 블로그로 이어지는 제작 기록.</p>
+          <span class="route-arrow">→</span>
+        </a>
+        <a class="route-card build" href="#lab">
+          <span class="route-kicker">BUILD</span>
+          <strong>만드는 과정</strong>
+          <p>문제 → 시도 → 수정 → 결과를 남기는 TUKI LAB.</p>
+          <span class="route-arrow">→</span>
+        </a>
       </div>
     </section>
 
     <section id="projects" class="section wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">PROJECTS</p>
-          <h2>지금 만들고 있는 것들</h2>
+          <p class="eyebrow">CURRENT PROJECTS</p>
+          <h2>지금 살아 움직이는 프로젝트.</h2>
         </div>
-        <p>완성품만이 아니라, 만드는 과정도 함께 남깁니다.</p>
+        <p>각 프로젝트는 앞으로 대표 캐릭터가 자기 페이지를 안내합니다.</p>
       </div>
       <div id="project-grid" class="project-grid" aria-live="polite"></div>
     </section>
 
-    <section id="devlog" class="section wrap">
+    <section id="characters" class="section wrap characters">
       <div class="section-head">
         <div>
-          <p class="eyebrow">DEV LOG</p>
-          <h2>최근 제작 기록</h2>
+          <p class="eyebrow">CHARACTERS & GUIDES</p>
+          <h2>캐릭터가 곧 길잡이.</h2>
         </div>
-        <p>문제 → 시도 → 수정 → 결과. 실패도 기록으로 남깁니다.</p>
+        <p>장식으로 붙이지 않고, 각 캐릭터에게 실제 역할을 줍니다.</p>
       </div>
-      <div id="devlog-list" class="devlog-list" aria-live="polite"></div>
+      <div class="character-grid">
+        <article class="character-card">
+          <div class="character-mark">T</div>
+          <div>
+            <span>WORLD GUIDE</span>
+            <h3>툭이</h3>
+            <p>START HERE, 제작 기록, SNS를 연결하는 TUKI WORLD의 안내자.</p>
+          </div>
+        </article>
+        <article class="character-card">
+          <div class="character-mark">M</div>
+          <div>
+            <span>COMPANION</span>
+            <h3>MOMO</h3>
+            <p>Companion Pet 프로젝트 안에서 생활, 기억, 반응 시스템을 보여주는 주인공.</p>
+          </div>
+        </article>
+        <article class="character-card">
+          <div class="character-mark">A</div>
+          <div>
+            <span>ORIGINAL IP</span>
+            <h3>AEVOWAKE</h3>
+            <p>작품 영역에 들어가면 리안·마렌·미라 등 원작 캐릭터들이 세계를 안내합니다.</p>
+          </div>
+        </article>
+      </div>
+      <p class="character-note">현재는 역할 구조를 먼저 고정했습니다. 다음 단계에서 기존 캐릭터 원본 이미지를 연결해 이 자리를 실제 비주얼로 교체합니다.</p>
     </section>
 
-    <section id="about" class="section wrap about">
+    <section id="lab" class="section wrap lab-section">
+      <div class="lab-intro">
+        <p class="eyebrow">TUKI LAB</p>
+        <h2>이 세계를 만드는 작업실.</h2>
+        <p>TUKI WORLD가 완성된 결과와 입구라면, TUKI LAB은 실패와 수정까지 공개하는 제작실입니다.</p>
+      </div>
       <div>
-        <p class="eyebrow">ABOUT</p>
-        <h2>설명보다 결과물을 먼저.</h2>
+        <div class="mini-head">
+          <strong>LATEST DEV LOG</strong>
+          <span>자동 업데이트 구조 연결 중</span>
+        </div>
+        <div id="devlog-list" class="devlog-list" aria-live="polite"></div>
       </div>
-      <div class="about-copy">
-        <p>TUKI LAB은 AI를 소개하는 공간보다, AI와 함께 실제 제품과 IP를 만들어가는 과정을 보여주는 공간을 지향합니다.</p>
-        <p>작은 실험을 빠르게 만들고, 문제가 생기면 고치고, 그 과정을 다시 다음 제작의 자산으로 남깁니다.</p>
+    </section>
+
+    <section id="channels" class="section wrap channels">
+      <div>
+        <p class="eyebrow">FOLLOW THE WORLD</p>
+        <h2>한 프로젝트,<br>여러 입구.</h2>
       </div>
+      <div class="channel-list">
+        <div><strong>YouTube</strong><span>개발 변화와 플레이 영상</span></div>
+        <div><strong>X</strong><span>AI 시행착오와 짧은 제작 기록</span></div>
+        <div><strong>Naver Blog</strong><span>검색형 정보와 긴 기록</span></div>
+        <div><strong>TUKI LAB</strong><span>프로젝트별 공식 개발 로그</span></div>
+      </div>
+      <p class="channel-note">실제 계정 링크는 다음 연결 단계에서 하나씩 검증해 붙입니다.</p>
     </section>
   </main>
 
   <footer>
     <div class="wrap footer-inner">
-      <strong>TUKI LAB</strong>
+      <div>
+        <strong>TUKI WORLD</strong>
+        <small>PLAY · READ · WATCH · BUILD</small>
+      </div>
       <span>© <span id="year"></span> TUKI. Built in public.</span>
     </div>
   </footer>

@@ -19,6 +19,88 @@ function formatLogDate(value, language = "ko") {
   }).format(date);
 }
 
+function setupRevealMotion() {
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const targets = [
+    document.querySelector(".ethos-ribbon"),
+    document.querySelector(".overview-head"),
+    document.querySelector(".recent-changes"),
+    document.querySelector(".world-snapshot")
+  ].filter(Boolean);
+
+  targets.forEach((el, index) => {
+    el.classList.add("reveal-unit");
+    el.style.setProperty("--reveal-delay", `${Math.min(index * 70, 210)}ms`);
+  });
+
+  if (reduced || !("IntersectionObserver" in window)) {
+    targets.forEach(el => el.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.16, rootMargin: "0px 0px -6% 0px" });
+
+  targets.forEach(el => observer.observe(el));
+}
+
+function setupPointerMotion(showcase) {
+  if (!showcase) return;
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const coarse = window.matchMedia("(pointer: coarse)").matches;
+  if (reduced || coarse) return;
+
+  const visual = showcase.querySelector(".showcase-visual");
+  const ambient = document.querySelector("#ambient-cursor");
+  let raf = 0;
+  let latestEvent = null;
+
+  const applyPointer = () => {
+    raf = 0;
+    const event = latestEvent;
+    if (!event) return;
+
+    if (ambient) {
+      ambient.style.setProperty("--cursor-x", `${event.clientX}px`);
+      ambient.style.setProperty("--cursor-y", `${event.clientY}px`);
+      ambient.classList.add("is-active");
+    }
+
+    if (!visual) return;
+    const rect = visual.getBoundingClientRect();
+    const x = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
+    const y = Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height));
+
+    const tiltY = (x - .5) * 2.4;
+    const tiltX = (.5 - y) * 2.0;
+    visual.style.setProperty("--tilt-x", `${tiltX.toFixed(2)}deg`);
+    visual.style.setProperty("--tilt-y", `${tiltY.toFixed(2)}deg`);
+    visual.style.setProperty("--spot-x", `${(x * 100).toFixed(1)}%`);
+    visual.style.setProperty("--spot-y", `${(y * 100).toFixed(1)}%`);
+  };
+
+  window.addEventListener("pointermove", event => {
+    latestEvent = event;
+    if (!raf) raf = requestAnimationFrame(applyPointer);
+  }, { passive: true });
+
+  showcase.addEventListener("pointerleave", () => {
+    visual?.style.setProperty("--tilt-x", "0deg");
+    visual?.style.setProperty("--tilt-y", "0deg");
+    visual?.style.setProperty("--spot-x", "50%");
+    visual?.style.setProperty("--spot-y", "45%");
+  });
+
+  document.addEventListener("mouseleave", () => {
+    ambient?.classList.remove("is-active");
+  });
+}
+
 async function boot() {
   try {
     await initI18n("");
@@ -54,12 +136,16 @@ async function boot() {
     if (bannerText) bannerText.textContent = latestActivity?.title || (language === "en" ? "Waiting for new activity" : "새 활동을 기다리는 중");
 
     let heroProjectIndex = Math.max(0, projects.findIndex(project => project.id === currentProject?.id));
+    let projectAnimating = false;
+    const showcase = document.querySelector(".hero-v4-showcase");
 
     function renderHeroProject() {
       const rawProject = projects[heroProjectIndex];
       if (!rawProject) return;
       const project = localizeProject(rawProject);
       const urls = visualMap.get(project.id) || [];
+
+      document.body.dataset.activeProject = project.id;
 
       const count = document.querySelector("#hero-showcase-count");
       const images = document.querySelector("#hero-showcase-images");
@@ -88,14 +174,40 @@ async function boot() {
       if (focus) focus.textContent = project.currentFocus;
     }
 
-    document.querySelector("#hero-project-prev")?.addEventListener("click", () => {
-      heroProjectIndex = (heroProjectIndex - 1 + projects.length) % projects.length;
-      renderHeroProject();
-    });
-    document.querySelector("#hero-project-next")?.addEventListener("click", () => {
-      heroProjectIndex = (heroProjectIndex + 1) % projects.length;
-      renderHeroProject();
-    });
+    function changeHeroProject(direction) {
+      if (!projects.length || projectAnimating) return;
+
+      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduced || !showcase) {
+        heroProjectIndex = direction === "next"
+          ? (heroProjectIndex + 1) % projects.length
+          : (heroProjectIndex - 1 + projects.length) % projects.length;
+        renderHeroProject();
+        return;
+      }
+
+      projectAnimating = true;
+      showcase.classList.remove("is-project-enter", "is-next", "is-prev");
+      showcase.classList.add(direction === "next" ? "is-next" : "is-prev", "is-project-exit");
+
+      window.setTimeout(() => {
+        heroProjectIndex = direction === "next"
+          ? (heroProjectIndex + 1) % projects.length
+          : (heroProjectIndex - 1 + projects.length) % projects.length;
+        renderHeroProject();
+
+        showcase.classList.remove("is-project-exit");
+        showcase.classList.add("is-project-enter");
+
+        window.setTimeout(() => {
+          showcase.classList.remove("is-project-enter", "is-next", "is-prev");
+          projectAnimating = false;
+        }, 420);
+      }, 145);
+    }
+
+    document.querySelector("#hero-project-prev")?.addEventListener("click", () => changeHeroProject("prev"));
+    document.querySelector("#hero-project-next")?.addEventListener("click", () => changeHeroProject("next"));
     renderHeroProject();
 
     const projectCount = document.querySelector("#snapshot-project-count");
@@ -166,6 +278,8 @@ async function boot() {
       `).join("");
     }
 
+    setupPointerMotion(showcase);
+    setupRevealMotion();
     setYear();
   } catch (error) {
     console.error(error);

@@ -111,7 +111,11 @@
       "about.p2Desc": "중단한 실험은 숨기지 않고 회고 기록으로 남깁니다.",
       "about.p3Title": "프로젝트는 분리, 세계는 연결",
       "about.p3Desc": "각 프로젝트의 개성을 유지하면서 TUKI WORLD 안에서 이어집니다.",
-      "common.loadingError": "내용을 불러오지 못했습니다."
+      "common.loadingError": "내용을 불러오지 못했습니다.",
+      "page.projectsTitle": "프로젝트 · TUKI WORLD",
+      "page.activityTitle": "활동 · TUKI WORLD",
+      "page.labTitle": "TUKI LAB · TUKI WORLD",
+      "page.aboutTitle": "소개 · TUKI WORLD"
     },
     "en": {
       "nav.home": "Home",
@@ -219,7 +223,11 @@
       "about.p2Desc": "Stopped experiments are not hidden. They remain as postmortems.",
       "about.p3Title": "Separate projects, connected world",
       "about.p3Desc": "Each project keeps its own identity while staying connected inside TUKI WORLD.",
-      "common.loadingError": "Could not load this content."
+      "common.loadingError": "Could not load this content.",
+      "page.projectsTitle": "Projects · TUKI WORLD",
+      "page.activityTitle": "Activity · TUKI WORLD",
+      "page.labTitle": "TUKI LAB · TUKI WORLD",
+      "page.aboutTitle": "About · TUKI WORLD"
     }
   },
   "terms": {
@@ -354,7 +362,7 @@
     "aevowake": {
       "ko": {
         "role": "오리지널 IP",
-        "description": "리안과 비인간 Anchor Creature 미라가 작품 세계로 들어가는 첫 얼굴."
+        "description": "리안과 비인간 앵커 생명체 미라가 작품 세계로 들어가는 첫 얼굴."
       },
       "en": {
         "role": "Original IP",

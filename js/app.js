@@ -6,6 +6,7 @@ async function loadJson(path) {
 
 const visualCache = new Map();
 const visualMime = {
+  tuki: "image/png",
   momo: "image/png"
 };
 

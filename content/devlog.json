@@ -1,5 +1,13 @@
 [
   {
+    "id": 11,
+    "date": "2026-10-06",
+    "type": "FIX",
+    "project": null,
+    "title": "TUKI WORLD 홈을 긴 세로형에서 탭형 월드 데크로 압축",
+    "summary": "START HERE와 EXPLORE의 중복 흐름을 걷어내고 PROJECTS·ACTIVITY·LAB을 한 화면 탭으로 통합해 스크롤 길이와 복잡도를 줄였다."
+  },
+  {
     "id": 10,
     "date": "2026-10-06",
     "type": "BUILD LOG",

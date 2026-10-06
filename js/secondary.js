@@ -1,5 +1,5 @@
 import {
-  loadJson, renderNav, renderProjectGrid, renderLabList,
+  loadJson, initI18n, renderNav, renderProjectGrid, renderLabList,
   renderChannels, renderActivityList, renderLabPosts, hydrateAssets, setYear
 } from "./core.js";
 
@@ -7,6 +7,7 @@ async function boot() {
   const page = document.body.dataset.page;
   const base = "../";
 
+  await initI18n(base);
   const site = await loadJson(base + "content/site.json");
   renderNav(site, base);
   setYear();

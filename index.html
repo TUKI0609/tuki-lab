@@ -18,31 +18,110 @@
     </div>
   </header>
 
+  <div class="live-banner" id="live-banner" aria-live="polite">
+    <div class="live-banner-track">
+      <span class="live-dot" aria-hidden="true"></span>
+      <strong>AUTO SYNC ON</strong>
+      <span class="live-divider">/</span>
+      <span id="live-banner-project">TUKI WORLD</span>
+      <span class="live-divider">/</span>
+      <span id="live-banner-text">최근 활동을 불러오는 중...</span>
+      <a href="./activity/">ACTIVITY ↗</a>
+    </div>
+  </div>
+
+  <aside class="world-dock" aria-label="TUKI WORLD 빠른 이동">
+    <a class="dock-logo is-active" href="#top" data-dock-section="top"><span>TW</span><small>WORLD</small></a>
+    <div class="dock-line"></div>
+    <a href="./projects/#play" title="게임하기"><b>▶</b><span>PLAY</span></a>
+    <a href="./projects/#read" title="작품 읽기"><b>◇</b><span>READ</span></a>
+    <a href="#activity" data-dock-section="activity" title="최근 활동"><b>◉</b><span>WATCH</span></a>
+    <a href="#lab" data-dock-section="lab" title="제작 기록"><b>⌁</b><span>BUILD</span></a>
+    <a href="./lab/" title="TUKI LAB"><b>＋</b><span>LAB</span></a>
+  </aside>
+
+  <aside class="tuki-now" id="tuki-now" aria-label="TUKI NOW 상태 패널">
+    <button class="tuki-now-toggle" id="tuki-now-toggle" type="button" aria-label="TUKI NOW 패널 접기">×</button>
+    <div class="tuki-now-head">
+      <div class="tuki-now-avatar"><img data-asset="tuki" alt="" /></div>
+      <div>
+        <span class="signal"><i></i> LIVE</span>
+        <strong>TUKI NOW</strong>
+      </div>
+    </div>
+    <div class="tuki-now-body">
+      <p class="tuki-now-label">LATEST PROJECT SIGNAL</p>
+      <a id="tuki-now-project" class="tuki-now-project" href="./projects/">불러오는 중...</a>
+      <p id="tuki-now-focus" class="tuki-now-focus"></p>
+      <div class="tuki-now-stats">
+        <div><b id="tuki-now-activity">0</b><span>ACTIVITY</span></div>
+        <div><b id="tuki-now-candidates">0</b><span>LAB QUEUE</span></div>
+      </div>
+      <div class="tuki-now-actions">
+        <a href="./projects/">PROJECTS</a>
+        <a href="./lab/">LAB</a>
+      </div>
+    </div>
+    <button class="tuki-now-restore" id="tuki-now-restore" type="button" aria-label="TUKI NOW 패널 열기">TUKI NOW <span>●</span></button>
+  </aside>
+
   <main>
-    <section class="hero wrap">
-      <div class="hero-copyblock">
-        <p class="eyebrow">WELCOME TO TUKI WORLD</p>
-        <h1 data-site-tagline>만들고, 망해보고, 다시 고칩니다.</h1>
+    <section class="hero hero-v2 wrap" id="top">
+      <div class="hero-copyblock hero-console-copy">
+        <div class="hero-system-line">
+          <span class="system-chip">TUKI WORLD // LIVE BUILD SYSTEM</span>
+          <span class="system-time">PUBLIC WORKSPACE · v2</span>
+        </div>
+
+        <p class="eyebrow">WELCOME TO MY BUILDING WORLD</p>
+        <h1>만들고,<br><span>망해보고,</span><br>다시 고칩니다.</h1>
         <p class="hero-copy" data-site-description></p>
+
+        <div class="hero-status-row" aria-label="TUKI WORLD 현황">
+          <div><span>PROJECTS</span><b id="hero-project-count">0</b></div>
+          <div><span>SYNC</span><b>ON</b></div>
+          <div><span>LAB QUEUE</span><b id="hero-candidate-count">0</b></div>
+        </div>
+
         <div class="hero-actions">
-          <a class="btn primary" href="./projects/">프로젝트 둘러보기</a>
-          <a class="btn ghost" href="#start">처음 오셨나요?</a>
+          <a class="btn primary" href="./projects/">ENTER WORLD <span>↗</span></a>
+          <a class="btn ghost" href="#activity">LATEST SIGNALS</a>
+        </div>
+
+        <div class="hero-note">
+          <span>※</span>
+          <p>완성품만 전시하지 않습니다. 실패, 수정, 중단, 다시 만든 이유까지 이곳에 남깁니다.</p>
         </div>
       </div>
 
-      <aside class="guide-card" aria-label="TUKI WORLD 안내">
-        <div class="guide-orbit">
-          <img data-asset="tuki" alt="TUKI WORLD 안내 캐릭터 툭이" />
-          <span class="orbit-dot dot-a"></span>
-          <span class="orbit-dot dot-b"></span>
-          <span class="orbit-dot dot-c"></span>
+      <aside class="world-console" aria-label="TUKI WORLD 프로젝트 콘솔">
+        <div class="console-top">
+          <span>WORLD MAP</span>
+          <span class="console-status"><i></i> ONLINE</span>
         </div>
-        <div class="guide-route-chips" aria-hidden="true">
-          <span>PLAY</span><span>READ</span><span>WATCH</span><span>BUILD</span>
+
+        <div class="console-screen">
+          <div class="world-grid-lines" aria-hidden="true"></div>
+          <div class="console-tuki">
+            <div class="console-tuki-ring"></div>
+            <img data-asset="tuki" alt="TUKI WORLD 안내 캐릭터 툭이" />
+            <span>WORLD GUIDE</span>
+          </div>
+          <div id="hero-project-nodes" class="project-nodes"></div>
         </div>
-        <p class="guide-label">WORLD GUIDE · TUKI</p>
-        <strong>여긴 결과물만<br>전시하는 곳이 아닙니다.</strong>
-        <p>만든 것, 고친 것, 실패한 것까지 한 세계 안에서 이어집니다.</p>
+
+        <div class="console-signal">
+          <span>LATEST SIGNAL</span>
+          <strong id="hero-latest-signal">외부 활동을 동기화하는 중...</strong>
+          <small id="hero-latest-source">AUTO FEED</small>
+        </div>
+
+        <div class="console-portals">
+          <a href="./projects/#play"><span>01</span><b>PLAY</b></a>
+          <a href="./projects/#read"><span>02</span><b>READ</b></a>
+          <a href="#activity"><span>03</span><b>WATCH</b></a>
+          <a href="./lab/"><span>04</span><b>BUILD</b></a>
+        </div>
       </aside>
     </section>
 

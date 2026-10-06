@@ -1,8 +1,37 @@
 [
-  {"id":6,"title":"툭이·MOMO·LUNA·AEVOWAKE 공식 비주얼을 TUKI WORLD에 통합","date":"2026-10-06"},
-  {"id":5,"title":"실제 플레이·연재·SNS 공개 링크를 TUKI WORLD에 연결","date":"2026-10-06"},
-  {"id":4,"title":"TUKI LAB을 TUKI WORLD 중앙 허브 구조로 확장","date":"2026-10-06"},
-  {"id":3,"title":"TUKI LAB 저장소와 운영 구조 만들기","date":"2026-10-06"},
-  {"id":2,"title":"프로젝트를 제품·IP·콘텐츠 축으로 다시 정리하기","date":"2026-10-06"},
-  {"id":1,"title":"AI 제작 과정을 하나의 기록 자산으로 묶기 시작","date":"2026-10-06"}
+  {
+    "id": 7,
+    "title": "MOMO 공식 스프라이트와 새 툭이 마스코트 적용, 게임명 정정",
+    "date": "2026-10-06"
+  },
+  {
+    "id": 6,
+    "title": "툭이·MOMO·LUTRATIDE SURVIVORS·AEVOWAKE 비주얼과 명칭 수정",
+    "date": "2026-10-06"
+  },
+  {
+    "id": 5,
+    "title": "실제 플레이·연재·SNS 공개 링크를 TUKI WORLD에 연결",
+    "date": "2026-10-06"
+  },
+  {
+    "id": 4,
+    "title": "TUKI LAB을 TUKI WORLD 중앙 허브 구조로 확장",
+    "date": "2026-10-06"
+  },
+  {
+    "id": 3,
+    "title": "TUKI LAB 저장소와 운영 구조 만들기",
+    "date": "2026-10-06"
+  },
+  {
+    "id": 2,
+    "title": "프로젝트를 제품·IP·콘텐츠 축으로 다시 정리하기",
+    "date": "2026-10-06"
+  },
+  {
+    "id": 1,
+    "title": "AI 제작 과정을 하나의 기록 자산으로 묶기 시작",
+    "date": "2026-10-06"
+  }
 ]

@@ -10,56 +10,29 @@
 <body>
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="TUKI WORLD 홈">
-        <span>TUKI WORLD</span>
+      <a class="brand" href="./" aria-label="TUKI WORLD 홈">
+        <span data-site-name>TUKI WORLD</span>
         <small>MADE WITH AI, FIXED BY TUKI</small>
       </a>
-      <nav aria-label="주요 메뉴">
-        <a href="#start">Start</a>
-        <a href="#explore">Explore</a>
-        <a href="#projects">Projects</a>
-        <a href="#lab">Lab</a>
-      </nav>
+      <nav id="main-nav" aria-label="주요 메뉴"></nav>
     </div>
   </header>
 
-  <main id="top">
+  <main>
     <section class="hero wrap">
       <div class="hero-copyblock">
         <p class="eyebrow">WELCOME TO TUKI WORLD</p>
-        <h1>만들고,<br>망해보고,<br><span>다시 고칩니다.</span></h1>
-        <p class="hero-copy">게임, 오리지널 IP, 웹소설, 영상과 콘텐츠까지. AI와 함께 실제로 만들고 공개하는 TUKI의 제작 세계입니다.</p>
+        <h1 data-site-tagline>만들고, 망해보고, 다시 고칩니다.</h1>
+        <p class="hero-copy" data-site-description></p>
         <div class="hero-actions">
-          <a class="btn primary" href="#start">처음 오셨나요?</a>
-          <a class="btn ghost" href="#projects">지금 만드는 것 보기</a>
+          <a class="btn primary" href="./projects/">프로젝트 둘러보기</a>
+          <a class="btn ghost" href="#start">처음 오셨나요?</a>
         </div>
       </div>
 
       <aside class="guide-card" aria-label="TUKI WORLD 안내">
         <div class="guide-orbit">
-          <svg class="tuki-mascot-svg" viewBox="0 0 256 256" role="img" aria-label="툭이">
-  <defs>
-    <clipPath id="tukiBodyClip">
-      <path d="M69 60C88 28 164 25 187 61C196 75 201 91 202 112C204 138 199 166 185 183C177 192 168 197 158 201L162 214C164 223 157 230 147 229C138 228 135 222 132 213C118 216 104 215 91 211C88 222 84 229 74 229C64 228 59 220 63 211L68 195C50 184 40 168 37 148C34 127 39 102 46 84C51 72 58 64 69 60Z"/>
-    </clipPath>
-  </defs>
-  <path d="M69 60C88 28 164 25 187 61C196 75 201 91 202 112C204 138 199 166 185 183C177 192 168 197 158 201L162 214C164 223 157 230 147 229C138 228 135 222 132 213C118 216 104 215 91 211C88 222 84 229 74 229C64 228 59 220 63 211L68 195C50 184 40 168 37 148C34 127 39 102 46 84C51 72 58 64 69 60Z" fill="#88dfb5" stroke="#26333a" stroke-width="8" stroke-linejoin="round"/>
-  <path d="M192 85C205 70 218 67 225 74C233 82 229 97 217 109C210 116 204 119 198 120" fill="#88dfb5" stroke="#26333a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  <g clip-path="url(#tukiBodyClip)">
-    <path d="M29 154C75 170 120 176 164 168C185 164 203 157 220 147L220 238H29Z" fill="#ffd94f"/>
-  </g>
-  <path d="M69 60C88 28 164 25 187 61C196 75 201 91 202 112C204 138 199 166 185 183C177 192 168 197 158 201L162 214C164 223 157 230 147 229C138 228 135 222 132 213C118 216 104 215 91 211C88 222 84 229 74 229C64 228 59 220 63 211L68 195C50 184 40 168 37 148C34 127 39 102 46 84C51 72 58 64 69 60Z" fill="none" stroke="#26333a" stroke-width="8" stroke-linejoin="round"/>
-  <path d="M61 128C58 145 61 158 72 160C83 162 89 151 91 139" fill="none" stroke="#26333a" stroke-width="6" stroke-linecap="round"/>
-  <ellipse cx="94" cy="111" rx="10" ry="14" fill="#26333a"/>
-  <ellipse cx="166" cy="107" rx="10" ry="14" fill="#26333a"/>
-  <circle cx="98" cy="106" r="3" fill="#fff"/>
-  <circle cx="170" cy="102" r="3" fill="#fff"/>
-  <ellipse cx="67" cy="130" rx="14" ry="9" fill="#ffd94f"/>
-  <ellipse cx="190" cy="126" rx="14" ry="9" fill="#ffd94f"/>
-  <path d="M119 127C128 133 138 133 147 127C146 143 137 150 128 150C119 150 112 142 111 132C114 132 117 130 119 127Z" fill="#26333a" stroke="#26333a" stroke-width="3" stroke-linejoin="round"/>
-  <path d="M119 140C124 136 134 136 140 140C137 146 133 148 128 148C124 148 121 145 119 140Z" fill="#ff8f78"/>
-  <ellipse cx="83" cy="76" rx="9" ry="15" transform="rotate(35 83 76)" fill="#d8ffe9" opacity=".85"/>
-</svg>
+          <img data-asset="tuki" alt="TUKI WORLD 안내 캐릭터 툭이" />
           <span class="orbit-dot dot-a"></span>
           <span class="orbit-dot dot-b"></span>
           <span class="orbit-dot dot-c"></span>
@@ -68,35 +41,35 @@
           <span>PLAY</span><span>READ</span><span>WATCH</span><span>BUILD</span>
         </div>
         <p class="guide-label">WORLD GUIDE · TUKI</p>
-        <strong>“여기서 뭘 하는지<br>10초 안에 보여줄게.”</strong>
-        <p>툭이가 입구를 안내하고, 각 프로젝트의 캐릭터가 자기 구역을 이어서 소개합니다.</p>
+        <strong>여긴 결과물만<br>전시하는 곳이 아닙니다.</strong>
+        <p>만든 것, 고친 것, 실패한 것까지 한 세계 안에서 이어집니다.</p>
       </aside>
     </section>
 
-    <section id="start" class="section wrap start-here">
+    <section id="start" class="section wrap">
       <div class="section-head">
         <div>
           <p class="eyebrow">START HERE</p>
           <h2>처음 오셨다면 여기부터.</h2>
         </div>
-        <p>이름을 몰라도 괜찮아요. 하고 싶은 행동으로 들어가면 됩니다.</p>
+        <p>프로젝트 이름을 몰라도 괜찮아요. 하고 싶은 행동으로 들어가면 됩니다.</p>
       </div>
 
       <div class="start-grid">
         <article>
           <span class="step">01</span>
           <h3>무엇을 하나요?</h3>
-          <p>AI와 함께 게임과 IP를 만들고, 실패와 수정 과정까지 공개합니다.</p>
+          <p>AI와 함께 게임과 IP를 만들고, 시행착오와 수정 과정까지 공개합니다.</p>
         </article>
         <article>
           <span class="step">02</span>
-          <h3>어디서 이어지나요?</h3>
-          <p>게임은 Verse8·GPT Astra 같은 제작 환경, 작품은 연재 플랫폼, 제작 기록은 TUKI LAB에서 이어집니다.</p>
+          <h3>어디서 볼 수 있나요?</h3>
+          <p>게임은 실제 플레이 링크, 작품은 연재 플랫폼, 제작 과정은 TUKI LAB으로 연결됩니다.</p>
         </article>
         <article>
           <span class="step">03</span>
-          <h3>어디까지 왔나요?</h3>
-          <p>플레이 가능, 연재 중, 개발 중처럼 각 프로젝트의 실제 공개 상태를 계속 갱신합니다.</p>
+          <h3>지금 상태는 어떤가요?</h3>
+          <p>LIVE, EARLY RELEASE, IN DEVELOPMENT처럼 실제 상태를 공통 규격으로 표시합니다.</p>
         </article>
       </div>
     </section>
@@ -107,15 +80,9 @@
           <p class="eyebrow">EXPLORE</p>
           <h2>뭘 하고 싶으세요?</h2>
         </div>
-        <p>TUKI WORLD는 프로젝트 이름보다 방문자의 목적을 먼저 보여줍니다.</p>
+        <p>프로젝트 이름이 아니라 방문 목적을 기준으로 TUKI WORLD를 탐색합니다.</p>
       </div>
-
-      <div class="route-grid">
-        <a class="route-card play" href="#projects"><span class="route-kicker">PLAY</span><strong>게임하기</strong><p>지금 플레이 가능한 LUTRATIDE SURVIVORS와 개발 중인 MOMO, AEVOWAKE Game.</p><span class="route-arrow">→</span></a>
-        <a class="route-card read" href="#projects"><span class="route-kicker">READ</span><strong>작품 읽기</strong><p>네이버와 문피아에서 연재 중인 AEVOWAKE 웹소설.</p><span class="route-arrow">→</span></a>
-        <a class="route-card watch" href="#channels"><span class="route-kicker">WATCH</span><strong>과정 보기</strong><p>YouTube, X, 네이버 블로그로 이어지는 제작 기록.</p><span class="route-arrow">→</span></a>
-        <a class="route-card build" href="#lab"><span class="route-kicker">BUILD</span><strong>만드는 과정</strong><p>문제 → 시도 → 수정 → 결과를 남기는 TUKI LAB.</p><span class="route-arrow">→</span></a>
-      </div>
+      <div id="route-grid" class="route-grid"></div>
     </section>
 
     <section id="projects" class="section wrap">
@@ -124,91 +91,55 @@
           <p class="eyebrow">CURRENT PROJECTS</p>
           <h2>지금 살아 움직이는 프로젝트.</h2>
         </div>
-        <p>프로젝트 카드부터 실제 캐릭터가 보이도록 바꿨습니다.</p>
+        <p>활성 프로젝트만 같은 규격으로 정리해 보여줍니다.</p>
       </div>
       <div id="project-grid" class="project-grid" aria-live="polite"></div>
+      <div class="section-more"><a href="./projects/">모든 프로젝트 보기 →</a></div>
     </section>
 
-    <section id="characters" class="section wrap characters">
+    <section class="section wrap">
       <div class="section-head">
         <div>
           <p class="eyebrow">CHARACTERS & GUIDES</p>
           <h2>캐릭터가 곧 길잡이.</h2>
         </div>
-        <p>각 캐릭터는 장식이 아니라 TUKI WORLD 안에서 담당 구역을 갖습니다.</p>
+        <p>툭이는 전체 세계를, 각 프로젝트 캐릭터는 자기 구역을 안내합니다.</p>
       </div>
-
-      <div class="character-grid">
-        <article class="character-card">
-          <div class="character-media tuki-media"><svg class="tuki-mascot-svg" viewBox="0 0 256 256" role="img" aria-label="툭이">
-  <defs>
-    <clipPath id="tukiBodyClip">
-      <path d="M69 60C88 28 164 25 187 61C196 75 201 91 202 112C204 138 199 166 185 183C177 192 168 197 158 201L162 214C164 223 157 230 147 229C138 228 135 222 132 213C118 216 104 215 91 211C88 222 84 229 74 229C64 228 59 220 63 211L68 195C50 184 40 168 37 148C34 127 39 102 46 84C51 72 58 64 69 60Z"/>
-    </clipPath>
-  </defs>
-  <path d="M69 60C88 28 164 25 187 61C196 75 201 91 202 112C204 138 199 166 185 183C177 192 168 197 158 201L162 214C164 223 157 230 147 229C138 228 135 222 132 213C118 216 104 215 91 211C88 222 84 229 74 229C64 228 59 220 63 211L68 195C50 184 40 168 37 148C34 127 39 102 46 84C51 72 58 64 69 60Z" fill="#88dfb5" stroke="#26333a" stroke-width="8" stroke-linejoin="round"/>
-  <path d="M192 85C205 70 218 67 225 74C233 82 229 97 217 109C210 116 204 119 198 120" fill="#88dfb5" stroke="#26333a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  <g clip-path="url(#tukiBodyClip)">
-    <path d="M29 154C75 170 120 176 164 168C185 164 203 157 220 147L220 238H29Z" fill="#ffd94f"/>
-  </g>
-  <path d="M69 60C88 28 164 25 187 61C196 75 201 91 202 112C204 138 199 166 185 183C177 192 168 197 158 201L162 214C164 223 157 230 147 229C138 228 135 222 132 213C118 216 104 215 91 211C88 222 84 229 74 229C64 228 59 220 63 211L68 195C50 184 40 168 37 148C34 127 39 102 46 84C51 72 58 64 69 60Z" fill="none" stroke="#26333a" stroke-width="8" stroke-linejoin="round"/>
-  <path d="M61 128C58 145 61 158 72 160C83 162 89 151 91 139" fill="none" stroke="#26333a" stroke-width="6" stroke-linecap="round"/>
-  <ellipse cx="94" cy="111" rx="10" ry="14" fill="#26333a"/>
-  <ellipse cx="166" cy="107" rx="10" ry="14" fill="#26333a"/>
-  <circle cx="98" cy="106" r="3" fill="#fff"/>
-  <circle cx="170" cy="102" r="3" fill="#fff"/>
-  <ellipse cx="67" cy="130" rx="14" ry="9" fill="#ffd94f"/>
-  <ellipse cx="190" cy="126" rx="14" ry="9" fill="#ffd94f"/>
-  <path d="M119 127C128 133 138 133 147 127C146 143 137 150 128 150C119 150 112 142 111 132C114 132 117 130 119 127Z" fill="#26333a" stroke="#26333a" stroke-width="3" stroke-linejoin="round"/>
-  <path d="M119 140C124 136 134 136 140 140C137 146 133 148 128 148C124 148 121 145 119 140Z" fill="#ff8f78"/>
-  <ellipse cx="83" cy="76" rx="9" ry="15" transform="rotate(35 83 76)" fill="#d8ffe9" opacity=".85"/>
-</svg></div>
-          <div><span>WORLD GUIDE</span><h3>툭이</h3><p>START HERE, 제작 기록, SNS를 연결하는 TUKI WORLD의 안내자.</p></div>
-        </article>
-        <article class="character-card">
-          <div class="character-media momo-media"><img data-visual="momo" alt="MOMO" /></div>
-          <div><span>COMPANION</span><h3>MOMO</h3><p>기억, 친밀도, 생활 이벤트를 중심으로 함께 살아가는 Companion Pet.</p></div>
-        </article>
-        <article class="character-card">
-          <div class="character-media luna-media"><img data-visual="luna" alt="LUNA" /></div>
-          <div><span>PLAYABLE HERO</span><h3>LUNA</h3><p>LUTRATIDE SURVIVORS에서 활약하는 플레이어블 캐릭터 중 하나.</p></div>
-        </article>
-        <article class="character-card aevowake-character">
-          <div class="character-media duo-media">
-            <img data-visual="lian" alt="AEVOWAKE 리안" />
-            <img data-visual="mira" alt="AEVOWAKE 미라" />
-          </div>
-          <div><span>ORIGINAL IP</span><h3>AEVOWAKE</h3><p>리안과 비인간 Anchor Creature 미라가 작품 세계로 들어가는 첫 얼굴을 맡습니다.</p></div>
-        </article>
-      </div>
+      <div id="character-grid" class="character-grid"></div>
     </section>
 
     <section id="lab" class="section wrap lab-section">
       <div class="lab-intro">
         <p class="eyebrow">TUKI LAB</p>
         <h2>이 세계를 만드는 작업실.</h2>
-        <p>TUKI WORLD가 공개된 결과와 입구라면, TUKI LAB은 성공뿐 아니라 중단한 실험과 실패까지 제작 자산으로 남기는 공간입니다.</p>
+        <p>완성 결과보다 변화의 이유를 남깁니다. BUILD LOG, FIX, RELEASE, POSTMORTEM, DECISION으로 기록합니다.</p>
+        <a class="text-link" href="./lab/">TUKI LAB 전체 보기 →</a>
       </div>
       <div>
-        <div class="mini-head"><strong>LATEST DEV LOG</strong><span>GitHub Pages 자동 배포 연결됨</span></div>
+        <div class="mini-head"><strong>LATEST FROM LAB</strong><span>최근 5개</span></div>
         <div id="devlog-list" class="devlog-list" aria-live="polite"></div>
       </div>
     </section>
 
     <section id="channels" class="section wrap channels">
-      <div><p class="eyebrow">FOLLOW THE WORLD</p><h2>한 프로젝트,<br>여러 입구.</h2></div>
+      <div>
+        <p class="eyebrow">FOLLOW THE WORLD</p>
+        <h2>한 프로젝트,<br>여러 입구.</h2>
+      </div>
       <div id="channel-list" class="channel-list" aria-live="polite"></div>
-      <p class="channel-note">채널마다 역할을 나눠 운영합니다. 같은 내용을 그대로 복제하기보다 플랫폼에 맞게 변환합니다.</p>
     </section>
   </main>
 
   <footer>
     <div class="wrap footer-inner">
-      <div><strong>TUKI WORLD</strong><small>PLAY · READ · WATCH · BUILD</small></div>
-      <span>© <span id="year"></span> TUKI. Built in public.</span>
+      <div>
+        <strong>TUKI WORLD</strong>
+        <small>PLAY · READ · WATCH · BUILD</small>
+      </div>
+      <span>© <span data-year></span> TUKI. Built in public.</span>
     </div>
   </footer>
 
-  <script src="js/app.js"></script>
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>

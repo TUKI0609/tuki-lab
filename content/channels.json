@@ -1,22 +1,26 @@
 [
   {
+    "id": "youtube",
     "name": "YouTube",
-    "description": "게임 개발 변화, 플레이, Shorts",
+    "role": "개발 변화, 플레이 영상, Shorts",
     "url": "https://www.youtube.com/@ty_tuki0609/videos"
   },
   {
+    "id": "x",
     "name": "X · @Ty_Tuki0609",
-    "description": "AI 시행착오와 짧은 제작 기록",
+    "role": "AI 시행착오와 짧은 제작 기록",
     "url": "https://x.com/Ty_Tuki0609"
   },
   {
+    "id": "naver-ai",
     "name": "Naver Blog · AI / 제작",
-    "description": "AI 활용, 제작 과정, 디지털 실험",
+    "role": "AI 활용, 제작 과정, 디지털 실험",
     "url": "https://blog.naver.com/ty_free"
   },
   {
+    "id": "naver-game",
     "name": "Naver Blog · 게임",
-    "description": "게임 정보와 플레이 콘텐츠",
+    "role": "게임 정보와 플레이 콘텐츠",
     "url": "https://blog.naver.com/abb7664"
   }
 ]

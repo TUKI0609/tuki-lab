@@ -113,6 +113,38 @@ export function renderLabList(logs, rootSelector = "#devlog-list", limit = null)
   `).join("");
 }
 
+
+export function renderActivityList(items, rootSelector = "#activity-list", limit = null) {
+  const root = document.querySelector(rootSelector);
+  if (!root) return;
+  const list = limit ? items.slice(0, limit) : items;
+  if (!list.length) {
+    root.innerHTML = '<p class="activity-empty">아직 자동 수집된 활동이 없습니다. 첫 동기화 후 여기에 표시됩니다.</p>';
+    return;
+  }
+  root.innerHTML = list.map(item => {
+    const date = new Date(item.publishedAt);
+    const dateText = Number.isNaN(date.getTime())
+      ? ""
+      : new Intl.DateTimeFormat("ko-KR", { month:"short", day:"numeric", hour:"2-digit", minute:"2-digit" }).format(date);
+    return `
+      <a class="activity-item source-${item.source}" href="${item.url}" target="_blank" rel="noopener noreferrer">
+        <div class="activity-meta">
+          <span class="activity-source">${item.sourceLabel}</span>
+          <span class="activity-kind">${item.kind}</span>
+          <span class="activity-route">${item.route || ""}</span>
+        </div>
+        <strong>${item.title}</strong>
+        ${item.summary ? `<p>${item.summary}</p>` : ""}
+        <div class="activity-foot">
+          <time datetime="${item.publishedAt}">${dateText}</time>
+          <span>원문 보기 ↗</span>
+        </div>
+      </a>
+    `;
+  }).join("");
+}
+
 export function renderChannels(channels, rootSelector = "#channel-list") {
   const root = document.querySelector(rootSelector);
   if (!root) return;

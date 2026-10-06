@@ -1,0 +1,43 @@
+[
+  {
+    "id": "tuki",
+    "name": "툭이",
+    "role": "WORLD GUIDE",
+    "project": null,
+    "visuals": [
+      "tuki"
+    ],
+    "description": "TUKI WORLD 전체를 안내하는 글로벌 가이드."
+  },
+  {
+    "id": "momo",
+    "name": "MOMO",
+    "role": "COMPANION",
+    "project": "momo",
+    "visuals": [
+      "momo"
+    ],
+    "description": "기억, 친밀도, 생활 이벤트를 중심으로 함께 살아가는 Companion Pet."
+  },
+  {
+    "id": "luna",
+    "name": "LUNA",
+    "role": "PLAYABLE HERO",
+    "project": "lutratide-survivors",
+    "visuals": [
+      "luna"
+    ],
+    "description": "LUTRATIDE SURVIVORS에서 활약하는 플레이어블 캐릭터 중 하나."
+  },
+  {
+    "id": "aevowake",
+    "name": "AEVOWAKE",
+    "role": "ORIGINAL IP",
+    "project": "aevowake",
+    "visuals": [
+      "lian",
+      "mira"
+    ],
+    "description": "리안과 비인간 Anchor Creature 미라가 작품 세계로 들어가는 첫 얼굴."
+  }
+]

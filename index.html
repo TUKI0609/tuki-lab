@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI로 직접 만들고, 실패하고, 고쳐서 완성해가는 TUKI의 제작 실험실" />
+  <title>TUKI LAB</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="TUKI LAB 홈">TUKI LAB</a>
+      <nav aria-label="주요 메뉴">
+        <a href="#projects">Projects</a>
+        <a href="#devlog">Dev Log</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <p class="eyebrow">AI × BUILD × RECORD</p>
+      <h1>AI에게 시켜보고,<br>실패하고, 고쳐서<br><span>실제로 만듭니다.</span></h1>
+      <p class="hero-copy">게임, 오리지널 IP, 콘텐츠를 직접 만들며 생긴 시행착오와 결과를 기록하는 TUKI의 제작 실험실입니다.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#projects">프로젝트 보기</a>
+        <a class="btn ghost" href="#devlog">최근 기록 보기</a>
+      </div>
+    </section>
+
+    <section id="projects" class="section wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">PROJECTS</p>
+          <h2>지금 만들고 있는 것들</h2>
+        </div>
+        <p>완성품만이 아니라, 만드는 과정도 함께 남깁니다.</p>
+      </div>
+      <div id="project-grid" class="project-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="devlog" class="section wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">DEV LOG</p>
+          <h2>최근 제작 기록</h2>
+        </div>
+        <p>문제 → 시도 → 수정 → 결과. 실패도 기록으로 남깁니다.</p>
+      </div>
+      <div id="devlog-list" class="devlog-list" aria-live="polite"></div>
+    </section>
+
+    <section id="about" class="section wrap about">
+      <div>
+        <p class="eyebrow">ABOUT</p>
+        <h2>설명보다 결과물을 먼저.</h2>
+      </div>
+      <div class="about-copy">
+        <p>TUKI LAB은 AI를 소개하는 공간보다, AI와 함께 실제 제품과 IP를 만들어가는 과정을 보여주는 공간을 지향합니다.</p>
+        <p>작은 실험을 빠르게 만들고, 문제가 생기면 고치고, 그 과정을 다시 다음 제작의 자산으로 남깁니다.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <strong>TUKI LAB</strong>
+      <span>© <span id="year"></span> TUKI. Built in public.</span>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -98,7 +98,20 @@
       "common.emptyActivity": "아직 자동 수집된 활동이 없습니다. 첫 동기화 후 여기에 표시됩니다.",
       "project.selected": "선택됨",
       "project.tryAgain": "다시 시도",
-      "project.nowFixing": "지금 고치는 중"
+      "project.nowFixing": "지금 고치는 중",
+      "project.notFoundEyebrow": "프로젝트",
+      "project.notFoundTitle": "프로젝트를 찾을 수 없습니다.",
+      "project.notFoundDesc": "주소를 다시 확인해주세요.",
+      "article.missingTitle": "이 기록은 아직 없습니다.",
+      "article.missingDesc": "승인되지 않았거나 주소가 잘못된 LAB 글입니다.",
+      "article.back": "TUKI LAB으로 돌아가기 →",
+      "about.p1Title": "실제 상태만 표시",
+      "about.p1Desc": "완성도를 과장하지 않고 공개 여부와 현재 단계를 그대로 보여줍니다.",
+      "about.p2Title": "실패도 기록",
+      "about.p2Desc": "중단한 실험은 숨기지 않고 회고 기록으로 남깁니다.",
+      "about.p3Title": "프로젝트는 분리, 세계는 연결",
+      "about.p3Desc": "각 프로젝트의 개성을 유지하면서 TUKI WORLD 안에서 이어집니다.",
+      "common.loadingError": "내용을 불러오지 못했습니다."
     },
     "en": {
       "nav.home": "Home",
@@ -193,7 +206,20 @@
       "common.emptyActivity": "No synced activity yet. It will appear after the first sync.",
       "project.selected": "Selected",
       "project.tryAgain": "Try again",
-      "project.nowFixing": "Now fixing"
+      "project.nowFixing": "Now fixing",
+      "project.notFoundEyebrow": "Project",
+      "project.notFoundTitle": "Project not found.",
+      "project.notFoundDesc": "Please check the address and try again.",
+      "article.missingTitle": "This record does not exist yet.",
+      "article.missingDesc": "It may not be approved yet, or the address may be incorrect.",
+      "article.back": "Back to TUKI LAB →",
+      "about.p1Title": "Show the real status",
+      "about.p1Desc": "No inflated polish. Availability and current stage are shown as they are.",
+      "about.p2Title": "Record failures too",
+      "about.p2Desc": "Stopped experiments are not hidden. They remain as postmortems.",
+      "about.p3Title": "Separate projects, connected world",
+      "about.p3Desc": "Each project keeps its own identity while staying connected inside TUKI WORLD.",
+      "common.loadingError": "Could not load this content."
     }
   },
   "terms": {

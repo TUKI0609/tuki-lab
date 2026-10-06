@@ -1,43 +1,40 @@
 [
   {
     "name": "MOMO",
+    "slug": "momo",
+    "visuals": ["momo"],
     "type": "PLAY · COMPANION PET",
     "status": "개발 중 · 미출시",
     "origin": "BUILD · Verse8",
     "description": "기억하고 반응하며 함께 생활하는 브라우저 기반 Companion Pet 프로젝트.",
-    "focus": "현재: 캐릭터 행동·기억·환경 상호작용 다듬기",
+    "focus": "현재: 공개 테스트 전 플레이 QA와 사용성 점검",
     "links": []
   },
   {
     "name": "LUNA",
+    "slug": "luna",
+    "visuals": ["luna"],
     "type": "PLAY · BROWSER GAME",
     "status": "플레이 가능",
     "origin": "BUILT WITH · GPT Astra",
     "description": "짧은 플레이와 반복 성장에 집중한 브라우저 액션 게임 실험.",
     "focus": "현재: 전투 감각·HUD·콘텐츠 완성도 개선",
     "links": [
-      {
-        "label": "PLAY",
-        "url": "https://lutra-tide-survivors.acc913473.chatgpt.site/"
-      }
+      {"label": "PLAY", "url": "https://lutra-tide-survivors.acc913473.chatgpt.site/"}
     ]
   },
   {
     "name": "AEVOWAKE",
+    "slug": "aevowake",
+    "visuals": ["lian", "mira"],
     "type": "READ · ORIGINAL IP",
     "status": "웹소설 연재 중",
     "origin": "NOVEL · NAVER / MUNPIA · GAME BUILD · Verse8",
     "description": "웹소설을 중심으로 게임까지 확장하고 있는 오리지널 세계관 프로젝트.",
     "focus": "현재: 웹소설 연재와 게임 프로토타입 제작",
     "links": [
-      {
-        "label": "NAVER NOVEL",
-        "url": "http://novel.naver.com/challenge/list?novelId=1245836"
-      },
-      {
-        "label": "MUNPIA",
-        "url": "https://nlink.munpia.com/link/munpia/novel/604667"
-      }
+      {"label": "NAVER NOVEL", "url": "http://novel.naver.com/challenge/list?novelId=1245836"},
+      {"label": "MUNPIA", "url": "https://nlink.munpia.com/link/munpia/novel/604667"}
     ]
   }
 ]

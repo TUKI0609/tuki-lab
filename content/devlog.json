@@ -1,5 +1,13 @@
 [
   {
+    "id": 18,
+    "date": "2026-10-07",
+    "type": "BUILD LOG",
+    "project": null,
+    "title": "TUKI WORLD Trace Motion 인터랙션 적용",
+    "summary": "Build Trace 아트 디렉션에 맞춰 프로젝트 전환 방향 애니메이션, 마우스 위치 반응 조명, 미세한 보드 기울기, 작업 경로를 따라 움직이는 trace 점, 스크롤 진입 모션을 적용했다. 모바일과 모션 축소 설정에서는 효과를 줄이도록 처리했다."
+  },
+  {
     "id": 17,
     "date": "2026-10-07",
     "type": "FIX",

@@ -1,5 +1,13 @@
 [
   {
+    "id": 10,
+    "date": "2026-10-06",
+    "type": "BUILD LOG",
+    "project": null,
+    "title": "TUKI WORLD UI v2 첫 개편",
+    "summary": "상단 Live Banner, 좌측 Sticky World Dock, TUKI NOW 플로팅 패널, 월드 콘솔형 Hero를 적용해 일반 포트폴리오에서 살아 있는 제작 인터페이스로 방향을 전환했다."
+  },
+  {
     "id": 9,
     "date": "2026-10-06",
     "type": "BUILD LOG",

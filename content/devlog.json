@@ -1,5 +1,13 @@
 [
   {
+    "id": 17,
+    "date": "2026-10-07",
+    "type": "FIX",
+    "project": null,
+    "title": "TUKI WORLD Build Trace 시그니처 배경과 아트 디렉션 적용",
+    "summary": "인기 제품·포트폴리오 사이트의 시각 계층과 인터랙션 원칙을 참고해, 일반적인 다크 카드 UI에서 벗어나 TUKI만의 Build Trace 배경, 비정형 프로젝트 쇼케이스, 작업 기록지 형태의 홈 아트 디렉션을 적용했다."
+  },
+  {
     "id": 16,
     "date": "2026-10-07",
     "type": "FIX",

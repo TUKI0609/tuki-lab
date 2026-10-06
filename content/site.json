@@ -1,0 +1,54 @@
+{
+  "name": "TUKI WORLD",
+  "tagline": "만들고, 망해보고, 다시 고칩니다.",
+  "description": "게임, 오리지널 IP, 웹소설, 영상과 콘텐츠까지. AI와 함께 실제로 만들고 공개하는 TUKI의 제작 세계.",
+  "primaryAccent": "mint",
+  "navigation": [
+    {
+      "label": "HOME",
+      "href": "./"
+    },
+    {
+      "label": "PROJECTS",
+      "href": "./projects/"
+    },
+    {
+      "label": "LAB",
+      "href": "./lab/"
+    },
+    {
+      "label": "ABOUT",
+      "href": "./about/"
+    }
+  ],
+  "routes": [
+    {
+      "id": "play",
+      "label": "PLAY",
+      "title": "게임하기",
+      "description": "지금 플레이하거나 개발 중인 게임으로 들어갑니다.",
+      "target": "./projects/#play"
+    },
+    {
+      "id": "read",
+      "label": "READ",
+      "title": "작품 읽기",
+      "description": "웹소설과 오리지널 IP를 따라갑니다.",
+      "target": "./projects/#read"
+    },
+    {
+      "id": "watch",
+      "label": "WATCH",
+      "title": "과정 보기",
+      "description": "영상과 SNS에서 제작 변화를 봅니다.",
+      "target": "#channels"
+    },
+    {
+      "id": "build",
+      "label": "BUILD",
+      "title": "만드는 과정",
+      "description": "실패와 수정까지 남기는 TUKI LAB.",
+      "target": "./lab/"
+    }
+  ]
+}

@@ -4304,3 +4304,255 @@ body.home-v4::after {
   }
   .world-snapshot::after { display: none; }
 }
+
+
+/* =========================================================
+   TUKI Motion System · Trace / Switch / Pointer
+   과한 효과 대신 "만들고 움직이는 작업 흔적"을 작은 반응으로 남긴다.
+   ========================================================= */
+body.home-v4 {
+  --cursor-x: 50vw;
+  --cursor-y: 24vh;
+  --project-accent: #72ddae;
+  --project-accent-soft: rgba(114,221,174,.13);
+}
+body.home-v4[data-active-project="momo"] {
+  --project-accent: #f1d34f;
+  --project-accent-soft: rgba(241,211,79,.13);
+}
+body.home-v4[data-active-project="lutratide-survivors"] {
+  --project-accent: #b49af3;
+  --project-accent-soft: rgba(180,154,243,.14);
+}
+body.home-v4[data-active-project="aevowake"] {
+  --project-accent: #86c7f7;
+  --project-accent-soft: rgba(134,199,247,.13);
+}
+
+/* 마우스가 있는 곳에 아주 약하게 작업광이 따라온다. */
+.ambient-cursor {
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 240px;
+  height: 240px;
+  margin-left: -120px;
+  margin-top: -120px;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(var(--cursor-x, 50vw), var(--cursor-y, 24vh), 0);
+  background: radial-gradient(circle, rgba(114,221,174,.085), rgba(114,221,174,.02) 42%, transparent 70%);
+  filter: blur(8px);
+  mix-blend-mode: screen;
+  transition: opacity .25s ease;
+}
+.ambient-cursor.is-active { opacity: .58; }
+
+/* 첫 진입은 '작업물이 나타나는' 정도로만 */
+.home-v4 .hero-v4-copy > * {
+  animation: tukiHeroIn .58s cubic-bezier(.2,.75,.2,1) both;
+}
+.home-v4 .hero-v4-copy > *:nth-child(2) { animation-delay: 35ms; }
+.home-v4 .hero-v4-copy > *:nth-child(3) { animation-delay: 70ms; }
+.home-v4 .hero-v4-copy > *:nth-child(4) { animation-delay: 105ms; }
+.home-v4 .hero-v4-copy > *:nth-child(5) { animation-delay: 140ms; }
+.home-v4 .hero-v4-copy > *:nth-child(6) { animation-delay: 175ms; }
+@keyframes tukiHeroIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 프로젝트 보드는 손에 잡힌 카드처럼 1~2도만 반응 */
+.home-v4 .showcase-visual {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  --spot-x: 50%;
+  --spot-y: 45%;
+  transform:
+    perspective(1100px)
+    rotateX(var(--tilt-x))
+    rotateY(var(--tilt-y))
+    translateZ(0);
+  transform-style: preserve-3d;
+  transition:
+    transform .18s ease-out,
+    background .35s ease;
+  background:
+    radial-gradient(circle 210px at var(--spot-x) var(--spot-y), var(--project-accent-soft), transparent 72%),
+    radial-gradient(circle at 52% 45%, rgba(114,221,174,.08), transparent 32%),
+    linear-gradient(145deg, #1c2622 0%, #131a17 70%, #171d1a 100%);
+}
+.home-v4 .showcase-stamp {
+  border-color: color-mix(in srgb, var(--project-accent) 48%, transparent);
+  color: color-mix(in srgb, var(--project-accent) 72%, white);
+}
+.home-v4 .showcase-kicker span:first-child {
+  color: color-mix(in srgb, var(--project-accent) 82%, white);
+}
+.home-v4 .showcase-top span {
+  color: color-mix(in srgb, var(--project-accent) 76%, white);
+}
+
+/* 프로젝트 이미지가 바뀔 때 방향감이 생긴다. */
+.home-v4 .hero-v4-showcase .showcase-images,
+.home-v4 .hero-v4-showcase .showcase-info {
+  will-change: transform, opacity;
+}
+.home-v4 .hero-v4-showcase.is-project-exit .showcase-images,
+.home-v4 .hero-v4-showcase.is-project-exit .showcase-info {
+  opacity: 0;
+  transition: opacity .14s ease, transform .14s ease;
+}
+.home-v4 .hero-v4-showcase.is-next.is-project-exit .showcase-images {
+  transform: translateX(-18px) scale(.985);
+}
+.home-v4 .hero-v4-showcase.is-prev.is-project-exit .showcase-images {
+  transform: translateX(18px) scale(.985);
+}
+.home-v4 .hero-v4-showcase.is-next.is-project-exit .showcase-info {
+  transform: translateX(-10px);
+}
+.home-v4 .hero-v4-showcase.is-prev.is-project-exit .showcase-info {
+  transform: translateX(10px);
+}
+.home-v4 .hero-v4-showcase.is-project-enter .showcase-images {
+  animation: projectVisualIn .38s cubic-bezier(.2,.8,.2,1) both;
+}
+.home-v4 .hero-v4-showcase.is-project-enter .showcase-info {
+  animation: projectInfoIn .38s cubic-bezier(.2,.8,.2,1) 35ms both;
+}
+.home-v4 .hero-v4-showcase.is-prev.is-project-enter .showcase-images {
+  animation-name: projectVisualInReverse;
+}
+.home-v4 .hero-v4-showcase.is-prev.is-project-enter .showcase-info {
+  animation-name: projectInfoInReverse;
+}
+@keyframes projectVisualIn {
+  from { opacity: 0; transform: translateX(20px) scale(.985); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+@keyframes projectVisualInReverse {
+  from { opacity: 0; transform: translateX(-20px) scale(.985); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+@keyframes projectInfoIn {
+  from { opacity: 0; transform: translateX(11px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes projectInfoInReverse {
+  from { opacity: 0; transform: translateX(-11px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* BUILD TRACE의 살아 있는 점. 눈에 띄기보다 '사이트가 움직이고 있다'는 신호. */
+.build-trace-runner {
+  position: absolute;
+  z-index: 8;
+  left: 7%;
+  top: 8%;
+  width: 6px;
+  height: 6px;
+  border: 1px solid rgba(255,255,255,.42);
+  border-radius: 50%;
+  background: var(--project-accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--project-accent) 10%, transparent),
+              0 0 18px color-mix(in srgb, var(--project-accent) 46%, transparent);
+  opacity: .72;
+  animation: buildTraceWalk 10s linear infinite;
+}
+@keyframes buildTraceWalk {
+  0%   { left: 7%;  top: 8%;  opacity: .15; }
+  7%   { opacity: .78; }
+  28%  { left: 88%; top: 5%;  opacity: .7; }
+  52%  { left: 94%; top: 82%; opacity: .76; }
+  76%  { left: 16%; top: 91%; opacity: .62; }
+  94%  { left: 3%;  top: 24%; opacity: .45; }
+  100% { left: 7%;  top: 8%;  opacity: .15; }
+}
+
+/* 스크롤 시 큰 블록만 한 번 등장. 모든 요소를 애니메이션하지 않는다. */
+.reveal-unit {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity .56s ease var(--reveal-delay, 0ms),
+    transform .56s cubic-bezier(.2,.75,.2,1) var(--reveal-delay, 0ms);
+}
+.reveal-unit.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 인터랙션 포인트도 같은 trace 언어 사용 */
+.home-v4 .showcase-arrows button,
+.home-v4 .snapshot-links a,
+.home-v4 #home-project-shortcuts a,
+.home-v4 .change-row {
+  position: relative;
+}
+.home-v4 .showcase-arrows button::after,
+.home-v4 .snapshot-links a::before,
+.home-v4 #home-project-shortcuts a::before {
+  content: "";
+  position: absolute;
+  background: var(--project-accent, #72ddae);
+  opacity: 0;
+  transition: opacity .18s ease, transform .18s ease;
+}
+.home-v4 .showcase-arrows button::after {
+  width: 4px;
+  height: 4px;
+  right: -2px;
+  top: -2px;
+  border-radius: 50%;
+  transform: scale(.4);
+}
+.home-v4 .showcase-arrows button:hover::after {
+  opacity: .85;
+  transform: scale(1);
+}
+.home-v4 .snapshot-links a::before,
+.home-v4 #home-project-shortcuts a::before {
+  left: 0;
+  top: 25%;
+  width: 1px;
+  height: 50%;
+  transform: scaleY(.2);
+}
+.home-v4 .snapshot-links a:hover::before,
+.home-v4 #home-project-shortcuts a:hover::before {
+  opacity: .9;
+  transform: scaleY(1);
+}
+
+@media (pointer: coarse) {
+  .ambient-cursor { display: none; }
+  .home-v4 .showcase-visual {
+    transform: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-cursor,
+  .build-trace-runner {
+    display: none !important;
+  }
+  .home-v4 .hero-v4-copy > *,
+  .home-v4 .hero-v4-showcase.is-project-enter .showcase-images,
+  .home-v4 .hero-v4-showcase.is-project-enter .showcase-info {
+    animation: none !important;
+  }
+  .reveal-unit {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .home-v4 .showcase-visual,
+  .home-v4 .showcase-images,
+  .home-v4 .showcase-info {
+    transition: none !important;
+    transform: none !important;
+  }
+}

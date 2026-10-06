@@ -556,6 +556,12 @@
         "title": "Applied a values-first night-workshop theme to TUKI WORLD",
         "summary": "Pulled back the overly bright theme, returned to a mid-dark workshop palette, simplified the hero, and added the values 'make it · keep the failures · fix it again' directly below the first screen."
       }
+    },
+    "16": {
+      "en": {
+        "title": "Rebuilt TUKI WORLD Home v4 as a one-view dashboard",
+        "summary": "Removed the long stacked home flow and compressed the page into a hero, one-line values statement, recent changes, and a current-state snapshot. Added a fixed bottom navigation for mobile."
+      }
     }
   }
 }

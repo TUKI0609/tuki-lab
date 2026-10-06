@@ -21,10 +21,10 @@ async function boot() {
 
     renderNav(site, "");
     renderProjectGrid(projects);
-    renderLabList(logs, "#devlog-list", 5);
+    renderLabList(logs, "#devlog-list", 4);
     renderChannels(channels);
     renderCharacters(characters);
-    renderActivityList(activity, "#activity-list", 6);
+    renderActivityList(activity, "#activity-list", 4);
 
     const pendingCandidates = candidates.filter(item => item.status === "PENDING");
     const projectMap = new Map(projects.map(project => [project.id, project]));
@@ -102,15 +102,54 @@ async function boot() {
     }
 
 
+    const tabProjectCount = document.querySelector("#tab-project-count");
+    const tabActivityCount = document.querySelector("#tab-activity-count");
+    const tabLabCount = document.querySelector("#tab-lab-count");
+    if (tabProjectCount) tabProjectCount.textContent = projects.length;
+    if (tabActivityCount) tabActivityCount.textContent = activity.length;
+    if (tabLabCount) tabLabCount.textContent = logs.length;
+
+    const tabButtons = [...document.querySelectorAll("[data-world-tab]")];
+    const tabPanels = [...document.querySelectorAll("[data-world-panel]")];
+
+    function openWorldTab(name, { scroll = false } = {}) {
+      tabButtons.forEach(button => {
+        const active = button.dataset.worldTab === name;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-selected", active ? "true" : "false");
+      });
+      tabPanels.forEach(panel => {
+        const active = panel.dataset.worldPanel === name;
+        panel.classList.toggle("is-active", active);
+        panel.hidden = !active;
+      });
+      if (scroll) document.querySelector("#deck")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    tabButtons.forEach(button => {
+      button.addEventListener("click", () => openWorldTab(button.dataset.worldTab));
+    });
+
+    document.querySelectorAll("[data-open-tab]").forEach(link => {
+      link.addEventListener("click", event => {
+        const name = link.dataset.openTab;
+        if (!name) return;
+        event.preventDefault();
+        openWorldTab(name, { scroll: true });
+      });
+    });
+
     const routeRoot = document.querySelector("#route-grid");
-    routeRoot.innerHTML = site.routes.map(route => `
-      <a class="route-card ${route.id}" href="${route.target}">
-        <span class="route-kicker">${route.label}</span>
-        <strong>${route.title}</strong>
-        <p>${route.description}</p>
-        <span class="route-arrow">→</span>
-      </a>
-    `).join("");
+    if (routeRoot) {
+      routeRoot.innerHTML = site.routes.map(route => `
+        <a class="route-card ${route.id}" href="${route.target}">
+          <span class="route-kicker">${route.label}</span>
+          <strong>${route.title}</strong>
+          <p>${route.description}</p>
+          <span class="route-arrow">→</span>
+        </a>
+      `).join("");
+    }
 
     await hydrateAssets(document, "");
     setYear();

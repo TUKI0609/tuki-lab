@@ -5,6 +5,9 @@ async function loadJson(path) {
 }
 
 const visualCache = new Map();
+const visualMime = {
+  momo: "image/png"
+};
 
 async function visualDataUrl(key) {
   if (!visualCache.has(key)) {
@@ -13,7 +16,7 @@ async function visualDataUrl(key) {
         if (!r.ok) throw new Error(key + " visual 불러오기 실패");
         return r.text();
       })
-      .then(data => "data:image/webp;base64," + data.trim()));
+      .then(data => `data:${visualMime[key] || "image/webp"};base64,${data.trim()}`));
   }
   return visualCache.get(key);
 }

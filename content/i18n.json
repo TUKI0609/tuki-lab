@@ -488,6 +488,12 @@
         "title": "Shifted TUKI WORLD from shape-led UI to real project imagery",
         "summary": "Reduced hero text collisions and made real project assets the visual focus with a project slider, large selector, signal timeline, and build-note UI."
       }
+    },
+    "13": {
+      "en": {
+        "title": "Added Korean-first UI with Korean/English language switching",
+        "summary": "Changed TUKI WORLD's default language to Korean and connected a bilingual system that switches major UI, project statuses, and build records from the header."
+      }
     }
   }
 }

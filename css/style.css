@@ -3345,3 +3345,15 @@ footer {
   .compact-follow { background: rgba(255,255,255,.018); }
   .values-section { padding-bottom: 48px; }
 }
+
+
+/* v3.1 polish: no decorative yellow rectangles without a job */
+.showcase-paper-note {
+  padding: 0;
+  background: transparent;
+  color: #aeb9b3;
+  border: 0;
+  box-shadow: none;
+  transform: none;
+  letter-spacing: .12em;
+}

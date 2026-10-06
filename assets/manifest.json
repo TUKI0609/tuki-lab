@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "assets": {
+    "tuki": {
+      "path": "assets/brand/tuki/mascot.svg",
+      "encoding": "url",
+      "mime": "image/svg+xml"
+    },
+    "momo": {
+      "path": "assets/projects/momo/character.b64",
+      "encoding": "base64",
+      "mime": "image/png"
+    },
+    "luna": {
+      "path": "assets/projects/lutratide-survivors/luna.b64",
+      "encoding": "base64",
+      "mime": "image/webp"
+    },
+    "lian": {
+      "path": "assets/projects/aevowake/lian.b64",
+      "encoding": "base64",
+      "mime": "image/webp"
+    },
+    "mira": {
+      "path": "assets/projects/aevowake/mira.b64",
+      "encoding": "base64",
+      "mime": "image/webp"
+    }
+  }
+}

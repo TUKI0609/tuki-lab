@@ -82,8 +82,8 @@ nav a:hover { color: var(--text); }
 .project-card:hover .project-visual img { transform: scale(1.035); }
 .project-visual-momo { background: radial-gradient(circle, rgba(255,202,122,.13), rgba(0,0,0,.92) 62%); }
 .project-visual-momo img { image-rendering: pixelated; width: 165px; }
-.project-visual-luna { background: radial-gradient(circle at 50% 45%, rgba(171,89,255,.23), rgba(13,8,24,.95) 68%); }
-.project-visual-luna img { max-height: 94%; }
+.project-visual-lutratide { background: radial-gradient(circle at 50% 45%, rgba(171,89,255,.23), rgba(13,8,24,.95) 68%); }
+.project-visual-lutratide img { max-height: 94%; }
 .project-visual-aevowake { background: linear-gradient(135deg, rgba(27,42,58,.95), rgba(8,20,31,.98)); gap: 0; }
 .project-visual.duo img { width: 50%; max-width: 50%; height: 100%; max-height: 100%; object-fit: cover; }
 .project-visual.duo img:first-child { object-position: 50% 30%; }

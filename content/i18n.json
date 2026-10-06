@@ -115,7 +115,11 @@
       "page.projectsTitle": "프로젝트 · TUKI WORLD",
       "page.activityTitle": "활동 · TUKI WORLD",
       "page.labTitle": "TUKI LAB · TUKI WORLD",
-      "page.aboutTitle": "소개 · TUKI WORLD"
+      "page.aboutTitle": "소개 · TUKI WORLD",
+      "hero.titleHtml": "만들고, <span>망해보고,</span><br>다시 고칩니다.",
+      "hero.copyShort": "게임, 이야기, AI 실험을 직접 만들고 고쳐가는 제작 세계입니다.",
+      "about.titleHtml": "만들고, 망해보고,<br>다시 고칩니다.",
+      "about.followTitle": "밖에서도 이어집니다."
     },
     "en": {
       "nav.home": "Home",
@@ -227,7 +231,11 @@
       "page.projectsTitle": "Projects · TUKI WORLD",
       "page.activityTitle": "Activity · TUKI WORLD",
       "page.labTitle": "TUKI LAB · TUKI WORLD",
-      "page.aboutTitle": "About · TUKI WORLD"
+      "page.aboutTitle": "About · TUKI WORLD",
+      "hero.titleHtml": "Build it, <span>break it,</span><br>fix it again.",
+      "hero.copyShort": "A maker world where games, stories, and AI experiments are built and rebuilt in public.",
+      "about.titleHtml": "Build it, break it,<br>fix it again.",
+      "about.followTitle": "The work continues elsewhere too."
     }
   },
   "terms": {

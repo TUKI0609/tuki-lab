@@ -1,5 +1,5 @@
 import {
-  loadJson, initI18n, renderNav, renderProjectGrid, renderLabList,
+  loadJson, initI18n, t, renderNav, renderProjectGrid, renderLabList,
   renderChannels, renderActivityList, renderLabPosts, hydrateAssets, setYear
 } from "./core.js";
 
@@ -10,6 +10,13 @@ async function boot() {
   await initI18n(base);
   const site = await loadJson(base + "content/site.json");
   renderNav(site, base);
+  const pageTitleKeys = {
+    projects: "page.projectsTitle",
+    activity: "page.activityTitle",
+    lab: "page.labTitle",
+    about: "page.aboutTitle"
+  };
+  if (pageTitleKeys[page]) document.title = t(pageTitleKeys[page], document.title);
   setYear();
 
   if (page === "projects") {

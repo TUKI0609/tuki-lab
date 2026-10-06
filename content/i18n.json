@@ -568,6 +568,12 @@
         "title": "Applied TUKI WORLD's Build Trace signature background and art direction",
         "summary": "Reinterpreted visual hierarchy and interaction ideas from popular product and portfolio sites into TUKI's own Build Trace background, irregular project showcase, and workshop-record style home art direction."
       }
+    },
+    "18": {
+      "en": {
+        "title": "Added TUKI WORLD Trace Motion interactions",
+        "summary": "Extended the Build Trace art direction with directional project transitions, pointer-reactive light, subtle board tilt, a moving trace node, and scroll reveals. Motion is reduced on mobile and for reduced-motion preferences."
+      }
     }
   }
 }

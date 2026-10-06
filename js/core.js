@@ -85,7 +85,10 @@ export function projectCard(project) {
         <p>${project.tagline}</p>
         <div class="project-origin">${project.platform}</div>
         <div class="meta">${project.currentFocus}</div>
-        <div class="project-links">${renderProjectLinks(project.links)}</div>
+        <div class="project-links">
+          <a class="project-link secondary" href="./projects/detail/?id=${encodeURIComponent(project.id)}">DETAILS →</a>
+          ${renderProjectLinks(project.links)}
+        </div>
       </div>
     </article>
   `;
@@ -95,6 +98,33 @@ export function renderProjectGrid(projects, rootSelector = "#project-grid") {
   const root = document.querySelector(rootSelector);
   if (!root) return;
   root.innerHTML = projects.map(projectCard).join("");
+}
+
+
+export function renderLabPosts(posts, rootSelector = "#published-lab", base = "", limit = null) {
+  const root = document.querySelector(rootSelector);
+  if (!root) return;
+  const list = limit ? posts.slice(0, limit) : posts;
+
+  if (!list.length) {
+    root.innerHTML = '<p class="lab-post-empty">아직 승인된 정식 LAB 글이 없습니다. 후보 승인 후 이곳에 쌓입니다.</p>';
+    return;
+  }
+
+  root.innerHTML = list.map(post => `
+    <a class="lab-post-card" href="${base}lab/article/?slug=${encodeURIComponent(post.slug)}">
+      <div class="lab-post-meta">
+        <span>${post.type}</span>
+        <span>${post.project ? post.project.toUpperCase() : "TUKI"}</span>
+      </div>
+      <h3>${post.title}</h3>
+      <p>${post.summary || ""}</p>
+      <div class="lab-post-foot">
+        <time datetime="${post.publishedAt}">${post.publishedAt}</time>
+        <span>읽기 →</span>
+      </div>
+    </a>
+  `).join("");
 }
 
 export function renderLabList(logs, rootSelector = "#devlog-list", limit = null) {

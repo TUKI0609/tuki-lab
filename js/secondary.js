@@ -1,6 +1,6 @@
 import {
   loadJson, renderNav, renderProjectGrid, renderLabList,
-  renderChannels, renderActivityList, hydrateAssets, setYear
+  renderChannels, renderActivityList, renderLabPosts, hydrateAssets, setYear
 } from "./core.js";
 
 async function boot() {
@@ -18,7 +18,11 @@ async function boot() {
   }
 
   if (page === "lab") {
-    const logs = await loadJson(base + "content/devlog.json");
+    const [posts, logs] = await Promise.all([
+      loadJson(base + "content/lab-posts.json"),
+      loadJson(base + "content/devlog.json")
+    ]);
+    renderLabPosts(posts, "#published-lab", base);
     renderLabList(logs, "#all-logs");
   }
 

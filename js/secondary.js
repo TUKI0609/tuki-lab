@@ -1,6 +1,6 @@
 import {
   loadJson, renderNav, renderProjectGrid, renderLabList,
-  renderChannels, hydrateAssets, setYear
+  renderChannels, renderActivityList, hydrateAssets, setYear
 } from "./core.js";
 
 async function boot() {
@@ -20,6 +20,11 @@ async function boot() {
   if (page === "lab") {
     const logs = await loadJson(base + "content/devlog.json");
     renderLabList(logs, "#all-logs");
+  }
+
+  if (page === "activity") {
+    const activity = await loadJson(base + "content/activity.json");
+    renderActivityList(activity, "#all-activity");
   }
 
   if (page === "about") {

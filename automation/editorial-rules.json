@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "purpose": "Only surface activity that belongs to TUKI's own maker ecosystem. Generic third-party game/news posts stay out of TUKI WORLD.",
+  "projects": [
+    {
+      "id": "momo",
+      "keywords": [
+        "momo",
+        "모모",
+        "다마고치",
+        "companion pet",
+        "companion record",
+        "virtual pet"
+      ]
+    },
+    {
+      "id": "lutratide-survivors",
+      "keywords": [
+        "lutratide",
+        "lutra tide",
+        "lutra-tide",
+        "루트라",
+        "luna",
+        "루나",
+        "뱀서라이크"
+      ]
+    },
+    {
+      "id": "aevowake",
+      "keywords": [
+        "aevowake",
+        "에보웨이크",
+        "리안",
+        "anchor creature"
+      ]
+    }
+  ],
+  "brandKeywords": [
+    "tuki world",
+    "tuki lab",
+    "툭이",
+    "tuki"
+  ],
+  "sourcePolicies": {
+    "naver-game": {
+      "default": "exclude",
+      "includeMakerPhrases": [
+        "내가 만든 게임",
+        "직접 만든 게임",
+        "제작 중인 게임",
+        "개발 중인 게임",
+        "게임 개발기",
+        "내 게임",
+        "우리 게임"
+      ],
+      "reviewPhrases": [
+        "ai 게임",
+        "게임 개발",
+        "바이브코딩"
+      ]
+    },
+    "naver-ai": {
+      "default": "review",
+      "includeMakerPhrases": [
+        "직접",
+        "만들",
+        "제작",
+        "바이브코딩",
+        "게임 개발",
+        "ai 게임",
+        "웹툰",
+        "스티커",
+        "프롬프트",
+        "스프라이트",
+        "캐릭터",
+        "이미지",
+        "ogq"
+      ],
+      "reviewPhrases": [
+        "ai",
+        "gpt",
+        "chatgpt",
+        "아스트라",
+        "astra"
+      ]
+    },
+    "youtube": {
+      "default": "exclude",
+      "includeMakerPhrases": [
+        "게임",
+        "게임개발",
+        "게임 개발",
+        "만든",
+        "만들기",
+        "gpt",
+        "바이브코딩",
+        "웹툰",
+        "스티커",
+        "뮤직비디오",
+        "개발"
+      ],
+      "reviewPhrases": [
+        "ai",
+        "astra",
+        "아스트라"
+      ]
+    }
+  }
+}

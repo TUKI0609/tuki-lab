@@ -1,5 +1,5 @@
 import {
-  loadJson, renderNav, setYear
+  loadJson, initI18n, t, term, renderNav, setYear
 } from "./core.js";
 
 const base = "../../";
@@ -12,6 +12,8 @@ function escapeHtml(value = "") {
 }
 
 async function boot() {
+  await initI18n(base);
+
   const slug = new URLSearchParams(location.search).get("slug");
   const [site, posts, projects] = await Promise.all([
     loadJson(base + "content/site.json"),
@@ -26,13 +28,13 @@ async function boot() {
   const post = posts.find(item => item.slug === slug);
 
   if (!post) {
-    document.title = "LAB 글을 찾을 수 없음 · TUKI WORLD";
+    document.title = `${t("article.missingTitle")} · TUKI WORLD`;
     root.innerHTML = `
       <section class="lab-article-missing">
         <p class="eyebrow">TUKI LAB</p>
-        <h1>이 기록은 아직 없습니다.</h1>
-        <p>승인되지 않았거나 주소가 잘못된 LAB 글입니다.</p>
-        <a class="text-link" href="../">TUKI LAB으로 돌아가기 →</a>
+        <h1>${t("article.missingTitle")}</h1>
+        <p>${t("article.missingDesc")}</p>
+        <a class="text-link" href="../">${t("article.back")}</a>
       </section>
     `;
     return;
@@ -44,7 +46,7 @@ async function boot() {
   root.innerHTML = `
     <header class="lab-article-head">
       <div class="lab-article-labels">
-        <span>${post.type}</span>
+        <span>${term(post.type)}</span>
         ${project ? `<a href="${base}projects/detail/?id=${encodeURIComponent(project.id)}">${project.name}</a>` : ""}
       </div>
       <h1>${escapeHtml(post.title)}</h1>
@@ -62,16 +64,16 @@ async function boot() {
     </div>
 
     <aside class="lab-sources">
-      <p class="eyebrow">SOURCE TRAIL</p>
-      <h2>이 기록의 바깥 흔적.</h2>
+      <p class="eyebrow">${t("article.sourceTrail")}</p>
+      <h2>${t("article.sourceTitle")}</h2>
       <div class="lab-source-list">
         ${(post.sources || []).map(source => `
           <a href="${source.url}" target="_blank" rel="noopener noreferrer">
-            <span>${escapeHtml(source.label || "SOURCE")}</span>
+            <span>${escapeHtml(source.label || t("common.source"))}</span>
             <strong>${escapeHtml(source.title || source.url)}</strong>
             <b>↗</b>
           </a>
-        `).join("") || '<p class="lab-post-empty">연결된 외부 자료가 없습니다.</p>'}
+        `).join("") || `<p class="lab-post-empty">${t("common.emptyActivity")}</p>`}
       </div>
     </aside>
   `;
@@ -79,5 +81,5 @@ async function boot() {
 
 boot().catch(error => {
   console.error(error);
-  document.querySelector("#lab-article").innerHTML = '<p class="error">LAB 글을 불러오지 못했습니다.</p>';
+  document.querySelector("#lab-article").innerHTML = `<p class="error">${t("common.loadingError","내용을 불러오지 못했습니다.")}</p>`;
 });

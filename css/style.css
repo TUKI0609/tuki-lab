@@ -316,3 +316,90 @@ footer { border-top: 1px solid var(--line); }
   .devlog-list-full .log-item { grid-template-columns: 1fr; }
   .log-type { min-width: 0; }
 }
+
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.activity-item {
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.018));
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+.activity-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(124,242,200,.25);
+  background: linear-gradient(180deg, rgba(124,242,200,.05), rgba(255,255,255,.02));
+}
+.activity-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+.activity-meta span {
+  display: inline-flex;
+  padding: 3px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 850;
+  letter-spacing: .06em;
+}
+.activity-source {
+  color: var(--accent) !important;
+  border-color: rgba(124,242,200,.16) !important;
+}
+.activity-item strong {
+  display: block;
+  font-size: 1.08rem;
+  line-height: 1.45;
+  letter-spacing: -.02em;
+}
+.activity-item p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: .84rem;
+}
+.activity-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 24px;
+  color: var(--muted);
+  font-size: .72rem;
+}
+.activity-foot span {
+  color: var(--accent);
+  font-weight: 800;
+}
+.activity-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 28px;
+  border: 1px dashed var(--line);
+  border-radius: 20px;
+  color: var(--muted);
+  text-align: center;
+}
+.activity-grid-full {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 920px) {
+  .activity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .activity-grid,
+  .activity-grid-full { grid-template-columns: 1fr; }
+  .activity-item { min-height: 180px; }
+}

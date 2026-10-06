@@ -3946,3 +3946,361 @@ footer {
     font-weight: 850;
   }
 }
+
+
+/* =========================================================
+   TUKI WORLD Signature Art Direction · Build Trace
+   참고: 제품 이미지를 중심에 두는 Linear식 명확한 계층,
+   Awwwards 포트폴리오의 일관된 아트 디렉션,
+   Figma 2026의 실험적 탐색/콜라주 흐름을 TUKI 방식으로 재해석.
+   ========================================================= */
+html { color-scheme: dark; }
+
+body.home-v4 {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 18% 6%, rgba(114,221,174,.10), transparent 27%),
+    radial-gradient(circle at 86% 17%, rgba(170,140,255,.055), transparent 24%),
+    linear-gradient(180deg, #111714 0%, #141c18 48%, #101512 100%);
+}
+body.home-v4::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(17,23,20,.08), rgba(17,23,20,.58)),
+    url("../assets/brand/tuki/world-trace.svg") center top / min(1800px, 125vw) auto repeat-y;
+  opacity: .95;
+  mask-image: linear-gradient(to bottom, #000 0%, #000 72%, rgba(0,0,0,.45) 100%);
+}
+body.home-v4::after {
+  content: "";
+  position: fixed;
+  z-index: -3;
+  inset: auto auto -16vh -10vw;
+  width: 70vw;
+  height: 42vh;
+  border-radius: 50%;
+  background: rgba(114,221,174,.035);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* 헤더는 유리판보다 어두운 재료판처럼 */
+.home-v4 .site-header {
+  background: rgba(15,21,18,.78);
+  border-bottom: 1px solid rgba(231,241,235,.075);
+  box-shadow: none;
+  backdrop-filter: blur(20px) saturate(115%);
+}
+.home-v4 .live-banner {
+  background: rgba(25,34,30,.84);
+  border-bottom-color: rgba(114,221,174,.12);
+  backdrop-filter: blur(18px);
+}
+.home-v4 .live-banner-track {
+  max-width: 1260px;
+}
+
+/* HERO는 카드 두 개가 아니라 하나의 작업 캔버스 */
+.home-v4 .hero-v4 {
+  position: relative;
+  overflow: visible;
+  padding-top: 58px;
+  padding-bottom: 54px;
+}
+.home-v4 .hero-v4::after {
+  content: "BUILD TRACE  /  01";
+  position: absolute;
+  right: 4px;
+  top: 38px;
+  color: rgba(213,228,219,.17);
+  font-size: .55rem;
+  font-weight: 900;
+  letter-spacing: .18em;
+  writing-mode: vertical-rl;
+}
+.home-v4 .hero-v4-copy::before {
+  background: linear-gradient(#72ddae 0 34%, rgba(114,221,174,.2) 34% 74%, transparent);
+}
+.home-v4 .system-chip {
+  background: transparent;
+  border-color: rgba(114,221,174,.18);
+}
+.home-v4 .hero-title {
+  text-shadow: 0 18px 55px rgba(0,0,0,.23);
+}
+.home-v4 .hero-title span::after {
+  height: .08em;
+  left: 1%;
+  right: 14%;
+  bottom: .03em;
+  opacity: .72;
+}
+.home-v4 .hero-copy-short {
+  color: #aab6af;
+}
+.home-v4 .hero-actions .btn {
+  border-radius: 999px;
+}
+.home-v4 .hero-actions .btn.primary {
+  box-shadow: 0 10px 32px rgba(38,126,92,.14);
+}
+.home-v4 .hero-actions .btn.ghost {
+  background: rgba(255,255,255,.018);
+}
+
+/* 대표 프로젝트: 박스를 없애고 실제 이미지가 찢어진 작업 보드 위에 떠 있게 */
+.home-v4 .hero-v4-showcase {
+  position: relative;
+  max-width: 650px;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.home-v4 .hero-v4-showcase::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 34px -18px 50px 42px;
+  clip-path: polygon(4% 0, 96% 3%, 100% 88%, 91% 100%, 2% 96%, 0 13%);
+  background:
+    linear-gradient(145deg, rgba(114,221,174,.075), rgba(255,255,255,.018) 45%, rgba(170,140,255,.035));
+  border: 1px solid rgba(230,239,234,.065);
+}
+.home-v4 .showcase-top {
+  position: relative;
+  z-index: 5;
+  width: calc(100% - 40px);
+  min-height: 34px;
+  margin: 0 0 8px 20px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.home-v4 .showcase-top > div:first-child {
+  gap: 12px;
+}
+.home-v4 .showcase-top span {
+  color: #99dac0;
+}
+.home-v4 .showcase-arrows button {
+  width: 36px;
+  height: 36px;
+  border-color: rgba(232,240,235,.11);
+  border-radius: 50%;
+  background: rgba(16,22,19,.68);
+  backdrop-filter: blur(12px);
+}
+.home-v4 .showcase-visual {
+  position: relative;
+  min-height: 318px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  clip-path: polygon(5% 2%, 97% 0, 100% 88%, 91% 100%, 0 96%, 2% 12%);
+  background:
+    radial-gradient(circle at 52% 45%, rgba(114,221,174,.13), transparent 31%),
+    linear-gradient(145deg, #1c2622 0%, #131a17 70%, #171d1a 100%);
+  box-shadow: 0 32px 80px rgba(0,0,0,.28);
+}
+.home-v4 .showcase-visual::before {
+  inset: auto 8% -48% 22%;
+  height: 82%;
+  background: rgba(114,221,174,.08);
+  filter: blur(34px);
+}
+.home-v4 .showcase-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(118deg, transparent 0 47%, rgba(255,255,255,.025) 48%, transparent 49%),
+    radial-gradient(circle at 12% 14%, rgba(241,211,79,.08), transparent 10%);
+  mix-blend-mode: screen;
+}
+.home-v4 .showcase-images {
+  inset: 12px 28px 10px;
+  transition: transform .35s cubic-bezier(.2,.8,.2,1);
+}
+.home-v4 .hero-v4-showcase:hover .showcase-images {
+  transform: translateY(-4px) scale(1.015);
+}
+.home-v4 .showcase-images img {
+  max-height: 300px;
+  filter: drop-shadow(0 26px 30px rgba(0,0,0,.40));
+}
+.home-v4 .showcase-images.is-duo {
+  inset: 0;
+}
+.home-v4 .showcase-images.is-duo img {
+  filter: saturate(.94) contrast(1.02);
+}
+.home-v4 .showcase-stamp {
+  right: 18px;
+  bottom: 18px;
+  border: 1px solid rgba(114,221,174,.32);
+  border-radius: 999px;
+  transform: none;
+  background: rgba(12,18,15,.72);
+  color: #afe7cf;
+  backdrop-filter: blur(10px);
+}
+
+.home-v4 .showcase-info {
+  position: relative;
+  z-index: 6;
+  width: 88%;
+  margin: -30px 0 0 7%;
+  padding: 14px 18px 15px;
+  border: 1px solid rgba(231,241,235,.09);
+  border-radius: 14px 14px 14px 5px;
+  background: rgba(20,28,24,.88);
+  box-shadow: 0 18px 45px rgba(0,0,0,.25);
+  backdrop-filter: blur(18px) saturate(112%);
+}
+.home-v4 .showcase-info h2 {
+  font-size: clamp(1.6rem, 2.7vw, 2.35rem);
+}
+.home-v4 .showcase-bottom {
+  border-top-style: solid;
+}
+
+/* 가치관 한 줄은 브랜드의 '규칙'처럼 */
+.ethos-ribbon {
+  position: relative;
+  border-top-color: rgba(114,221,174,.09);
+  border-bottom-color: rgba(114,221,174,.09);
+  background: linear-gradient(90deg, rgba(114,221,174,.025), transparent 28%, transparent 72%, rgba(170,140,255,.018));
+}
+.ethos-ribbon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 64px;
+  height: 1px;
+  background: #72ddae;
+}
+.ethos-ribbon > div strong {
+  letter-spacing: -.01em;
+}
+
+/* 한눈에 보는 영역: 박스 두 개가 아니라 기록지 + 인덱스 */
+.home-overview {
+  position: relative;
+}
+.home-overview::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 7%;
+  right: 7%;
+  top: 88px;
+  bottom: 34px;
+  border: 1px solid rgba(231,241,235,.03);
+  transform: rotate(-.35deg);
+}
+.overview-head h2 {
+  text-wrap: balance;
+}
+.recent-changes {
+  border: 0;
+  border-top: 1px solid rgba(231,241,235,.09);
+  border-bottom: 1px solid rgba(231,241,235,.065);
+  border-radius: 0;
+  background: transparent;
+}
+.recent-changes .panel-head {
+  border-bottom-color: rgba(231,241,235,.065);
+}
+.change-row {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.change-row:hover {
+  padding-left: 10px;
+  background: linear-gradient(90deg, rgba(114,221,174,.055), transparent 72%);
+}
+.change-order {
+  font-variant-numeric: tabular-nums;
+}
+.world-snapshot {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(231,241,235,.085);
+  border-radius: 18px 18px 18px 4px;
+  background:
+    radial-gradient(circle at 95% 8%, rgba(114,221,174,.09), transparent 22%),
+    linear-gradient(150deg, rgba(31,43,38,.96), rgba(21,29,25,.94));
+  box-shadow: 0 22px 55px rgba(0,0,0,.18);
+}
+.world-snapshot::after {
+  content: "TUKI / INDEX";
+  position: absolute;
+  right: -27px;
+  top: 47%;
+  transform: rotate(90deg);
+  color: rgba(229,239,233,.08);
+  font-size: .48rem;
+  font-weight: 900;
+  letter-spacing: .18em;
+}
+.snapshot-stats div {
+  background: rgba(255,255,255,.022);
+  border: 1px solid rgba(231,241,235,.05);
+}
+.snapshot-links a {
+  border: 1px solid rgba(231,241,235,.05);
+}
+
+/* 작은 반응형에서도 '프로젝트 이미지가 주인공' 원칙 유지 */
+@media (max-width: 1100px) {
+  .home-v4 .hero-v4-showcase::before {
+    inset: 36px -8px 48px 24px;
+  }
+}
+@media (max-width: 900px) {
+  body.home-v4::before {
+    background-size: 1700px auto;
+    background-position: 48% top;
+  }
+  .home-v4 .hero-v4-showcase {
+    justify-self: stretch;
+  }
+  .home-v4 .showcase-visual {
+    min-height: 300px;
+  }
+  .home-v4 .showcase-info {
+    width: 92%;
+    margin-left: 4%;
+  }
+}
+@media (max-width: 700px) {
+  body.home-v4::before {
+    opacity: .68;
+    background-size: 1450px auto;
+    background-position: 44% top;
+  }
+  .home-v4 .hero-v4::after { display: none; }
+  .home-v4 .system-time { display: none; }
+  .home-v4 .showcase-visual {
+    min-height: 244px;
+    clip-path: polygon(3% 1%, 98% 0, 100% 91%, 92% 100%, 0 97%, 1% 9%);
+  }
+  .home-v4 .showcase-images img { max-height: 228px; }
+  .home-v4 .showcase-info {
+    margin-top: -22px;
+    border-radius: 12px 12px 12px 4px;
+  }
+  .ethos-ribbon {
+    background: rgba(114,221,174,.018);
+  }
+  .world-snapshot::after { display: none; }
+}

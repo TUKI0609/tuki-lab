@@ -2,8 +2,11 @@ import fs from "node:fs/promises";
 import crypto from "node:crypto";
 
 const SOURCES_PATH = new URL("../automation/sources.json", import.meta.url);
+const RULES_PATH = new URL("../automation/editorial-rules.json", import.meta.url);
+const RAW_PATH = new URL("../content/activity-all.json", import.meta.url);
 const ACTIVITY_PATH = new URL("../content/activity.json", import.meta.url);
-const USER_AGENT = "TUKI-WORLD-ActivitySync/1.0 (+https://github.com/TUKI0609/tuki-lab)";
+const REVIEW_PATH = new URL("../content/activity-review.json", import.meta.url);
+const USER_AGENT = "TUKI-WORLD-ActivitySync/2.0 (+https://github.com/TUKI0609/tuki-lab)";
 
 const decodeXml = (value = "") => value
   .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
@@ -30,6 +33,8 @@ const attr = (xml, tagName, attrName) => {
 };
 
 const stableId = url => crypto.createHash("sha256").update(url).digest("hex").slice(0, 16);
+const haystack = item => `${item.title || ""} ${item.summary || ""}`.toLowerCase();
+const includesAny = (text, phrases = []) => phrases.some(p => text.includes(String(p).toLowerCase()));
 
 async function fetchText(url) {
   const res = await fetch(url, {
@@ -117,8 +122,50 @@ async function readJson(url, fallback) {
   catch { return fallback; }
 }
 
+function classify(item, rules) {
+  if (item.manual === true) {
+    return { ...item, editorial: { decision:"include", reason:"manual", score:100 } };
+  }
+
+  const text = haystack(item);
+
+  for (const project of rules.projects || []) {
+    if (includesAny(text, project.keywords)) {
+      return {
+        ...item,
+        project: project.id,
+        editorial: { decision:"include", reason:`project:${project.id}`, score:100 }
+      };
+    }
+  }
+
+  if (includesAny(text, rules.brandKeywords)) {
+    return { ...item, editorial: { decision:"include", reason:"tuki-brand", score:95 } };
+  }
+
+  const policy = rules.sourcePolicies?.[item.source] || { default:"exclude" };
+
+  if (includesAny(text, policy.includeMakerPhrases)) {
+    return { ...item, editorial: { decision:"include", reason:"maker-content", score:80 } };
+  }
+
+  if (includesAny(text, policy.reviewPhrases)) {
+    return { ...item, editorial: { decision:"review", reason:"possible-maker-content", score:50 } };
+  }
+
+  return {
+    ...item,
+    editorial: {
+      decision: policy.default === "include" ? "include" : policy.default === "review" ? "review" : "exclude",
+      reason: `source-default:${policy.default || "exclude"}`,
+      score: policy.default === "include" ? 60 : policy.default === "review" ? 30 : 0
+    }
+  };
+}
+
 const config = await readJson(SOURCES_PATH, { sources: [] });
-const existing = await readJson(ACTIVITY_PATH, []);
+const rules = await readJson(RULES_PATH, { projects:[], brandKeywords:[], sourcePolicies:{} });
+const existingRaw = await readJson(RAW_PATH, []);
 const incoming = [];
 
 for (const source of config.sources.filter(s => s.enabled)) {
@@ -135,8 +182,8 @@ for (const source of config.sources.filter(s => s.enabled)) {
   }
 }
 
-const manual = existing.filter(item => item.manual === true);
-const previousByUrl = new Map(existing.map(item => [item.url, item]));
+const manual = existingRaw.filter(item => item.manual === true);
+const previousByUrl = new Map(existingRaw.map(item => [item.url, item]));
 const mergedByUrl = new Map();
 
 for (const item of [...manual, ...incoming]) {
@@ -147,9 +194,22 @@ for (const item of [...manual, ...incoming]) {
   } : item);
 }
 
-const merged = [...mergedByUrl.values()]
+const raw = [...mergedByUrl.values()]
   .sort((a,b) => new Date(b.publishedAt) - new Date(a.publishedAt))
+  .slice(0, 80);
+
+const classified = raw.map(item => classify(item, rules));
+const visible = classified
+  .filter(item => item.editorial.decision === "include")
+  .slice(0, 60);
+const review = classified
+  .filter(item => item.editorial.decision === "review")
   .slice(0, 60);
 
-await fs.writeFile(ACTIVITY_PATH, JSON.stringify(merged, null, 2) + "\n");
-console.log(`[activity-sync] wrote ${merged.length} activities (${incoming.length} fetched)`);
+await Promise.all([
+  fs.writeFile(RAW_PATH, JSON.stringify(classified, null, 2) + "\n"),
+  fs.writeFile(ACTIVITY_PATH, JSON.stringify(visible, null, 2) + "\n"),
+  fs.writeFile(REVIEW_PATH, JSON.stringify(review, null, 2) + "\n")
+]);
+
+console.log(`[activity-sync] raw=${classified.length} visible=${visible.length} review=${review.length} fetched=${incoming.length}`);

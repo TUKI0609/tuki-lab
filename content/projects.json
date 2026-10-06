@@ -1,21 +1,21 @@
 [
   {
     "name": "MOMO",
-    "type": "COMPANION PET",
+    "type": "PLAY · COMPANION PET",
     "status": "개발 중",
     "description": "기억하고 반응하며 함께 생활하는 브라우저 기반 Companion Pet 프로젝트.",
     "focus": "현재: 캐릭터 행동·기억·환경 상호작용 다듬기"
   },
   {
     "name": "LUNA",
-    "type": "BROWSER GAME",
+    "type": "PLAY · BROWSER GAME",
     "status": "업데이트 중",
     "description": "짧은 플레이와 반복 성장에 집중한 브라우저 액션 게임 실험.",
     "focus": "현재: 전투 감각·HUD·콘텐츠 완성도 개선"
   },
   {
     "name": "AEVOWAKE",
-    "type": "ORIGINAL IP",
+    "type": "READ · ORIGINAL IP",
     "status": "확장 중",
     "description": "웹소설에서 웹툰과 게임으로 확장하고 있는 오리지널 세계관 프로젝트.",
     "focus": "현재: 소설·웹툰·게임의 CANON 일관성 유지"

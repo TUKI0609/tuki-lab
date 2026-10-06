@@ -1,11 +1,13 @@
 import {
-  loadJson, renderNav, renderProjectVisual, renderProjectLinks,
+  loadJson, initI18n, t, localizeProject, renderNav, renderProjectVisual, renderProjectLinks,
   renderLabPosts, renderActivityList, hydrateAssets, setYear
 } from "./core.js";
 
 const base = "../../";
 
 async function boot() {
+  await initI18n(base);
+
   const id = new URLSearchParams(location.search).get("id");
   const [site, projects, posts, activity] = await Promise.all([
     loadJson(base + "content/site.json"),
@@ -17,21 +19,22 @@ async function boot() {
   renderNav(site, base);
   setYear();
 
-  const project = projects.find(item => item.id === id);
+  const rawProject = projects.find(item => item.id === id);
   const root = document.querySelector("#project-detail-root");
 
-  if (!project) {
-    document.title = "프로젝트를 찾을 수 없음 · TUKI WORLD";
+  if (!rawProject) {
+    document.title = `${t("project.notFoundTitle")} · TUKI WORLD`;
     root.innerHTML = `
       <section class="page-hero wrap">
-        <p class="eyebrow">PROJECT</p>
-        <h1>프로젝트를 찾을 수 없습니다.</h1>
-        <p>주소를 다시 확인해주세요.</p>
+        <p class="eyebrow">${t("project.notFoundEyebrow")}</p>
+        <h1>${t("project.notFoundTitle")}</h1>
+        <p>${t("project.notFoundDesc")}</p>
       </section>
     `;
     return;
   }
 
+  const project = localizeProject(rawProject);
   document.title = `${project.name} · TUKI WORLD`;
   const projectPosts = posts.filter(post => post.project === project.id);
   const projectActivity = activity.filter(item => item.project === project.id);
@@ -40,10 +43,10 @@ async function boot() {
     <section class="project-detail-hero wrap">
       <div class="project-detail-copy">
         <div class="card-top">
-          <span class="tag">${project.route} · ${project.type}</span>
-          <span class="status">${project.status}</span>
+          <span class="tag">${project.routeLabel} · ${project.typeLabel}</span>
+          <span class="status">${project.statusLabel}</span>
         </div>
-        <div class="availability">${project.availability}</div>
+        <div class="availability">${project.availabilityLabel}</div>
         <h1>${project.name}</h1>
         <p>${project.tagline}</p>
         <div class="project-origin">${project.platform}</div>
@@ -56,24 +59,24 @@ async function boot() {
 
     <section class="section wrap project-facts">
       <article>
-        <span>CURRENT FOCUS</span>
-        <h2>지금 어디를 고치고 있나.</h2>
+        <span>${t("project.currentFocus")}</span>
+        <h2>${t("project.currentFocus")}</h2>
         <p>${project.currentFocus}</p>
       </article>
       <article>
-        <span>STATUS</span>
-        <h2>${project.status}</h2>
-        <p>${project.availability}</p>
+        <span>${t("project.status")}</span>
+        <h2>${project.statusLabel}</h2>
+        <p>${project.availabilityLabel}</p>
       </article>
     </section>
 
     <section class="section wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">TUKI LAB</p>
-          <h2>이 프로젝트의 정식 제작 기록.</h2>
+          <p class="eyebrow">${t("project.logs")}</p>
+          <h2>${t("project.logsTitle")}</h2>
         </div>
-        <p>승인된 기록만 여기에 연결됩니다.</p>
+        <p>${t("project.logsDesc")}</p>
       </div>
       <div id="project-lab-posts" class="lab-post-grid"></div>
     </section>
@@ -81,10 +84,10 @@ async function boot() {
     <section class="section wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">RELATED ACTIVITY</p>
-          <h2>밖에서 이어진 최근 활동.</h2>
+          <p class="eyebrow">${t("project.related")}</p>
+          <h2>${t("project.relatedTitle")}</h2>
         </div>
-        <p>블로그와 영상에서 이 프로젝트와 자동 연결된 흔적입니다.</p>
+        <p>${t("project.relatedDesc")}</p>
       </div>
       <div id="project-activity" class="activity-grid"></div>
     </section>
@@ -97,5 +100,5 @@ async function boot() {
 
 boot().catch(error => {
   console.error(error);
-  document.querySelector("#project-detail-root").innerHTML = '<div class="wrap"><p class="error">프로젝트 정보를 불러오지 못했습니다.</p></div>';
+  document.querySelector("#project-detail-root").innerHTML = `<div class="wrap"><p class="error">${t("common.loadingError","내용을 불러오지 못했습니다.")}</p></div>`;
 });

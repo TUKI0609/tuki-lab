@@ -1,0 +1,46 @@
+name: Sync public activity
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */3 * * *"
+  push:
+    paths:
+      - "automation/sources.json"
+      - "scripts/sync-activity.mjs"
+      - ".github/workflows/sync-activity.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-public-activity
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Pull public feeds
+        run: node scripts/sync-activity.mjs
+
+      - name: Commit changes
+        shell: bash
+        run: |
+          if git diff --quiet -- content/activity.json; then
+            echo "No activity changes."
+            exit 0
+          fi
+          git config user.name "tuki-world-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add content/activity.json
+          git commit -m "Sync public activity"
+          git push

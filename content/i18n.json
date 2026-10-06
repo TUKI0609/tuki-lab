@@ -130,7 +130,21 @@
       "values.threeDesc": "한 번 만들었다고 끝내지 않습니다. 직접 써보고, 플레이하고, 다시 뜯어고칩니다.",
       "values.oneMark": "MAKE",
       "values.twoMark": "FAIL",
-      "values.threeMark": "FIX"
+      "values.threeMark": "FIX",
+      "overview.eyebrow": "지금의 TUKI WORLD",
+      "overview.title": "한눈에 보는 현재 상태.",
+      "overview.desc": "프로젝트 수, 최근 변화, 다음 이동만 남겼습니다.",
+      "overview.recentLabel": "최근 변화",
+      "overview.recentTitle": "지금 막 바뀐 것들",
+      "overview.allChanges": "전체 기록 →",
+      "overview.snapshotLabel": "한눈에",
+      "overview.projects": "프로젝트",
+      "overview.activities": "최근 활동",
+      "overview.queue": "제작실 대기",
+      "overview.jump": "바로 프로젝트로",
+      "overview.projectsLink": "프로젝트 전체 보기",
+      "overview.activityLink": "활동 보기",
+      "overview.labLink": "제작실 보기"
     },
     "en": {
       "nav.home": "Home",
@@ -257,7 +271,21 @@
       "values.threeDesc": "Finishing once is not the finish line. We use it, play it, break it, and rebuild it.",
       "values.oneMark": "MAKE",
       "values.twoMark": "FAIL",
-      "values.threeMark": "FIX"
+      "values.threeMark": "FIX",
+      "overview.eyebrow": "TUKI WORLD right now",
+      "overview.title": "The current state at a glance.",
+      "overview.desc": "Only the projects, recent changes, and next destinations remain.",
+      "overview.recentLabel": "Recent changes",
+      "overview.recentTitle": "What just changed",
+      "overview.allChanges": "All records →",
+      "overview.snapshotLabel": "At a glance",
+      "overview.projects": "Projects",
+      "overview.activities": "Recent activity",
+      "overview.queue": "Lab queue",
+      "overview.jump": "Jump to a project",
+      "overview.projectsLink": "View all projects",
+      "overview.activityLink": "View activity",
+      "overview.labLink": "Open lab"
     }
   },
   "terms": {

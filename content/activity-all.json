@@ -1,5 +1,24 @@
 [
   {
+    "id": "ff6806f53a976c56",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "서든어택 16:9 해상도 어떻게 바뀌나? 4:3 차이부터 베타 참여 방법까지",
+    "summary": "서든어택이 드디어!!!!!! 16:9 화면비를 테스트하고 있습니다. 기존 서든어택은 4:3 화면비를 중심으로 플레이하는 경우가 많았는데요. 이번 베타 테스트에서는 최대 2560×1440 해상도의 16:9 환경을 직접 사용할 수 있습니다. 결론부터 말하면 지금 당장 정식 서버 전체가 16:9로 바뀐 것은 아닙니다. 10월 ",
+    "url": "https://blog.naver.com/abb7664/224433252234?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-06T09:41:55.000Z",
+    "detectedAt": "2026-10-06T15:58:19.719Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "250f26dfe7860b79",
     "source": "naver-game",
     "sourceLabel": "Naver Blog · 게임",
@@ -339,25 +358,6 @@
       "decision": "include",
       "reason": "maker-content",
       "score": 80
-    }
-  },
-  {
-    "id": "f53307af02df95b9",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "FC온라인 개천절·한글날 이벤트 총정리｜26TOTS 8강·UC 8강·수수료 100% 쿠폰",
-    "summary": "FC온라인에서 개천절과 한글날을 맞아 '빨간 날엔 금빛 사냥' 이벤트가 시작됩니다. 핵심은 간단합니다. 10월 3일부터 '개·천·절', 10월 9일부터 '한·글·날' 글자를 모으면 각각 26TOTS 8강, UC 8강 획득 기회 상자를 받을 수 있고, 6글자를 모두 완성하면 전체 수수료 100% 할인 쿠폰까지 받을 수 있습",
-    "url": "https://blog.naver.com/abb7664/224429340175?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-02T04:37:50.000Z",
-    "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
     }
   },
   {

@@ -71,7 +71,7 @@ export function renderProjectVisual(project) {
   </div>`;
 }
 
-export function projectCard(project) {
+export function projectCard(project, base = "") {
   return `
     <article class="card project-card project-card-${project.id}" id="${project.id}">
       ${renderProjectVisual(project)}
@@ -86,7 +86,7 @@ export function projectCard(project) {
         <div class="project-origin">${project.platform}</div>
         <div class="meta">${project.currentFocus}</div>
         <div class="project-links">
-          <a class="project-link secondary" href="./projects/detail/?id=${encodeURIComponent(project.id)}">DETAILS →</a>
+          <a class="project-link secondary" href="${base}projects/detail/?id=${encodeURIComponent(project.id)}">DETAILS →</a>
           ${renderProjectLinks(project.links)}
         </div>
       </div>
@@ -94,10 +94,10 @@ export function projectCard(project) {
   `;
 }
 
-export function renderProjectGrid(projects, rootSelector = "#project-grid") {
+export function renderProjectGrid(projects, rootSelector = "#project-grid", base = "") {
   const root = document.querySelector(rootSelector);
   if (!root) return;
-  root.innerHTML = projects.map(projectCard).join("");
+  root.innerHTML = projects.map(project => projectCard(project, base)).join("");
 }
 
 

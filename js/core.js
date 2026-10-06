@@ -4,6 +4,120 @@ export async function loadJson(path) {
   return response.json();
 }
 
+let i18nData = null;
+let currentLanguage = "ko";
+const LANGUAGE_KEY = "tuki-world-language";
+
+export async function initI18n(base = "") {
+  i18nData = await loadJson(base + "content/i18n.json");
+  const saved = localStorage.getItem(LANGUAGE_KEY);
+  currentLanguage = i18nData.supportedLanguages.includes(saved)
+    ? saved
+    : i18nData.defaultLanguage || "ko";
+
+  document.documentElement.lang = currentLanguage;
+  renderLanguageSwitcher();
+  applyStaticTranslations(document);
+  return currentLanguage;
+}
+
+export function getLanguage() {
+  return currentLanguage;
+}
+
+export function t(key, fallback = "") {
+  return i18nData?.strings?.[currentLanguage]?.[key]
+    ?? i18nData?.strings?.ko?.[key]
+    ?? fallback
+    ?? key;
+}
+
+export function term(value = "") {
+  return i18nData?.terms?.[currentLanguage]?.[value] ?? value;
+}
+
+export function localizeProject(project) {
+  const override = i18nData?.projects?.[project.id]?.[currentLanguage] || {};
+  return {
+    ...project,
+    tagline: override.tagline ?? project.tagline,
+    currentFocus: override.currentFocus ?? project.currentFocus,
+    routeLabel: term(project.route),
+    typeLabel: term(project.type),
+    statusLabel: term(project.status),
+    availabilityLabel: term(project.availability)
+  };
+}
+
+export function localizeCharacter(character) {
+  const override = i18nData?.characters?.[character.id]?.[currentLanguage] || {};
+  return {
+    ...character,
+    roleLabel: override.role ?? term(character.role),
+    descriptionLabel: override.description ?? character.description
+  };
+}
+
+export function localizeChannel(channel) {
+  const override = i18nData?.channels?.[channel.id]?.[currentLanguage] || {};
+  return {
+    ...channel,
+    nameLabel: override.name ?? channel.name,
+    roleLabel: override.role ?? channel.role
+  };
+}
+
+export function localizeLog(log) {
+  const override = i18nData?.devlog?.[String(log.id)]?.[currentLanguage] || {};
+  return {
+    ...log,
+    typeLabel: term(log.type),
+    titleLabel: override.title ?? log.title,
+    summaryLabel: override.summary ?? log.summary
+  };
+}
+
+export function applyStaticTranslations(root = document) {
+  root.querySelectorAll("[data-i18n]").forEach(el => {
+    const value = t(el.dataset.i18n, el.textContent);
+    if (value) el.textContent = value;
+  });
+  root.querySelectorAll("[data-i18n-aria]").forEach(el => {
+    const value = t(el.dataset.i18nAria, el.getAttribute("aria-label") || "");
+    if (value) el.setAttribute("aria-label", value);
+  });
+  root.querySelectorAll("[data-i18n-title]").forEach(el => {
+    const value = t(el.dataset.i18nTitle, el.getAttribute("title") || "");
+    if (value) el.setAttribute("title", value);
+  });
+}
+
+function renderLanguageSwitcher() {
+  const navWrap = document.querySelector(".nav");
+  if (!navWrap || navWrap.querySelector(".language-switch")) return;
+
+  const switcher = document.createElement("div");
+  switcher.className = "language-switch";
+  switcher.setAttribute("role", "group");
+  switcher.setAttribute("aria-label", currentLanguage === "ko" ? "언어 선택" : "Language");
+  switcher.innerHTML = `
+    <button type="button" data-language="ko" aria-pressed="${currentLanguage === "ko"}">한글</button>
+    <button type="button" data-language="en" aria-pressed="${currentLanguage === "en"}">EN</button>
+  `;
+
+  switcher.querySelectorAll("[data-language]").forEach(button => {
+    button.classList.toggle("is-active", button.dataset.language === currentLanguage);
+    button.addEventListener("click", () => {
+      const next = button.dataset.language;
+      if (next === currentLanguage) return;
+      localStorage.setItem(LANGUAGE_KEY, next);
+      location.reload();
+    });
+  });
+
+  navWrap.appendChild(switcher);
+}
+
 let assetManifest = null;
 const assetCache = new Map();
 
@@ -53,13 +167,17 @@ export function renderNav(site, base = "") {
   if (!root) return;
   root.innerHTML = site.navigation.map(item => {
     const href = item.href.startsWith("./") ? base + item.href.slice(2) : item.href;
-    return `<a href="${href}">${item.label}</a>`;
+    const label = item.i18n ? t(item.i18n, item.label) : item.label;
+    return `<a href="${href}">${label}</a>`;
   }).join("");
 }
 
 export function renderProjectLinks(links = []) {
-  if (!links.length) return '<span class="project-wait">NOT YET PUBLIC</span>';
-  return links.map(link => `<a class="project-link" href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label} ↗</a>`).join("");
+  if (!links.length) return `<span class="project-wait">${term("NOT YET PUBLIC")}</span>`;
+  return links.map(link => {
+    const label = link.label === "PLAY" ? term("PLAY") : link.label;
+    return `<a class="project-link" href="${link.url}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`;
+  }).join("");
 }
 
 export function renderProjectVisual(project) {
@@ -72,22 +190,23 @@ export function renderProjectVisual(project) {
 }
 
 export function projectCard(project, base = "") {
+  const p = localizeProject(project);
   return `
-    <article class="card project-card project-card-${project.id}" id="${project.id}">
-      ${renderProjectVisual(project)}
+    <article class="card project-card project-card-${p.id}" id="${p.id}">
+      ${renderProjectVisual(p)}
       <div class="card-body">
         <div class="card-top">
-          <span class="tag">${project.route} · ${project.type}</span>
-          <span class="status">${project.status}</span>
+          <span class="tag">${p.routeLabel} · ${p.typeLabel}</span>
+          <span class="status">${p.statusLabel}</span>
         </div>
-        <div class="availability">${project.availability}</div>
-        <h3>${project.name}</h3>
-        <p>${project.tagline}</p>
-        <div class="project-origin">${project.platform}</div>
-        <div class="meta">${project.currentFocus}</div>
+        <div class="availability">${p.availabilityLabel}</div>
+        <h3>${p.name}</h3>
+        <p>${p.tagline}</p>
+        <div class="project-origin">${p.platform}</div>
+        <div class="meta">${p.currentFocus}</div>
         <div class="project-links">
-          <a class="project-link secondary" href="${base}projects/detail/?id=${encodeURIComponent(project.id)}">DETAILS →</a>
-          ${renderProjectLinks(project.links)}
+          <a class="project-link secondary" href="${base}projects/detail/?id=${encodeURIComponent(p.id)}">${t("common.details","상세 보기 →")}</a>
+          ${renderProjectLinks(p.links)}
         </div>
       </div>
     </article>
@@ -100,28 +219,27 @@ export function renderProjectGrid(projects, rootSelector = "#project-grid", base
   root.innerHTML = projects.map(project => projectCard(project, base)).join("");
 }
 
-
 export function renderLabPosts(posts, rootSelector = "#published-lab", base = "", limit = null) {
   const root = document.querySelector(rootSelector);
   if (!root) return;
   const list = limit ? posts.slice(0, limit) : posts;
 
   if (!list.length) {
-    root.innerHTML = '<p class="lab-post-empty">아직 승인된 정식 LAB 글이 없습니다. 후보 승인 후 이곳에 쌓입니다.</p>';
+    root.innerHTML = `<p class="lab-post-empty">${t("common.emptyLab")}</p>`;
     return;
   }
 
   root.innerHTML = list.map(post => `
     <a class="lab-post-card" href="${base}lab/article/?slug=${encodeURIComponent(post.slug)}">
       <div class="lab-post-meta">
-        <span>${post.type}</span>
+        <span>${term(post.type)}</span>
         <span>${post.project ? post.project.toUpperCase() : "TUKI"}</span>
       </div>
       <h3>${post.title}</h3>
       <p>${post.summary || ""}</p>
       <div class="lab-post-foot">
         <time datetime="${post.publishedAt}">${post.publishedAt}</time>
-        <span>읽기 →</span>
+        <span>${t("common.read","읽기 →")}</span>
       </div>
     </a>
   `).join("");
@@ -131,44 +249,48 @@ export function renderLabList(logs, rootSelector = "#devlog-list", limit = null)
   const root = document.querySelector(rootSelector);
   if (!root) return;
   const items = limit ? logs.slice(0, limit) : logs;
-  root.innerHTML = items.map(log => `
-    <article class="log-item">
-      <span class="log-type">${log.type}</span>
-      <div>
-        <strong class="log-title">${log.title}</strong>
-        ${log.summary ? `<p>${log.summary}</p>` : ""}
-      </div>
-      <time class="log-date" datetime="${log.date}">${log.date}</time>
-    </article>
-  `).join("");
+  root.innerHTML = items.map(raw => {
+    const log = localizeLog(raw);
+    return `
+      <article class="log-item">
+        <span class="log-type">${log.typeLabel}</span>
+        <div>
+          <strong class="log-title">${log.titleLabel}</strong>
+          ${log.summaryLabel ? `<p>${log.summaryLabel}</p>` : ""}
+        </div>
+        <time class="log-date" datetime="${log.date}">${log.date}</time>
+      </article>
+    `;
+  }).join("");
 }
-
 
 export function renderActivityList(items, rootSelector = "#activity-list", limit = null) {
   const root = document.querySelector(rootSelector);
   if (!root) return;
   const list = limit ? items.slice(0, limit) : items;
   if (!list.length) {
-    root.innerHTML = '<p class="activity-empty">아직 자동 수집된 활동이 없습니다. 첫 동기화 후 여기에 표시됩니다.</p>';
+    root.innerHTML = `<p class="activity-empty">${t("common.emptyActivity")}</p>`;
     return;
   }
+
+  const locale = currentLanguage === "en" ? "en-US" : "ko-KR";
   root.innerHTML = list.map(item => {
     const date = new Date(item.publishedAt);
     const dateText = Number.isNaN(date.getTime())
       ? ""
-      : new Intl.DateTimeFormat("ko-KR", { month:"short", day:"numeric", hour:"2-digit", minute:"2-digit" }).format(date);
+      : new Intl.DateTimeFormat(locale, { month:"short", day:"numeric", hour:"2-digit", minute:"2-digit" }).format(date);
     return `
       <a class="activity-item source-${item.source}" href="${item.url}" target="_blank" rel="noopener noreferrer">
         <div class="activity-meta">
           <span class="activity-source">${item.sourceLabel}</span>
-          <span class="activity-kind">${item.kind}</span>
-          <span class="activity-route">${item.route || ""}</span>
+          <span class="activity-kind">${term(item.kind)}</span>
+          <span class="activity-route">${term(item.route || "")}</span>
         </div>
         <strong>${item.title}</strong>
         ${item.summary ? `<p>${item.summary}</p>` : ""}
         <div class="activity-foot">
           <time datetime="${item.publishedAt}">${dateText}</time>
-          <span>원문 보기 ↗</span>
+          <span>${t("common.openOriginal","원문 보기 ↗")}</span>
         </div>
       </a>
     `;
@@ -178,19 +300,23 @@ export function renderActivityList(items, rootSelector = "#activity-list", limit
 export function renderChannels(channels, rootSelector = "#channel-list") {
   const root = document.querySelector(rootSelector);
   if (!root) return;
-  root.innerHTML = channels.map(channel => `
-    <a class="channel-row" href="${channel.url}" target="_blank" rel="noopener noreferrer">
-      <strong>${channel.name}</strong>
-      <span>${channel.role}</span>
-      <b aria-hidden="true">↗</b>
-    </a>
-  `).join("");
+  root.innerHTML = channels.map(raw => {
+    const channel = localizeChannel(raw);
+    return `
+      <a class="channel-row" href="${channel.url}" target="_blank" rel="noopener noreferrer">
+        <strong>${channel.nameLabel}</strong>
+        <span>${channel.roleLabel}</span>
+        <b aria-hidden="true">↗</b>
+      </a>
+    `;
+  }).join("");
 }
 
 export function renderCharacters(characters, rootSelector = "#character-grid") {
   const root = document.querySelector(rootSelector);
   if (!root) return;
-  root.innerHTML = characters.map(character => {
+  root.innerHTML = characters.map(raw => {
+    const character = localizeCharacter(raw);
     const visuals = character.visuals || [];
     const mediaClass = visuals.length > 1 ? "character-media duo-media" : "character-media";
     return `
@@ -199,9 +325,9 @@ export function renderCharacters(characters, rootSelector = "#character-grid") {
           ${visuals.map(v => `<img data-asset="${v}" alt="${character.name}" />`).join("")}
         </div>
         <div>
-          <span>${character.role}</span>
+          <span>${character.roleLabel}</span>
           <h3>${character.name}</h3>
-          <p>${character.description}</p>
+          <p>${character.descriptionLabel}</p>
         </div>
       </article>
     `;

@@ -78,6 +78,10 @@ export function localizeLog(log) {
 }
 
 export function applyStaticTranslations(root = document) {
+  root.querySelectorAll("[data-i18n-html]").forEach(el => {
+    const value = t(el.dataset.i18nHtml, el.innerHTML);
+    if (value) el.innerHTML = value;
+  });
   root.querySelectorAll("[data-i18n]").forEach(el => {
     const value = t(el.dataset.i18n, el.textContent);
     if (value) el.textContent = value;

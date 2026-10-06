@@ -74,8 +74,8 @@
         </div>
 
         <p class="eyebrow">WELCOME TO MY BUILDING WORLD</p>
-        <h1>만들고,<br><span>망해보고,</span><br>다시 고칩니다.</h1>
-        <p class="hero-copy" data-site-description></p>
+        <h1 class="hero-title">만들고, <span>망해보고,</span><br>다시 고칩니다.</h1>
+        <p class="hero-copy hero-copy-short">게임, 이야기, AI 실험을 직접 만들고 고쳐가는 제작 세계입니다.</p>
 
         <div class="hero-status-row" aria-label="TUKI WORLD 현황">
           <div><span>PROJECTS</span><b id="hero-project-count">0</b></div>
@@ -94,33 +94,35 @@
         </div>
       </div>
 
-      <aside class="world-console" aria-label="TUKI WORLD 프로젝트 콘솔">
-        <div class="console-top">
-          <span>WORLD MAP</span>
-          <span class="console-status"><i></i> ONLINE</span>
-        </div>
-
-        <div class="console-screen">
-          <div class="world-grid-lines" aria-hidden="true"></div>
-          <div class="console-tuki">
-            <div class="console-tuki-ring"></div>
-            <img data-asset="tuki" alt="TUKI WORLD 안내 캐릭터 툭이" />
-            <span>WORLD GUIDE</span>
+      <aside class="hero-project-showcase" aria-label="대표 프로젝트">
+        <div class="showcase-top">
+          <div>
+            <span>NOW BUILDING</span>
+            <strong id="hero-showcase-count">01 / 03</strong>
           </div>
-          <div id="hero-project-nodes" class="project-nodes"></div>
+          <div class="showcase-arrows" aria-label="프로젝트 전환">
+            <button id="hero-project-prev" type="button" aria-label="이전 프로젝트">←</button>
+            <button id="hero-project-next" type="button" aria-label="다음 프로젝트">→</button>
+          </div>
         </div>
 
-        <div class="console-signal">
-          <span>LATEST SIGNAL</span>
-          <strong id="hero-latest-signal">외부 활동을 동기화하는 중...</strong>
-          <small id="hero-latest-source">AUTO FEED</small>
+        <div class="showcase-visual" id="hero-showcase-visual">
+          <div class="showcase-paper-note">TRY / FIX / BUILD</div>
+          <div id="hero-showcase-images" class="showcase-images"></div>
+          <span class="showcase-stamp" id="hero-showcase-status">IN DEVELOPMENT</span>
         </div>
 
-        <div class="console-portals">
-          <a href="./projects/#play"><span>01</span><b>PLAY</b></a>
-          <a href="./projects/#read"><span>02</span><b>READ</b></a>
-          <a href="#deck" data-open-tab="activity"><span>03</span><b>WATCH</b></a>
-          <a href="#deck" data-open-tab="lab"><span>04</span><b>BUILD</b></a>
+        <div class="showcase-info">
+          <div class="showcase-kicker">
+            <span id="hero-showcase-route">PLAY · GAME</span>
+            <span id="hero-showcase-platform">VERSE8</span>
+          </div>
+          <h2 id="hero-showcase-name">MOMO</h2>
+          <p id="hero-showcase-tagline">기억하고 반응하며 함께 생활하는 Companion Pet.</p>
+          <div class="showcase-bottom">
+            <a id="hero-showcase-detail" href="./projects/">PROJECT DETAIL ↗</a>
+            <span id="hero-showcase-focus">공개 전 UX와 실제 플레이 QA</span>
+          </div>
         </div>
       </aside>
     </section>
@@ -144,7 +146,10 @@
             <div><span>01 / ACTIVE PROJECTS</span><strong>지금 만들고 있는 것</strong></div>
             <a href="./projects/">ALL PROJECTS ↗</a>
           </div>
-          <div id="project-grid" class="project-grid deck-project-grid" aria-live="polite"></div>
+          <div class="project-picker">
+            <div id="project-picker-tabs" class="project-picker-tabs" role="tablist" aria-label="프로젝트 선택"></div>
+            <div id="project-stage" class="project-stage" aria-live="polite"></div>
+          </div>
         </section>
 
         <section id="activity" class="deck-panel" data-world-panel="activity" role="tabpanel" hidden>
@@ -152,7 +157,7 @@
             <div><span>02 / LATEST SIGNALS</span><strong>밖에서 이어진 최근 활동</strong></div>
             <a href="./activity/">ALL ACTIVITY ↗</a>
           </div>
-          <div id="activity-list" class="activity-grid deck-activity-grid" aria-live="polite"></div>
+          <div id="activity-list" class="signal-timeline" aria-live="polite"></div>
         </section>
 
         <section id="lab" class="deck-panel" data-world-panel="lab" role="tabpanel" hidden>
@@ -160,7 +165,7 @@
             <div><span>03 / BUILD NOTES</span><strong>짧게 남긴 제작 변화</strong></div>
             <a href="./lab/">OPEN TUKI LAB ↗</a>
           </div>
-          <div id="devlog-list" class="devlog-list deck-log-list" aria-live="polite"></div>
+          <div id="devlog-list" class="build-notes" aria-live="polite"></div>
         </section>
       </div>
     </section>

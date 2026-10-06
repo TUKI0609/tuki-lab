@@ -1,1 +1,142 @@
-[]
+[
+  {
+    "id": "lab-lutratide-survivors-2026-W41",
+    "project": "lutratide-survivors",
+    "projectName": "LUTRATIDE SURVIVORS",
+    "period": "2026-W41",
+    "status": "PENDING",
+    "needsApproval": true,
+    "suggestedType": "BUILD LOG",
+    "suggestedTitle": "LUTRATIDE SURVIVORS · GPT-6 Astra로 만든 게임, 이번엔 진화 차이를 키웠습니다",
+    "suggestedSummary": "LUTRATIDE SURVIVORS와 연결된 최근 활동 1건을 하나의 BUILD LOG 후보로 묶었습니다. 출처: YouTube. 승인 전에는 TUKI LAB에 공개되지 않습니다.",
+    "confidence": 70,
+    "evidenceCount": 1,
+    "evidence": [
+      {
+        "activityId": "a0491d60ef6a6e52",
+        "source": "youtube",
+        "sourceLabel": "YouTube",
+        "title": "GPT-6 Astra로 만든 게임, 이번엔 진화 차이를 키웠습니다 #AI게임 #게임개발 #인디게임 #GPTAstra #Shorts",
+        "url": "https://www.youtube.com/shorts/BrBawuxsBy0",
+        "publishedAt": "2026-10-05T15:47:08.000Z"
+      }
+    ],
+    "evidenceHash": "866b9009dcde",
+    "generatedAt": "2026-10-06T09:18:47.068Z",
+    "updatedAt": "2026-10-06T09:18:47.069Z",
+    "approvedAt": null,
+    "rejectedAt": null
+  },
+  {
+    "id": "lab-momo-2026-W40",
+    "project": "momo",
+    "projectName": "MOMO",
+    "period": "2026-W40",
+    "status": "PENDING",
+    "needsApproval": true,
+    "suggestedType": "BUILD LOG",
+    "suggestedTitle": "MOMO · 다마고치 게임 만들기｜캐릭터가 드디어 밥을 먹습니다",
+    "suggestedSummary": "MOMO와 연결된 최근 활동 1건을 하나의 BUILD LOG 후보로 묶었습니다. 출처: YouTube. 승인 전에는 TUKI LAB에 공개되지 않습니다.",
+    "confidence": 70,
+    "evidenceCount": 1,
+    "evidence": [
+      {
+        "activityId": "f0b3b099a2402028",
+        "source": "youtube",
+        "sourceLabel": "YouTube",
+        "title": "다마고치 게임 만들기｜캐릭터가 드디어 밥을 먹습니다 #ai게임 #게임개발 #gpt",
+        "url": "https://www.youtube.com/shorts/KKx1ILxPxHE",
+        "publishedAt": "2026-10-03T09:12:55.000Z"
+      }
+    ],
+    "evidenceHash": "d4ba34db036b",
+    "generatedAt": "2026-10-06T09:18:47.069Z",
+    "updatedAt": "2026-10-06T09:18:47.069Z",
+    "approvedAt": null,
+    "rejectedAt": null
+  },
+  {
+    "id": "lab-lutratide-survivors-2026-W40",
+    "project": "lutratide-survivors",
+    "projectName": "LUTRATIDE SURVIVORS",
+    "period": "2026-W40",
+    "status": "PENDING",
+    "needsApproval": true,
+    "suggestedType": "FIX",
+    "suggestedTitle": "LUTRATIDE SURVIVORS · 5탄) 챗GPT로 만든 게임, 몬스터를 고쳤더니…｜",
+    "suggestedSummary": "LUTRATIDE SURVIVORS와 연결된 최근 활동 1건을 하나의 FIX 후보로 묶었습니다. 출처: YouTube. 승인 전에는 TUKI LAB에 공개되지 않습니다.",
+    "confidence": 70,
+    "evidenceCount": 1,
+    "evidence": [
+      {
+        "activityId": "7c6740135538a8e0",
+        "source": "youtube",
+        "sourceLabel": "YouTube",
+        "title": "5탄) 챗GPT로 만든 게임, 몬스터를 고쳤더니…｜#바이브코딩 #AI게임만들기 #챗GPT #인디게임개발 #뱀서라이크 #Shorts",
+        "url": "https://www.youtube.com/shorts/elhXFK08t7E",
+        "publishedAt": "2026-09-29T06:53:50.000Z"
+      }
+    ],
+    "evidenceHash": "f6f3c1aada84",
+    "generatedAt": "2026-10-06T09:18:47.069Z",
+    "updatedAt": "2026-10-06T09:18:47.069Z",
+    "approvedAt": null,
+    "rejectedAt": null
+  },
+  {
+    "id": "lab-aevowake-2026-W39",
+    "project": "aevowake",
+    "projectName": "AEVOWAKE",
+    "period": "2026-W39",
+    "status": "PENDING",
+    "needsApproval": true,
+    "suggestedType": "DECISION",
+    "suggestedTitle": "AEVOWAKE · AI로 웹툰 연재까지 가능할까? 직접 만든 웹소설로 도전해봤습니다",
+    "suggestedSummary": "AEVOWAKE와 연결된 최근 활동 1건을 하나의 DECISION 후보로 묶었습니다. 출처: Naver Blog · AI / 제작. 승인 전에는 TUKI LAB에 공개되지 않습니다.",
+    "confidence": 70,
+    "evidenceCount": 1,
+    "evidence": [
+      {
+        "activityId": "aef736215b77c20b",
+        "source": "naver-ai",
+        "sourceLabel": "Naver Blog · AI / 제작",
+        "title": "AI로 웹툰 연재까지 가능할까? 직접 만든 웹소설로 도전해봤습니다",
+        "url": "https://blog.naver.com/ty_free/224423874662?fromRss=true&trackingCode=rss",
+        "publishedAt": "2026-09-27T06:44:37.000Z"
+      }
+    ],
+    "evidenceHash": "3b0410750abd",
+    "generatedAt": "2026-10-06T09:18:47.069Z",
+    "updatedAt": "2026-10-06T09:18:47.069Z",
+    "approvedAt": null,
+    "rejectedAt": null
+  },
+  {
+    "id": "lab-lutratide-survivors-2026-W39",
+    "project": "lutratide-survivors",
+    "projectName": "LUTRATIDE SURVIVORS",
+    "period": "2026-W39",
+    "status": "PENDING",
+    "needsApproval": true,
+    "suggestedType": "BUILD LOG",
+    "suggestedTitle": "LUTRATIDE SURVIVORS · 9분 50초 만에 만든 게임, 업데이트 후 이렇게 달라졌습니다",
+    "suggestedSummary": "LUTRATIDE SURVIVORS와 연결된 최근 활동 1건을 하나의 BUILD LOG 후보로 묶었습니다. 출처: YouTube. 승인 전에는 TUKI LAB에 공개되지 않습니다.",
+    "confidence": 70,
+    "evidenceCount": 1,
+    "evidence": [
+      {
+        "activityId": "7400298221d82f54",
+        "source": "youtube",
+        "sourceLabel": "YouTube",
+        "title": "9분 50초 만에 만든 게임, 업데이트 후 이렇게 달라졌습니다",
+        "url": "https://www.youtube.com/shorts/PrqgIoBEZoE",
+        "publishedAt": "2026-09-21T05:07:09.000Z"
+      }
+    ],
+    "evidenceHash": "6ed800069660",
+    "generatedAt": "2026-10-06T09:18:47.069Z",
+    "updatedAt": "2026-10-06T09:18:47.069Z",
+    "approvedAt": null,
+    "rejectedAt": null
+  }
+]

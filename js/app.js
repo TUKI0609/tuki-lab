@@ -1,12 +1,12 @@
 import {
-  loadJson, renderNav, renderProjectLinks,
-  renderChannels, renderCharacters, assetUrl, hydrateAssets, setYear
+  loadJson, initI18n, getLanguage, t, term, localizeProject, localizeLog,
+  renderNav, renderProjectLinks, renderChannels, renderCharacters, assetUrl, hydrateAssets, setYear
 } from "./core.js";
 
-function formatActivityDate(value) {
+function formatActivityDate(value, language = "ko") {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return "";
-  return new Intl.DateTimeFormat("ko-KR", {
+  return new Intl.DateTimeFormat(language === "en" ? "en-US" : "ko-KR", {
     month: "short", day: "numeric", hour: "2-digit", minute: "2-digit"
   }).format(date);
 }
@@ -18,6 +18,9 @@ function shortProjectLabel(name = "") {
 
 async function boot() {
   try {
+    await initI18n("");
+    const language = getLanguage();
+
     const [site, projects, logs, channels, characters, activity, candidates] = await Promise.all([
       loadJson("content/site.json"),
       loadJson("content/projects.json"),
@@ -44,7 +47,8 @@ async function boot() {
     const projectMap = new Map(projects.map(project => [project.id, project]));
     const latestLinkedActivity = activity.find(item => item.project && projectMap.has(item.project));
     const latestActivity = activity[0] || null;
-    const currentProject = latestLinkedActivity ? projectMap.get(latestLinkedActivity.project) : projects[0];
+    const currentProjectRaw = latestLinkedActivity ? projectMap.get(latestLinkedActivity.project) : projects[0];
+    const currentProject = currentProjectRaw ? localizeProject(currentProjectRaw) : null;
 
     const projectCount = document.querySelector("#hero-project-count");
     const candidateCount = document.querySelector("#hero-candidate-count");
@@ -53,8 +57,8 @@ async function boot() {
 
     const bannerProject = document.querySelector("#live-banner-project");
     const bannerText = document.querySelector("#live-banner-text");
-    if (bannerProject) bannerProject.textContent = currentProject ? currentProject.name : "TUKI WORLD";
-    if (bannerText) bannerText.textContent = latestActivity ? latestActivity.title : "새 활동을 기다리는 중";
+    if (bannerProject) bannerProject.textContent = currentProject?.name || "TUKI WORLD";
+    if (bannerText) bannerText.textContent = latestActivity?.title || (language === "en" ? "Waiting for new activity" : "새 활동을 기다리는 중");
 
     const nowProject = document.querySelector("#tuki-now-project");
     const nowFocus = document.querySelector("#tuki-now-focus");
@@ -83,8 +87,9 @@ async function boot() {
     }
 
     function renderHeroProject() {
-      const project = projects[heroProjectIndex];
-      if (!project) return;
+      const rawProject = projects[heroProjectIndex];
+      if (!rawProject) return;
+      const project = localizeProject(rawProject);
 
       const count = document.querySelector("#hero-showcase-count");
       const images = document.querySelector("#hero-showcase-images");
@@ -97,12 +102,14 @@ async function boot() {
       const focus = document.querySelector("#hero-showcase-focus");
 
       if (count) count.textContent = `${String(heroProjectIndex + 1).padStart(2, "0")} / ${String(projects.length).padStart(2, "0")}`;
-      if (images) images.innerHTML = (visualMap.get(project.id) || [])
-        .map((url, index) => `<img src="${url}" alt="${project.name} 대표 이미지 ${index + 1}" />`).join("");
-      images?.classList.toggle("is-duo", (visualMap.get(project.id) || []).length > 1);
-      images?.setAttribute("data-project", project.id);
-      if (status) status.textContent = project.status;
-      if (route) route.textContent = `${project.route} · ${project.type}`;
+      if (images) {
+        images.innerHTML = (visualMap.get(project.id) || [])
+          .map((url, index) => `<img src="${url}" alt="${project.name} 대표 이미지 ${index + 1}" />`).join("");
+        images.classList.toggle("is-duo", (visualMap.get(project.id) || []).length > 1);
+        images.setAttribute("data-project", project.id);
+      }
+      if (status) status.textContent = project.statusLabel;
+      if (route) route.textContent = `${project.routeLabel} · ${project.typeLabel}`;
       if (platform) platform.textContent = project.platform;
       if (name) name.textContent = project.name;
       if (tagline) tagline.textContent = project.tagline;
@@ -125,8 +132,9 @@ async function boot() {
     let selectedProjectId = currentProject?.id || projects[0]?.id;
 
     function renderProjectStage(projectId) {
-      const project = projectMap.get(projectId) || projects[0];
-      if (!project || !projectStage) return;
+      const rawProject = projectMap.get(projectId) || projects[0];
+      if (!rawProject || !projectStage) return;
+      const project = localizeProject(rawProject);
       selectedProjectId = project.id;
 
       [...pickerTabs?.querySelectorAll("[data-project-pick]") || []].forEach(button => {
@@ -137,27 +145,27 @@ async function boot() {
 
       const externalLinks = project.links?.length
         ? renderProjectLinks(project.links)
-        : '<span class="project-wait">NOT YET PUBLIC</span>';
+        : `<span class="project-wait">${term("NOT YET PUBLIC")}</span>`;
 
       projectStage.innerHTML = `
         <div class="project-stage-visual stage-${project.id}">
-          <span class="project-stage-index">SELECTED / ${String(projects.findIndex(p => p.id === project.id) + 1).padStart(2, "0")}</span>
+          <span class="project-stage-index">${t("project.selected","선택됨")} / ${String(projects.findIndex(p => p.id === project.id) + 1).padStart(2, "0")}</span>
           ${projectImagesMarkup(project, "stage-images")}
-          <span class="project-stage-mark">TRY AGAIN</span>
+          <span class="project-stage-mark">${t("project.tryAgain","다시 시도")}</span>
         </div>
         <div class="project-stage-copy">
           <div class="project-stage-meta">
-            <span>${project.route} · ${project.type}</span>
-            <b>${project.status}</b>
+            <span>${project.routeLabel} · ${project.typeLabel}</span>
+            <b>${project.statusLabel}</b>
           </div>
           <h3>${project.name}</h3>
           <p class="project-stage-tagline">${project.tagline}</p>
           <div class="project-stage-focus">
-            <span>NOW FIXING</span>
+            <span>${t("project.nowFixing","지금 고치는 중")}</span>
             <strong>${project.currentFocus}</strong>
           </div>
           <div class="project-stage-actions">
-            <a class="project-stage-primary" href="./projects/detail/?id=${encodeURIComponent(project.id)}">DETAILS ↗</a>
+            <a class="project-stage-primary" href="./projects/detail/?id=${encodeURIComponent(project.id)}">${t("common.details","상세 보기 →")}</a>
             ${externalLinks}
           </div>
         </div>
@@ -167,7 +175,7 @@ async function boot() {
     if (pickerTabs) {
       pickerTabs.innerHTML = projects.map(project => `
         <button type="button" role="tab" aria-selected="false" data-project-pick="${project.id}">
-          <span>${project.route}</span>
+          <span>${term(project.route)}</span>
           <strong>${shortProjectLabel(project.name)}</strong>
         </button>
       `).join("");
@@ -187,7 +195,7 @@ async function boot() {
             <span>${String(index + 1).padStart(2, "0")}</span>
           </div>
           <div class="signal-main">
-            <div class="signal-meta"><span>${item.sourceLabel}</span><time>${formatActivityDate(item.publishedAt)}</time></div>
+            <div class="signal-meta"><span>${item.sourceLabel}</span><time>${formatActivityDate(item.publishedAt, language)}</time></div>
             <strong>${item.title}</strong>
           </div>
           <span class="signal-arrow">↗</span>
@@ -197,17 +205,20 @@ async function boot() {
 
     const labRoot = document.querySelector("#devlog-list");
     if (labRoot) {
-      labRoot.innerHTML = logs.slice(0, 5).map((log, index) => `
-        <article class="build-note note-${(index % 3) + 1}">
-          <div class="build-note-top">
-            <span>${log.type}</span>
-            <time>${log.date}</time>
-          </div>
-          <strong>${log.title}</strong>
-          ${log.summary ? `<p>${log.summary}</p>` : ""}
-          <b aria-hidden="true">${String(log.id).padStart(3, "0")}</b>
-        </article>
-      `).join("");
+      labRoot.innerHTML = logs.slice(0, 5).map((rawLog, index) => {
+        const log = localizeLog(rawLog);
+        return `
+          <article class="build-note note-${(index % 3) + 1}">
+            <div class="build-note-top">
+              <span>${log.typeLabel}</span>
+              <time>${log.date}</time>
+            </div>
+            <strong>${log.titleLabel}</strong>
+            ${log.summaryLabel ? `<p>${log.summaryLabel}</p>` : ""}
+            <b aria-hidden="true">${String(log.id).padStart(3, "0")}</b>
+          </article>
+        `;
+      }).join("");
     }
 
     const tabProjectCount = document.querySelector("#tab-project-count");
@@ -237,29 +248,13 @@ async function boot() {
     tabButtons.forEach(button => {
       button.addEventListener("click", () => openWorldTab(button.dataset.worldTab));
     });
+
     document.querySelectorAll("[data-open-tab]").forEach(link => {
       link.addEventListener("click", event => {
         event.preventDefault();
         openWorldTab(link.dataset.openTab, { scroll: true });
       });
     });
-
-    const sectionTargets = ["top", "deck", "channels"]
-      .map(id => document.getElementById(id))
-      .filter(Boolean);
-    const dockLinks = [...document.querySelectorAll("[data-dock-section]")];
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(entries => {
-        const visible = entries
-          .filter(entry => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (!visible) return;
-        dockLinks.forEach(link => {
-          link.classList.toggle("is-active", link.dataset.dockSection === visible.target.id);
-        });
-      }, { rootMargin: "-20% 0px -65% 0px", threshold: [0.05, 0.2, 0.5] });
-      sectionTargets.forEach(section => observer.observe(section));
-    }
 
     await hydrateAssets(document, "");
     setYear();

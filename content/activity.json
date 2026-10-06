@@ -1,33 +1,5 @@
 [
   {
-    "id": "250f26dfe7860b79",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "한국 우즈베키스탄 축구 오늘 몇시?｜중계·손흥민 59호·김민재 출전 여부 관전 포인트",
-    "summary": "오늘 대한민국 축구대표팀이 우즈베키스탄을 상대로 9·10월 A매치 4연전 마지막 경기를 치릅니다. 경기는 10월 6일 오후 8시 용인 미르스타디움에서 시작하며 TV조선, tvN, 쿠팡플레이를 통해 볼 수 있습니다. 이번 경기는 단순한 평가전 한 경기를 넘어 손흥민의 A매치 최다 득점 신기록 도전, 김민재의 출전 여부, 모",
-    "url": "https://blog.naver.com/abb7664/224432987635?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-06T05:48:33.000Z",
-    "detectedAt": "2026-10-06T08:57:12.382Z",
-    "manual": false
-  },
-  {
-    "id": "37c0d36ff237d557",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "FC온라인 가을 전어구이 만들기｜귀한 가을전어·소금·숯불 얻는 법과 교환 보상 정리",
-    "summary": "FC온라인에서 진행 중인 '가을 전어구이 만들기'는 처음 보면 재료도 세 종류고 교환식도 많아서 조금 복잡합니다. 결론부터 보면 핵심 재료는 귀한 가을전어, 굵은 소금, 숯불 3종입니다. 이 재료를 모아 에이전트에서 전어구이를 제작하면 선수팩, BP, 수수료 할인 쿠폰 등을 받을 수 있고 가장 높은 단계에서는 26FSL ",
-    "url": "https://blog.naver.com/abb7664/224432809771?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-06T03:09:27.000Z",
-    "detectedAt": "2026-10-06T08:57:12.382Z",
-    "manual": false
-  },
-  {
     "id": "bf8b90b413231cf9",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -39,21 +11,12 @@
     "url": "https://blog.naver.com/ty_free/224432774897?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-06T02:37:59.000Z",
     "detectedAt": "2026-10-06T08:57:11.321Z",
-    "manual": false
-  },
-  {
-    "id": "3a6d46526e2efb96",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "마인크래프트 던전스2 2인 플레이 방법｜PC 한 대·로컬 협동·온라인·크로스플레이 정리",
-    "summary": "마인크래프트 던전스2는 혼자뿐 아니라 최대 4명까지 함께 플레이할 수 있습니다. 같은 PC나 콘솔에서 2명이 함께하는 로컬 협동도 가능하고, 온라인 친구와 크로스플레이도 지원합니다. 특히 이번 작품에서는 로컬과 온라인을 섞는 'Mixed Co-op'도 지원해서, 같은 PC에서 2명이 플레이하면서 다른 곳의 친구가 온라인으",
-    "url": "https://blog.naver.com/abb7664/224432451125?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-05T16:53:53.000Z",
-    "detectedAt": "2026-10-06T08:57:12.382Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "a0491d60ef6a6e52",
@@ -67,7 +30,12 @@
     "url": "https://www.youtube.com/shorts/BrBawuxsBy0",
     "publishedAt": "2026-10-05T15:47:08.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "59179aaed90c0d55",
@@ -81,35 +49,12 @@
     "url": "https://blog.naver.com/ty_free/224431969533?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-05T06:37:47.000Z",
     "detectedAt": "2026-10-06T08:57:11.321Z",
-    "manual": false
-  },
-  {
-    "id": "597fb45bc98c6748",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "도깨비의세계 출시일 10월 8일 오전 11시｜직업 없는 12스킬·PC모바일·사전등록 정리",
-    "summary": "카카오게임즈 신작 MMORPG '도깨비의세계'가 10월 8일 오전 11시 정식 출시됩니다. PC와 모바일에서 즐길 수 있고, 일반적인 MMORPG처럼 처음부터 직업 하나를 정하는 방식이 아니라 12개의 스킬 스타일을 자유롭게 조합하는 구조가 핵심인데요. 출시 전까지 사전등록도 계속 진행됩니다. 출시 전에 알아둘 내용만 빠",
-    "url": "https://blog.naver.com/abb7664/224431941475?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-05T06:05:22.000Z",
-    "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
-  },
-  {
-    "id": "f107b202cde6ad96",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "트릭컬 3주년 600뽑 지금 시작해도 될까?｜15일 출석·무료 모집권 정리",
-    "summary": "트릭컬 리바이브 3주년을 보고 지금 시작해도 늦지 않았을까 고민하는 분들이 있을 것 같습니다. 결론부터 보면 10월 4일 기준 아직 늦지 않았습니다. 3주년 주요 이벤트는 10월 22일 오전 10시 59분까지 진행되고, 핵심인 15일 누적 출석을 완료할 시간도 남아 있습니다. 다만 많이 보이는 '600뽑'은 15일 출석만",
-    "url": "https://blog.naver.com/abb7664/224431038778?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-04T04:27:58.000Z",
-    "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "7c6e6a40a6d32df4",
@@ -123,35 +68,12 @@
     "url": "https://blog.naver.com/ty_free/224430923108?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-04T01:28:10.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
-  },
-  {
-    "id": "bf1699e8e4d64152",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "포켓몬 챔피언즈 HOME 연동 방법｜스위치·모바일 데이터 공유, 포켓몬 보내기 정리",
-    "summary": "Pokémon Champions를 시작했다면 한 번쯤 궁금해지는 게 있습니다. \"기존 Pokémon HOME에 있던 포켓몬을 가져올 수 있나?\" \"스위치에서 하다가 모바일에서도 이어서 할 수 있나?\" 결론부터 보면 둘 다 가능합니다. Pokémon Champions는 Pokémon HOME과 연동해 일부 포켓몬을 원정 형",
-    "url": "https://blog.naver.com/abb7664/224430907552?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-04T01:03:44.000Z",
-    "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
-  },
-  {
-    "id": "ad711ffe301768df",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "한국 일본 1-0, 아시안게임 축구 4연패｜엄지성 결승골·양민혁 투지가 만든 한일전",
-    "summary": "대한민국이 결국 해냈습니다. 2026 아이치·나고야 아시안게임 남자축구 결승에서 일본을 1-0으로 꺾고 금메달을 차지했습니다. 2014 인천, 2018 자카르타·팔렘방, 2022 항저우 대회에 이어 아시안게임 남자축구 4회 연속 우승입니다. 결과는 1-0. 하지만 개인적으로 이번 결승에서 가장 기억에 남은 건 단순히 스코",
-    "url": "https://blog.naver.com/abb7664/224430570052?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-03T12:33:02.000Z",
-    "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "f0b3b099a2402028",
@@ -159,27 +81,18 @@
     "sourceLabel": "YouTube",
     "kind": "VIDEO",
     "route": "WATCH",
-    "project": null,
+    "project": "momo",
     "title": "다마고치 게임 만들기｜캐릭터가 드디어 밥을 먹습니다 #ai게임 #게임개발 #gpt",
     "summary": "",
     "url": "https://www.youtube.com/shorts/KKx1ILxPxHE",
     "publishedAt": "2026-10-03T09:12:55.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
-  },
-  {
-    "id": "4814d9ccb9a1df20",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "세나리 귀멸 콜라보 지금 시작해도 될까?｜탄지로·젠이츠 무료 획득, 네즈코 4장까지",
-    "summary": "세븐나이츠 리버스 × 귀멸의 칼날 콜라보가 시작된 지 며칠 지났습니다. 지금 들어가도 늦지 않았을까? 탄지로와 젠이츠는 꼭 뽑아야 할까? 네즈코는 어디서 얻을 수 있을까? 결론부터 보면 지금 시작해도 주요 무료 보상을 챙길 시간은 충분합니다. 콜라보는 10월 29일 점검 전까지 진행되고, 탄지로와 젠이츠는 출석 보상으로 ",
-    "url": "https://blog.naver.com/abb7664/224430442076?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-03T08:59:33.000Z",
-    "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "project:momo",
+      "score": 100
+    }
   },
   {
     "id": "8824bedd4d5a4163",
@@ -193,49 +106,12 @@
     "url": "https://blog.naver.com/ty_free/224430305987?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-03T05:37:03.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
-  },
-  {
-    "id": "ff8d8e6bd6bd1db7",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "FC온라인 한일전 핫타임 오늘 6시 시작｜접속만 해도 BP·수수료 30%·선수팩",
-    "summary": "오늘 FC온라인 접속하실 분이라면 오후 6시는 꼭 기억해두세요. 한일전 결승을 기념한 핫타임 접속 이벤트가 오늘 10월 3일 오후 6시부터 11시 59분까지 딱 하루 진행됩니다. PC 또는 FC온라인 M에 한 번만 접속해도 BP 카드, 전체 수수료 30% 할인 쿠폰, 선수팩 묶음 상자를 모두 받을 수 있습니다. 한눈에 보",
-    "url": "https://blog.naver.com/abb7664/224430288827?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-03T05:11:51.000Z",
-    "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
-  },
-  {
-    "id": "04e3fc267f596922",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "한국 베네수엘라 0-0, 왜 답답했을까?｜손흥민 59호골·우즈벡전 일정 관전 포인트",
-    "summary": "대한민국이 베네수엘라와 0-0으로 비겼습니다. 우루과이전 1-4 패배 뒤 가장 궁금했던 건 하나였습니다. 강한 압박을 받을 때 흔들렸던 빌드업과 수비 밸런스를 얼마나 고쳤을까? 결과만 보면 무실점으로 안정됐지만, 경기 내용까지 보면 아직 해결해야 할 부분이 꽤 남았습니다. 전반 첫 슈팅이 45분에 나올 정도로 공격 전개가",
-    "url": "https://blog.naver.com/abb7664/224429855996?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-02T14:18:56.000Z",
-    "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
-  },
-  {
-    "id": "d278386125305a9f",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "배그 700 G코인 무료로 받는 법｜7일 출석 이벤트·유효기간·밀수품 쿠폰 정리",
-    "summary": "배틀그라운드에서 로그인만 해도 총 700 G-Coin을 받을 수 있는 7일 접속 이벤트가 시작됐습니다. 10월 11일 오전 11시까지 매일 로비에 접속하면 하루 100 G-Coin씩 총 700 G-Coin을 받을 수 있고, 연속 출석 보상으로 밀수품 쿠폰 25장도 챙길 수 있습니다. 다만 이번 G-Coin은 영구 보상이 ",
-    "url": "https://blog.naver.com/abb7664/224429663275?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-02T09:48:20.000Z",
-    "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "32063d94e3643a7e",
@@ -249,21 +125,12 @@
     "url": "https://blog.naver.com/ty_free/224429372515?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-02T05:09:22.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
-  },
-  {
-    "id": "f53307af02df95b9",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "FC온라인 개천절·한글날 이벤트 총정리｜26TOTS 8강·UC 8강·수수료 100% 쿠폰",
-    "summary": "FC온라인에서 개천절과 한글날을 맞아 '빨간 날엔 금빛 사냥' 이벤트가 시작됩니다. 핵심은 간단합니다. 10월 3일부터 '개·천·절', 10월 9일부터 '한·글·날' 글자를 모으면 각각 26TOTS 8강, UC 8강 획득 기회 상자를 받을 수 있고, 6글자를 모두 완성하면 전체 수수료 100% 할인 쿠폰까지 받을 수 있습",
-    "url": "https://blog.naver.com/abb7664/224429340175?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-02T04:37:50.000Z",
-    "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "7231a0a70f05ff24",
@@ -277,7 +144,12 @@
     "url": "https://blog.naver.com/ty_free/224428404584?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-01T07:33:02.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "3ade1c695a2500db",
@@ -291,7 +163,12 @@
     "url": "https://blog.naver.com/ty_free/224427884654?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-09-30T23:43:40.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "0ef4bf9027d8f47f",
@@ -305,7 +182,12 @@
     "url": "https://blog.naver.com/ty_free/224427215763?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-09-30T08:30:00.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "c66a504e2a3b11d2",
@@ -319,7 +201,12 @@
     "url": "https://blog.naver.com/ty_free/224427159807?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-09-30T06:38:06.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "2c045ddf937d3ca4",
@@ -333,7 +220,12 @@
     "url": "https://blog.naver.com/ty_free/224426134448?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-09-29T08:16:24.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "7c6740135538a8e0",
@@ -341,13 +233,18 @@
     "sourceLabel": "YouTube",
     "kind": "VIDEO",
     "route": "WATCH",
-    "project": null,
+    "project": "lutratide-survivors",
     "title": "5탄) 챗GPT로 만든 게임, 몬스터를 고쳤더니…｜#바이브코딩 #AI게임만들기 #챗GPT #인디게임개발 #뱀서라이크 #Shorts",
     "summary": "",
     "url": "https://www.youtube.com/shorts/elhXFK08t7E",
     "publishedAt": "2026-09-29T06:53:50.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "project:lutratide-survivors",
+      "score": 100
+    }
   },
   {
     "id": "f1c849c9dff82c72",
@@ -361,7 +258,12 @@
     "url": "https://blog.naver.com/ty_free/224424873817?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-09-28T06:40:27.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "aef736215b77c20b",
@@ -369,13 +271,18 @@
     "sourceLabel": "Naver Blog · AI / 제작",
     "kind": "POST",
     "route": "BUILD",
-    "project": null,
+    "project": "aevowake",
     "title": "AI로 웹툰 연재까지 가능할까? 직접 만든 웹소설로 도전해봤습니다",
     "summary": "웹소설을 쓰다 보니까 어느 순간 이런 생각이 들었습니다. “이 이야기를 웹툰으로 만들면 어떤 느낌일까?” 그래서 그냥 상상만 하지 않고 직접 해봤어요. 제가 쓰고 있던 웹소설 ‘에보웨이크(AEVOWAKE)’ 시즌1을 기준으로 캐릭터 디자인부터 배경, 콘티, 컷 구성, 이미지 제작까지 하나씩 진행했고, 결국 네이버 웹툰 크",
     "url": "https://blog.naver.com/ty_free/224423874662?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-09-27T06:44:37.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "project:aevowake",
+      "score": 100
+    }
   },
   {
     "id": "43913a5ab0cd76e6",
@@ -389,7 +296,12 @@
     "url": "https://www.youtube.com/shorts/tApq3jZlA5o",
     "publishedAt": "2026-09-27T04:48:57.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "134833316f9e41a0",
@@ -403,7 +315,12 @@
     "url": "https://www.youtube.com/shorts/H8QyErkBvCI",
     "publishedAt": "2026-09-25T06:54:32.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "7400298221d82f54",
@@ -417,7 +334,12 @@
     "url": "https://www.youtube.com/shorts/PrqgIoBEZoE",
     "publishedAt": "2026-09-21T05:07:09.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "b856eabeb4a24b15",
@@ -431,7 +353,12 @@
     "url": "https://www.youtube.com/shorts/9ESE4Y8qwKo",
     "publishedAt": "2026-09-17T16:25:15.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "8c356972fb592d65",
@@ -445,7 +372,12 @@
     "url": "https://www.youtube.com/watch?v=brXb0zLQh_g",
     "publishedAt": "2026-09-17T15:57:43.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "24223278d0db1120",
@@ -459,48 +391,11 @@
     "url": "https://www.youtube.com/watch?v=pInPyYdHUZU",
     "publishedAt": "2026-02-10T09:14:59.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
-  },
-  {
-    "id": "c78744ec9c94ca29",
-    "source": "youtube",
-    "sourceLabel": "YouTube",
-    "kind": "VIDEO",
-    "route": "WATCH",
-    "project": null,
-    "title": "1일 1 감정 노래 | 지하실 디스코 | Emotional Healing BGM",
-    "summary": "",
-    "url": "https://www.youtube.com/watch?v=yb4g8oRfnJo",
-    "publishedAt": "2026-02-08T07:02:25.000Z",
-    "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
-  },
-  {
-    "id": "fc645a7ec3eb99b1",
-    "source": "youtube",
-    "sourceLabel": "YouTube",
-    "kind": "VIDEO",
-    "route": "WATCH",
-    "project": null,
-    "title": "1일 1 감정 노래 | 괜히 걱정하는 밤 | Emotional Healing BGM",
-    "summary": "",
-    "url": "https://www.youtube.com/watch?v=uz9UBkj8ga0",
-    "publishedAt": "2026-02-06T00:01:04.000Z",
-    "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
-  },
-  {
-    "id": "5732982ee9f00a59",
-    "source": "youtube",
-    "sourceLabel": "YouTube",
-    "kind": "VIDEO",
-    "route": "WATCH",
-    "project": null,
-    "title": "1일 1 감정 노래 | 처음인 것처럼 | Emotional Healing BGM",
-    "summary": "",
-    "url": "https://www.youtube.com/watch?v=ZhnU1c16OHM",
-    "publishedAt": "2026-02-05T00:00:43.000Z",
-    "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   }
 ]

@@ -11,7 +11,12 @@
     "url": "https://blog.naver.com/abb7664/224432987635?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-06T05:48:33.000Z",
     "detectedAt": "2026-10-06T08:57:12.382Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
   },
   {
     "id": "37c0d36ff237d557",
@@ -25,7 +30,12 @@
     "url": "https://blog.naver.com/abb7664/224432809771?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-06T03:09:27.000Z",
     "detectedAt": "2026-10-06T08:57:12.382Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
   },
   {
     "id": "bf8b90b413231cf9",
@@ -39,7 +49,12 @@
     "url": "https://blog.naver.com/ty_free/224432774897?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-06T02:37:59.000Z",
     "detectedAt": "2026-10-06T08:57:11.321Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "3a6d46526e2efb96",
@@ -53,7 +68,12 @@
     "url": "https://blog.naver.com/abb7664/224432451125?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-05T16:53:53.000Z",
     "detectedAt": "2026-10-06T08:57:12.382Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
   },
   {
     "id": "a0491d60ef6a6e52",
@@ -67,7 +87,12 @@
     "url": "https://www.youtube.com/shorts/BrBawuxsBy0",
     "publishedAt": "2026-10-05T15:47:08.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "59179aaed90c0d55",
@@ -81,7 +106,12 @@
     "url": "https://blog.naver.com/ty_free/224431969533?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-05T06:37:47.000Z",
     "detectedAt": "2026-10-06T08:57:11.321Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "597fb45bc98c6748",
@@ -95,7 +125,12 @@
     "url": "https://blog.naver.com/abb7664/224431941475?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-05T06:05:22.000Z",
     "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
   },
   {
     "id": "f107b202cde6ad96",
@@ -109,7 +144,12 @@
     "url": "https://blog.naver.com/abb7664/224431038778?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-04T04:27:58.000Z",
     "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
   },
   {
     "id": "7c6e6a40a6d32df4",
@@ -123,7 +163,12 @@
     "url": "https://blog.naver.com/ty_free/224430923108?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-04T01:28:10.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "bf1699e8e4d64152",
@@ -137,7 +182,12 @@
     "url": "https://blog.naver.com/abb7664/224430907552?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-04T01:03:44.000Z",
     "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
   },
   {
     "id": "ad711ffe301768df",
@@ -151,7 +201,12 @@
     "url": "https://blog.naver.com/abb7664/224430570052?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-03T12:33:02.000Z",
     "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
   },
   {
     "id": "f0b3b099a2402028",
@@ -159,13 +214,18 @@
     "sourceLabel": "YouTube",
     "kind": "VIDEO",
     "route": "WATCH",
-    "project": null,
+    "project": "momo",
     "title": "다마고치 게임 만들기｜캐릭터가 드디어 밥을 먹습니다 #ai게임 #게임개발 #gpt",
     "summary": "",
     "url": "https://www.youtube.com/shorts/KKx1ILxPxHE",
     "publishedAt": "2026-10-03T09:12:55.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "project:momo",
+      "score": 100
+    }
   },
   {
     "id": "4814d9ccb9a1df20",
@@ -179,7 +239,12 @@
     "url": "https://blog.naver.com/abb7664/224430442076?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-03T08:59:33.000Z",
     "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
   },
   {
     "id": "8824bedd4d5a4163",
@@ -193,7 +258,12 @@
     "url": "https://blog.naver.com/ty_free/224430305987?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-03T05:37:03.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "ff8d8e6bd6bd1db7",
@@ -207,7 +277,12 @@
     "url": "https://blog.naver.com/abb7664/224430288827?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-03T05:11:51.000Z",
     "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
   },
   {
     "id": "04e3fc267f596922",
@@ -221,7 +296,12 @@
     "url": "https://blog.naver.com/abb7664/224429855996?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-02T14:18:56.000Z",
     "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
   },
   {
     "id": "d278386125305a9f",
@@ -235,7 +315,12 @@
     "url": "https://blog.naver.com/abb7664/224429663275?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-02T09:48:20.000Z",
     "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
   },
   {
     "id": "32063d94e3643a7e",
@@ -249,7 +334,12 @@
     "url": "https://blog.naver.com/ty_free/224429372515?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-02T05:09:22.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "f53307af02df95b9",
@@ -263,7 +353,12 @@
     "url": "https://blog.naver.com/abb7664/224429340175?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-02T04:37:50.000Z",
     "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
   },
   {
     "id": "7231a0a70f05ff24",
@@ -277,7 +372,12 @@
     "url": "https://blog.naver.com/ty_free/224428404584?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-01T07:33:02.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "3ade1c695a2500db",
@@ -291,7 +391,12 @@
     "url": "https://blog.naver.com/ty_free/224427884654?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-09-30T23:43:40.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "0ef4bf9027d8f47f",
@@ -305,7 +410,12 @@
     "url": "https://blog.naver.com/ty_free/224427215763?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-09-30T08:30:00.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "c66a504e2a3b11d2",
@@ -319,7 +429,12 @@
     "url": "https://blog.naver.com/ty_free/224427159807?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-09-30T06:38:06.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "2c045ddf937d3ca4",
@@ -333,7 +448,12 @@
     "url": "https://blog.naver.com/ty_free/224426134448?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-09-29T08:16:24.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "7c6740135538a8e0",
@@ -341,13 +461,18 @@
     "sourceLabel": "YouTube",
     "kind": "VIDEO",
     "route": "WATCH",
-    "project": null,
+    "project": "lutratide-survivors",
     "title": "5탄) 챗GPT로 만든 게임, 몬스터를 고쳤더니…｜#바이브코딩 #AI게임만들기 #챗GPT #인디게임개발 #뱀서라이크 #Shorts",
     "summary": "",
     "url": "https://www.youtube.com/shorts/elhXFK08t7E",
     "publishedAt": "2026-09-29T06:53:50.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "project:lutratide-survivors",
+      "score": 100
+    }
   },
   {
     "id": "f1c849c9dff82c72",
@@ -361,7 +486,12 @@
     "url": "https://blog.naver.com/ty_free/224424873817?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-09-28T06:40:27.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "aef736215b77c20b",
@@ -369,13 +499,18 @@
     "sourceLabel": "Naver Blog · AI / 제작",
     "kind": "POST",
     "route": "BUILD",
-    "project": null,
+    "project": "aevowake",
     "title": "AI로 웹툰 연재까지 가능할까? 직접 만든 웹소설로 도전해봤습니다",
     "summary": "웹소설을 쓰다 보니까 어느 순간 이런 생각이 들었습니다. “이 이야기를 웹툰으로 만들면 어떤 느낌일까?” 그래서 그냥 상상만 하지 않고 직접 해봤어요. 제가 쓰고 있던 웹소설 ‘에보웨이크(AEVOWAKE)’ 시즌1을 기준으로 캐릭터 디자인부터 배경, 콘티, 컷 구성, 이미지 제작까지 하나씩 진행했고, 결국 네이버 웹툰 크",
     "url": "https://blog.naver.com/ty_free/224423874662?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-09-27T06:44:37.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "project:aevowake",
+      "score": 100
+    }
   },
   {
     "id": "43913a5ab0cd76e6",
@@ -389,7 +524,12 @@
     "url": "https://www.youtube.com/shorts/tApq3jZlA5o",
     "publishedAt": "2026-09-27T04:48:57.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "134833316f9e41a0",
@@ -403,7 +543,12 @@
     "url": "https://www.youtube.com/shorts/H8QyErkBvCI",
     "publishedAt": "2026-09-25T06:54:32.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "7400298221d82f54",
@@ -417,7 +562,12 @@
     "url": "https://www.youtube.com/shorts/PrqgIoBEZoE",
     "publishedAt": "2026-09-21T05:07:09.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "b856eabeb4a24b15",
@@ -431,7 +581,12 @@
     "url": "https://www.youtube.com/shorts/9ESE4Y8qwKo",
     "publishedAt": "2026-09-17T16:25:15.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "8c356972fb592d65",
@@ -445,7 +600,12 @@
     "url": "https://www.youtube.com/watch?v=brXb0zLQh_g",
     "publishedAt": "2026-09-17T15:57:43.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "24223278d0db1120",
@@ -459,7 +619,12 @@
     "url": "https://www.youtube.com/watch?v=pInPyYdHUZU",
     "publishedAt": "2026-02-10T09:14:59.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
   },
   {
     "id": "c78744ec9c94ca29",
@@ -473,7 +638,12 @@
     "url": "https://www.youtube.com/watch?v=yb4g8oRfnJo",
     "publishedAt": "2026-02-08T07:02:25.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
   },
   {
     "id": "fc645a7ec3eb99b1",
@@ -487,7 +657,12 @@
     "url": "https://www.youtube.com/watch?v=uz9UBkj8ga0",
     "publishedAt": "2026-02-06T00:01:04.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
   },
   {
     "id": "5732982ee9f00a59",
@@ -501,6 +676,11 @@
     "url": "https://www.youtube.com/watch?v=ZhnU1c16OHM",
     "publishedAt": "2026-02-05T00:00:43.000Z",
     "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
   }
 ]

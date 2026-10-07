@@ -4867,3 +4867,222 @@ body.home-v4[data-active-project="aevowake"] {
  .project-history-copy h3 { font-size: 1.1rem; }
  .project-history-copy > p { font-size: .82rem; }
 }
+
+
+/* =========================================================
+   HOME SHOWCASE v5 · Film Archive
+   네 프로젝트 모두 같은 프레임 규격 + 필름 기록물 질감 + 정보판 완전 분리
+   ========================================================= */
+.home-v4 .hero-v4-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 650px;
+  min-width: 0;
+}
+.home-v4 .hero-v4-showcase::before {
+  display: none !important;
+}
+.home-v4 .showcase-top {
+  width: 100%;
+  margin: 0;
+  min-height: 42px;
+}
+
+/* 1~4 프로젝트의 외곽 크기는 이 프레임 하나로 강제 통일한다. */
+.home-v4 .showcase-visual {
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  clip-path: none !important;
+  border: 1px solid rgba(246,234,207,.16);
+  border-radius: 14px;
+  padding: 0;
+  background-color: #111512;
+  background-image:
+    repeating-linear-gradient(90deg,
+      #080a09 0 12px,
+      transparent 12px 28px),
+    repeating-linear-gradient(90deg,
+      #080a09 0 12px,
+      transparent 12px 28px),
+    radial-gradient(circle 220px at var(--spot-x) var(--spot-y),
+      var(--project-accent-soft), transparent 72%),
+    linear-gradient(145deg,#20231e,#111512 68%);
+  background-size:
+    auto 13px,
+    auto 13px,
+    auto,
+    auto;
+  background-position:
+    16px 9px,
+    16px calc(100% - 9px),
+    center,
+    center;
+  background-repeat:
+    repeat-x,
+    repeat-x,
+    no-repeat,
+    no-repeat;
+  box-shadow:
+    0 28px 68px rgba(0,0,0,.28),
+    inset 0 0 0 9px rgba(236,220,188,.035);
+}
+
+/* 이전의 광택용 pseudo를 필름 내부 프레임/캡션으로 재정의 */
+.home-v4 .showcase-visual::before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+  inset: 29px 18px 34px;
+  border: 1px solid rgba(246,234,207,.13);
+  border-radius: 5px;
+  background: none;
+  filter: none;
+  box-shadow:
+    inset 0 0 24px rgba(0,0,0,.18),
+    0 0 0 1px rgba(0,0,0,.24);
+}
+.home-v4 .showcase-visual::after {
+  content: "TUKI WORLD  ·  ARCHIVE FRAME";
+  position: absolute;
+  z-index: 7;
+  left: 22px;
+  right: 22px;
+  bottom: 10px;
+  height: auto;
+  background: none;
+  color: rgba(238,225,197,.48);
+  font-size: .48rem;
+  font-weight: 850;
+  line-height: 1;
+  letter-spacing: .16em;
+  text-align: right;
+  mix-blend-mode: normal;
+  pointer-events: none;
+}
+
+/* 사진이 들어가는 뷰포트도 모든 프로젝트에서 동일하다. */
+.home-v4 .showcase-images,
+.home-v4 .showcase-images.is-duo,
+.home-v4 .showcase-images[data-project="crypto-saga"] {
+  position: absolute;
+  inset: 30px 19px 35px !important;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 4px;
+  background:
+    radial-gradient(circle at 50% 48%, var(--project-accent-soft), transparent 56%),
+    #151b18;
+}
+
+/* 단일 캐릭터 자산은 잘리지 않게, 사진 프레임 크기만 동일하게 유지 */
+.home-v4 .showcase-images:not(.is-duo) img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0;
+  filter: drop-shadow(0 18px 26px rgba(0,0,0,.34));
+}
+/* CRYPTO SAGA는 애초에 가로형 대표 그래픽이라 사진처럼 꽉 채운다. */
+.home-v4 .showcase-images[data-project="crypto-saga"] img {
+  object-fit: cover;
+  filter: none;
+}
+/* AEVOWAKE의 두 이미지는 같은 프레임을 정확히 반으로 나눈다. */
+.home-v4 .showcase-images.is-duo img {
+  width: 50% !important;
+  height: 100% !important;
+  max-width: 50% !important;
+  max-height: 100% !important;
+  object-fit: cover;
+  border-radius: 0;
+}
+.home-v4 .showcase-images.is-duo img:first-child {
+  object-position: 50% 28%;
+}
+.home-v4 .showcase-images.is-duo img:last-child {
+  object-position: 50% 45%;
+}
+
+/* 이미지와 설명판 사이의 음수 마진을 완전히 제거한다. */
+.home-v4 .showcase-info {
+  position: relative;
+  z-index: 6;
+  width: 100% !important;
+  min-height: 178px;
+  margin: 0 !important;
+  padding: 16px 18px 17px;
+  border: 1px solid rgba(231,241,235,.085);
+  border-top-color: color-mix(in srgb,var(--project-accent) 25%,rgba(231,241,235,.08));
+  border-radius: 13px;
+  background: rgba(19,27,23,.88);
+  box-shadow: 0 14px 36px rgba(0,0,0,.16);
+  backdrop-filter: blur(18px) saturate(108%);
+}
+.home-v4 .showcase-info h2 {
+  margin-top: 5px;
+}
+.home-v4 .showcase-bottom {
+  margin-top: auto;
+}
+
+/* 필름 프레임에서는 trace 점이 사진 안쪽을 따라 돌도록 살짝 안으로 당긴다. */
+.home-v4 .build-trace-runner {
+  z-index: 9;
+  width: 5px;
+  height: 5px;
+}
+
+/* hover 때 프레임 전체가 뒤틀리지 않고 사진만 아주 미세하게 움직인다. */
+.home-v4 .hero-v4-showcase:hover .showcase-images {
+  transform: translateY(-2px) scale(1.008);
+}
+.home-v4 .showcase-visual {
+  transform:
+    perspective(1200px)
+    rotateX(calc(var(--tilt-x) * .48))
+    rotateY(calc(var(--tilt-y) * .48))
+    translateZ(0);
+}
+
+/* 모바일에서도 1~4 동일 비율을 유지하되 필름 여백만 축소한다. */
+@media (max-width: 700px) {
+  .home-v4 .hero-v4-showcase { gap: 12px; }
+  .home-v4 .showcase-visual {
+    aspect-ratio: 16 / 10;
+    border-radius: 11px;
+  }
+  .home-v4 .showcase-visual::before {
+    inset: 25px 14px 30px;
+  }
+  .home-v4 .showcase-visual::after {
+    left: 17px;
+    right: 17px;
+    bottom: 8px;
+    font-size: .42rem;
+  }
+  .home-v4 .showcase-images,
+  .home-v4 .showcase-images.is-duo,
+  .home-v4 .showcase-images[data-project="crypto-saga"] {
+    inset: 26px 15px 31px !important;
+  }
+  .home-v4 .showcase-info {
+    min-height: 0;
+    margin: 0 !important;
+    padding: 15px 15px 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-v4 .showcase-visual { transform: none !important; }
+}

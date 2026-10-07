@@ -128,13 +128,14 @@ async function boot() {
     const pendingCandidates = candidates.filter(item => item.status === "PENDING");
     const projectMap = new Map(projects.map(project => [project.id, project]));
     const latestLinkedActivity = activity.find(item => item.project && projectMap.has(item.project));
-    const currentProjectRaw = latestLinkedActivity ? projectMap.get(latestLinkedActivity.project) : projects[0];
+    const activityProjectRaw = latestLinkedActivity ? projectMap.get(latestLinkedActivity.project) : null;
+    const currentProjectRaw = projectMap.get(site.featuredProjectId) || activityProjectRaw || projects[0];
     const currentProject = currentProjectRaw ? localizeProject(currentProjectRaw) : null;
     const latestActivity = activity[0] || null;
 
     const bannerProject = document.querySelector("#live-banner-project");
     const bannerText = document.querySelector("#live-banner-text");
-    if (bannerProject) bannerProject.textContent = currentProject?.name || "TUKI WORLD";
+    if (bannerProject) bannerProject.textContent = activityProjectRaw?.name || "TUKI WORLD";
     if (bannerText) bannerText.textContent = latestActivity?.title || (language === "en" ? "Waiting for new activity" : "새 활동을 기다리는 중");
 
     let heroProjectIndex = Math.max(0, projects.findIndex(project => project.id === currentProject?.id));
@@ -158,6 +159,11 @@ async function boot() {
       const tagline = document.querySelector("#hero-showcase-tagline");
       const detail = document.querySelector("#hero-showcase-detail");
       const focus = document.querySelector("#hero-showcase-focus");
+      const seasonNote = document.querySelector("#hero-showcase-season");
+      if (seasonNote) {
+        seasonNote.textContent = project.seasonLabel || "";
+        seasonNote.hidden = !project.seasonLabel;
+      }
       const mood = document.querySelector("#world-theme-mood");
       if (mood) {
         const moodKey = "worldTheme." + project.id;
@@ -167,7 +173,7 @@ async function boot() {
       if (count) count.textContent = `${String(heroProjectIndex + 1).padStart(2, "0")} / ${String(projects.length).padStart(2, "0")}`;
       if (images) {
         images.innerHTML = urls
-          .map((url, index) => `<img src="${url}" alt="${project.name} 대표 이미지 ${index + 1}" />`)
+          .map((url, index) => `<img src="${url}" alt="${project.visualCaption || (project.name + " 대표 이미지 " + (index + 1))}" />`)
           .join("");
         images.classList.toggle("is-duo", urls.length > 1);
         images.setAttribute("data-project", project.id);

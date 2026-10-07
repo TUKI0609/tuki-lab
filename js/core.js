@@ -42,6 +42,8 @@ export function localizeProject(project) {
     ...project,
     tagline: override.tagline ?? project.tagline,
     currentFocus: override.currentFocus ?? project.currentFocus,
+    seasonLabel: override.seasonLabel ?? project.seasonLabel ?? "",
+    visualCaption: override.visualCaption ?? project.visualCaption ?? "",
     routeLabel: term(project.route),
     typeLabel: term(project.type),
     statusLabel: term(project.status),
@@ -189,7 +191,7 @@ export function renderProjectVisual(project) {
   if (!visuals.length) return "";
   const cls = visuals.length > 1 ? "project-visual duo" : "project-visual";
   return `<div class="${cls} project-visual-${project.id}">
-    ${visuals.map((visual, i) => `<img data-asset="${visual}" alt="${project.name} 대표 이미지 ${i + 1}" />`).join("")}
+    ${visuals.map((visual, i) => `<img data-asset="${visual}" alt="${project.visualCaption || (project.name + " 대표 이미지 " + (i + 1))}" />`).join("")}
   </div>`;
 }
 
@@ -206,6 +208,7 @@ export function projectCard(project, base = "") {
         <div class="availability">${p.availabilityLabel}</div>
         <h3>${p.name}</h3>
         <p>${p.tagline}</p>
+        ${p.seasonLabel ? `<div class="project-season">${p.seasonLabel}</div>` : ""}
         <div class="project-origin">${p.platform}</div>
         <div class="meta">${p.currentFocus}</div>
         <div class="project-links">

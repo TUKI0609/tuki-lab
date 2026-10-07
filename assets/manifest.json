@@ -25,6 +25,11 @@
       "path": "assets/projects/aevowake/mira.b64",
       "encoding": "base64",
       "mime": "image/webp"
+    },
+    "crypto-saga": {
+      "path": "assets/projects/crypto-saga/preview.svg",
+      "encoding": "url",
+      "mime": "image/svg+xml"
     }
   }
 }

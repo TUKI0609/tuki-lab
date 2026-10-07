@@ -1,5 +1,32 @@
 [
   {
+    "id": "crypto-saga",
+    "name": "CRYPTO SAGA",
+    "type": "GAME",
+    "route": "PLAY",
+    "status": "REBUILDING",
+    "availability": "PLAYABLE",
+    "platform": "Verse8",
+    "tagline": "영웅을 수집하고 성장시키는 픽셀풍 턴제 RPG. 스토리, 던전, 아레나를 중심으로 모험이 펼쳐집니다.",
+    "currentFocus": "기존 게임 리빌딩 및 시즌 2 준비",
+    "seasonLabel": "기존 버전 공개 중 · 시즌 2 준비 중",
+    "visualCaption": "크립토사가 재구성 콘셉트 그래픽 (실제 플레이 화면 아님)",
+    "visuals": [
+      "crypto-saga"
+    ],
+    "links": [
+      {
+        "label": "PLAY",
+        "url": "https://verse8.io/dl/games/U7w8x7m?referral=C4GF3Z"
+      }
+    ],
+    "characters": [],
+    "labTags": [
+      "crypto-saga",
+      "cryptosaga"
+    ]
+  },
+  {
     "id": "momo",
     "name": "MOMO",
     "type": "GAME",

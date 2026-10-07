@@ -4685,3 +4685,74 @@ body.home-v4[data-active-project="aevowake"] {
 @media (prefers-reduced-motion: reduce) {
   .world-theme-scene { transition: none !important; }
 }
+
+/* CRYPTO SAGA · published game / rebuild in progress */
+.project-visual-crypto-saga {
+  background: radial-gradient(circle at 52% 54%, rgba(184,139,75,.21), transparent 68%), #17222d;
+}
+.project-visual-crypto-saga img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.project-detail-visual .project-visual-crypto-saga img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.project-card-crypto-saga .status { color: #f4daa4; border-color: rgba(237,193,112,.27); background: rgba(237,193,112,.10); }
+.project-season {
+  margin-top: 12px;
+  width: fit-content;
+  padding: 5px 10px;
+  border: 1px solid rgba(238,197,117,.19);
+  border-radius: 8px;
+  color: #f0d7a9;
+  background: rgba(238,197,117,.055);
+  font-size: .67rem;
+  font-weight: 750;
+}
+.project-season-detail { margin-top: 17px; }
+.showcase-season {
+  display: block;
+  width: fit-content;
+  margin: 4px 0 8px;
+  color: #f0d7a9;
+  font-size: .68rem;
+  letter-spacing: .01em;
+}
+.showcase-season[hidden] { display: none; }
+.home-v4 .showcase-images[data-project="crypto-saga"] {
+  inset: 0;
+}
+.home-v4 .showcase-images[data-project="crypto-saga"] img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  max-width: 100%;
+  object-fit: cover;
+  filter: none;
+}
+.home-v4[data-active-project="crypto-saga"] {
+  --project-accent: #f1c988;
+  --project-accent-soft: rgba(218,164,94,.18);
+}
+.world-theme-scene--crypto-saga {
+  background-image:
+    radial-gradient(ellipse at 83% 33%, rgba(221,158,84,.16), transparent 39%),
+    radial-gradient(ellipse at 44% 76%, rgba(76,142,177,.075), transparent 36%),
+    url("../assets/brand/tuki/world-crypto-saga.svg");
+}
+.home-v4[data-active-project="crypto-saga"] .world-theme-scene--crypto-saga {
+  opacity: 1;
+}
+@media (max-width:700px) {
+  .project-season { font-size: .63rem; }
+  .showcase-season { font-size: .63rem; }
+}

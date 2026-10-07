@@ -49,6 +49,7 @@ async function boot() {
         <div class="availability">${project.availabilityLabel}</div>
         <h1>${project.name}</h1>
         <p>${project.tagline}</p>
+        ${project.seasonLabel ? `<div class="project-season project-season-detail">${project.seasonLabel}</div>` : ""}
         <div class="project-origin">${project.platform}</div>
         <div class="project-detail-actions">${renderProjectLinks(project.links)}</div>
       </div>

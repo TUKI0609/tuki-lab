@@ -147,7 +147,8 @@
       "overview.labLink": "제작실 보기",
       "worldTheme.momo": "작은 일상이 자라는 방",
       "worldTheme.lutratide-survivors": "성장과 전투의 궤적",
-      "worldTheme.aevowake": "기억과 파도의 기록"
+      "worldTheme.aevowake": "기억과 파도의 기록",
+      "worldTheme.crypto-saga": "다시 펼쳐지는 영웅들의 모험"
     },
     "en": {
       "nav.home": "Home",
@@ -291,7 +292,8 @@
       "overview.labLink": "Open lab",
       "worldTheme.momo": "A room for little routines",
       "worldTheme.lutratide-survivors": "Traces of growth and combat",
-      "worldTheme.aevowake": "Where memory meets the tide"
+      "worldTheme.aevowake": "Where memory meets the tide",
+      "worldTheme.crypto-saga": "A new chapter for returning heroes"
     }
   },
   "terms": {
@@ -325,7 +327,8 @@
       "COMPANION": "동반자",
       "PLAYABLE HERO": "플레이어블 캐릭터",
       "SOURCE": "출처",
-      "DETAILS": "상세 보기"
+      "DETAILS": "상세 보기",
+      "REBUILDING": "리빌딩 중"
     },
     "en": {
       "HOME": "Home",
@@ -357,7 +360,8 @@
       "COMPANION": "Companion",
       "PLAYABLE HERO": "Playable hero",
       "SOURCE": "Source",
-      "DETAILS": "Details"
+      "DETAILS": "Details",
+      "REBUILDING": "Rebuilding"
     }
   },
   "projects": {
@@ -389,6 +393,20 @@
       "en": {
         "tagline": "An original universe expanding from web fiction into a game project.",
         "currentFocus": "Web-fiction serialization and game prototyping"
+      }
+    },
+    "crypto-saga": {
+      "ko": {
+        "tagline": "영웅을 수집하고 성장시키는 픽셀풍 턴제 RPG. 스토리, 던전, 아레나를 중심으로 모험이 펼쳐집니다.",
+        "currentFocus": "기존 게임 리빌딩 및 시즌 2 준비",
+        "seasonLabel": "기존 버전 공개 중 · 시즌 2 준비 중",
+        "visualCaption": "크립토사가 재구성 콘셉트 그래픽 (실제 플레이 화면 아님)"
+      },
+      "en": {
+        "tagline": "A pixel-style, turn-based RPG about collecting and raising heroes, with story chapters, dungeons, and Arena battles.",
+        "currentFocus": "Rebuilding the existing game and preparing Season 2",
+        "seasonLabel": "Existing build available · Season 2 in preparation",
+        "visualCaption": "Crypto Saga rebuilding concept artwork, not a gameplay screenshot"
       }
     }
   },
@@ -585,6 +603,12 @@
       "en": {
         "title": "Added project-linked world themes to TUKI WORLD",
         "summary": "Created three original vector ambience scenes that switch with the featured project: MOMO's cozy room glow, LUTRATIDE's violet combat arcs, and AEVOWAKE's tidal memory rings. Kept the core Build Trace identity and added mobile and reduced-motion handling."
+      }
+    },
+    "20": {
+      "en": {
+        "title": "Added the existing CRYPTO SAGA release and Season 2 rebuilding plans to TUKI WORLD",
+        "summary": "Listed the long-running pixel-style collection turn-based RPG, linked the existing Verse8 game, and separated its public playable build from the rebuilding and Season 2 work. The website illustration is labeled concept art rather than a gameplay screenshot."
       }
     }
   }

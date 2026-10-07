@@ -8,7 +8,13 @@ const base = "../../";
 async function boot() {
   await initI18n(base);
 
-  const id = new URLSearchParams(location.search).get("id");
+  const queryId = new URLSearchParams(location.search).get("id");
+  const staticId = document.body.dataset.projectId || "";
+  if (!staticId && queryId && location.pathname.includes("/projects/detail/")) {
+    location.replace(`${base}projects/${encodeURIComponent(queryId)}/`);
+    return;
+  }
+  const id = staticId || queryId;
   const [site, projects, posts, activity] = await Promise.all([
     loadJson(base + "content/site.json"),
     loadJson(base + "content/projects.json"),
@@ -36,6 +42,21 @@ async function boot() {
 
   const project = localizeProject(rawProject);
   document.title = `${project.name} · TUKI WORLD`;
+  const canonicalUrl = `https://tuki0609.github.io/tuki-lab/projects/${encodeURIComponent(project.id)}/`;
+  const description = project.tagline + (project.currentFocus ? ` 현재 작업: ${project.currentFocus}` : "");
+  const setMeta = (selector, value, attr = "content") => {
+    const el = document.querySelector(selector);
+    if (el) el.setAttribute(attr, value);
+  };
+  setMeta('meta[name="description"]', description);
+  setMeta('meta[name="robots"]', "index,follow,max-image-preview:large");
+  setMeta('meta[property="og:title"]', document.title);
+  setMeta('meta[property="og:description"]', description);
+  setMeta('meta[property="og:url"]', canonicalUrl);
+  setMeta('meta[name="twitter:title"]', document.title);
+  setMeta('meta[name="twitter:description"]', description);
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.href = canonicalUrl;
   const projectPosts = posts.filter(post => post.project === project.id);
   const projectActivity = activity.filter(item => item.project === project.id);
 
@@ -92,7 +113,7 @@ async function boot() {
         <div class="availability">${project.availabilityLabel}</div>
         <h1>${project.name}</h1>
         <p>${project.tagline}</p>
-        ${project.seasonLabel ? `<div class="project-season project-season-detail">${project.seasonLabel}</div>` : ""}
+        ${(project.releaseLabel || project.seasonLabel) ? `<div class="project-season project-season-detail">${project.releaseLabel || project.seasonLabel}</div>` : ""}
         <div class="project-origin">${project.platform}</div>
         <div class="project-detail-actions">${renderProjectLinks(project.links)}</div>
       </div>

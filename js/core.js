@@ -210,11 +210,11 @@ export function projectCard(project, base = "") {
         <div class="availability">${p.availabilityLabel}</div>
         <h3>${p.name}</h3>
         <p>${p.tagline}</p>
-        ${p.seasonLabel ? `<div class="project-season">${p.seasonLabel}</div>` : ""}
+        ${(p.releaseLabel || p.seasonLabel) ? `<div class="project-season">${p.releaseLabel || p.seasonLabel}</div>` : ""}
         <div class="project-origin">${p.platform}</div>
         <div class="meta">${p.currentFocus}</div>
         <div class="project-links">
-          <a class="project-link secondary" href="${base}projects/detail/?id=${encodeURIComponent(p.id)}">${t("common.details","상세 보기 →")}</a>
+          <a class="project-link secondary" href="${base}projects/${encodeURIComponent(p.id)}/">${t("common.details","상세 보기 →")}</a>
           ${renderProjectLinks(p.links)}
         </div>
       </div>

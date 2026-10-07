@@ -174,8 +174,8 @@ async function boot() {
       const focus = document.querySelector("#hero-showcase-focus");
       const seasonNote = document.querySelector("#hero-showcase-season");
       if (seasonNote) {
-        seasonNote.textContent = project.seasonLabel || "";
-        seasonNote.hidden = !project.seasonLabel;
+        seasonNote.textContent = project.releaseLabel || project.seasonLabel || "";
+        seasonNote.hidden = !(project.releaseLabel || project.seasonLabel);
       }
       const mood = document.querySelector("#world-theme-mood");
       if (mood) {
@@ -196,7 +196,7 @@ async function boot() {
       if (platform) platform.textContent = project.platform;
       if (name) name.textContent = project.name;
       if (tagline) tagline.textContent = project.tagline;
-      if (detail) detail.href = `./projects/detail/?id=${encodeURIComponent(project.id)}`;
+      if (detail) detail.href = `./projects/${encodeURIComponent(project.id)}/`;
       if (focus) focus.textContent = project.currentFocus;
     }
 
@@ -248,7 +248,7 @@ async function boot() {
       shortcuts.innerHTML = projects.map(raw => {
         const project = localizeProject(raw);
         return `
-          <a href="./projects/detail/?id=${encodeURIComponent(project.id)}">
+          <a href="./projects/${encodeURIComponent(project.id)}/">
             <span>${term(project.route)}</span>
             <strong>${project.name}</strong>
             <em>${project.statusLabel}</em>

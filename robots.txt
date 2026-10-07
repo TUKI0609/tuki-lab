@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tuki0609.github.io/tuki-lab/sitemap.xml

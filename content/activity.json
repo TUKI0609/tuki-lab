@@ -214,7 +214,7 @@
     "sourceLabel": "Naver Blog · AI / 제작",
     "kind": "POST",
     "route": "BUILD",
-    "project": null,
+    "project": "crypto-saga",
     "title": "바이브코딩으로 RPG 게임 리빌딩하기, 전투 화면부터 다시 만들었습니다 | Crypto Saga",
     "summary": "Crypto Saga는 이미 플레이할 수 있는 RPG였습니다. 전투도 돌아가고, 캐릭터도 있고, 던전과 아레나 같은 콘텐츠도 있었어요. 근데 계속 플레이하다 보니까 하나가 계속 눈에 걸렸습니다. 기능은 돌아가는데, 화면을 보면 아직 ‘게임을 플레이한다’기보다는 기능들을 한곳에 배치해둔 느낌이 강했어요. 그래서 이번 리빌딩",
     "url": "https://blog.naver.com/ty_free/224426134448?fromRss=true&trackingCode=rss",
@@ -223,8 +223,8 @@
     "manual": false,
     "editorial": {
       "decision": "include",
-      "reason": "maker-content",
-      "score": 80
+      "reason": "project:crypto-saga",
+      "score": 100
     }
   },
   {

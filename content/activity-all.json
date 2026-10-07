@@ -472,7 +472,7 @@
     "timestampSource": "x-status-id",
     "editorial": {
       "decision": "include",
-      "reason": "verified-user-provided-x-post",
+      "reason": "manual",
       "score": 100
     },
     "mediaEvidenceCount": 4,

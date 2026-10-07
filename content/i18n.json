@@ -148,7 +148,12 @@
       "worldTheme.momo": "작은 일상이 자라는 방",
       "worldTheme.lutratide-survivors": "성장과 전투의 궤적",
       "worldTheme.aevowake": "기억과 파도의 기록",
-      "worldTheme.crypto-saga": "다시 펼쳐지는 영웅들의 모험"
+      "worldTheme.crypto-saga": "다시 펼쳐지는 영웅들의 모험",
+      "project.historyEyebrow": "개발 히스토리",
+      "project.historyTitle": "이 게임이 지금까지 걸어온 길.",
+      "project.historyDesc": "과거 게시물과 공개된 개발 글에서 확인되는 내용만 정리했습니다. 정식 LAB 글과는 별개의 개발 이력입니다.",
+      "project.historySource": "기록 원문 보기 ↗",
+      "project.historyArtwork": "당시 실제 게임 화면은 원문 게시물에서 확인할 수 있습니다."
     },
     "en": {
       "nav.home": "Home",
@@ -293,7 +298,12 @@
       "worldTheme.momo": "A room for little routines",
       "worldTheme.lutratide-survivors": "Traces of growth and combat",
       "worldTheme.aevowake": "Where memory meets the tide",
-      "worldTheme.crypto-saga": "A new chapter for returning heroes"
+      "worldTheme.crypto-saga": "A new chapter for returning heroes",
+      "project.historyEyebrow": "Development history",
+      "project.historyTitle": "How this game got here.",
+      "project.historyDesc": "A timeline based on posts and development notes we can verify. Separate from formally approved LAB articles.",
+      "project.historySource": "View original source ↗",
+      "project.historyArtwork": "See the original post for game screenshots from that period."
     }
   },
   "terms": {
@@ -609,6 +619,12 @@
       "en": {
         "title": "Added the existing CRYPTO SAGA release and Season 2 rebuilding plans to TUKI WORLD",
         "summary": "Listed the long-running pixel-style collection turn-based RPG, linked the existing Verse8 game, and separated its public playable build from the rebuilding and Season 2 work. The website illustration is labeled concept art rather than a gameplay screenshot."
+      }
+    },
+    "21": {
+      "en": {
+        "title": "Verified CRYPTO SAGA's X post and four game screenshots and restored development timeline",
+        "summary": "The January 2026 X post documents character evolutions, summoning, compendium, auto-battles, scenarios and hidden stories, language selection, and data-related fixes. Linked that historical evidence with the September rebuild post and present Season 2 preparations. Did not publish an official LAB article before approval."
       }
     }
   }

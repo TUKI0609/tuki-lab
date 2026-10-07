@@ -24,6 +24,114 @@
     "labTags": [
       "crypto-saga",
       "cryptosaga"
+    ],
+    "history": [
+      {
+        "id": "project-rebuild-season2",
+        "date": null,
+        "dateLabel": {
+          "ko": "현재",
+          "en": "Now"
+        },
+        "stage": {
+          "ko": "진행 중",
+          "en": "In progress"
+        },
+        "title": {
+          "ko": "리빌딩과 시즌 2 준비",
+          "en": "Rebuilding and preparing Season 2"
+        },
+        "summary": {
+          "ko": "기존 게임을 유지하면서 더 나은 플레이 경험을 목표로 재정비하고 있습니다. 시즌 2는 준비 중이며, 출시 일정은 아직 공개하지 않았습니다.",
+          "en": "The existing game remains available while its experience is being rebuilt. Season 2 is in preparation, with no release date announced."
+        },
+        "highlights": {
+          "ko": [
+            "기존 버전 플레이 가능",
+            "시즌 2 준비 중"
+          ],
+          "en": [
+            "Existing build playable",
+            "Season 2 in preparation"
+          ]
+        },
+        "source": null
+      },
+      {
+        "id": "project-rebuild-2026-09",
+        "date": "2026-09-29",
+        "dateLabel": {
+          "ko": "2026.09.29",
+          "en": "Sep 29, 2026"
+        },
+        "stage": {
+          "ko": "리빌딩 기록",
+          "en": "Rebuild note"
+        },
+        "title": {
+          "ko": "전투 화면부터 다시 만든 리빌딩",
+          "en": "Rebuilding, starting with the battle screen"
+        },
+        "summary": {
+          "ko": "기존 게임은 플레이할 수 있었지만 화면 구성이 기능을 모아둔 느낌이라는 문제를 인식했습니다. 전투 화면부터 게임다운 경험으로 다듬기 시작한 과정을 블로그에 기록했습니다.",
+          "en": "The game already worked, but its interface felt more like a collection of features than a cohesive game. A blog post documents the effort to rethink the battle screen."
+        },
+        "highlights": {
+          "ko": [
+            "전투 UI 재설계",
+            "플레이 경험 개선"
+          ],
+          "en": [
+            "Battle UI redesign",
+            "Improving play experience"
+          ]
+        },
+        "source": {
+          "label": "네이버 블로그",
+          "url": "https://blog.naver.com/ty_free/224426134448"
+        }
+      },
+      {
+        "id": "project-archive-2026-01",
+        "date": "2026-01-09",
+        "dateLabel": {
+          "ko": "2026.01.09",
+          "en": "Jan 9, 2026"
+        },
+        "stage": {
+          "ko": "당시 개발 기록",
+          "en": "Archived dev note"
+        },
+        "title": {
+          "ko": "크립토사가의 게임 시스템을 소개하다",
+          "en": "A look at Crypto Saga’s working game systems"
+        },
+        "summary": {
+          "ko": "Verse8 바이브 코딩으로 제작한 수집형 턴제 RPG를 소개했습니다. 3단계 캐릭터 진화와 소환, 도감 수집, 자동 전투, 시나리오 클리어 후 숨겨진 이야기, 크립토 세계관과 스킬을 구현했다고 기록했습니다. 당시에는 데이터 증가로 생긴 오류를 해결하는 일이 중요한 과제였습니다.",
+          "en": "The creator showcased a collectible turn-based RPG built with Verse8 vibe coding: three-stage character evolutions, summoning, a compendium, auto-battles, hidden stories after clearing scenarios, and skills. Data-growth-related errors were a known challenge at the time."
+        },
+        "highlights": {
+          "ko": [
+            "캐릭터 3단 진화 · 소환 · 도감",
+            "자동 전투 · 시나리오 · 숨겨진 스토리",
+            "한국어/영어 UI 소개 · 데이터 오류 수정 과제"
+          ],
+          "en": [
+            "Three-stage evolution, summoning & compendium",
+            "Auto-battles, scenarios & hidden stories",
+            "Korean/English UI shown; data issues to fix"
+          ]
+        },
+        "source": {
+          "label": "X · @Ty_Tuki0609",
+          "url": "https://x.com/Ty_Tuki0609/status/2009526942635372781"
+        },
+        "attribution": {
+          "ko": "당시 게시물에 사용 IP를 ‘Pixel Heroes Adventures’로 표기했습니다. 사용 권한 및 범위는 별도 확인 대상입니다.",
+          "en": "The original post identified 'Pixel Heroes Adventures' as a used IP. License and usage scope have not been independently verified."
+        },
+        "mediaEvidenceCount": 4
+      }
     ]
   },
   {

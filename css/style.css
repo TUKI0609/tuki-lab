@@ -4756,3 +4756,114 @@ body.home-v4[data-active-project="aevowake"] {
   .project-season { font-size: .63rem; }
   .showcase-season { font-size: .63rem; }
 }
+
+/* CRYPTO SAGA project history: sourced development timeline, not an approved LAB article. */
+.project-history-section {
+  border-top: 1px solid rgba(224,236,227,.10);
+}
+.project-history-intro { padding-bottom: 18px; }
+.project-history-list {
+  position: relative;
+  display: grid;
+  margin: 18px 0 12px;
+  padding-bottom: 8px;
+}
+.project-history-list::before {
+  content: "";
+  position: absolute;
+  left: 162px;
+  top: 16px;
+  bottom: 44px;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(245,209,147,.47),rgba(114,221,174,.30),rgba(114,221,174,.05));
+}
+.project-history-entry {
+  display: grid;
+  grid-template-columns: 162px minmax(0,1fr);
+  gap: 28px;
+  padding: 12px 0 28px;
+}
+.project-history-date {
+  position: relative;
+  color: #c8b18b;
+  font-size: .75rem;
+  font-weight: 800;
+  padding-top: 15px;
+  font-variant-numeric: tabular-nums;
+}
+.project-history-marker {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: -6px;
+  top: 18px;
+  border: 2px solid #d9bf94;
+  border-radius: 50%;
+  background: #18221e;
+  box-shadow: 0 0 0 5px rgba(217,191,148,.07);
+}
+.project-history-copy {
+  border: 1px solid rgba(229,236,231,.085);
+  border-radius: 16px 16px 16px 5px;
+  background: linear-gradient(135deg,rgba(40,49,43,.8),rgba(22,30,26,.73));
+  padding: 21px 24px;
+}
+.project-history-stage {
+  color: #cbb38b;
+  letter-spacing: .04em;
+  font-size: .67rem;
+  font-weight: 830;
+}
+.project-history-copy h3 {
+  color: #f1f1e9;
+  margin: 7px 0 11px;
+  font-size: clamp(1.12rem,2.5vw,1.48rem);
+  line-height: 1.35;
+}
+.project-history-copy > p {
+  color: #a9b6ac;
+  margin: 0;
+  font-size: .86rem;
+  line-height: 1.78;
+}
+.project-history-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 17px;
+}
+.project-history-highlights span {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border: 1px solid rgba(222,232,224,.105);
+  border-radius: 999px;
+  color: #b7d3bf;
+  background: rgba(114,221,174,.04);
+  font-size: .7rem;
+  line-height: 1.35;
+}
+.project-history-copy .project-history-credit {
+  margin-top: 14px;
+  color: #8b9a8d;
+  font-size: .7rem;
+}
+.project-history-link {
+  display: inline-flex;
+  margin-top: 18px;
+  color: #edd2a6;
+  font-size: .75rem;
+  font-weight: 850;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.project-history-link:hover{color:#fff2da}
+@media(max-width:760px){
+ .project-history-list::before { left: 9px; }
+ .project-history-entry { grid-template-columns: 1fr; gap: 7px; padding: 4px 0 23px 29px; }
+ .project-history-date { padding: 0; font-size: .72rem; }
+ .project-history-marker { left: -24px; right: auto; top: 4px; }
+ .project-history-copy { padding: 17px 16px; }
+ .project-history-copy h3 { font-size: 1.1rem; }
+ .project-history-copy > p { font-size: .82rem; }
+}

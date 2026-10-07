@@ -462,18 +462,20 @@
     "kind": "POST",
     "route": "BUILD",
     "project": "crypto-saga",
-    "title": "CRYPTO SAGA · 과거 X 게시물 (본문 확인 전)",
-    "summary": "사용자가 제공한 크립토사가 관련 X 게시물 링크. 게시물 본문과 첨부 이미지는 아직 확인하지 못했습니다.",
+    "title": "CRYPTO SAGA · 수집형 턴제 RPG 개발 소개 (진화·소환·자동 전투)",
+    "summary": "Verse8 바이브 코딩으로 제작한 크립토사가의 3단 진화, 소환, 도감, 자동 전투, 시나리오·숨겨진 스토리를 소개한 글. 당시 데이터 증가로 발생한 오류 수정도 과제로 언급했습니다.",
     "url": "https://x.com/Ty_Tuki0609/status/2009526942635372781",
     "publishedAt": "2026-01-09T07:25:32.986Z",
     "detectedAt": "2026-10-07T00:00:00.000Z",
     "manual": true,
-    "verification": "link-only",
+    "verification": "user-provided-post-text-and-four-images",
     "timestampSource": "x-status-id",
     "editorial": {
       "decision": "include",
-      "reason": "manual-user-provided-x-reference",
+      "reason": "verified-user-provided-x-post",
       "score": 100
-    }
+    },
+    "mediaEvidenceCount": 4,
+    "ipAttribution": "Pixel Heroes Adventures (original author attribution; rights not verified)"
   }
 ]

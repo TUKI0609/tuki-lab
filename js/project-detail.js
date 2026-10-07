@@ -39,6 +39,49 @@ async function boot() {
   const projectPosts = posts.filter(post => post.project === project.id);
   const projectActivity = activity.filter(item => item.project === project.id);
 
+
+  const historyMarkup = project.history?.length ? `
+    <section class="section wrap project-history-section" aria-label="${t("project.historyEyebrow")}">
+      <div class="section-head project-history-intro">
+        <div>
+          <p class="eyebrow">${t("project.historyEyebrow")}</p>
+          <h2>${t("project.historyTitle")}</h2>
+        </div>
+        <p>${t("project.historyDesc")}</p>
+      </div>
+      <div class="project-history-list">
+        ${project.history.map(entry => {
+          const lang = document.documentElement.lang === "en" ? "en" : "ko";
+          const title = entry.title?.[lang] || entry.title?.ko || "";
+          const summary = entry.summary?.[lang] || entry.summary?.ko || "";
+          const labels = entry.highlights?.[lang] || entry.highlights?.ko || [];
+          const dateLabel = entry.dateLabel?.[lang] || entry.dateLabel?.ko || "";
+          const stage = entry.stage?.[lang] || entry.stage?.ko || "";
+          const credit = entry.attribution?.[lang] || entry.attribution?.ko || "";
+          const link = entry.source?.url;
+          return `
+            <article class="project-history-entry">
+              <div class="project-history-date">
+                ${entry.date ? `<time datetime="${entry.date}">${dateLabel}</time>` : `<span>${dateLabel}</span>`}
+                <span class="project-history-marker" aria-hidden="true"></span>
+              </div>
+              <div class="project-history-copy">
+                <span class="project-history-stage">${stage}</span>
+                <h3>${title}</h3>
+                <p>${summary}</p>
+                <div class="project-history-highlights">
+                  ${labels.map(label => `<span>${label}</span>`).join("")}
+                </div>
+                ${credit ? `<p class="project-history-credit">${credit}</p>` : ""}
+                ${link ? `<a class="project-history-link" href="${link}" target="_blank" rel="noopener noreferrer">${entry.source.label} · ${t("project.historySource")}</a>` : ""}
+              </div>
+            </article>
+          `;
+        }).join("")}
+      </div>
+    </section>
+  ` : "";
+
   root.innerHTML = `
     <section class="project-detail-hero wrap">
       <div class="project-detail-copy">
@@ -70,6 +113,8 @@ async function boot() {
         <p>${project.availabilityLabel}</p>
       </article>
     </section>
+
+    ${historyMarkup}
 
     <section class="section wrap">
       <div class="section-head">

@@ -1,5 +1,13 @@
 [
   {
+    "id": 27,
+    "date": "2026-10-07",
+    "type": "BUILD LOG",
+    "project": null,
+    "title": "4개 프로젝트 실제 화면 증거 갤러리 추가",
+    "summary": "MOMO, CRYPTO SAGA, LUTRATIDE SURVIVORS에는 실제 플레이·게임 화면을, AEVOWAKE에는 실제 작품 제작 컷을 3장씩 연결했다. 대표 이미지와 증거 화면을 분리하고, 공개 출처가 있는 항목은 원문으로 이어지도록 구성했다."
+  },
+  {
     "id": 26,
     "date": "2026-10-07",
     "type": "BUILD LOG",

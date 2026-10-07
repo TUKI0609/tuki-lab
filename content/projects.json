@@ -132,6 +132,74 @@
         },
         "mediaEvidenceCount": 4
       }
+    ],
+    "evidence": [
+      {
+        "title": {
+          "ko": "시나리오 · 스토리 화면",
+          "en": "Scenario & story screen"
+        },
+        "type": {
+          "ko": "실제 게임 화면",
+          "en": "Actual game screen"
+        },
+        "note": {
+          "ko": "2026년 1월 공개 기록에서 확인한 시나리오와 스토리 아카이브 화면입니다.",
+          "en": "A scenario and story-archive screen verified from the January 2026 public build record."
+        },
+        "sprite": {
+          "row": 1,
+          "col": 0
+        },
+        "source": {
+          "label": "X · @Ty_Tuki0609",
+          "url": "https://x.com/Ty_Tuki0609/status/2009526942635372781"
+        }
+      },
+      {
+        "title": {
+          "ko": "대화면 플레이 UI",
+          "en": "Full play UI"
+        },
+        "type": {
+          "ko": "실제 게임 화면",
+          "en": "Actual game screen"
+        },
+        "note": {
+          "ko": "공개 당시 전투·진행 정보를 한 화면에서 보여주던 실제 UI입니다.",
+          "en": "The live build UI showing combat and progression information in one view."
+        },
+        "sprite": {
+          "row": 1,
+          "col": 1
+        },
+        "source": {
+          "label": "X · @Ty_Tuki0609",
+          "url": "https://x.com/Ty_Tuki0609/status/2009526942635372781"
+        }
+      },
+      {
+        "title": {
+          "ko": "자동 전투 · 소환",
+          "en": "Auto-battle & summoning"
+        },
+        "type": {
+          "ko": "실제 게임 화면",
+          "en": "Actual game screen"
+        },
+        "note": {
+          "ko": "자동 전투와 소환 시스템을 소개한 당시 실제 게임 화면입니다.",
+          "en": "An actual build capture used to demonstrate auto-battle and summoning."
+        },
+        "sprite": {
+          "row": 1,
+          "col": 2
+        },
+        "source": {
+          "label": "X · @Ty_Tuki0609",
+          "url": "https://x.com/Ty_Tuki0609/status/2009526942635372781"
+        }
+      }
     ]
   },
   {
@@ -198,6 +266,74 @@
           "url": "https://verse8.io/dl/games/G2R7X5f?referral=C4GF3Z"
         }
       }
+    ],
+    "evidence": [
+      {
+        "title": {
+          "ko": "모모와 보내는 방",
+          "en": "A room with Momo"
+        },
+        "type": {
+          "ko": "실제 플레이",
+          "en": "Actual gameplay"
+        },
+        "note": {
+          "ko": "모모와 같은 공간에서 시간을 보내는 생활 화면입니다.",
+          "en": "The everyday room where the player spends time with Momo."
+        },
+        "sprite": {
+          "row": 3,
+          "col": 0
+        },
+        "source": {
+          "label": "Verse8 · Live game",
+          "url": "https://verse8.io/dl/games/G2R7X5f?referral=C4GF3Z"
+        }
+      },
+      {
+        "title": {
+          "ko": "밥 주기",
+          "en": "Feeding Momo"
+        },
+        "type": {
+          "ko": "실제 플레이",
+          "en": "Actual gameplay"
+        },
+        "note": {
+          "ko": "돌봄 행동 중 밥 주기가 실제로 동작하는 플레이 장면입니다.",
+          "en": "A real play capture of the feeding interaction."
+        },
+        "sprite": {
+          "row": 3,
+          "col": 1
+        },
+        "source": {
+          "label": "YouTube · Development short",
+          "url": "https://www.youtube.com/shorts/KKx1ILxPxHE"
+        }
+      },
+      {
+        "title": {
+          "ko": "함께한 순간 기록",
+          "en": "A shared moment recorded"
+        },
+        "type": {
+          "ko": "실제 플레이",
+          "en": "Actual gameplay"
+        },
+        "note": {
+          "ko": "함께한 순간을 사진과 기록으로 남기는 기능을 보여주는 화면입니다.",
+          "en": "A gameplay screen showing how shared moments can be preserved as a record."
+        },
+        "sprite": {
+          "row": 3,
+          "col": 2
+        },
+        "source": {
+          "label": "Verse8 · Live game",
+          "url": "https://verse8.io/dl/games/G2R7X5f?referral=C4GF3Z"
+        }
+      }
     ]
   },
   {
@@ -225,6 +361,74 @@
     "labTags": [
       "lutratide",
       "luna"
+    ],
+    "evidence": [
+      {
+        "title": {
+          "ko": "성장 선택 화면",
+          "en": "Growth choice screen"
+        },
+        "type": {
+          "ko": "실제 플레이",
+          "en": "Actual gameplay"
+        },
+        "note": {
+          "ko": "전투 흐름 속에서 성장 방향을 고르는 실제 게임 UI입니다.",
+          "en": "The live game UI for choosing a growth path during a run."
+        },
+        "sprite": {
+          "row": 2,
+          "col": 0
+        },
+        "source": {
+          "label": "YouTube · Build record",
+          "url": "https://www.youtube.com/shorts/PrqgIoBEZoE"
+        }
+      },
+      {
+        "title": {
+          "ko": "전투 플레이 화면",
+          "en": "Combat gameplay"
+        },
+        "type": {
+          "ko": "실제 플레이",
+          "en": "Actual gameplay"
+        },
+        "note": {
+          "ko": "다수의 적을 상대하며 이동과 자동 공격에 집중하는 브라우저 플레이 장면입니다.",
+          "en": "Browser gameplay focused on movement and auto-attacks against groups of enemies."
+        },
+        "sprite": {
+          "row": 2,
+          "col": 1
+        },
+        "source": {
+          "label": "YouTube · Build record",
+          "url": "https://www.youtube.com/shorts/elhXFK08t7E"
+        }
+      },
+      {
+        "title": {
+          "ko": "스킬 이펙트",
+          "en": "Skill effects"
+        },
+        "type": {
+          "ko": "실제 플레이",
+          "en": "Actual gameplay"
+        },
+        "note": {
+          "ko": "업데이트 과정에서 다듬은 공격·스킬 표현을 확인할 수 있는 장면입니다.",
+          "en": "A gameplay capture showing attack and skill effects refined during updates."
+        },
+        "sprite": {
+          "row": 2,
+          "col": 2
+        },
+        "source": {
+          "label": "YouTube · Build record",
+          "url": "https://www.youtube.com/shorts/BrBawuxsBy0"
+        }
+      }
     ]
   },
   {
@@ -257,6 +461,62 @@
     ],
     "labTags": [
       "aevowake"
+    ],
+    "evidence": [
+      {
+        "title": {
+          "ko": "가족사진이라는 단서",
+          "en": "The family-photo clue"
+        },
+        "type": {
+          "ko": "작품 제작 화면",
+          "en": "Production visual"
+        },
+        "note": {
+          "ko": "기억과 가족이라는 핵심 단서를 시각화한 AEVOWAKE 제작 컷입니다.",
+          "en": "An AEVOWAKE production frame visualizing a key clue around memory and family."
+        },
+        "sprite": {
+          "row": 0,
+          "col": 0
+        }
+      },
+      {
+        "title": {
+          "ko": "리안의 시선",
+          "en": "Lian's gaze"
+        },
+        "type": {
+          "ko": "작품 제작 화면",
+          "en": "Production visual"
+        },
+        "note": {
+          "ko": "주인공 리안의 감정과 낯선 기억의 흔들림을 표현한 제작 컷입니다.",
+          "en": "A production frame focused on Lian's emotion and the unease of unfamiliar memory."
+        },
+        "sprite": {
+          "row": 0,
+          "col": 1
+        }
+      },
+      {
+        "title": {
+          "ko": "계단에서 들린 기척",
+          "en": "A sound on the stairs"
+        },
+        "type": {
+          "ko": "작품 제작 화면",
+          "en": "Production visual"
+        },
+        "note": {
+          "ko": "평범한 일상에 미스터리가 끼어드는 순간을 보여주는 제작 장면입니다.",
+          "en": "A production scene where mystery breaks into an otherwise ordinary moment."
+        },
+        "sprite": {
+          "row": 0,
+          "col": 2
+        }
+      }
     ]
   }
 ]

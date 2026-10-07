@@ -175,7 +175,10 @@
       "project.releaseDate": "런칭일",
       "showcase.readNow": "지금 읽기",
       "overview.playable": "플레이 가능",
-      "overview.readable": "읽기 가능"
+      "overview.readable": "읽기 가능",
+      "project.evidenceEyebrow": "실제 화면",
+      "project.evidenceTitle": "말보다, 실제로 보이는 것들.",
+      "project.evidenceDesc": "대표 이미지와 별개로 실제 플레이·작품 제작 화면을 함께 남깁니다. 화면의 성격은 카드마다 구분해 표시합니다."
     },
     "en": {
       "nav.home": "Home",
@@ -347,7 +350,10 @@
       "project.releaseDate": "Launch date",
       "showcase.readNow": "Read now",
       "overview.playable": "Playable",
-      "overview.readable": "Readable"
+      "overview.readable": "Readable",
+      "project.evidenceEyebrow": "Evidence",
+      "project.evidenceTitle": "What the project actually looks like.",
+      "project.evidenceDesc": "Alongside key art, these cards preserve real gameplay or production visuals and label each kind of evidence clearly."
     }
   },
   "terms": {
@@ -705,6 +711,12 @@
       "en": {
         "title": "Published the first three TUKI LAB records and made the home page action-first",
         "summary": "Published the approved MOMO launch, CRYPTO SAGA rebuild, and Verse8 hands-on records. The home showcase now links directly to play/read destinations, public-facing stats replace internal queue counts, and recent changes prioritize core projects and Verse8."
+      }
+    },
+    "27": {
+      "en": {
+        "title": "Added evidence galleries for all four projects",
+        "summary": "Added three verified gameplay or game screens each for MOMO, CRYPTO SAGA, and LUTRATIDE SURVIVORS, plus three real production frames for AEVOWAKE. Key art and evidence are now clearly separated, with public source links where available."
       }
     }
   }

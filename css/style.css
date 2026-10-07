@@ -5420,3 +5420,116 @@ body[data-page="projects"] .core-platform-shell {
     text-align:left;
   }
 }
+
+
+/* =========================================================
+   PROJECT EVIDENCE · actual screens / production visuals
+   ========================================================= */
+.project-evidence-section {
+  padding-top: 26px;
+}
+.project-evidence-head {
+  align-items: end;
+}
+.project-evidence-head > p {
+  max-width: 500px;
+}
+.project-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 12px;
+}
+.project-evidence-card {
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 8px 12px;
+  border: 1px solid rgba(229,239,233,.08);
+  border-radius: 15px 15px 15px 5px;
+  background: rgba(21,29,25,.76);
+  box-shadow: 0 13px 32px rgba(0,0,0,.12);
+  color: inherit;
+}
+a.project-evidence-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb,var(--project-accent) 26%,rgba(229,239,233,.08));
+}
+.project-evidence-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 150 / 86;
+  margin-bottom: 11px;
+  overflow: hidden;
+  border-radius: 9px 9px 9px 3px;
+  background-image: url("../assets/projects/evidence/tuki-project-evidence.webp");
+  background-repeat: no-repeat;
+  background-size: 300% 400%;
+  background-position: var(--evidence-x) var(--evidence-y);
+  background-color: #101713;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.035);
+}
+.project-evidence-type {
+  width: fit-content;
+  margin: 0 3px 7px;
+  padding: 3px 7px;
+  border: 1px solid color-mix(in srgb,var(--project-accent) 22%,rgba(255,255,255,.05));
+  border-radius: 999px;
+  color: color-mix(in srgb,var(--project-accent) 72%,#eef3ef);
+  background: color-mix(in srgb,var(--project-accent) 7%,transparent);
+  font-size: .51rem;
+  font-weight: 900;
+  letter-spacing: .055em;
+}
+.project-evidence-card > strong {
+  margin: 0 3px;
+  color: #e5ebe7;
+  font-size: .82rem;
+  line-height: 1.38;
+}
+.project-evidence-card > p {
+  margin: 6px 3px 0;
+  color: #8d9a92;
+  font-size: .66rem;
+  line-height: 1.55;
+}
+.project-evidence-card > small {
+  margin: auto 3px 0;
+  padding-top: 10px;
+  color: #718078;
+  font-size: .52rem;
+  font-weight: 760;
+}
+@media (max-width: 760px) {
+  .project-evidence-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-evidence-card {
+    display: grid;
+    grid-template-columns: minmax(120px,.8fr) minmax(0,1fr);
+    grid-template-rows: auto auto 1fr auto;
+    gap: 0 11px;
+    padding: 8px;
+  }
+  .project-evidence-image {
+    grid-row: 1 / span 4;
+    margin: 0;
+    align-self: stretch;
+    aspect-ratio: auto;
+    min-height: 118px;
+  }
+  .project-evidence-type { grid-column: 2; margin-top: 3px; }
+  .project-evidence-card > strong { grid-column: 2; }
+  .project-evidence-card > p { grid-column: 2; }
+  .project-evidence-card > small { grid-column: 2; }
+}
+@media (max-width: 480px) {
+  .project-evidence-card {
+    display: flex;
+  }
+  .project-evidence-image {
+    min-height: 0;
+    aspect-ratio: 150 / 86;
+    margin-bottom: 10px;
+  }
+}

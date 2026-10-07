@@ -61,6 +61,40 @@ async function boot() {
   const projectActivity = activity.filter(item => item.project === project.id);
 
 
+  const evidenceLang = document.documentElement.lang === "en" ? "en" : "ko";
+  const evidenceMarkup = project.evidence?.length ? `
+    <section class="section wrap project-evidence-section" aria-label="${t("project.evidenceEyebrow")}">
+      <div class="section-head project-evidence-head">
+        <div>
+          <p class="eyebrow">${t("project.evidenceEyebrow")}</p>
+          <h2>${t("project.evidenceTitle")}</h2>
+        </div>
+        <p>${t("project.evidenceDesc")}</p>
+      </div>
+      <div class="project-evidence-grid">
+        ${project.evidence.map((entry, index) => {
+          const title = entry.title?.[evidenceLang] || entry.title?.ko || "";
+          const type = entry.type?.[evidenceLang] || entry.type?.ko || "";
+          const note = entry.note?.[evidenceLang] || entry.note?.ko || "";
+          const col = Math.max(0, Math.min(2, Number(entry.sprite?.col) || 0));
+          const row = Math.max(0, Math.min(3, Number(entry.sprite?.row) || 0));
+          const x = [0, 50, 100][col];
+          const y = [0, 33.333, 66.667, 100][row];
+          const cardInner = `
+            <span class="project-evidence-image" role="img" aria-label="${title}" style="--evidence-x:${x}%;--evidence-y:${y}%"></span>
+            <span class="project-evidence-type">${type}</span>
+            <strong>${title}</strong>
+            <p>${note}</p>
+            ${entry.source?.label ? `<small>${entry.source.label}${entry.source.url ? " ↗" : ""}</small>` : ""}
+          `;
+          return entry.source?.url
+            ? `<a class="project-evidence-card" href="${entry.source.url}" target="_blank" rel="noopener noreferrer">${cardInner}</a>`
+            : `<article class="project-evidence-card">${cardInner}</article>`;
+        }).join("")}
+      </div>
+    </section>
+  ` : "";
+
   const historyMarkup = project.history?.length ? `
     <section class="section wrap project-history-section" aria-label="${t("project.historyEyebrow")}">
       <div class="section-head project-history-intro">
@@ -134,6 +168,8 @@ async function boot() {
         <p>${project.availabilityLabel}</p>
       </article>
     </section>
+
+    ${evidenceMarkup}
 
     ${historyMarkup}
 

@@ -306,16 +306,54 @@ export function renderActivityList(items, rootSelector = "#activity-list", limit
   }).join("");
 }
 
+function renderChannelIcon(id) {
+  if (id === "youtube") {
+    return `
+      <span class="channel-icon channel-icon-youtube" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.8 31.8 0 0 0 0 12a31.8 31.8 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.8 31.8 0 0 0 24 12a31.8 31.8 0 0 0-.5-5.8ZM9.6 15.7V8.3L16 12l-6.4 3.7Z"/>
+        </svg>
+      </span>
+    `;
+  }
+  if (id === "x") {
+    return `
+      <span class="channel-icon channel-icon-x" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path d="M18.9 2H22l-6.8 7.8L23 22h-6.2l-4.8-6.3L6.5 22H3.4l7.3-8.4L1 2h6.3l4.3 5.7L18.9 2Zm-1.1 18h1.7L6.2 3.9H4.4L17.8 20Z"/>
+        </svg>
+      </span>
+    `;
+  }
+  if (id === "naver-ai" || id === "naver-game") {
+    return `
+      <span class="channel-icon channel-icon-naver" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path d="M4 4h6.4l5.2 7.5V4H20v16h-6.1L8.4 12.1V20H4V4Z"/>
+        </svg>
+      </span>
+    `;
+  }
+  return `
+    <span class="channel-icon channel-icon-generic" aria-hidden="true">
+      <svg viewBox="0 0 24 24" focusable="false">
+        <circle cx="12" cy="12" r="7.5"/>
+      </svg>
+    </span>
+  `;
+}
+
 export function renderChannels(channels, rootSelector = "#channel-list") {
   const root = document.querySelector(rootSelector);
   if (!root) return;
   root.innerHTML = channels.map(raw => {
     const channel = localizeChannel(raw);
     return `
-      <a class="channel-row" href="${channel.url}" target="_blank" rel="noopener noreferrer">
+      <a class="channel-row channel-row-${channel.id}" href="${channel.url}" target="_blank" rel="noopener noreferrer">
+        ${renderChannelIcon(channel.id)}
         <strong>${channel.nameLabel}</strong>
         <span>${channel.roleLabel}</span>
-        <b aria-hidden="true">↗</b>
+        <b class="channel-external" aria-hidden="true">↗</b>
       </a>
     `;
   }).join("");

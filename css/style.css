@@ -5533,3 +5533,77 @@ a.project-evidence-card:hover {
     margin-bottom: 10px;
   }
 }
+
+
+/* =========================================================
+   OFFICIAL CHANNELS · recognizable platform marks
+   ========================================================= */
+.channel-row {
+  grid-template-columns: 34px minmax(150px,.8fr) minmax(0,1.2fr) auto;
+  gap: 14px;
+  min-height: 60px;
+  padding: 12px 0;
+  transition: background .18s ease, transform .18s ease, border-color .18s ease;
+}
+.channel-row:hover {
+  transform: translateX(3px);
+  border-color: rgba(255,255,255,.15);
+}
+.channel-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 9px;
+  background: rgba(255,255,255,.035);
+}
+.channel-icon svg {
+  width: 19px;
+  height: 19px;
+  display: block;
+  fill: currentColor;
+}
+.channel-icon-youtube {
+  color: #ff4b45;
+  background: rgba(255,75,69,.075);
+}
+.channel-icon-x {
+  color: #f4f7fb;
+  background: rgba(244,247,251,.055);
+}
+.channel-icon-naver {
+  color: #03c75a;
+  background: rgba(3,199,90,.075);
+}
+.channel-icon-generic {
+  color: var(--accent);
+}
+.channel-row strong {
+  min-width: 0;
+}
+.channel-row .channel-external {
+  color: rgba(124,242,200,.7);
+  font-size: .9rem;
+  transition: transform .18s ease, color .18s ease;
+}
+.channel-row:hover .channel-external {
+  transform: translate(2px,-2px);
+  color: var(--accent);
+}
+@media (max-width: 700px) {
+  .channel-row {
+    grid-template-columns: 32px minmax(0,1fr) auto;
+    gap: 11px;
+    min-height: 58px;
+  }
+  .channel-row > span:not(.channel-icon) {
+    grid-column: 2;
+    margin-top: -5px;
+    font-size: .76rem;
+  }
+  .channel-row .channel-external {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+}

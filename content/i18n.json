@@ -718,6 +718,12 @@
         "title": "Added evidence galleries for all four projects",
         "summary": "Added three verified gameplay or game screens each for MOMO, CRYPTO SAGA, and LUTRATIDE SURVIVORS, plus three real production frames for AEVOWAKE. Key art and evidence are now clearly separated, with public source links where available."
       }
+    },
+    "28": {
+      "en": {
+        "title": "Added recognizable platform icons to the official channel list",
+        "summary": "Added distinctive icons and restrained platform colors for YouTube, X, and Naver Blog links. On mobile, channel descriptions now sit beneath the name for quicker scanning."
+      }
     }
   }
 }

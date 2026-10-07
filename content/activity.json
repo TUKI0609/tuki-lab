@@ -226,5 +226,26 @@
       "reason": "maker-content",
       "score": 80
     }
+  },
+  {
+    "id": "x-2009526942635372781",
+    "source": "x",
+    "sourceLabel": "X · @Ty_Tuki0609",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": "crypto-saga",
+    "title": "CRYPTO SAGA · 과거 X 게시물 (본문 확인 전)",
+    "summary": "사용자가 제공한 크립토사가 관련 X 게시물 링크. 게시물 본문과 첨부 이미지는 아직 확인하지 못했습니다.",
+    "url": "https://x.com/Ty_Tuki0609/status/2009526942635372781",
+    "publishedAt": "2026-01-09T07:25:32.986Z",
+    "detectedAt": "2026-10-07T00:00:00.000Z",
+    "manual": true,
+    "verification": "link-only",
+    "timestampSource": "x-status-id",
+    "editorial": {
+      "decision": "include",
+      "reason": "manual-user-provided-x-reference",
+      "score": 100
+    }
   }
 ]

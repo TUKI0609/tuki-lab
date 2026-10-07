@@ -1,5 +1,24 @@
 [
   {
+    "id": "61fb93622b6dd6a8",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "Verse8, 접속해도 될까? 직접 게임을 만들며 확인한 것들(바이브코딩, 게임 제작 플랫폼)",
+    "summary": "요즘 제가 X나 블로그에 올리는 게임을 보다 보면 조금 생소한 이름이 하나 보일 겁니다. Verse8 저도 처음에는 비슷한 생각을 했습니다. “여기서 게임을 만들어도 되는 건가?” “내가 만든 게임을 다른 사람에게 공유해도 괜찮을까?” “결제나 개인정보가 들어가면 안전한가?” “그리고 이걸 정말 게임 제작 플랫폼이라고 불",
+    "url": "https://blog.naver.com/ty_free/224434209760?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-07T06:46:03.000Z",
+    "detectedAt": "2026-10-07T07:08:20.128Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "c635c88a09fdd4a0",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -133,6 +152,25 @@
     }
   },
   {
+    "id": "a0491d60ef6a6e52",
+    "source": "youtube",
+    "sourceLabel": "YouTube",
+    "kind": "VIDEO",
+    "route": "WATCH",
+    "project": "lutratide-survivors",
+    "title": "GPT-6 Astra로 만든 게임, 이번엔 진화 차이를 키웠습니다 #AI게임 #게임개발 #인디게임 #GPTAstra #Shorts",
+    "summary": "",
+    "url": "https://www.youtube.com/shorts/BrBawuxsBy0",
+    "publishedAt": "2026-10-05T15:47:08.000Z",
+    "detectedAt": "2026-10-07T07:08:21.489Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "project:lutratide-survivors",
+      "score": 100
+    }
+  },
+  {
     "id": "59179aaed90c0d55",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -244,6 +282,25 @@
       "decision": "exclude",
       "reason": "source-default:exclude",
       "score": 0
+    }
+  },
+  {
+    "id": "f0b3b099a2402028",
+    "source": "youtube",
+    "sourceLabel": "YouTube",
+    "kind": "VIDEO",
+    "route": "WATCH",
+    "project": "momo",
+    "title": "다마고치 게임 만들기｜캐릭터가 드디어 밥을 먹습니다 #ai게임 #게임개발 #gpt",
+    "summary": "",
+    "url": "https://www.youtube.com/shorts/KKx1ILxPxHE",
+    "publishedAt": "2026-10-03T09:12:55.000Z",
+    "detectedAt": "2026-10-07T07:08:21.489Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "project:momo",
+      "score": 100
     }
   },
   {
@@ -437,22 +494,193 @@
     }
   },
   {
-    "id": "f1c849c9dff82c72",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
+    "id": "7c6740135538a8e0",
+    "source": "youtube",
+    "sourceLabel": "YouTube",
+    "kind": "VIDEO",
+    "route": "WATCH",
+    "project": "lutratide-survivors",
+    "title": "5탄) 챗GPT로 만든 게임, 몬스터를 고쳤더니…｜#바이브코딩 #AI게임만들기 #챗GPT #인디게임개발 #뱀서라이크 #Shorts",
+    "summary": "",
+    "url": "https://www.youtube.com/shorts/elhXFK08t7E",
+    "publishedAt": "2026-09-29T06:53:50.000Z",
+    "detectedAt": "2026-10-07T07:08:21.489Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "project:lutratide-survivors",
+      "score": 100
+    }
+  },
+  {
+    "id": "43913a5ab0cd76e6",
+    "source": "youtube",
+    "sourceLabel": "YouTube",
+    "kind": "VIDEO",
+    "route": "WATCH",
     "project": null,
-    "title": "OGQ 스티커 진짜 팔릴까? AI로 만든 스티커 승인부터 첫 판매·사용까지 해봤습니다",
-    "summary": "드디어 첫 OGQ 스티커가 승인됐습니다. 근데 이번에는 승인에서 끝난 게 아니었어요. 실제 판매가 발생했고, 두 번째 스티커도 판매 중으로 넘어왔으며, 제가 직접 구매해서 네이버 블로그에서 사용하는 것까지 확인했습니다. 현재 크리에이터 화면에는 판매 수 3건 판매 중 콘텐츠 2건 심사 중 콘텐츠 2건 으로 표시되고 있어요",
-    "url": "https://blog.naver.com/ty_free/224424873817?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-09-28T06:40:27.000Z",
-    "detectedAt": "2026-10-06T08:57:11.322Z",
+    "title": "AI 게임, 계속 고치면 진짜 재밌어질까? #ai게임 #게임개발 #gpt",
+    "summary": "",
+    "url": "https://www.youtube.com/shorts/tApq3jZlA5o",
+    "publishedAt": "2026-09-27T04:48:57.000Z",
+    "detectedAt": "2026-10-07T07:08:21.489Z",
     "manual": false,
     "editorial": {
       "decision": "include",
       "reason": "maker-content",
       "score": 80
+    }
+  },
+  {
+    "id": "134833316f9e41a0",
+    "source": "youtube",
+    "sourceLabel": "YouTube",
+    "kind": "VIDEO",
+    "route": "WATCH",
+    "project": null,
+    "title": "'GPT Astra'로 만든 게임, 업데이트할수록 진짜 게임이 되어간다 #ai게임",
+    "summary": "",
+    "url": "https://www.youtube.com/shorts/H8QyErkBvCI",
+    "publishedAt": "2026-09-25T06:54:32.000Z",
+    "detectedAt": "2026-10-07T07:08:21.489Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "7400298221d82f54",
+    "source": "youtube",
+    "sourceLabel": "YouTube",
+    "kind": "VIDEO",
+    "route": "WATCH",
+    "project": "lutratide-survivors",
+    "title": "9분 50초 만에 만든 게임, 업데이트 후 이렇게 달라졌습니다",
+    "summary": "",
+    "url": "https://www.youtube.com/shorts/PrqgIoBEZoE",
+    "publishedAt": "2026-09-21T05:07:09.000Z",
+    "detectedAt": "2026-10-07T07:08:21.489Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "project:lutratide-survivors",
+      "score": 100
+    }
+  },
+  {
+    "id": "b856eabeb4a24b15",
+    "source": "youtube",
+    "sourceLabel": "YouTube",
+    "kind": "VIDEO",
+    "route": "WATCH",
+    "project": null,
+    "title": "“게임 만들어줘” 했더니 9분 50초 만에 나옴;; 편집까지 뚝딱",
+    "summary": "",
+    "url": "https://www.youtube.com/shorts/9ESE4Y8qwKo",
+    "publishedAt": "2026-09-17T16:25:15.000Z",
+    "detectedAt": "2026-10-07T07:08:21.489Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "8c356972fb592d65",
+    "source": "youtube",
+    "sourceLabel": "YouTube",
+    "kind": "VIDEO",
+    "route": "WATCH",
+    "project": null,
+    "title": "GPT 아스트라에게 게임을 만들어 달랬더니… 9분 50초 만에 나온 결과",
+    "summary": "",
+    "url": "https://www.youtube.com/watch?v=brXb0zLQh_g",
+    "publishedAt": "2026-09-17T15:57:43.000Z",
+    "detectedAt": "2026-10-07T07:08:21.489Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "24223278d0db1120",
+    "source": "youtube",
+    "sourceLabel": "YouTube",
+    "kind": "VIDEO",
+    "route": "WATCH",
+    "project": null,
+    "title": "AI를 이용해 뮤직비디오를 제작하다. '용사의 노래 MV'",
+    "summary": "",
+    "url": "https://www.youtube.com/watch?v=pInPyYdHUZU",
+    "publishedAt": "2026-02-10T09:14:59.000Z",
+    "detectedAt": "2026-10-07T07:08:21.489Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "c78744ec9c94ca29",
+    "source": "youtube",
+    "sourceLabel": "YouTube",
+    "kind": "VIDEO",
+    "route": "WATCH",
+    "project": null,
+    "title": "1일 1 감정 노래 | 지하실 디스코 | Emotional Healing BGM",
+    "summary": "",
+    "url": "https://www.youtube.com/watch?v=yb4g8oRfnJo",
+    "publishedAt": "2026-02-08T07:02:25.000Z",
+    "detectedAt": "2026-10-07T07:08:21.489Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
+    "id": "fc645a7ec3eb99b1",
+    "source": "youtube",
+    "sourceLabel": "YouTube",
+    "kind": "VIDEO",
+    "route": "WATCH",
+    "project": null,
+    "title": "1일 1 감정 노래 | 괜히 걱정하는 밤 | Emotional Healing BGM",
+    "summary": "",
+    "url": "https://www.youtube.com/watch?v=uz9UBkj8ga0",
+    "publishedAt": "2026-02-06T00:01:04.000Z",
+    "detectedAt": "2026-10-07T07:08:21.489Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
+    "id": "5732982ee9f00a59",
+    "source": "youtube",
+    "sourceLabel": "YouTube",
+    "kind": "VIDEO",
+    "route": "WATCH",
+    "project": null,
+    "title": "1일 1 감정 노래 | 처음인 것처럼 | Emotional Healing BGM",
+    "summary": "",
+    "url": "https://www.youtube.com/watch?v=ZhnU1c16OHM",
+    "publishedAt": "2026-02-05T00:00:43.000Z",
+    "detectedAt": "2026-10-07T07:08:21.489Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
     }
   },
   {

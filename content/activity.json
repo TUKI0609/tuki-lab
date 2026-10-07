@@ -1,5 +1,24 @@
 [
   {
+    "id": "c635c88a09fdd4a0",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "AI로 만든 효과음, 게임에 써도 될까? 상업적 이용 전 꼭 확인할 것",
+    "summary": "게임을 만들다 보면 생각보다 '소리'가 정말 많이 필요합니다. 버튼을 누를 때 나는 소리부터 아이템을 먹는 소리, 발소리, 공격음, 바람 소리까지. 직접 녹음하기는 어렵고 무료 효과음을 하나씩 찾자니 원하는 소리가 잘 나오지 않죠. 그래서 요즘은 AI로 효과음을 만드는 방법도 꽤 매력적입니다. \"나무 바닥을 천천히 걷는 ",
+    "url": "https://blog.naver.com/ty_free/224434101912?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-07T05:17:08.000Z",
+    "detectedAt": "2026-10-07T05:35:38.187Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "bf8b90b413231cf9",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -16,25 +35,6 @@
       "decision": "include",
       "reason": "maker-content",
       "score": 80
-    }
-  },
-  {
-    "id": "a0491d60ef6a6e52",
-    "source": "youtube",
-    "sourceLabel": "YouTube",
-    "kind": "VIDEO",
-    "route": "WATCH",
-    "project": "lutratide-survivors",
-    "title": "GPT-6 Astra로 만든 게임, 이번엔 진화 차이를 키웠습니다 #AI게임 #게임개발 #인디게임 #GPTAstra #Shorts",
-    "summary": "",
-    "url": "https://www.youtube.com/shorts/BrBawuxsBy0",
-    "publishedAt": "2026-10-05T15:47:08.000Z",
-    "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "project:lutratide-survivors",
-      "score": 100
     }
   },
   {
@@ -73,25 +73,6 @@
       "decision": "include",
       "reason": "maker-content",
       "score": 80
-    }
-  },
-  {
-    "id": "f0b3b099a2402028",
-    "source": "youtube",
-    "sourceLabel": "YouTube",
-    "kind": "VIDEO",
-    "route": "WATCH",
-    "project": "momo",
-    "title": "다마고치 게임 만들기｜캐릭터가 드디어 밥을 먹습니다 #ai게임 #게임개발 #gpt",
-    "summary": "",
-    "url": "https://www.youtube.com/shorts/KKx1ILxPxHE",
-    "publishedAt": "2026-10-03T09:12:55.000Z",
-    "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "project:momo",
-      "score": 100
     }
   },
   {
@@ -228,25 +209,6 @@
     }
   },
   {
-    "id": "7c6740135538a8e0",
-    "source": "youtube",
-    "sourceLabel": "YouTube",
-    "kind": "VIDEO",
-    "route": "WATCH",
-    "project": "lutratide-survivors",
-    "title": "5탄) 챗GPT로 만든 게임, 몬스터를 고쳤더니…｜#바이브코딩 #AI게임만들기 #챗GPT #인디게임개발 #뱀서라이크 #Shorts",
-    "summary": "",
-    "url": "https://www.youtube.com/shorts/elhXFK08t7E",
-    "publishedAt": "2026-09-29T06:53:50.000Z",
-    "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "project:lutratide-survivors",
-      "score": 100
-    }
-  },
-  {
     "id": "f1c849c9dff82c72",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -258,139 +220,6 @@
     "url": "https://blog.naver.com/ty_free/224424873817?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-09-28T06:40:27.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "aef736215b77c20b",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": "aevowake",
-    "title": "AI로 웹툰 연재까지 가능할까? 직접 만든 웹소설로 도전해봤습니다",
-    "summary": "웹소설을 쓰다 보니까 어느 순간 이런 생각이 들었습니다. “이 이야기를 웹툰으로 만들면 어떤 느낌일까?” 그래서 그냥 상상만 하지 않고 직접 해봤어요. 제가 쓰고 있던 웹소설 ‘에보웨이크(AEVOWAKE)’ 시즌1을 기준으로 캐릭터 디자인부터 배경, 콘티, 컷 구성, 이미지 제작까지 하나씩 진행했고, 결국 네이버 웹툰 크",
-    "url": "https://blog.naver.com/ty_free/224423874662?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-09-27T06:44:37.000Z",
-    "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "project:aevowake",
-      "score": 100
-    }
-  },
-  {
-    "id": "43913a5ab0cd76e6",
-    "source": "youtube",
-    "sourceLabel": "YouTube",
-    "kind": "VIDEO",
-    "route": "WATCH",
-    "project": null,
-    "title": "AI 게임, 계속 고치면 진짜 재밌어질까? #ai게임 #게임개발 #gpt",
-    "summary": "",
-    "url": "https://www.youtube.com/shorts/tApq3jZlA5o",
-    "publishedAt": "2026-09-27T04:48:57.000Z",
-    "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "134833316f9e41a0",
-    "source": "youtube",
-    "sourceLabel": "YouTube",
-    "kind": "VIDEO",
-    "route": "WATCH",
-    "project": null,
-    "title": "'GPT Astra'로 만든 게임, 업데이트할수록 진짜 게임이 되어간다 #ai게임",
-    "summary": "",
-    "url": "https://www.youtube.com/shorts/H8QyErkBvCI",
-    "publishedAt": "2026-09-25T06:54:32.000Z",
-    "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "7400298221d82f54",
-    "source": "youtube",
-    "sourceLabel": "YouTube",
-    "kind": "VIDEO",
-    "route": "WATCH",
-    "project": "lutratide-survivors",
-    "title": "9분 50초 만에 만든 게임, 업데이트 후 이렇게 달라졌습니다",
-    "summary": "",
-    "url": "https://www.youtube.com/shorts/PrqgIoBEZoE",
-    "publishedAt": "2026-09-21T05:07:09.000Z",
-    "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "project:lutratide-survivors",
-      "score": 100
-    }
-  },
-  {
-    "id": "b856eabeb4a24b15",
-    "source": "youtube",
-    "sourceLabel": "YouTube",
-    "kind": "VIDEO",
-    "route": "WATCH",
-    "project": null,
-    "title": "“게임 만들어줘” 했더니 9분 50초 만에 나옴;; 편집까지 뚝딱",
-    "summary": "",
-    "url": "https://www.youtube.com/shorts/9ESE4Y8qwKo",
-    "publishedAt": "2026-09-17T16:25:15.000Z",
-    "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "8c356972fb592d65",
-    "source": "youtube",
-    "sourceLabel": "YouTube",
-    "kind": "VIDEO",
-    "route": "WATCH",
-    "project": null,
-    "title": "GPT 아스트라에게 게임을 만들어 달랬더니… 9분 50초 만에 나온 결과",
-    "summary": "",
-    "url": "https://www.youtube.com/watch?v=brXb0zLQh_g",
-    "publishedAt": "2026-09-17T15:57:43.000Z",
-    "detectedAt": "2026-10-06T08:57:12.761Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "24223278d0db1120",
-    "source": "youtube",
-    "sourceLabel": "YouTube",
-    "kind": "VIDEO",
-    "route": "WATCH",
-    "project": null,
-    "title": "AI를 이용해 뮤직비디오를 제작하다. '용사의 노래 MV'",
-    "summary": "",
-    "url": "https://www.youtube.com/watch?v=pInPyYdHUZU",
-    "publishedAt": "2026-02-10T09:14:59.000Z",
-    "detectedAt": "2026-10-06T08:57:12.761Z",
     "manual": false,
     "editorial": {
       "decision": "include",

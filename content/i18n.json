@@ -169,7 +169,10 @@
       "platform.trustTitle": "“안전합니다”보다, 확인된 것과 확인 중인 것을 나눠 보여줍니다.",
       "platform.blog": "실사용 확인 글 읽기",
       "platform.docs": "Verse8 공식 문서",
-      "platform.latest": "최신 Verse8 기록"
+      "platform.latest": "최신 Verse8 기록",
+      "showcase.playNow": "지금 플레이",
+      "project.release": "공개",
+      "project.releaseDate": "런칭일"
     },
     "en": {
       "nav.home": "Home",
@@ -335,7 +338,10 @@
       "platform.trustTitle": "Trust comes from separating what is verified from what is still being checked.",
       "platform.blog": "Read the hands-on verification post",
       "platform.docs": "Verse8 official docs",
-      "platform.latest": "Latest Verse8 record"
+      "platform.latest": "Latest Verse8 record",
+      "showcase.playNow": "Play now",
+      "project.release": "Release",
+      "project.releaseDate": "Launch date"
     }
   },
   "terms": {
@@ -370,7 +376,8 @@
       "PLAYABLE HERO": "플레이어블 캐릭터",
       "SOURCE": "출처",
       "DETAILS": "상세 보기",
-      "REBUILDING": "리빌딩 중"
+      "REBUILDING": "리빌딩 중",
+      "RELEASED": "정식 공개"
     },
     "en": {
       "HOME": "Home",
@@ -403,18 +410,23 @@
       "PLAYABLE HERO": "Playable hero",
       "SOURCE": "Source",
       "DETAILS": "Details",
-      "REBUILDING": "Rebuilding"
+      "REBUILDING": "Rebuilding",
+      "RELEASED": "Released"
     }
   },
   "projects": {
     "momo": {
       "ko": {
         "tagline": "기억하고 반응하며 함께 생활하는 반려형 가상 펫.",
-        "currentFocus": "공개 전 사용성 점검과 실제 플레이 테스트"
+        "currentFocus": "런칭 후 안정화와 실제 플레이 피드백 반영",
+        "name": "모모와 포근한 하루",
+        "releaseLabel": "Verse8 공개 런칭"
       },
       "en": {
         "tagline": "A companion pet that remembers, reacts, and lives alongside you.",
-        "currentFocus": "Pre-release UX and hands-on play QA"
+        "currentFocus": "Post-launch stabilization and player feedback",
+        "name": "Cozy Days with Momo",
+        "releaseLabel": "Public launch on Verse8"
       }
     },
     "lutratide-survivors": {
@@ -669,6 +681,12 @@
       "en": {
         "title": "Elevated Verse8 to a core build platform inside TUKI WORLD",
         "summary": "Verse8 is now presented as the core build platform behind multiple projects rather than as another game card. The latest hands-on Verse8 blog post is linked, and trust is built by separating verified use, official documentation, and areas still requiring verification."
+      }
+    },
+    "24": {
+      "en": {
+        "title": "Cozy Days with Momo officially launches on Verse8",
+        "summary": "The MOMO project launched on Verse8 as Cozy Days with Momo. Its status is now Released and Playable, the live game link is connected, and MOMO has moved into the featured-project slot on the home page."
       }
     }
   }

@@ -5354,3 +5354,18 @@ body[data-page="projects"] .core-platform-shell {
   }
   .core-platform-latest > b { grid-column:2; grid-row:1 / span 2; }
 }
+
+/* MOMO public launch */
+.project-card-momo .status {
+  color:#c9f5dd;
+  border-color:rgba(114,221,174,.28);
+  background:rgba(114,221,174,.10);
+}
+.project-card-momo .availability {
+  color:#b8ead2;
+}
+.home-v4[data-active-project="momo"] .showcase-stamp {
+  border-color:rgba(114,221,174,.42);
+  color:#d3f6e3;
+  background:rgba(18,38,29,.78);
+}

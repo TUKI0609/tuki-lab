@@ -1,5 +1,13 @@
 [
   {
+    "id": 24,
+    "date": "2026-10-07",
+    "type": "RELEASE",
+    "project": "momo",
+    "title": "‘모모와 포근한 하루’ Verse8 정식 공개",
+    "summary": "MOMO 프로젝트를 ‘모모와 포근한 하루_Cozy Days with Momo’라는 이름으로 Verse8에 공개했다. 프로젝트 상태를 정식 공개·플레이 가능으로 전환하고 실제 게임 링크를 연결했으며, 홈 대표 프로젝트도 MOMO로 변경했다."
+  },
+  {
     "id": 23,
     "date": "2026-10-07",
     "type": "DECISION",

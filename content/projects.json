@@ -136,23 +136,68 @@
   },
   {
     "id": "momo",
-    "name": "MOMO",
+    "name": "모모와 포근한 하루",
     "type": "GAME",
     "route": "PLAY",
-    "status": "IN DEVELOPMENT",
-    "availability": "NOT YET PUBLIC",
+    "status": "RELEASED",
+    "availability": "PLAYABLE",
     "platform": "Verse8",
     "tagline": "기억하고 반응하며 함께 생활하는 Companion Pet.",
-    "currentFocus": "공개 전 UX와 실제 플레이 QA",
+    "currentFocus": "런칭 후 안정화와 실제 플레이 피드백 반영",
     "visuals": [
       "momo"
     ],
-    "links": [],
+    "links": [
+      {
+        "label": "PLAY",
+        "url": "https://verse8.io/dl/games/G2R7X5f?referral=C4GF3Z"
+      }
+    ],
     "characters": [
       "momo"
     ],
     "labTags": [
       "momo"
+    ],
+    "releaseDate": "2026-10-07",
+    "releaseLabel": "Verse8 공개 런칭",
+    "history": [
+      {
+        "id": "momo-launch-2026-10-07",
+        "date": "2026-10-07",
+        "dateLabel": {
+          "ko": "2026.10.07",
+          "en": "Oct 7, 2026"
+        },
+        "stage": {
+          "ko": "공개 런칭",
+          "en": "Public launch"
+        },
+        "title": {
+          "ko": "‘모모와 포근한 하루’ Verse8 공개",
+          "en": "Cozy Days with Momo launches on Verse8"
+        },
+        "summary": {
+          "ko": "반려형 가상 펫 프로젝트를 ‘모모와 포근한 하루’라는 이름으로 Verse8에 공개했습니다. 이제 실제 플레이가 가능하며, 다음 단계는 런칭 이후 안정화와 플레이 피드백 반영입니다.",
+          "en": "The companion-pet project launched publicly on Verse8 as Cozy Days with Momo. It is now playable, with post-launch stabilization and player feedback as the next focus."
+        },
+        "highlights": {
+          "ko": [
+            "Verse8 공개 런칭",
+            "실제 플레이 가능",
+            "런칭 후 안정화 단계"
+          ],
+          "en": [
+            "Public Verse8 launch",
+            "Playable now",
+            "Post-launch stabilization"
+          ]
+        },
+        "source": {
+          "label": "Verse8",
+          "url": "https://verse8.io/dl/games/G2R7X5f?referral=C4GF3Z"
+        }
+      }
     ]
   },
   {

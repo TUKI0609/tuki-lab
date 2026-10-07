@@ -40,8 +40,10 @@ export function localizeProject(project) {
   const override = i18nData?.projects?.[project.id]?.[currentLanguage] || {};
   return {
     ...project,
+    name: override.name ?? project.name,
     tagline: override.tagline ?? project.tagline,
     currentFocus: override.currentFocus ?? project.currentFocus,
+    releaseLabel: override.releaseLabel ?? project.releaseLabel ?? "",
     seasonLabel: override.seasonLabel ?? project.seasonLabel ?? "",
     visualCaption: override.visualCaption ?? project.visualCaption ?? "",
     routeLabel: term(project.route),

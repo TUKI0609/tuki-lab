@@ -1,5 +1,24 @@
 [
   {
+    "id": "e0ab04e8946cf7fe",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "롤 26.20 패치 뭐가 바뀌었나? 버프·너프 챔피언과 로켓벨트 변경 총정리",
+    "summary": "리그 오브 레전드 26.20 패치가 적용됐습니다. 이번 패치가 평소보다 조금 더 중요한 이유가 있는데요. 바로 2026 월드 챔피언십에서 사용되는 패치이기 때문입니다. 결론부터 보면 암베사, 애쉬, 크산테 등 프로 경기에서 자주 등장했던 챔피언은 하향됐고, 킨드레드와 케넨, 릴리아, 모데카이저처럼 상대적으로 힘이 부족했던",
+    "url": "https://blog.naver.com/abb7664/224434250173?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-07T07:20:33.000Z",
+    "detectedAt": "2026-10-07T09:48:07.905Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "61fb93622b6dd6a8",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -352,25 +371,6 @@
     "summary": "오늘 FC온라인 접속하실 분이라면 오후 6시는 꼭 기억해두세요. 한일전 결승을 기념한 핫타임 접속 이벤트가 오늘 10월 3일 오후 6시부터 11시 59분까지 딱 하루 진행됩니다. PC 또는 FC온라인 M에 한 번만 접속해도 BP 카드, 전체 수수료 30% 할인 쿠폰, 선수팩 묶음 상자를 모두 받을 수 있습니다. 한눈에 보",
     "url": "https://blog.naver.com/abb7664/224430288827?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-03T05:11:51.000Z",
-    "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
-    "id": "04e3fc267f596922",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "한국 베네수엘라 0-0, 왜 답답했을까?｜손흥민 59호골·우즈벡전 일정 관전 포인트",
-    "summary": "대한민국이 베네수엘라와 0-0으로 비겼습니다. 우루과이전 1-4 패배 뒤 가장 궁금했던 건 하나였습니다. 강한 압박을 받을 때 흔들렸던 빌드업과 수비 밸런스를 얼마나 고쳤을까? 결과만 보면 무실점으로 안정됐지만, 경기 내용까지 보면 아직 해결해야 할 부분이 꽤 남았습니다. 전반 첫 슈팅이 45분에 나올 정도로 공격 전개가",
-    "url": "https://blog.naver.com/abb7664/224429855996?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-02T14:18:56.000Z",
     "detectedAt": "2026-10-06T08:57:12.383Z",
     "manual": false,
     "editorial": {

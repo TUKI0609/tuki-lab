@@ -23,20 +23,20 @@
     ],
     "evidenceHash": "866b9009dcde",
     "generatedAt": "2026-10-07T07:08:21.547Z",
-    "updatedAt": "2026-10-07T07:08:21.547Z",
+    "updatedAt": "2026-10-07T09:48:08.311Z",
     "approvedAt": null,
     "rejectedAt": null
   },
   {
     "id": "lab-momo-2026-W40",
     "project": "momo",
-    "projectName": "MOMO",
+    "projectName": "모모와 포근한 하루",
     "period": "2026-W40",
     "status": "APPROVED",
     "needsApproval": false,
     "suggestedType": "BUILD LOG",
-    "suggestedTitle": "MOMO · 다마고치 게임 만들기｜캐릭터가 드디어 밥을 먹습니다",
-    "suggestedSummary": "MOMO와 연결된 최근 활동 1건을 하나의 BUILD LOG 후보로 묶었습니다. 출처: YouTube. 승인 전에는 TUKI LAB에 공개되지 않습니다.",
+    "suggestedTitle": "모모와 포근한 하루 · 다마고치 게임 만들기｜캐릭터가 드디어 밥을 먹습니다",
+    "suggestedSummary": "모모와 포근한 하루와 연결된 최근 활동 1건을 하나의 BUILD LOG 후보로 묶었습니다. 출처: YouTube. 승인 전에는 TUKI LAB에 공개되지 않습니다.",
     "confidence": 70,
     "evidenceCount": 1,
     "evidence": [
@@ -51,7 +51,7 @@
     ],
     "evidenceHash": "d4ba34db036b",
     "generatedAt": "2026-10-07T07:08:21.547Z",
-    "updatedAt": "2026-10-07T07:08:21.547Z",
+    "updatedAt": "2026-10-07T09:48:08.311Z",
     "approvedAt": "2026-10-07T09:40:00.000Z",
     "rejectedAt": null
   },
@@ -79,7 +79,7 @@
     ],
     "evidenceHash": "f311796063e8",
     "generatedAt": "2026-10-07T05:35:39.802Z",
-    "updatedAt": "2026-10-07T07:08:21.547Z",
+    "updatedAt": "2026-10-07T09:48:08.311Z",
     "approvedAt": "2026-10-07T09:40:00.000Z",
     "rejectedAt": null
   },
@@ -107,7 +107,7 @@
     ],
     "evidenceHash": "f6f3c1aada84",
     "generatedAt": "2026-10-07T07:08:21.547Z",
-    "updatedAt": "2026-10-07T07:08:21.547Z",
+    "updatedAt": "2026-10-07T09:48:08.311Z",
     "approvedAt": null,
     "rejectedAt": null
   },
@@ -135,7 +135,7 @@
     ],
     "evidenceHash": "6ed800069660",
     "generatedAt": "2026-10-07T07:08:21.547Z",
-    "updatedAt": "2026-10-07T07:08:21.547Z",
+    "updatedAt": "2026-10-07T09:48:08.312Z",
     "approvedAt": null,
     "rejectedAt": null
   }

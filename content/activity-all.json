@@ -1,5 +1,24 @@
 [
   {
+    "id": "7385cc5d42027678",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "롤 리플레이 다운로드 안됨? 26.20부터 다른 사람 리플레이가 안 보이는 이유",
+    "summary": "롤에서 다른 사람의 리플레이를 받으려고 했는데 갑자기 다운로드가 안 된다면 오류가 아닙니다. 2026년 10월 7일 적용된 롤 26.20 패치부터 리플레이 정책 자체가 변경됐습니다. 결론부터 말하면 이제 자신이 직접 참여한 게임의 리플레이만 볼 수 있습니다. 다른 플레이어의 리플레이를 다운로드하는 기능은 막혔고, 외부 사",
+    "url": "https://blog.naver.com/abb7664/224434402320?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-07T09:51:01.000Z",
+    "detectedAt": "2026-10-07T13:26:52.013Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "e0ab04e8946cf7fe",
     "source": "naver-game",
     "sourceLabel": "Naver Blog · 게임",
@@ -358,25 +377,6 @@
       "decision": "include",
       "reason": "maker-content",
       "score": 80
-    }
-  },
-  {
-    "id": "ff8d8e6bd6bd1db7",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "FC온라인 한일전 핫타임 오늘 6시 시작｜접속만 해도 BP·수수료 30%·선수팩",
-    "summary": "오늘 FC온라인 접속하실 분이라면 오후 6시는 꼭 기억해두세요. 한일전 결승을 기념한 핫타임 접속 이벤트가 오늘 10월 3일 오후 6시부터 11시 59분까지 딱 하루 진행됩니다. PC 또는 FC온라인 M에 한 번만 접속해도 BP 카드, 전체 수수료 30% 할인 쿠폰, 선수팩 묶음 상자를 모두 받을 수 있습니다. 한눈에 보",
-    "url": "https://blog.naver.com/abb7664/224430288827?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-03T05:11:51.000Z",
-    "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
     }
   },
   {

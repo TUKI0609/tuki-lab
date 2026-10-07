@@ -42,12 +42,27 @@ async function boot() {
 
   const project = projects.find(item => item.id === post.project);
   document.title = `${post.title} · TUKI LAB`;
+  const canonicalUrl = `https://tuki0609.github.io/tuki-lab/lab/article/?slug=${encodeURIComponent(post.slug)}`;
+  const description = post.summary || "TUKI LAB 제작 기록";
+  const setMeta = (selector, value, attr = "content") => {
+    const el = document.querySelector(selector);
+    if (el) el.setAttribute(attr, value);
+  };
+  setMeta('meta[name="description"]', description);
+  setMeta('meta[name="robots"]', "index,follow,max-image-preview:large");
+  setMeta('meta[property="og:title"]', document.title);
+  setMeta('meta[property="og:description"]', description);
+  setMeta('meta[property="og:url"]', canonicalUrl);
+  setMeta('meta[name="twitter:title"]', document.title);
+  setMeta('meta[name="twitter:description"]', description);
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.href = canonicalUrl;
 
   root.innerHTML = `
     <header class="lab-article-head">
       <div class="lab-article-labels">
         <span>${term(post.type)}</span>
-        ${project ? `<a href="${base}projects/detail/?id=${encodeURIComponent(project.id)}">${project.name}</a>` : ""}
+        ${project ? `<a href="${base}projects/${encodeURIComponent(project.id)}/">${project.name}</a>` : ""}
       </div>
       <h1>${escapeHtml(post.title)}</h1>
       <p class="lab-article-summary">${escapeHtml(post.summary || "")}</p>

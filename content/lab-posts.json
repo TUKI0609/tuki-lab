@@ -1,1 +1,151 @@
-[]
+[
+  {
+    "slug": "momo-public-launch-2026-10-07",
+    "project": "momo",
+    "type": "RELEASE",
+    "title": "모모와 포근한 하루, 개발 중인 펫 게임에서 실제 공개 게임으로",
+    "summary": "MOMO를 ‘모모와 포근한 하루_Cozy Days with Momo’라는 이름으로 Verse8에 공개했습니다. 무엇을 완성했고, 출시 뒤 무엇을 계속 고칠지 남긴 첫 정식 런칭 기록입니다.",
+    "publishedAt": "2026-10-07",
+    "sections": [
+      {
+        "heading": "‘언젠가 공개할 게임’에서 ‘지금 플레이할 수 있는 게임’으로",
+        "paragraphs": [
+          "MOMO는 방 안에서 함께 생활하는 작은 반려형 게임으로 시작했습니다. 밥 먹기, 놀기, 잠자기 같은 기본 돌봄에서 출발해 친밀도, 행동 기록, 취향, 생활 이벤트처럼 ‘함께 지낸 시간이 남는 구조’를 계속 붙였습니다.",
+          "2026년 10월 7일, 프로젝트 이름을 ‘모모와 포근한 하루_Cozy Days with Momo’로 정하고 Verse8에 공개했습니다. 이제 설명이나 개발 영상만 있는 프로젝트가 아니라 외부 사용자가 직접 들어가 플레이할 수 있는 상태입니다."
+        ]
+      },
+      {
+        "heading": "출시는 끝이 아니라 실제 사용이 시작되는 지점",
+        "paragraphs": [
+          "공개했다고 완성도를 과장하지 않기로 했습니다. 지금 상태는 정식 공개와 플레이 가능이지만, 런칭 이후의 안정화와 실제 플레이 피드백 반영이 다음 작업입니다.",
+          "TUKI WORLD에서는 공개 여부와 현재 작업을 분리해 표시합니다. 플레이할 수 있다는 사실과 앞으로 더 고칠 부분이 남아 있다는 사실을 동시에 보여주는 것이 이 프로젝트의 현재 상태입니다."
+        ]
+      },
+      {
+        "heading": "다음 기록에서 볼 것",
+        "paragraphs": [
+          "이후에는 반복 플레이에서 관계와 기억이 충분히 체감되는지, 돌봄 행동이 단순 버튼 반복으로 느껴지지 않는지, 생활 이벤트와 기록 기능이 다시 접속할 이유를 만드는지를 실제 플레이 기준으로 점검합니다.",
+          "좋았던 결과만 모으기보다 출시 뒤 발견되는 어색함과 수정 과정도 같은 프로젝트 기록 안에 계속 남길 예정입니다."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Verse8 · Live game",
+        "title": "모모와 포근한 하루_Cozy Days with Momo",
+        "url": "https://verse8.io/dl/games/G2R7X5f?referral=C4GF3Z"
+      },
+      {
+        "label": "YouTube · Development short",
+        "title": "다마고치 게임 만들기｜캐릭터가 드디어 밥을 먹습니다",
+        "url": "https://www.youtube.com/shorts/KKx1ILxPxHE"
+      }
+    ]
+  },
+  {
+    "slug": "crypto-saga-battle-rebuild-2026-10",
+    "project": "crypto-saga",
+    "type": "BUILD LOG",
+    "title": "CRYPTO SAGA, 기능을 모은 화면에서 ‘게임다운 전투’로 다시 만들기",
+    "summary": "이미 플레이 가능한 RPG였던 CRYPTO SAGA를 왜 다시 뜯어고치기 시작했는지, 전투 화면 리빌딩과 시즌 2 준비의 기준을 정리했습니다.",
+    "publishedAt": "2026-10-07",
+    "sections": [
+      {
+        "heading": "작동하는 것과 게임처럼 느껴지는 것은 달랐다",
+        "paragraphs": [
+          "CRYPTO SAGA에는 전투, 캐릭터, 던전, 아레나 등 이미 작동하는 기능이 있었습니다. 하지만 실제로 플레이할수록 화면이 하나의 게임 경험이라기보다 여러 기능을 한곳에 모아놓은 인상에 가까웠습니다.",
+          "그래서 기능을 더 추가하기 전에 전투 화면부터 다시 보기로 했습니다. 이번 리빌딩의 기준은 ‘기능이 있느냐’가 아니라 ‘플레이 흐름 안에서 자연스럽게 읽히느냐’입니다."
+        ]
+      },
+      {
+        "heading": "기존 게임은 남기고, 시즌 2를 준비한다",
+        "paragraphs": [
+          "현재 공개된 기존 버전은 계속 플레이할 수 있습니다. 동시에 전투 UI와 전체 플레이 경험을 다시 정리하며 시즌 2를 준비하고 있습니다.",
+          "과거 공개 기록에서는 캐릭터 3단 진화, 소환, 도감, 자동 전투, 시나리오와 숨겨진 스토리 같은 시스템이 실제 구현된 상태를 확인했습니다. 지금의 작업은 이 기능들을 버리는 것이 아니라 더 읽히는 구조로 다시 묶는 과정입니다."
+        ]
+      },
+      {
+        "heading": "리빌딩에서 지키는 원칙",
+        "paragraphs": [
+          "큰 기능을 한 번에 덧붙이기보다 화면 단위로 수정하고, 정상 작동 버전을 기준점으로 남긴 뒤 회귀 테스트를 반복합니다.",
+          "CRYPTO SAGA의 다음 단계는 기능 목록을 늘리는 것이 아니라 기존 시스템이 서로 연결되어 하나의 게임처럼 느껴지게 만드는 것입니다."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Naver Blog · Rebuild",
+        "title": "바이브코딩으로 RPG 게임 리빌딩하기, 전투 화면부터 다시 만들었습니다 | Crypto Saga",
+        "url": "https://blog.naver.com/ty_free/224426134448"
+      },
+      {
+        "label": "X · Archived build",
+        "title": "CRYPTO SAGA 수집형 턴제 RPG 개발 소개",
+        "url": "https://x.com/Ty_Tuki0609/status/2009526942635372781"
+      },
+      {
+        "label": "Verse8 · Live game",
+        "title": "CRYPTO SAGA",
+        "url": "https://verse8.io/dl/games/U7w8x7m?referral=C4GF3Z"
+      }
+    ]
+  },
+  {
+    "slug": "verse8-hands-on-2026-10",
+    "project": null,
+    "type": "BUILD LOG",
+    "title": "Verse8를 실제 게임 제작에 써보며 확인한 것들",
+    "summary": "CRYPTO SAGA, 모모와 포근한 하루, AEVOWAKE를 만들며 Verse8를 실제 제작 환경으로 사용해봤습니다. 확인된 기능과 아직 확인이 필요한 영역을 분리해 기록합니다.",
+    "publishedAt": "2026-10-07",
+    "sections": [
+      {
+        "heading": "TUKI WORLD에서 Verse8는 ‘게임 하나’가 아니라 제작 기반이다",
+        "paragraphs": [
+          "Verse8는 TUKI WORLD 안에서 별도의 게임 프로젝트로 취급하지 않습니다. CRYPTO SAGA, 모모와 포근한 하루, AEVOWAKE 같은 프로젝트를 만들고 테스트하는 주요 제작 환경으로 사용하고 있습니다.",
+          "자연어 기반 제작 도구뿐 아니라 서버와 퍼블리싱, 게임 내 수익화 기능까지 공식 문서에서 다루고 있어 단순한 미니게임 생성 도구보다 범위가 넓습니다."
+        ]
+      },
+      {
+        "heading": "확인된 것과 진행 중인 것을 나눠 본다",
+        "paragraphs": [
+          "실제 게임 제작과 공개, GameServer, VXShop 같은 기능은 공식 문서와 사용 경험에서 확인할 수 있습니다. 반면 Creator 현금 정산 시스템은 공식 문서상 아직 개발 중인 영역입니다.",
+          "또한 외부 상업 이용권, 생성 결과물의 권리 범위, 외부 유통 조건은 실제 출시 시점의 최신 약관과 계약 조건을 다시 확인해야 합니다. 그래서 TUKI WORLD는 Verse8를 ‘무조건 안전한 플랫폼’이라고 표현하지 않습니다."
+        ]
+      },
+      {
+        "heading": "현재 판단",
+        "paragraphs": [
+          "현재의 Verse8는 단순한 실험 서비스라고만 보기에는 실제 제작·서버·Creator·수익화 기능이 많이 연결되어 있습니다. 동시에 정산과 일부 외부 유통 구조는 완성 과정에 있습니다.",
+          "그래서 앞으로도 직접 만든 게임의 결과와 공식 문서를 함께 보면서, 확인된 사실과 아직 진행 중인 부분을 구분해 기록할 예정입니다."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Naver Blog · Hands-on",
+        "title": "Verse8, 접속해도 될까? 직접 게임을 만들며 확인한 것들",
+        "url": "https://blog.naver.com/ty_free/224434209760"
+      },
+      {
+        "label": "Verse8 Docs",
+        "title": "Agent8 documentation",
+        "url": "https://docs.verse8.io/en/docs"
+      },
+      {
+        "label": "Verse8 Docs",
+        "title": "GameServer introduction",
+        "url": "https://docs.verse8.io/en/docs/gameserver/intro"
+      },
+      {
+        "label": "Verse8 Docs",
+        "title": "VXShop introduction",
+        "url": "https://docs.verse8.io/en/docs/vxshop/intro"
+      },
+      {
+        "label": "Verse8 Docs",
+        "title": "Creator settlement status",
+        "url": "https://docs.verse8.io/en/docs/vxshop/settlements"
+      }
+    ]
+  }
+]

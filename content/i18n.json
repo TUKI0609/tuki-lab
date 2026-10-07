@@ -38,7 +38,7 @@
       "hero.enter": "프로젝트 보기",
       "hero.latest": "최근 제작 기록",
       "hero.note": "완성품보다 과정에 더 많은 흔적이 남습니다.",
-      "showcase.now": "지금 제작 중",
+      "showcase.now": "대표 프로젝트",
       "showcase.note": "시도 / 수정 / 제작",
       "showcase.detail": "프로젝트 상세 ↗",
       "deck.eyebrow": "한눈에 보기",
@@ -133,12 +133,12 @@
       "values.threeMark": "FIX",
       "overview.eyebrow": "지금의 TUKI WORLD",
       "overview.title": "한눈에 보는 현재 상태.",
-      "overview.desc": "프로젝트 수, 최근 변화, 다음 이동만 남겼습니다.",
+      "overview.desc": "바로 플레이하고 읽을 수 있는 것과 최근 제작 변화를 보여줍니다.",
       "overview.recentLabel": "최근 변화",
       "overview.recentTitle": "지금 막 바뀐 것들",
       "overview.allChanges": "전체 기록 →",
       "overview.snapshotLabel": "한눈에",
-      "overview.projects": "프로젝트",
+      "overview.projects": "전체 프로젝트",
       "overview.activities": "최근 활동",
       "overview.queue": "제작실 대기",
       "overview.jump": "바로 프로젝트로",
@@ -172,7 +172,10 @@
       "platform.latest": "최신 Verse8 기록",
       "showcase.playNow": "지금 플레이",
       "project.release": "공개",
-      "project.releaseDate": "런칭일"
+      "project.releaseDate": "런칭일",
+      "showcase.readNow": "지금 읽기",
+      "overview.playable": "플레이 가능",
+      "overview.readable": "읽기 가능"
     },
     "en": {
       "nav.home": "Home",
@@ -207,7 +210,7 @@
       "hero.enter": "View projects",
       "hero.latest": "Recent build notes",
       "hero.note": "The process leaves more traces than the finished piece.",
-      "showcase.now": "Now building",
+      "showcase.now": "Featured projects",
       "showcase.note": "Try / Fix / Build",
       "showcase.detail": "Project detail ↗",
       "deck.eyebrow": "World deck",
@@ -302,7 +305,7 @@
       "values.threeMark": "FIX",
       "overview.eyebrow": "TUKI WORLD right now",
       "overview.title": "The current state at a glance.",
-      "overview.desc": "Only the projects, recent changes, and next destinations remain.",
+      "overview.desc": "See what you can play or read now, plus the latest project changes.",
       "overview.recentLabel": "Recent changes",
       "overview.recentTitle": "What just changed",
       "overview.allChanges": "All records →",
@@ -341,7 +344,10 @@
       "platform.latest": "Latest Verse8 record",
       "showcase.playNow": "Play now",
       "project.release": "Release",
-      "project.releaseDate": "Launch date"
+      "project.releaseDate": "Launch date",
+      "showcase.readNow": "Read now",
+      "overview.playable": "Playable",
+      "overview.readable": "Readable"
     }
   },
   "terms": {
@@ -693,6 +699,12 @@
       "en": {
         "title": "Built the search-engine discovery foundation for TUKI WORLD",
         "summary": "Added robots.txt and sitemap.xml, canonical URLs, Open Graph, Twitter Cards, and structured data across core pages. Project detail pages now have clean crawlable URLs, while legacy query URLs redirect to the new paths."
+      }
+    },
+    "26": {
+      "en": {
+        "title": "Published the first three TUKI LAB records and made the home page action-first",
+        "summary": "Published the approved MOMO launch, CRYPTO SAGA rebuild, and Verse8 hands-on records. The home showcase now links directly to play/read destinations, public-facing stats replace internal queue counts, and recent changes prioritize core projects and Verse8."
       }
     }
   }

@@ -1,5 +1,13 @@
 [
   {
+    "id": 26,
+    "date": "2026-10-07",
+    "type": "BUILD LOG",
+    "project": null,
+    "title": "TUKI LAB 첫 정식 기록 3편 공개 · 홈을 방문자 행동 중심으로 정리",
+    "summary": "사용자가 승인한 MOMO 런칭기, CRYPTO SAGA 리빌딩, Verse8 실사용 기록을 TUKI LAB 정식 글로 공개했다. 홈 대표 프로젝트에는 바로 플레이/읽기 CTA를 추가하고, 내부용 LAB 대기 수치 대신 전체 프로젝트·플레이 가능·읽기 가능 수치를 표시하며 최근 변화에는 핵심 프로젝트와 Verse8 활동을 우선 노출한다."
+  },
+  {
     "id": 25,
     "date": "2026-10-07",
     "type": "BUILD LOG",

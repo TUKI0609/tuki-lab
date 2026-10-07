@@ -171,6 +171,7 @@ async function boot() {
       const name = document.querySelector("#hero-showcase-name");
       const tagline = document.querySelector("#hero-showcase-tagline");
       const detail = document.querySelector("#hero-showcase-detail");
+      const primary = document.querySelector("#hero-showcase-primary");
       const focus = document.querySelector("#hero-showcase-focus");
       const seasonNote = document.querySelector("#hero-showcase-season");
       if (seasonNote) {
@@ -197,6 +198,16 @@ async function boot() {
       if (name) name.textContent = project.name;
       if (tagline) tagline.textContent = project.tagline;
       if (detail) detail.href = `./projects/${encodeURIComponent(project.id)}/`;
+      if (primary) {
+        const destination = project.links?.[0]?.url || "";
+        primary.hidden = !destination;
+        if (destination) {
+          primary.href = destination;
+          primary.querySelector("span").textContent = project.route === "READ"
+            ? t("showcase.readNow","지금 읽기")
+            : t("showcase.playNow","지금 플레이");
+        }
+      }
       if (focus) focus.textContent = project.currentFocus;
     }
 
@@ -239,9 +250,11 @@ async function boot() {
     const projectCount = document.querySelector("#snapshot-project-count");
     const activityCount = document.querySelector("#snapshot-activity-count");
     const queueCount = document.querySelector("#snapshot-queue-count");
+    const playableCount = projects.filter(project => project.availability === "PLAYABLE").length;
+    const readableCount = projects.filter(project => project.route === "READ" && project.availability === "READING AVAILABLE").length;
     if (projectCount) projectCount.textContent = projects.length;
-    if (activityCount) activityCount.textContent = activity.length;
-    if (queueCount) queueCount.textContent = pendingCandidates.length;
+    if (activityCount) activityCount.textContent = playableCount;
+    if (queueCount) queueCount.textContent = readableCount;
 
     const shortcuts = document.querySelector("#home-project-shortcuts");
     if (shortcuts) {
@@ -259,7 +272,10 @@ async function boot() {
 
     const changeRoot = document.querySelector("#home-change-list");
     if (changeRoot) {
-      const activityItems = activity.slice(0, 6).map(item => ({
+      const relevantActivity = activity.filter(item =>
+        item.project || /verse\s*8/i.test((item.title || "") + " " + (item.summary || ""))
+      );
+      const activityItems = relevantActivity.slice(0, 6).map(item => ({
         kind: "activity",
         sortDate: new Date(item.publishedAt).getTime(),
         label: term(item.kind),

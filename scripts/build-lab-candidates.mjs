@@ -98,7 +98,7 @@ for (const [bucket, items] of grouped.entries()) {
     projectName:project.name,
     period:week,
     status:prev?.status || "PENDING",
-    needsApproval:true,
+    needsApproval:prev?.status === "APPROVED" ? false : true,
     suggestedType:type,
     suggestedTitle:suggestTitle(project, items, type),
     suggestedSummary:buildSummary(project, items, type),

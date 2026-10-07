@@ -1,5 +1,13 @@
 [
   {
+    "id": 25,
+    "date": "2026-10-07",
+    "type": "BUILD LOG",
+    "project": null,
+    "title": "TUKI WORLD 검색엔진 노출 기반 구축",
+    "summary": "robots.txt와 sitemap.xml을 추가하고 홈·프로젝트·활동·LAB·소개 페이지에 canonical, Open Graph, Twitter Card, 구조화 데이터를 적용했다. 프로젝트 상세는 검색 친화적인 고정 URL을 새로 만들고 기존 쿼리 주소는 새 주소로 이동하도록 정리했다."
+  },
+  {
     "id": 24,
     "date": "2026-10-07",
     "type": "RELEASE",

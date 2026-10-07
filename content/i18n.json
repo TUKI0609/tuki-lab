@@ -153,7 +153,23 @@
       "project.historyTitle": "이 게임이 지금까지 걸어온 길.",
       "project.historyDesc": "과거 게시물과 공개된 개발 글에서 확인되는 내용만 정리했습니다. 정식 LAB 글과는 별개의 개발 이력입니다.",
       "project.historySource": "기록 원문 보기 ↗",
-      "project.historyArtwork": "당시 실제 게임 화면은 원문 게시물에서 확인할 수 있습니다."
+      "project.historyArtwork": "당시 실제 게임 화면은 원문 게시물에서 확인할 수 있습니다.",
+      "platform.core": "핵심 제작 플랫폼",
+      "platform.desc": "TUKI WORLD의 여러 게임을 실제로 만들고 테스트하는 주요 작업 환경입니다.",
+      "platform.checked": "확인",
+      "platform.docsChecked": "확인",
+      "platform.inProgress": "진행",
+      "platform.realUseTitle": "실제 제작에 사용 중",
+      "platform.realUseDesc": "CRYPTO SAGA · MOMO · AEVOWAKE에서 직접 사용하고 있습니다.",
+      "platform.transparentTitle": "확인된 기능만 구분해 표시",
+      "platform.transparentDesc": "공식 문서와 실제 사용 경험을 분리해서 기록합니다.",
+      "platform.limitTitle": "아직 완성되지 않은 부분도 공개",
+      "platform.limitDesc": "정산·외부 상업 이용·장기 안정성처럼 재확인이 필요한 부분은 확정된 것처럼 말하지 않습니다.",
+      "platform.trustLabel": "TUKI 확인 기준",
+      "platform.trustTitle": "“안전합니다”보다, 확인된 것과 확인 중인 것을 나눠 보여줍니다.",
+      "platform.blog": "실사용 확인 글 읽기",
+      "platform.docs": "Verse8 공식 문서",
+      "platform.latest": "최신 Verse8 기록"
     },
     "en": {
       "nav.home": "Home",
@@ -303,7 +319,23 @@
       "project.historyTitle": "How this game got here.",
       "project.historyDesc": "A timeline based on posts and development notes we can verify. Separate from formally approved LAB articles.",
       "project.historySource": "View original source ↗",
-      "project.historyArtwork": "See the original post for game screenshots from that period."
+      "project.historyArtwork": "See the original post for game screenshots from that period.",
+      "platform.core": "Core build platform",
+      "platform.desc": "A primary workspace used to build and test several games inside TUKI WORLD.",
+      "platform.checked": "Checked",
+      "platform.docsChecked": "Checked",
+      "platform.inProgress": "In progress",
+      "platform.realUseTitle": "Used in real production",
+      "platform.realUseDesc": "Actively used for CRYPTO SAGA, MOMO, and AEVOWAKE.",
+      "platform.transparentTitle": "Verified capabilities are clearly separated",
+      "platform.transparentDesc": "Official documentation and hands-on experience are recorded as different kinds of evidence.",
+      "platform.limitTitle": "Unfinished areas stay visible",
+      "platform.limitDesc": "Settlement, external commercial use, and long-term stability are not presented as settled when they still require verification.",
+      "platform.trustLabel": "TUKI verification standard",
+      "platform.trustTitle": "Trust comes from separating what is verified from what is still being checked.",
+      "platform.blog": "Read the hands-on verification post",
+      "platform.docs": "Verse8 official docs",
+      "platform.latest": "Latest Verse8 record"
     }
   },
   "terms": {
@@ -631,6 +663,12 @@
       "en": {
         "title": "Rebuilt the featured project showcase as uniform film frames",
         "summary": "Standardized all four featured project visuals to one 16:10 frame, added film perforations and an archive caption, and removed the negative overlap between the image and information panel."
+      }
+    },
+    "23": {
+      "en": {
+        "title": "Elevated Verse8 to a core build platform inside TUKI WORLD",
+        "summary": "Verse8 is now presented as the core build platform behind multiple projects rather than as another game card. The latest hands-on Verse8 blog post is linked, and trust is built by separating verified use, official documentation, and areas still requiring verification."
       }
     }
   }

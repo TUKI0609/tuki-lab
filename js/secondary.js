@@ -20,8 +20,25 @@ async function boot() {
   setYear();
 
   if (page === "projects") {
-    const projects = await loadJson(base + "content/projects.json");
+    const [projects, activity] = await Promise.all([
+      loadJson(base + "content/projects.json"),
+      loadJson(base + "content/activity.json")
+    ]);
     renderProjectGrid(projects, "#all-projects", base);
+
+    const latestVerse8Post = activity.find(item =>
+      item.source === "naver-ai" &&
+      /verse\s*8/i.test((item.title || "") + " " + (item.summary || ""))
+    );
+    if (latestVerse8Post) {
+      document.querySelectorAll("[data-verse8-blog-link]").forEach(link => {
+        link.href = latestVerse8Post.url;
+      });
+      document.querySelectorAll("[data-verse8-blog-title]").forEach(el => {
+        el.textContent = latestVerse8Post.title;
+      });
+    }
+
     await hydrateAssets(document, base);
   }
 

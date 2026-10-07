@@ -23,6 +23,7 @@ function setupRevealMotion() {
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const targets = [
     document.querySelector(".ethos-ribbon"),
+    document.querySelector(".core-platform"),
     document.querySelector(".overview-head"),
     document.querySelector(".recent-changes"),
     document.querySelector(".world-snapshot")
@@ -132,6 +133,18 @@ async function boot() {
     const currentProjectRaw = projectMap.get(site.featuredProjectId) || activityProjectRaw || projects[0];
     const currentProject = currentProjectRaw ? localizeProject(currentProjectRaw) : null;
     const latestActivity = activity[0] || null;
+    const latestVerse8Post = activity.find(item =>
+      item.source === "naver-ai" &&
+      /verse\s*8/i.test((item.title || "") + " " + (item.summary || ""))
+    );
+    if (latestVerse8Post) {
+      document.querySelectorAll("[data-verse8-blog-link]").forEach(link => {
+        link.href = latestVerse8Post.url;
+      });
+      document.querySelectorAll("[data-verse8-blog-title]").forEach(el => {
+        el.textContent = latestVerse8Post.title;
+      });
+    }
 
     const bannerProject = document.querySelector("#live-banner-project");
     const bannerText = document.querySelector("#live-banner-text");

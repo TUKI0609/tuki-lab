@@ -4556,3 +4556,132 @@ body.home-v4[data-active-project="aevowake"] {
     transform: none !important;
   }
 }
+
+
+/* =========================================================
+   WORLD THEME SCENES · project-specific ambient worlds
+   MOMO: warm indoor daily-life motifs
+   LUTRATIDE: violet combat paths and growth arcs
+   AEVOWAKE: cool tide lines and resonant memory rings
+   ========================================================= */
+.home-v4 main {
+  position: relative;
+  isolation: isolate;
+}
+.home-v4 main > section {
+  position: relative;
+  z-index: 1;
+}
+.world-theme-scenes {
+  position: absolute;
+  z-index: 0;
+  top: -28px;
+  left: 0;
+  right: 0;
+  height: min(900px, 92vw);
+  min-height: 610px;
+  overflow: hidden;
+  pointer-events: none;
+  isolation: isolate;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 58%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 58%, transparent 100%);
+}
+.world-theme-scene {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .95s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: max(1350px, 105vw) auto;
+}
+.world-theme-scene--momo {
+  background-image:
+    radial-gradient(ellipse at 77% 39%, rgba(242,191,118,.12), transparent 36%),
+    radial-gradient(ellipse at 46% 84%, rgba(104,182,127,.055), transparent 37%),
+    url("../assets/brand/tuki/world-momo.svg");
+}
+.world-theme-scene--lutratide-survivors {
+  background-image:
+    radial-gradient(ellipse at 82% 39%, rgba(154,108,218,.17), transparent 38%),
+    radial-gradient(ellipse at 37% 67%, rgba(102,132,209,.065), transparent 40%),
+    url("../assets/brand/tuki/world-lutratide.svg");
+}
+.world-theme-scene--aevowake {
+  background-image:
+    radial-gradient(ellipse at 82% 38%, rgba(83,175,212,.15), transparent 39%),
+    radial-gradient(ellipse at 40% 80%, rgba(49,122,154,.06), transparent 40%),
+    url("../assets/brand/tuki/world-aevowake.svg");
+}
+.home-v4[data-active-project="momo"] .world-theme-scene--momo,
+.home-v4[data-active-project="lutratide-survivors"] .world-theme-scene--lutratide-survivors,
+.home-v4[data-active-project="aevowake"] .world-theme-scene--aevowake {
+  opacity: 1;
+}
+/* The global Build Trace remains visible below each project-specific scene. */
+.home-v4 .hero-v4-showcase::before {
+  background:
+    linear-gradient(145deg, var(--project-accent-soft), rgba(255,255,255,.018) 48%, transparent);
+  transition: background .6s ease;
+}
+.home-v4 .showcase-info {
+  border-top: 1px solid color-mix(in srgb, var(--project-accent) 22%, rgba(231,241,235,.08));
+}
+.world-theme-mood {
+  display: block;
+  padding-top: 3px;
+  color: #aabbb0;
+  font-size: .60rem;
+  font-weight: 650;
+  letter-spacing: -.01em;
+  line-height: 1.35;
+}
+.home-v4 .showcase-top > div:first-child {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  column-gap: 12px;
+  row-gap: 0;
+}
+.home-v4 .showcase-top .world-theme-mood {
+  grid-column: 1 / -1;
+  color: color-mix(in srgb, var(--project-accent) 48%, #b4c6bd);
+}
+.home-v4 .world-snapshot {
+  border-top-color: color-mix(in srgb, var(--project-accent) 28%, transparent);
+}
+.home-v4 .ethos-ribbon::before {
+  background: var(--project-accent);
+  transition: background .6s ease;
+}
+.home-v4 .hero-v4-showcase .showcase-visual {
+  transition: transform .18s ease-out, background .6s ease, box-shadow .6s ease;
+}
+@media (max-width: 900px) {
+  .world-theme-scenes {
+    height: 960px;
+    min-height: 0;
+    background-position: 62% top;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 65%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 65%, transparent 100%);
+  }
+  .world-theme-scene {
+    background-size: 1550px auto;
+    background-position: 60% top;
+  }
+}
+@media (max-width: 700px) {
+  .world-theme-scenes {
+    top: 0;
+    height: 1000px;
+    opacity: .75;
+  }
+  .world-theme-scene {
+    background-size: 1380px auto;
+    background-position: 62% top;
+  }
+  .world-theme-mood { font-size: .56rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .world-theme-scene { transition: none !important; }
+}

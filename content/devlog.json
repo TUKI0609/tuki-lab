@@ -1,5 +1,13 @@
 [
   {
+    "id": 19,
+    "date": "2026-10-07",
+    "type": "BUILD LOG",
+    "project": null,
+    "title": "TUKI WORLD 프로젝트별 월드 테마 전환 적용",
+    "summary": "대표 프로젝트를 넘길 때 홈 배경도 함께 전환되도록 3종의 전용 벡터 아트워크를 제작했다. MOMO는 일상의 방과 따뜻한 빛, LUTRATIDE는 전투 궤적과 보랏빛 에너지, AEVOWAKE는 파도와 기록의 공명을 모티프로 사용했다. 모바일·모션 축소 환경도 고려하고 기존 Build Trace 정체성은 유지했다."
+  },
+  {
     "id": 18,
     "date": "2026-10-07",
     "type": "BUILD LOG",

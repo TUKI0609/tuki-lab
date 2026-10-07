@@ -144,7 +144,10 @@
       "overview.jump": "바로 프로젝트로",
       "overview.projectsLink": "프로젝트 전체 보기",
       "overview.activityLink": "활동 보기",
-      "overview.labLink": "제작실 보기"
+      "overview.labLink": "제작실 보기",
+      "worldTheme.momo": "작은 일상이 자라는 방",
+      "worldTheme.lutratide-survivors": "성장과 전투의 궤적",
+      "worldTheme.aevowake": "기억과 파도의 기록"
     },
     "en": {
       "nav.home": "Home",
@@ -285,7 +288,10 @@
       "overview.jump": "Jump to a project",
       "overview.projectsLink": "View all projects",
       "overview.activityLink": "View activity",
-      "overview.labLink": "Open lab"
+      "overview.labLink": "Open lab",
+      "worldTheme.momo": "A room for little routines",
+      "worldTheme.lutratide-survivors": "Traces of growth and combat",
+      "worldTheme.aevowake": "Where memory meets the tide"
     }
   },
   "terms": {
@@ -573,6 +579,12 @@
       "en": {
         "title": "Added TUKI WORLD Trace Motion interactions",
         "summary": "Extended the Build Trace art direction with directional project transitions, pointer-reactive light, subtle board tilt, a moving trace node, and scroll reveals. Motion is reduced on mobile and for reduced-motion preferences."
+      }
+    },
+    "19": {
+      "en": {
+        "title": "Added project-linked world themes to TUKI WORLD",
+        "summary": "Created three original vector ambience scenes that switch with the featured project: MOMO's cozy room glow, LUTRATIDE's violet combat arcs, and AEVOWAKE's tidal memory rings. Kept the core Build Trace identity and added mobile and reduced-motion handling."
       }
     }
   }

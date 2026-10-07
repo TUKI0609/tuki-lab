@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="850" viewBox="0 0 1600 850" fill="none">
+<defs>
+  <radialGradient id="aura" cx="0" cy="0" r="1" gradientTransform="translate(1270 383) rotate(90) scale(550 700)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#AE80F0" stop-opacity=".25"/><stop offset=".42" stop-color="#6754AC" stop-opacity=".10"/><stop offset="1" stop-color="#5B4B9E" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="slash" x1="750" y1="800" x2="1510" y2="80" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#80D6E8" stop-opacity="0"/><stop offset=".48" stop-color="#A99CF3" stop-opacity=".34"/><stop offset="1" stop-color="#8CCBE8" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="fog"><feGaussianBlur stdDeviation="42"/></filter>
+</defs>
+<rect width="1600" height="850" fill="url(#aura)"/>
+<circle cx="1270" cy="383" r="330" fill="#9D80FF" fill-opacity=".06" filter="url(#fog)"/>
+<g stroke="#C9B7FF" stroke-opacity=".17" stroke-width="1.8" stroke-linecap="round">
+ <path d="M1179 77C1371 45 1550 213 1574 371" />
+ <path d="M1487 594C1388 748 1128 770 956 607"/>
+ <path d="M967 251C1012 171 1080 127 1152 96"/>
+ <path d="M1040 295C1092 210 1161 176 1251 173"/>
+ <path d="M1476 355C1494 460 1446 529 1391 589"/>
+</g>
+<g stroke="#7DDDE0" stroke-opacity=".18" stroke-width="1.1" stroke-dasharray="5 18">
+ <circle cx="1270" cy="383" r="246"/>
+ <circle cx="1270" cy="383" r="371"/>
+</g>
+<g stroke="url(#slash)" stroke-width="2">
+ <path d="M735 760L1470 60"/>
+ <path d="M817 832L1539 147"/>
+ <path d="M690 540L1254 7"/>
+ <path d="M1133 812L1619 355"/>
+</g>
+<g fill="#C0A9FF" fill-opacity=".22">
+ <path d="M1180 90L1196 72L1223 112L1203 108Z"/>
+ <path d="M1496 185L1516 152L1525 223Z"/>
+ <path d="M938 627L952 608L963 650Z"/>
+ <path d="M1420 722L1433 700L1452 744Z"/>
+</g>
+<g fill="#8FD7E9" fill-opacity=".36">
+ <circle cx="1032" cy="237" r="3"/>
+ <circle cx="1500" cy="460" r="4"/>
+ <circle cx="913" cy="537" r="2"/>
+ <circle cx="1397" cy="620" r="3"/>
+ <circle cx="1108" cy="678" r="2.5"/>
+</g>
+<g stroke="#BCB2F2" stroke-opacity=".19">
+ <path d="M858 340h34M875 323v34"/>
+ <path d="M1517 618h25M1529 605v25"/>
+ <path d="M1087 91h22M1098 80v22"/>
+</g>
+</svg>

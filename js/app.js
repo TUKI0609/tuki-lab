@@ -73,6 +73,8 @@ function setupPointerMotion(showcase) {
 
     if (!visual) return;
     const rect = visual.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right
+      || event.clientY < rect.top || event.clientY > rect.bottom) return;
     const x = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
     const y = Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height));
 
@@ -156,6 +158,11 @@ async function boot() {
       const tagline = document.querySelector("#hero-showcase-tagline");
       const detail = document.querySelector("#hero-showcase-detail");
       const focus = document.querySelector("#hero-showcase-focus");
+      const mood = document.querySelector("#world-theme-mood");
+      if (mood) {
+        const moodKey = "worldTheme." + project.id;
+        mood.textContent = t(moodKey, "");
+      }
 
       if (count) count.textContent = `${String(heroProjectIndex + 1).padStart(2, "0")} / ${String(projects.length).padStart(2, "0")}`;
       if (images) {

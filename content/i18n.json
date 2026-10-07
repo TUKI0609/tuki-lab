@@ -688,6 +688,12 @@
         "title": "Cozy Days with Momo officially launches on Verse8",
         "summary": "The MOMO project launched on Verse8 as Cozy Days with Momo. Its status is now Released and Playable, the live game link is connected, and MOMO has moved into the featured-project slot on the home page."
       }
+    },
+    "25": {
+      "en": {
+        "title": "Built the search-engine discovery foundation for TUKI WORLD",
+        "summary": "Added robots.txt and sitemap.xml, canonical URLs, Open Graph, Twitter Cards, and structured data across core pages. Project detail pages now have clean crawlable URLs, while legacy query URLs redirect to the new paths."
+      }
     }
   }
 }

@@ -1,5 +1,24 @@
 [
   {
+    "id": "69bfff0f6e3c90dc",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "도깨비의세계 초반 공략｜도술 강화·문파·승천의 탑, 초보가 놓치기 쉬운 팁 7가지 (10시 추가 쿠폰)",
+    "summary": "도깨비의세계가 10월 8일 정식 출시했죠, 이전 글에서 쿠폰과 적용 방식을 정리했었습니다. * 이전 글 보기 : https://blog.naver.com/abb7664/224435202668 게임에 처음 접속하면 메인 퀘스트를 따라가며 자연스럽게 성장할 수 있지만, 게임을 조금 진행하다 보면 장비, 도술, 문파, 승천의 ",
+    "url": "https://blog.naver.com/abb7664/224435701360?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-08T13:34:17.000Z",
+    "detectedAt": "2026-10-08T18:52:08.812Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "fc01eb3c6991a658",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -333,25 +352,6 @@
     "summary": "Pokémon Champions를 시작했다면 한 번쯤 궁금해지는 게 있습니다. \"기존 Pokémon HOME에 있던 포켓몬을 가져올 수 있나?\" \"스위치에서 하다가 모바일에서도 이어서 할 수 있나?\" 결론부터 보면 둘 다 가능합니다. Pokémon Champions는 Pokémon HOME과 연동해 일부 포켓몬을 원정 형",
     "url": "https://blog.naver.com/abb7664/224430907552?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-04T01:03:44.000Z",
-    "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
-    "id": "ad711ffe301768df",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "한국 일본 1-0, 아시안게임 축구 4연패｜엄지성 결승골·양민혁 투지가 만든 한일전",
-    "summary": "대한민국이 결국 해냈습니다. 2026 아이치·나고야 아시안게임 남자축구 결승에서 일본을 1-0으로 꺾고 금메달을 차지했습니다. 2014 인천, 2018 자카르타·팔렘방, 2022 항저우 대회에 이어 아시안게임 남자축구 4회 연속 우승입니다. 결과는 1-0. 하지만 개인적으로 이번 결승에서 가장 기억에 남은 건 단순히 스코",
-    "url": "https://blog.naver.com/abb7664/224430570052?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-03T12:33:02.000Z",
     "detectedAt": "2026-10-06T08:57:12.383Z",
     "manual": false,
     "editorial": {

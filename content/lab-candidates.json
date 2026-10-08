@@ -23,7 +23,7 @@
     ],
     "evidenceHash": "866b9009dcde",
     "generatedAt": "2026-10-07T07:08:21.547Z",
-    "updatedAt": "2026-10-08T01:01:40.504Z",
+    "updatedAt": "2026-10-08T10:37:11.975Z",
     "approvedAt": null,
     "rejectedAt": null
   },
@@ -51,35 +51,7 @@
     ],
     "evidenceHash": "d4ba34db036b",
     "generatedAt": "2026-10-07T07:08:21.547Z",
-    "updatedAt": "2026-10-08T01:01:40.504Z",
-    "approvedAt": "2026-10-07T09:40:00.000Z",
-    "rejectedAt": null
-  },
-  {
-    "id": "lab-crypto-saga-2026-W40",
-    "project": "crypto-saga",
-    "projectName": "CRYPTO SAGA",
-    "period": "2026-W40",
-    "status": "APPROVED",
-    "needsApproval": false,
-    "suggestedType": "BUILD LOG",
-    "suggestedTitle": "CRYPTO SAGA · 바이브코딩으로 RPG 게임 리빌딩하기, 전투 화면부터 다시 만들었습니다 | Crypto Saga",
-    "suggestedSummary": "CRYPTO SAGA와 연결된 최근 활동 1건을 하나의 BUILD LOG 후보로 묶었습니다. 출처: Naver Blog · AI / 제작. 승인 전에는 TUKI LAB에 공개되지 않습니다.",
-    "confidence": 70,
-    "evidenceCount": 1,
-    "evidence": [
-      {
-        "activityId": "2c045ddf937d3ca4",
-        "source": "naver-ai",
-        "sourceLabel": "Naver Blog · AI / 제작",
-        "title": "바이브코딩으로 RPG 게임 리빌딩하기, 전투 화면부터 다시 만들었습니다 | Crypto Saga",
-        "url": "https://blog.naver.com/ty_free/224426134448?fromRss=true&trackingCode=rss",
-        "publishedAt": "2026-09-29T08:16:24.000Z"
-      }
-    ],
-    "evidenceHash": "f311796063e8",
-    "generatedAt": "2026-10-07T05:35:39.802Z",
-    "updatedAt": "2026-10-08T01:01:40.504Z",
+    "updatedAt": "2026-10-08T10:37:11.975Z",
     "approvedAt": "2026-10-07T09:40:00.000Z",
     "rejectedAt": null
   },
@@ -107,7 +79,7 @@
     ],
     "evidenceHash": "f6f3c1aada84",
     "generatedAt": "2026-10-07T07:08:21.547Z",
-    "updatedAt": "2026-10-08T01:01:40.504Z",
+    "updatedAt": "2026-10-08T10:37:11.975Z",
     "approvedAt": null,
     "rejectedAt": null
   },
@@ -135,7 +107,7 @@
     ],
     "evidenceHash": "6ed800069660",
     "generatedAt": "2026-10-07T07:08:21.547Z",
-    "updatedAt": "2026-10-08T01:01:40.504Z",
+    "updatedAt": "2026-10-08T10:37:11.975Z",
     "approvedAt": null,
     "rejectedAt": null
   }

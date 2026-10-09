@@ -1,5 +1,24 @@
 [
   {
+    "id": "8ea96b9372d65e1b",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "도깨비의세계 보물찾기 꼭 해야 할까? 타바로성 보물상자 12개와 초반 활용법",
+    "summary": "도깨비의세계를 플레이하다 보면 메뉴에서 '보물찾기'라는 콘텐츠를 확인할 수 있습니다. 처음에는 메인 퀘스트와 크게 상관없는 수집 콘텐츠처럼 보일 수 있는데요. 결론부터 말하면 초반부터 모든 보물상자를 억지로 찾아다닐 필요는 없지만, 이동 중 발견한 상자는 반드시 열어두는 것을 추천합니다. 특히 메인 퀘스트와 성장 콘텐츠를",
+    "url": "https://blog.naver.com/abb7664/224436313858?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-09T07:10:05.000Z",
+    "detectedAt": "2026-10-09T10:36:04.092Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "84b15d52855e4aeb",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -333,25 +352,6 @@
     "summary": "카카오게임즈 신작 MMORPG '도깨비의세계'가 10월 8일 오전 11시 정식 출시됩니다. PC와 모바일에서 즐길 수 있고, 일반적인 MMORPG처럼 처음부터 직업 하나를 정하는 방식이 아니라 12개의 스킬 스타일을 자유롭게 조합하는 구조가 핵심인데요. 출시 전까지 사전등록도 계속 진행됩니다. 출시 전에 알아둘 내용만 빠",
     "url": "https://blog.naver.com/abb7664/224431941475?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-05T06:05:22.000Z",
-    "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
-    "id": "f107b202cde6ad96",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "트릭컬 3주년 600뽑 지금 시작해도 될까?｜15일 출석·무료 모집권 정리",
-    "summary": "트릭컬 리바이브 3주년을 보고 지금 시작해도 늦지 않았을까 고민하는 분들이 있을 것 같습니다. 결론부터 보면 10월 4일 기준 아직 늦지 않았습니다. 3주년 주요 이벤트는 10월 22일 오전 10시 59분까지 진행되고, 핵심인 15일 누적 출석을 완료할 시간도 남아 있습니다. 다만 많이 보이는 '600뽑'은 15일 출석만",
-    "url": "https://blog.naver.com/abb7664/224431038778?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-04T04:27:58.000Z",
     "detectedAt": "2026-10-06T08:57:12.383Z",
     "manual": false,
     "editorial": {

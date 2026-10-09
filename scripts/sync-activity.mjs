@@ -102,21 +102,6 @@ function youtubeItems(xml, source) {
   }).filter(Boolean);
 }
 
-async function resolveYoutubeChannelId(source) {
-  if (source.channelId) return source.channelId;
-  const page = await fetchText(`https://www.youtube.com/@${source.handle}/videos`);
-  const patterns = [
-    /"externalId":"(UC[^"]+)"/,
-    /"channelId":"(UC[^"]+)"/,
-    /youtube\.com\/channel\/(UC[\w-]+)/
-  ];
-  for (const re of patterns) {
-    const id = page.match(re)?.[1];
-    if (id) return id;
-  }
-  throw new Error("YouTube channel ID를 공개 페이지에서 찾지 못했습니다.");
-}
-
 async function readJson(url, fallback) {
   try { return JSON.parse(await fs.readFile(url, "utf8")); }
   catch { return fallback; }
@@ -172,17 +157,17 @@ for (const source of config.sources.filter(s => s.enabled)) {
   try {
     if (source.kind === "naver-rss") {
       incoming.push(...naverItems(await fetchText(source.url), source));
-    } else if (source.kind === "youtube-handle") {
-      const channelId = await resolveYoutubeChannelId(source);
-      const feed = await fetchText(`https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`);
-      incoming.push(...youtubeItems(feed, source));
+    } else {
+      console.warn(`[activity-sync] ${source.id}: unsupported adapter '${source.kind}', skipped`);
     }
   } catch (error) {
     console.warn(`[activity-sync] ${source.id}: ${error.message}`);
   }
 }
 
-const manual = existingRaw.filter(item => item.manual === true);
+// Keep existing public activity from disabled sources without contacting their services.
+const disabledSources = new Set(config.sources.filter(s => !s.enabled).map(s => s.id));
+const manual = existingRaw.filter(item => item.manual === true || disabledSources.has(item.source));
 const previousByUrl = new Map(existingRaw.map(item => [item.url, item]));
 const mergedByUrl = new Map();
 

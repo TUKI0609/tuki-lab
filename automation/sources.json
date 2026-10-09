@@ -27,8 +27,8 @@
       "handle": "ty_tuki0609",
       "route": "WATCH",
       "project": null,
-      "enabled": true,
-      "note": "Best-effort channel ID discovery from the public handle page. If YouTube blocks automated discovery, set channelId later."
+      "enabled": false,
+      "note": "Automatic YouTube access disabled pending an official, authenticated YouTube Data API integration."
     },
     {
       "id": "x",

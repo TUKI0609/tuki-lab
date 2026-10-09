@@ -384,3 +384,98 @@ export function renderCharacters(characters, rootSelector = "#character-grid") {
 export function setYear() {
   document.querySelectorAll("[data-year]").forEach(el => el.textContent = new Date().getFullYear());
 }
+
+
+// TUKI WORLD: consent-first, site-wide Google Analytics 4.
+// This shared module is imported by both the homepage and secondary pages.
+const TUKI_GA_ID = "G-Q6JMT9XLVP";
+const TUKI_ANALYTICS_CHOICE = "tuki-world-analytics-consent-v1";
+
+function startTukiAnalytics() {
+  if (window.__tukiAnalyticsStarted) return;
+  window.__tukiAnalyticsStarted = true;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", TUKI_GA_ID, { anonymize_ip: true });
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(TUKI_GA_ID);
+  document.head.appendChild(script);
+}
+
+function initTukiAnalyticsConsent() {
+  // No GA request is initiated until the visitor opts in.
+  const stored = (() => {
+    try { return localStorage.getItem(TUKI_ANALYTICS_CHOICE); } catch { return null; }
+  })();
+  if (stored === "accepted") startTukiAnalytics();
+
+  const style = document.createElement("style");
+  style.textContent = `
+    .tuki-privacy-settings{position:fixed;bottom:14px;left:14px;z-index:10000;
+      border:1px solid #66766b;border-radius:999px;padding:8px 12px;
+      background:#1b2721;color:#fff;font:12px/1.4 system-ui,sans-serif;cursor:pointer}
+    .tuki-privacy-banner{position:fixed;bottom:58px;left:14px;right:14px;
+      max-width:560px;z-index:10001;padding:17px;border:1px solid #788c7d;
+      border-radius:14px;background:#1b2721;color:#fff;
+      box-shadow:0 10px 35px #0007;font:14px/1.55 system-ui,sans-serif}
+    .tuki-privacy-banner p{margin:8px 0 12px;color:#e0e9e1}
+    .tuki-privacy-banner a{color:#bbdfd0;text-decoration:underline}
+    .tuki-privacy-actions{display:flex;gap:9px;flex-wrap:wrap}
+    .tuki-privacy-actions button{cursor:pointer;border:1px solid #a7c2af;
+      border-radius:8px;padding:8px 14px;background:#253a2f;color:#fff;font:inherit}
+    .tuki-privacy-actions button:first-child{background:#c6ead1;color:#122719}
+    @media(max-width:600px){.tuki-privacy-settings{bottom:80px}
+      .tuki-privacy-banner{bottom:124px;max-height:55vh;overflow:auto}}
+  `;
+  document.head.appendChild(style);
+
+  const settings = document.createElement("button");
+  settings.type = "button";
+  settings.className = "tuki-privacy-settings";
+  settings.textContent = "분석 설정";
+  settings.setAttribute("aria-label", "방문 통계 수집 동의 설정 열기");
+  document.body.appendChild(settings);
+
+  const banner = document.createElement("section");
+  banner.className = "tuki-privacy-banner";
+  banner.setAttribute("role", "dialog");
+  banner.setAttribute("aria-label", "방문 통계 수집 동의");
+  banner.innerHTML = `
+    <strong>방문 통계 수집 안내</strong>
+    <p>사이트 개선을 위해 Google Analytics 4를 사용하려고 합니다.
+    동의하면 페이지 방문과 이용 정보가 Google로 전송될 수 있으며
+    분석 관련 식별자와 쿠키가 사용될 수 있습니다.
+    거부해도 사이트를 이용할 수 있습니다.
+    <a href="https://policies.google.com/privacy?hl=ko" target="_blank"
+    rel="noopener noreferrer">Google 개인정보처리방침</a></p>
+    <div class="tuki-privacy-actions">
+      <button type="button" data-tuki-consent="accepted">분석 허용</button>
+      <button type="button" data-tuki-consent="rejected">거부</button>
+    </div>
+  `;
+  document.body.appendChild(banner);
+
+  function showBanner() { banner.hidden = false; banner.style.display = "block"; }
+  function hideBanner() { banner.hidden = true; banner.style.display = "none"; }
+  settings.addEventListener("click", showBanner);
+  banner.addEventListener("click", (event) => {
+    const choice = event.target.closest("[data-tuki-consent]")?.dataset.tukiConsent;
+    if (!choice) return;
+    try { localStorage.setItem(TUKI_ANALYTICS_CHOICE, choice); } catch {}
+    hideBanner();
+    if (choice === "accepted") startTukiAnalytics();
+    // Withdrawing consent stops subsequent visits from tracking. To immediately
+    // stop an already loaded tag in this tab, reload without restarting it.
+    if (choice === "rejected" && window.__tukiAnalyticsStarted) window.location.reload();
+  });
+  if (stored === "accepted" || stored === "rejected") hideBanner();
+  else showBanner();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initTukiAnalyticsConsent, { once: true });
+} else {
+  initTukiAnalyticsConsent();
+}

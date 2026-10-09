@@ -21,9 +21,7 @@ Automatic via public Naver RSS.
 Automatic via public Naver RSS.
 
 ### YouTube
-Best-effort automatic detection.
-The sync script attempts to resolve the channel ID from the public handle page and then reads the official uploads feed.
-If this becomes unreliable, store the canonical channel ID in automation/sources.json.
+Automatic ingestion is disabled as a compliance precaution. The collector does not scrape YouTube pages or fetch the YouTube upload feed. Previously collected public video links remain visible without additional YouTube requests. Restore automatic ingestion only after implementing an officially authenticated YouTube Data API integration and reviewing applicable policies.
 
 ### X
 Not automatically ingested yet.
@@ -60,7 +58,7 @@ Until that layer is connected, feed ingestion stays deterministic and conservati
 
 ## Schedule
 
-The GitHub Action checks public feeds every three hours.
+The GitHub Action checks enabled public Naver RSS feeds every three hours. YouTube and X automatic collection are disabled.
 It only commits when content/activity.json actually changes.
 
 No API passwords or private project credentials are required for the current RSS/feed adapters.

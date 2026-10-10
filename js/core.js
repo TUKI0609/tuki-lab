@@ -396,6 +396,8 @@ function startTukiAnalytics() {
   window.__tukiAnalyticsStarted = true;
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag("consent", "default", { analytics_storage: "denied", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" });
+  window.gtag("consent", "update", { analytics_storage: "granted" });
   window.gtag("js", new Date());
   window.gtag("config", TUKI_GA_ID, { anonymize_ip: true });
   const script = document.createElement("script");
@@ -431,6 +433,12 @@ function initTukiAnalyticsConsent() {
   `;
   document.head.appendChild(style);
 
+  const policyLink = document.createElement("a");
+  policyLink.href = (location.pathname.includes("/tuki-lab/") ? "/tuki-lab/" : "/") + "privacy/";
+  policyLink.textContent = "개인정보처리방침";
+  policyLink.style.cssText = "display:inline-block;margin-left:12px;color:inherit;text-decoration:underline;font:12px system-ui,sans-serif";
+  document.querySelector("footer .footer-inner")?.appendChild(policyLink);
+
   const settings = document.createElement("button");
   settings.type = "button";
   settings.className = "tuki-privacy-settings";
@@ -449,7 +457,8 @@ function initTukiAnalyticsConsent() {
     분석 관련 식별자와 쿠키가 사용될 수 있습니다.
     거부해도 사이트를 이용할 수 있습니다.
     <a href="https://policies.google.com/privacy?hl=ko" target="_blank"
-    rel="noopener noreferrer">Google 개인정보처리방침</a></p>
+    rel="noopener noreferrer">Google 개인정보처리방침</a> ·
+    <a href="${policyLink.href}">TUKI WORLD 개인정보처리방침</a></p>
     <div class="tuki-privacy-actions">
       <button type="button" data-tuki-consent="accepted">분석 허용</button>
       <button type="button" data-tuki-consent="rejected">거부</button>
@@ -468,7 +477,10 @@ function initTukiAnalyticsConsent() {
     if (choice === "accepted") startTukiAnalytics();
     // Withdrawing consent stops subsequent visits from tracking. To immediately
     // stop an already loaded tag in this tab, reload without restarting it.
-    if (choice === "rejected" && window.__tukiAnalyticsStarted) window.location.reload();
+    if (choice === "rejected" && window.__tukiAnalyticsStarted) {
+      if (typeof window.gtag === "function") window.gtag("consent", "update", {analytics_storage: "denied"});
+      window.location.reload();
+    }
   });
   if (stored === "accepted" || stored === "rejected") hideBanner();
   else showBanner();

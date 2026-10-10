@@ -1,5 +1,43 @@
 [
   {
+    "id": "bcab0d3afeab8648",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "AI로 만든 웹게임 무료 배포 방법｜GitHub Pages 사용법부터 저작권·게임 규정까지",
+    "summary": "ChatGPT로 게임을 만들었는데, 다른 사람도 플레이할 수 있도록 인터넷에 올리려면 어떻게 해야 할까요? AI로 게임을 만드는 것까지는 성공했지만 막상 배포하려고 하면 고민이 생깁니다. \"게임 파일은 있는데 공유할 링크는 어떻게 만들지?\" \"서버를 구매해야 하나?\" \"무료로 올려도 저작권이나 법적인 문제는 없을까?\" 결",
+    "url": "https://blog.naver.com/ty_free/224437131420?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-10T05:53:46.000Z",
+    "detectedAt": "2026-10-10T09:52:33.875Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "3d0855e00dd4520e",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "도깨비의세계 신규 쿠폰 3종 공개｜도깨비의다짐·약속·마음 보상과 10월 10일 개선 총정리",
+    "summary": "도깨비의세계가 10월 9일 라이브 방송을 통해 신규 감사 쿠폰 3종을 공개했습니다. 이번 쿠폰은 `도깨비의다짐`, `도깨비의약속`, `도깨비의마음` 총 3개입니다. 결론부터 말하면 세 쿠폰 모두 계정당 1회 사용할 수 있고, 공식 공지 기준 별도의 사용 가능 기간이 정해져 있지 않습니다. 출시 초반에 필요한 엽전, 요혼석",
+    "url": "https://blog.naver.com/abb7664/224437096033?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-10T05:07:48.000Z",
+    "detectedAt": "2026-10-10T09:52:34.738Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "8ea96b9372d65e1b",
     "source": "naver-game",
     "sourceLabel": "Naver Blog · 게임",
@@ -342,25 +380,6 @@
     }
   },
   {
-    "id": "597fb45bc98c6748",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "도깨비의세계 출시일 10월 8일 오전 11시｜직업 없는 12스킬·PC모바일·사전등록 정리",
-    "summary": "카카오게임즈 신작 MMORPG '도깨비의세계'가 10월 8일 오전 11시 정식 출시됩니다. PC와 모바일에서 즐길 수 있고, 일반적인 MMORPG처럼 처음부터 직업 하나를 정하는 방식이 아니라 12개의 스킬 스타일을 자유롭게 조합하는 구조가 핵심인데요. 출시 전까지 사전등록도 계속 진행됩니다. 출시 전에 알아둘 내용만 빠",
-    "url": "https://blog.naver.com/abb7664/224431941475?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-05T06:05:22.000Z",
-    "detectedAt": "2026-10-06T08:57:12.383Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "7c6e6a40a6d32df4",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -466,25 +485,6 @@
     "summary": "AI로 캐릭터를 만들다 보면 꽤 자주 생기는 문제가 있습니다. 분명 같은 캐릭터를 요청했는데... 첫 번째 이미지에서는 마음에 들게 나왔는데 두 번째에서는 얼굴이 달라지고, 세 번째에서는 옷이 바뀌고, 조금 더 진행하면 아예 다른 캐릭터처럼 보이기도 합니다. 저도 게임 캐릭터를 직접 제작하면서 이 문제를 여러 번 겪었습니",
     "url": "https://blog.naver.com/ty_free/224427884654?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-09-30T23:43:40.000Z",
-    "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "0ef4bf9027d8f47f",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "1편. 바이브코딩으로 무슨 게임 만들까? 게임 장르별 난이도부터 정리해봤습니다",
-    "summary": "바이브코딩으로 게임을 한번 만들어보고 싶다. 여기까지는 좋은데, 막상 시작하려고 하면 바로 다음 문제가 생깁니다. “그래서 무슨 게임을 만들지?” 저도 이것저것 만들어보면서 느꼈는데, 게임 장르에 따라 바이브코딩 난이도가 생각보다 꽤 달랐어요. 단순히 AI가 코드를 만들어준다고 해서 모든 게임의 제작 난이도가 비슷해지는 ",
-    "url": "https://blog.naver.com/ty_free/224427215763?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-09-30T08:30:00.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
     "manual": false,
     "editorial": {

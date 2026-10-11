@@ -5575,6 +5575,10 @@ a.project-evidence-card:hover {
   color: #03c75a;
   background: rgba(3,199,90,.075);
 }
+.channel-icon-instagram {
+  color: #e1306c;
+  background: rgba(225,48,108,.075);
+}
 .channel-icon-generic {
   color: var(--accent);
 }

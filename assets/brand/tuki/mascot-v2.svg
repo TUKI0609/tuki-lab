@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">툭이</title>
+  <desc id="desc">민트색 몸과 노란 배, 새싹 모양 머리 장식을 가진 TUKI WORLD 마스코트 툭이</desc>
+  <defs>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9ff8d7"/>
+      <stop offset="0.58" stop-color="#72e9bd"/>
+      <stop offset="1" stop-color="#4fd9aa"/>
+    </linearGradient>
+    <linearGradient id="yellow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff36a"/>
+      <stop offset="0.62" stop-color="#ffd84a"/>
+      <stop offset="1" stop-color="#ffc12f"/>
+    </linearGradient>
+    <linearGradient id="sprout" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a8f9dc"/>
+      <stop offset="1" stop-color="#5bdcae"/>
+    </linearGradient>
+    <radialGradient id="eye" cx="35%" cy="25%" r="75%">
+      <stop offset="0" stop-color="#493122"/>
+      <stop offset="1" stop-color="#24180f"/>
+    </radialGradient>
+    <clipPath id="bodyClip">
+      <path d="M255 112 C177 112 120 155 102 221 C94 249 96 285 85 308 C69 341 69 386 92 419 C120 459 172 476 255 476 C338 476 390 459 418 419 C441 386 441 341 425 308 C414 285 416 249 408 221 C390 155 333 112 255 112Z"/>
+    </clipPath>
+  </defs>
+  <g stroke="#202521" stroke-width="12" stroke-linejoin="round">
+    <path d="M250 118 C224 105 203 88 205 66 C207 44 226 28 245 37 C262 45 269 68 264 96 C257 81 248 73 236 68 C248 75 255 92 250 118Z" fill="url(#sprout)"/>
+    <path d="M263 114 C281 93 304 78 326 83 C348 88 359 108 347 126 C336 143 312 147 283 137 C301 133 314 126 320 115 C309 126 286 131 263 114Z" fill="url(#sprout)"/>
+  </g>
+  <g stroke="#202521" stroke-width="12" stroke-linejoin="round">
+    <path d="M171 433 C162 455 166 478 187 489 C207 499 239 492 247 470 C253 453 241 438 223 430Z" fill="url(#yellow)"/>
+    <path d="M339 433 C348 455 344 478 323 489 C303 499 271 492 263 470 C257 453 269 438 287 430Z" fill="url(#yellow)"/>
+  </g>
+  <g stroke="#202521" stroke-width="12" stroke-linejoin="round">
+    <path d="M104 297 C76 314 58 350 62 382 C65 407 82 421 100 413 C116 406 125 382 126 350 C126 325 119 307 104 297Z" fill="url(#mint)"/>
+    <path d="M406 297 C434 314 452 350 448 382 C445 407 428 421 410 413 C394 406 385 382 384 350 C384 325 391 307 406 297Z" fill="url(#mint)"/>
+  </g>
+  <path d="M255 112 C177 112 120 155 102 221 C94 249 96 285 85 308 C69 341 69 386 92 419 C120 459 172 476 255 476 C338 476 390 459 418 419 C441 386 441 341 425 308 C414 285 416 249 408 221 C390 155 333 112 255 112Z" fill="url(#mint)" stroke="#202521" stroke-width="12" stroke-linejoin="round"/>
+  <g clip-path="url(#bodyClip)">
+    <path d="M55 338 C124 371 190 382 255 382 C320 382 386 371 455 338 L455 510 L55 510Z" fill="url(#yellow)"/>
+    <path d="M66 343 C143 373 202 382 255 382 C308 382 367 373 444 343" fill="none" stroke="#ffe56a" stroke-width="7" opacity=".58"/>
+  </g>
+  <path d="M255 112 C177 112 120 155 102 221 C94 249 96 285 85 308 C69 341 69 386 92 419 C120 459 172 476 255 476 C338 476 390 459 418 419 C441 386 441 341 425 308 C414 285 416 249 408 221 C390 155 333 112 255 112Z" fill="none" stroke="#202521" stroke-width="12" stroke-linejoin="round"/>
+  <g>
+    <circle cx="192" cy="263" r="27" fill="url(#eye)"/>
+    <circle cx="318" cy="263" r="27" fill="url(#eye)"/>
+    <circle cx="184" cy="253" r="8" fill="#fff"/>
+    <circle cx="310" cy="253" r="8" fill="#fff"/>
+    <circle cx="200" cy="273" r="3.5" fill="#fff" opacity=".9"/>
+    <circle cx="326" cy="273" r="3.5" fill="#fff" opacity=".9"/>
+    <ellipse cx="146" cy="307" rx="24" ry="16" fill="#ffe45d"/>
+    <ellipse cx="364" cy="307" rx="24" ry="16" fill="#ffe45d"/>
+    <path d="M222 299 C236 309 274 309 288 299 C289 331 275 348 255 348 C235 348 221 331 222 299Z" fill="#2a1b15" stroke="#202521" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M233 329 C244 320 267 320 278 329 C273 340 265 345 255 345 C245 345 237 340 233 329Z" fill="#ff8f83"/>
+  </g>
+  <g fill="#eafff5" opacity=".72">
+    <ellipse cx="166" cy="176" rx="34" ry="15" transform="rotate(-34 166 176)"/>
+    <ellipse cx="126" cy="220" rx="12" ry="7" transform="rotate(-34 126 220)"/>
+    <ellipse cx="229" cy="57" rx="13" ry="7" transform="rotate(-30 229 57)"/>
+    <ellipse cx="318" cy="104" rx="11" ry="6" transform="rotate(-20 318 104)"/>
+  </g>
+</svg>

@@ -2,9 +2,9 @@
   "version": 1,
   "assets": {
     "tuki": {
-      "path": "assets/brand/tuki/mascot.webp",
+      "path": "assets/brand/tuki/mascot.svg",
       "encoding": "url",
-      "mime": "image/webp"
+      "mime": "image/svg+xml"
     },
     "momo": {
       "path": "assets/projects/momo/character.b64",

@@ -1,5 +1,43 @@
 [
   {
+    "id": "90588de55d76db85",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "AI로 만든 게임, 픽셀아트가 흐릿하다면? 이미지 깨짐 해결하는 방법",
+    "summary": "AI를 이용해 게임을 만들었는데, 이상하게 캐릭터 이미지가 흐릿하게 보인 적 있으신가요? 원본 이미지는 분명 선명했는데 게임에 적용하니 테두리가 뭉개지거나, 캐릭터를 확대했더니 픽셀이 흐려지는 상황 말이죠. 이럴 때 무조건 고해상도 이미지를 다시 만들 필요는 없습니다. 이미지를 확대하는 방식부터 확인해 보세요. 오늘은 픽",
+    "url": "https://blog.naver.com/ty_free/224437927258?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-11T04:55:14.000Z",
+    "detectedAt": "2026-10-11T05:49:15.463Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "3bc528e4b78d92b8",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "도깨비의세계 꿀팁 총정리｜희귀 장비 분해·요혼석·레이드·사냥 보상까지",
+    "summary": "도깨비의세계를 며칠 플레이하다 보면 처음에는 잘 보이지 않았던 시스템들이 하나씩 눈에 들어오기 시작합니다. 특히 장비 분해, 요혼석 수급, 레이드 티켓, 파티 사냥, 길라잡이 같은 기능은 모르고 지나치면 재화나 시간을 손해 보기 쉬운 부분입니다. 이번 글은 지금까지 정리했던 쿠폰, 오프라인 사냥, 보물상자 공략과 최대한 ",
+    "url": "https://blog.naver.com/abb7664/224437919729?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-11T04:44:09.000Z",
+    "detectedAt": "2026-10-11T05:49:16.622Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "bcab0d3afeab8648",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -323,25 +361,6 @@
     }
   },
   {
-    "id": "3a6d46526e2efb96",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "마인크래프트 던전스2 2인 플레이 방법｜PC 한 대·로컬 협동·온라인·크로스플레이 정리",
-    "summary": "마인크래프트 던전스2는 혼자뿐 아니라 최대 4명까지 함께 플레이할 수 있습니다. 같은 PC나 콘솔에서 2명이 함께하는 로컬 협동도 가능하고, 온라인 친구와 크로스플레이도 지원합니다. 특히 이번 작품에서는 로컬과 온라인을 섞는 'Mixed Co-op'도 지원해서, 같은 PC에서 2명이 플레이하면서 다른 곳의 친구가 온라인으",
-    "url": "https://blog.naver.com/abb7664/224432451125?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-05T16:53:53.000Z",
-    "detectedAt": "2026-10-06T08:57:12.382Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "a0491d60ef6a6e52",
     "source": "youtube",
     "sourceLabel": "YouTube",
@@ -466,25 +485,6 @@
     "summary": "바이브코딩으로 게임이나 프로그램을 만들다 보면 이상한 순간이 찾아옵니다. 처음에는 정말 잘 됩니다. \"여기에 버튼 하나 추가해줘.\" \"전투 화면 만들어줘.\" \"결과창도 추가해줘.\" 몇 마디만 입력했는데 AI가 알아서 코드를 만들고 실제로 작동하는 모습을 보면 신기합니다. 그런데 기능이 하나둘 늘어나면서 분위기가 달라집니다",
     "url": "https://blog.naver.com/ty_free/224428404584?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-01T07:33:02.000Z",
-    "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "3ade1c695a2500db",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "AI 게임 캐릭터가 자꾸 달라진다면? 같은 캐릭터 유지하는 방법 5가지",
-    "summary": "AI로 캐릭터를 만들다 보면 꽤 자주 생기는 문제가 있습니다. 분명 같은 캐릭터를 요청했는데... 첫 번째 이미지에서는 마음에 들게 나왔는데 두 번째에서는 얼굴이 달라지고, 세 번째에서는 옷이 바뀌고, 조금 더 진행하면 아예 다른 캐릭터처럼 보이기도 합니다. 저도 게임 캐릭터를 직접 제작하면서 이 문제를 여러 번 겪었습니",
-    "url": "https://blog.naver.com/ty_free/224427884654?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-09-30T23:43:40.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
     "manual": false,
     "editorial": {

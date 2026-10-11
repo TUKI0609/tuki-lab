@@ -2,7 +2,7 @@
   "version": 1,
   "assets": {
     "tuki": {
-      "path": "assets/brand/tuki/mascot.svg",
+      "path": "assets/brand/tuki/mascot-v2.svg",
       "encoding": "url",
       "mime": "image/svg+xml"
     },

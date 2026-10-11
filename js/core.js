@@ -334,6 +334,15 @@ function renderChannelIcon(id) {
       </span>
     `;
   }
+  if (id === "tiktok") {
+    return `
+      <span class="channel-icon channel-icon-tiktok" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path d="M14.5 3v10.1a4.1 4.1 0 1 1-3.1-4V6.4a6.8 6.8 0 1 0 5.8 6.7V8.4c1.2.9 2.7 1.4 4.3 1.4V7.1c-2.1 0-4-1.7-4-4.1h-3Z"/>
+        </svg>
+      </span>
+    `;
+  }
   if (id === "naver-ai" || id === "naver-game") {
     return `
       <span class="channel-icon channel-icon-naver" aria-hidden="true">

@@ -325,6 +325,15 @@ function renderChannelIcon(id) {
       </span>
     `;
   }
+  if (id === "instagram") {
+    return `
+      <span class="channel-icon channel-icon-instagram" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path d="M7.7 2h8.6A5.7 5.7 0 0 1 22 7.7v8.6a5.7 5.7 0 0 1-5.7 5.7H7.7A5.7 5.7 0 0 1 2 16.3V7.7A5.7 5.7 0 0 1 7.7 2Zm0 2A3.7 3.7 0 0 0 4 7.7v8.6A3.7 3.7 0 0 0 7.7 20h8.6a3.7 3.7 0 0 0 3.7-3.7V7.7A3.7 3.7 0 0 0 16.3 4H7.7Zm9.1 1.5a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+        </svg>
+      </span>
+    `;
+  }
   if (id === "naver-ai" || id === "naver-game") {
     return `
       <span class="channel-icon channel-icon-naver" aria-hidden="true">

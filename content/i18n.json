@@ -564,6 +564,16 @@
         "name": "Instagram · @tuki0609",
         "role": "Short-form videos and TUKI WORLD stories"
       }
+    },
+    "tiktok": {
+      "ko": {
+        "name": "TikTok · @ty_tuki0609",
+        "role": "숏폼 영상과 제작 기록"
+      },
+      "en": {
+        "name": "TikTok · @ty_tuki0609",
+        "role": "Short-form videos and build notes"
+      }
     }
   },
   "devlog": {

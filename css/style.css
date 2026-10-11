@@ -5579,6 +5579,10 @@ a.project-evidence-card:hover {
   color: #e1306c;
   background: rgba(225,48,108,.075);
 }
+.channel-icon-tiktok {
+  color: #f4f7fb;
+  background: rgba(37,244,238,.065);
+}
 .channel-icon-generic {
   color: var(--accent);
 }

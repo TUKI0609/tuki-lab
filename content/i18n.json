@@ -554,6 +554,16 @@
         "name": "Naver Blog · Games",
         "role": "Game information and play content"
       }
+    },
+    "instagram": {
+      "ko": {
+        "name": "Instagram · @tuki0609",
+        "role": "숏폼 영상과 TUKI WORLD 세계관 기록"
+      },
+      "en": {
+        "name": "Instagram · @tuki0609",
+        "role": "Short-form videos and TUKI WORLD stories"
+      }
     }
   },
   "devlog": {

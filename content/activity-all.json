@@ -1,5 +1,43 @@
 [
   {
+    "id": "96cc599d73ecbca8",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "AI로 만든 게임, 모바일에서 소리가 안 난다면? 웹게임 배경음악 오류 해결법",
+    "summary": "AI로 웹게임을 만들었는데 PC에서는 정상적으로 나오던 배경음악이 스마트폰에서는 들리지 않는 경험, 혹시 있으신가요? 게임은 정상적으로 실행되고 캐릭터도 움직이는데, 이상하게 배경음악이나 효과음만 나오지 않는 상황입니다. 이럴 때 사운드 파일이 잘못됐다고 생각하거나 AI에게 음악을 다시 넣어달라고 요청하기 쉽습니다. 그런",
+    "url": "https://blog.naver.com/ty_free/224438938775?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-12T04:18:24.000Z",
+    "detectedAt": "2026-10-12T10:52:44.838Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "f5feeb0ad66e92df",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "FC온라인 10월 쿠폰 언제 나오나? FC PRO 챔피언스컵 생중계 쿠폰·접속 보상 총정리",
+    "summary": "FC온라인에서 새로운 생중계 쿠폰 이벤트가 시작됩니다. 2026 FC PRO CHAMPIONS CUP이 10월 13일부터 18일까지 진행되는데요. 이번 대회 기간에는 단순 경기 시청뿐 아니라 매일 생중계 쉐어쿠폰과 접속 보상까지 함께 받을 수 있습니다. 결론부터 말하면 생중계 쿠폰은 10월 13일부터 18일까지 매일 오후",
+    "url": "https://blog.naver.com/abb7664/224438927013?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-12T04:07:41.000Z",
+    "detectedAt": "2026-10-12T10:52:46.126Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "90588de55d76db85",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -323,25 +361,6 @@
     }
   },
   {
-    "id": "37c0d36ff237d557",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "FC온라인 가을 전어구이 만들기｜귀한 가을전어·소금·숯불 얻는 법과 교환 보상 정리",
-    "summary": "FC온라인에서 진행 중인 '가을 전어구이 만들기'는 처음 보면 재료도 세 종류고 교환식도 많아서 조금 복잡합니다. 결론부터 보면 핵심 재료는 귀한 가을전어, 굵은 소금, 숯불 3종입니다. 이 재료를 모아 에이전트에서 전어구이를 제작하면 선수팩, BP, 수수료 할인 쿠폰 등을 받을 수 있고 가장 높은 단계에서는 26FSL ",
-    "url": "https://blog.naver.com/abb7664/224432809771?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-06T03:09:27.000Z",
-    "detectedAt": "2026-10-06T08:57:12.382Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "bf8b90b413231cf9",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -466,25 +485,6 @@
     "summary": "AI에게 게임 캐릭터의 걷는 모습을 만들어달라고 했습니다. 한 장씩 볼 때는 정말 괜찮았습니다. 캐릭터도 귀엽고, 걷는 동작도 자연스러워 보였습니다. 그런데 게임에 적용해서 재생하는 순간 이상한 부분이 보이기 시작했습니다. 캐릭터가 위아래로 덜컹거리고, 어떤 프레임에서는 몸이 조금 더 커지고, 발 위치도 미묘하게 달라집니",
     "url": "https://blog.naver.com/ty_free/224429372515?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-02T05:09:22.000Z",
-    "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "7231a0a70f05ff24",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "바이브코딩, 처음엔 잘 되다가 왜 꼬일까? AI 코딩 오류가 반복되는 이유",
-    "summary": "바이브코딩으로 게임이나 프로그램을 만들다 보면 이상한 순간이 찾아옵니다. 처음에는 정말 잘 됩니다. \"여기에 버튼 하나 추가해줘.\" \"전투 화면 만들어줘.\" \"결과창도 추가해줘.\" 몇 마디만 입력했는데 AI가 알아서 코드를 만들고 실제로 작동하는 모습을 보면 신기합니다. 그런데 기능이 하나둘 늘어나면서 분위기가 달라집니다",
-    "url": "https://blog.naver.com/ty_free/224428404584?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-01T07:33:02.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
     "manual": false,
     "editorial": {

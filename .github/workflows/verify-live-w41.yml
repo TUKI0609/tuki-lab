@@ -19,99 +19,53 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Check owner-published gameplay reference alternatives (diagnostic only)
-        shell: bash
-        run: |
-          set -euo pipefail
-          echo "Checking only publicly accessible creator-owned video thumbnail endpoints; no media will be committed."
-          for id in PrqgIoBEZoE elhXFK08t7E BrBawuxsBy0; do
-            if curl --silent --show-error --location --compressed --fail --max-time 15 \
-              --output "$RUNNER_TEMP/$id.jpg" "https://i.ytimg.com/vi/$id/hqdefault.jpg"; then
-              echo "Video thumbnail $id:"
-              file "$RUNNER_TEMP/$id.jpg"
-            else
-              echo "Video thumbnail unavailable: $id"
-            fi
-          done
-          if curl --silent --show-error --location --fail --max-time 20 \
-            --output "$RUNNER_TEMP/lutratide-game.html" \
-            "https://lutra-tide-survivors.acc913473.chatgpt.site/play/"; then
-            echo "Game public page responds, bytes: $(wc -c < "$RUNNER_TEMP/lutratide-game.html")"
-          else
-            echo "Game public page not accessible to CI"
-          fi
-      - name: Preserve thumbnail bytes in audit output for self-hosted correction
-        shell: bash
-        run: |
-          python3 - <<'PY'
-          import base64, os
-          from pathlib import Path
-          for video in ("PrqgIoBEZoE","elhXFK08t7E","BrBawuxsBy0"):
-              data=(Path(os.environ["RUNNER_TEMP"])/f"{video}.jpg").read_bytes()
-              assert data[:3] == b"\xff\xd8\xff"
-              payload=base64.b64encode(data).decode("ascii")
-              print("THUMB-BEGIN|"+video+"|"+str(len(data)))
-              for i in range(0,len(payload),500):
-                  print("THUMB-CHUNK|"+video+"|"+str(i//500)+"|"+payload[i:i+500])
-              print("THUMB-END|"+video+"|"+str(len(payload)))
-          PY
-      - name: Diagnose repository and live image file format
-        shell: bash
-        run: |
-          set -euo pipefail
-          echo "::group::Repository image"
-          file assets/projects/evidence/tuki-project-evidence.webp
-          xxd -l 24 assets/projects/evidence/tuki-project-evidence.webp
-          echo "::endgroup::"
-          echo "::group::Published image"
-          curl --silent --show-error --location --compressed --fail \
-            --dump-header "$RUNNER_TEMP/w41-image-headers.txt" \
-            --output "$RUNNER_TEMP/w41-image-response.bin" \
-            'https://tuki0609.github.io/tuki-lab/assets/projects/evidence/tuki-project-evidence.webp'
-          grep -Ei '^(content-type|content-encoding|content-length|HTTP/)' "$RUNNER_TEMP/w41-image-headers.txt" || true
-          file "$RUNNER_TEMP/w41-image-response.bin"
-          xxd -l 24 "$RUNNER_TEMP/w41-image-response.bin"
-          echo "::endgroup::"
-      - name: Open public LAB pages in headless Chrome and verify screenshots appear in DOM
+      - name: Verify published LAB data and 3 actual self-hosted image payloads
+        run: node scripts/verify-live-w41.mjs
+      - name: Verify desktop, mobile, listing and existing article in real Chrome
         shell: bash
         run: |
           set -euo pipefail
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
-          if [ -z "$CHROME" ]; then echo "Chrome unavailable"; exit 1; fi
-          URL="https://tuki0609.github.io/tuki-lab/lab/article/?slug=lutratide-evolution-growth-difference-2026-w41&verify=$GITHUB_RUN_ID"
-          timeout 80 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+          if [ -z "$CHROME" ]; then echo "Headless Chrome not found"; exit 1; fi
+
+          URL="https://tuki0609.github.io/tuki-lab/lab/article/?slug=lutratide-evolution-growth-difference-2026-w41&_audit=$GITHUB_RUN_ID"
+
+          timeout 70 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
             --virtual-time-budget=14000 --window-size=1180,3000 --dump-dom "$URL" \
-            > "$RUNNER_TEMP/w41-live-dom.html" 2> "$RUNNER_TEMP/w41-chrome.log"
-          grep -Fq '진화했는데 손맛이 그대로라면' "$RUNNER_TEMP/w41-live-dom.html"
-          grep -Fq '이번 제작에서 남긴 기준' "$RUNNER_TEMP/w41-live-dom.html"
-          grep -Fq '게임 제작 과정의 실제 화면' "$RUNNER_TEMP/w41-live-dom.html"
-          grep -Fq '기존 프로젝트에 등록된 플레이 참고 화면입니다' "$RUNNER_TEMP/w41-live-dom.html"
+            > "$RUNNER_TEMP/w41-desktop.html" 2> "$RUNNER_TEMP/w41-desktop.log"
+          grep -Fq '진화했는데 손맛이 그대로라면' "$RUNNER_TEMP/w41-desktop.html"
+          grep -Fq '이번 제작에서 남긴 기준' "$RUNNER_TEMP/w41-desktop.html"
+          grep -Fq '게임 제작 과정의 영상 미리보기' "$RUNNER_TEMP/w41-desktop.html"
+          grep -Fq '본 이미지는 기존에 공개한 제작 영상 3편의 썸네일입니다' "$RUNNER_TEMP/w41-desktop.html"
           for title in '성장 선택 화면' '전투 플레이 화면' '스킬 이펙트'; do
-            grep -Fq "$title" "$RUNNER_TEMP/w41-live-dom.html"
+            grep -Fq "$title" "$RUNNER_TEMP/w41-desktop.html"
           done
-          COUNT="$(grep -o 'class="lab-evidence-card"' "$RUNNER_TEMP/w41-live-dom.html" | wc -l)"
-          test "$COUNT" -eq 3
-          echo "PASS: Public W41 article rendered full text and all 3 project evidence panels in desktop Chrome."
-          timeout 80 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
-            --virtual-time-budget=14000 --window-size=390,844 --dump-dom "$URL" \
-            > "$RUNNER_TEMP/w41-mobile-dom.html" 2> "$RUNNER_TEMP/w41-mobile-chrome.log"
-          MCOUNT="$(grep -o 'class="lab-evidence-card"' "$RUNNER_TEMP/w41-mobile-dom.html" | wc -l)"
-          test "$MCOUNT" -eq 3
-          echo "PASS: Mobile-size viewport also rendered all 3 project evidence panels."
-          timeout 80 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
-            --virtual-time-budget=12000 --dump-dom \
-            "https://tuki0609.github.io/tuki-lab/lab/?verify=$GITHUB_RUN_ID" \
-            > "$RUNNER_TEMP/lab-index-dom.html" 2> "$RUNNER_TEMP/lab-index-chrome.log"
-          grep -Fq 'lutratide-evolution-growth-difference-2026-w41' "$RUNNER_TEMP/lab-index-dom.html"
-          echo "PASS: TUKI LAB listing includes W41 article."
-          timeout 80 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
-            --virtual-time-budget=12000 --dump-dom \
-            "https://tuki0609.github.io/tuki-lab/lab/article/?slug=momo-public-launch-2026-10-07&verify=$GITHUB_RUN_ID" \
-            > "$RUNNER_TEMP/momo-dom.html" 2> "$RUNNER_TEMP/momo-chrome.log"
-          if grep -Fq 'class="lab-evidence-card"' "$RUNNER_TEMP/momo-dom.html"; then
-            echo "FAIL: Existing MOMO article unexpectedly acquired W41 gallery."
-            exit 1
+          test "$(grep -o 'class="lab-evidence-card"' "$RUNNER_TEMP/w41-desktop.html" | wc -l)" -eq 3
+          test "$(grep -o 'data-loaded="true"' "$RUNNER_TEMP/w41-desktop.html" | wc -l)" -eq 3
+          if grep -Fq 'data-loaded="error"' "$RUNNER_TEMP/w41-desktop.html"; then
+            echo "FAIL: at least one published image failed to load"; exit 1
           fi
-          echo "PASS: Previously published MOMO article remains without W41 gallery."
-      - name: Fetch real published JSON, metadata, styles, WebP bytes
-        run: node scripts/verify-live-w41.mjs
+          echo "PASS: Published desktop W41 article renders complete text and 3 fully loaded images."
+
+          timeout 70 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+            --virtual-time-budget=14000 --window-size=390,844 --dump-dom "$URL" \
+            > "$RUNNER_TEMP/w41-mobile.html" 2> "$RUNNER_TEMP/w41-mobile.log"
+          test "$(grep -o 'class="lab-evidence-card"' "$RUNNER_TEMP/w41-mobile.html" | wc -l)" -eq 3
+          test "$(grep -o 'data-loaded="true"' "$RUNNER_TEMP/w41-mobile.html" | wc -l)" -eq 3
+          echo "PASS: Published mobile viewport renders 3 fully loaded images."
+
+          timeout 70 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+            --virtual-time-budget=12000 --dump-dom \
+            "https://tuki0609.github.io/tuki-lab/lab/?_audit=$GITHUB_RUN_ID" \
+            > "$RUNNER_TEMP/lab-index.html" 2> "$RUNNER_TEMP/lab-index.log"
+          grep -Fq 'lutratide-evolution-growth-difference-2026-w41' "$RUNNER_TEMP/lab-index.html"
+          echo "PASS: Published LAB listing contains W41."
+
+          timeout 70 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+            --virtual-time-budget=12000 --dump-dom \
+            "https://tuki0609.github.io/tuki-lab/lab/article/?slug=momo-public-launch-2026-10-07&_audit=$GITHUB_RUN_ID" \
+            > "$RUNNER_TEMP/old-article.html" 2> "$RUNNER_TEMP/old-article.log"
+          if grep -Fq 'class="lab-evidence-card"' "$RUNNER_TEMP/old-article.html"; then
+            echo "FAIL: Existing MOMO article unexpectedly received W41 image gallery"; exit 1
+          fi
+          echo "PASS: Existing MOMO LAB article has no W41 gallery."

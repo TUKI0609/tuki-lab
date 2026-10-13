@@ -7,7 +7,11 @@ const CANDIDATES_PATH = new URL("../content/lab-candidates.json", import.meta.ur
 
 async function readJson(url, fallback) {
   try { return JSON.parse(await fs.readFile(url, "utf8")); }
-  catch { return fallback; }
+  catch (error) {
+    // Never replace corrupted source or approval history with an empty array.
+    if (error.code === "ENOENT") return fallback;
+    throw error;
+  }
 }
 
 const stableHash = value =>

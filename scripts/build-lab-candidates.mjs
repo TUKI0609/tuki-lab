@@ -59,6 +59,8 @@ const projects = await readJson(PROJECTS_PATH, []);
 const previous = await readJson(CANDIDATES_PATH, []);
 const projectMap = new Map(projects.map(p => [p.id, p]));
 const previousById = new Map(previous.map(c => [c.id, c]));
+const now = new Date().toISOString();
+const withoutUpdateTimestamp = ({ updatedAt, ...material }) => JSON.stringify(material);
 
 const cutoff = Date.now() - 45 * 24 * 60 * 60 * 1000;
 const grouped = new Map();
@@ -93,12 +95,13 @@ for (const [bucket, items] of grouped.entries()) {
   }));
 
   const candidate = {
+    ...prev,
     id,
     project:projectId,
     projectName:project.name,
     period:week,
     status:prev?.status || "PENDING",
-    needsApproval:prev?.status === "APPROVED" ? false : true,
+    needsApproval:!["APPROVED", "REJECTED"].includes(prev?.status),
     suggestedType:type,
     suggestedTitle:suggestTitle(project, items, type),
     suggestedSummary:buildSummary(project, items, type),
@@ -106,13 +109,25 @@ for (const [bucket, items] of grouped.entries()) {
     evidenceCount:items.length,
     evidence,
     evidenceHash:stableHash(evidence.map(e => e.activityId).sort().join("|")),
-    generatedAt:prev?.generatedAt || new Date().toISOString(),
-    updatedAt:new Date().toISOString(),
+    generatedAt:prev?.generatedAt || now,
+    updatedAt:prev?.updatedAt || now,
     approvedAt:prev?.approvedAt || null,
     rejectedAt:prev?.rejectedAt || null
   };
 
+  // Unchanged source evidence and approval state must not rewrite the file.
+  if (!prev || withoutUpdateTimestamp(candidate) !== withoutUpdateTimestamp(prev)) {
+    candidate.updatedAt = now;
+  }
+
   candidates.push(candidate);
+}
+
+// Never silently discard human decisions when evidence ages past the 45-day window
+// or a source is temporarily unavailable.
+const currentIds = new Set(candidates.map(candidate => candidate.id));
+for (const older of previous) {
+  if (!currentIds.has(older.id)) candidates.push(older);
 }
 
 candidates.sort((a,b) => {

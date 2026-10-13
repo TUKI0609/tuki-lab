@@ -1,0 +1,99 @@
+name: Validate LAB discoverability and static SEO
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "js/app.js"
+      - "js/core.js"
+      - "js/lab-article.js"
+      - "css/style.css"
+      - "content/lab-posts.json"
+      - "lab/posts/**"
+      - "sitemap.xml"
+      - "scripts/build-lab-search-pages.mjs"
+      - ".github/workflows/lab-search-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Verify per-post HTML and sitemap match approved JSON
+        run: node scripts/build-lab-search-pages.mjs --check
+      - name: Verify JavaScript syntax
+        run: |
+          node --check js/app.js
+          node --check js/core.js
+          node --check js/lab-article.js
+          node --check scripts/build-lab-search-pages.mjs
+      - name: Check static SEO and internal navigation links
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import assert from "node:assert/strict";
+          import {readFileSync, existsSync} from "node:fs";
+          const root = readFileSync("index.html","utf8");
+          const apps = readFileSync("js/app.js","utf8");
+          const lab = readFileSync("lab/article/index.html","utf8");
+          const legacy = readFileSync("js/lab-article.js","utf8");
+          const posts=JSON.parse(readFileSync("content/lab-posts.json","utf8"));
+          const site=readFileSync("sitemap.xml","utf8");
+          assert.match(root,/id="home-featured-lab"/);
+          assert.match(root,/href="\.\/lab\/posts\/lutratide-evolution-growth-difference-2026-w41\/"/);
+          assert.match(apps,/loadJson\("content\/lab-posts\.json"\)/);
+          assert.match(apps,/const publishedItems/);
+          assert.match(lab,/<meta name="robots" content="noindex,follow"/);
+          assert.doesNotMatch(legacy,/setMeta\('meta\[name="robots"\]'/);
+          assert.match(legacy,/\/lab\/posts\//);
+          for (const post of posts) {
+            const path="lab/posts/"+post.slug+"/index.html";
+            assert(existsSync(path), "Missing static LAB page: "+path);
+            const html=readFileSync(path,"utf8");
+            const expected="https://tuki0609.github.io/tuki-lab/lab/posts/"+post.slug+"/";
+            assert(html.includes(post.title.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")));
+            assert(html.includes('<link rel="canonical" href="'+expected+'">'));
+            assert(html.includes('name="robots" content="index,follow'));
+            assert(html.includes('<h1>'));
+            assert(html.includes('application/ld+json'));
+            assert(site.includes("<loc>"+expected+"</loc>"));
+          }
+          console.log("PASS: home links approved posts, static articles are canonical and indexable, and sitemap contains all four.");
+          NODE
+      - name: Load homepage and search-friendly W41 article in headless Chrome
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m http.server 8765 --bind 127.0.0.1 > "$RUNNER_TEMP/preview-server.log" 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          for i in $(seq 1 20); do
+            if curl --silent --fail http://127.0.0.1:8765/ > /dev/null; then break; fi
+            sleep 1
+          done
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME"
+          timeout 70 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+            --virtual-time-budget=14000 --window-size=1280,900 --dump-dom \
+            http://127.0.0.1:8765/ > "$RUNNER_TEMP/home.html" 2> "$RUNNER_TEMP/home-chrome.log"
+          grep -Fq 'home-featured-lab-title' "$RUNNER_TEMP/home.html"
+          grep -Fq '진화했는데 손맛이 그대로라면' "$RUNNER_TEMP/home.html"
+          grep -Fq 'lab/posts/lutratide-evolution-growth-difference-2026-w41/' "$RUNNER_TEMP/home.html"
+          timeout 70 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+            --virtual-time-budget=14000 --window-size=390,844 --dump-dom \
+            http://127.0.0.1:8765/lab/posts/lutratide-evolution-growth-difference-2026-w41/ \
+            > "$RUNNER_TEMP/w41.html" 2> "$RUNNER_TEMP/w41-chrome.log"
+          grep -Fq '이번 제작에서 남긴 기준' "$RUNNER_TEMP/w41.html"
+          grep -Fq 'w39-video-thumbnail.svg' "$RUNNER_TEMP/w41.html"
+          grep -Fq 'w40-video-thumbnail.svg' "$RUNNER_TEMP/w41.html"
+          grep -Fq 'w41-video-thumbnail.svg' "$RUNNER_TEMP/w41.html"
+          echo "PASS: Homepage links to W41 and standalone W41 article renders with three locally hosted thumbnails."

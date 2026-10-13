@@ -43,14 +43,15 @@ async function boot() {
 
   const project = projects.find(item => item.id === post.project);
   document.title = `${post.title} · TUKI LAB`;
-  const canonicalUrl = `https://tuki0609.github.io/tuki-lab/lab/article/?slug=${encodeURIComponent(post.slug)}`;
+  const canonicalUrl = `https://tuki0609.github.io/tuki-lab/lab/posts/${encodeURIComponent(post.slug)}/`;
   const description = post.summary || "TUKI LAB 제작 기록";
   const setMeta = (selector, value, attr = "content") => {
     const el = document.querySelector(selector);
     if (el) el.setAttribute(attr, value);
   };
   setMeta('meta[name="description"]', description);
-  setMeta('meta[name="robots"]', "index,follow,max-image-preview:large");
+  // This legacy query-based template intentionally stays noindex. The static
+  // per-article page is the sole canonical/indexable version.
   setMeta('meta[property="og:title"]', document.title);
   setMeta('meta[property="og:description"]', description);
   setMeta('meta[property="og:url"]', canonicalUrl);

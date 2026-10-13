@@ -109,12 +109,13 @@ async function boot() {
     await initI18n("");
     const language = getLanguage();
 
-    const [site, projects, logs, activity, candidates] = await Promise.all([
+    const [site, projects, logs, activity, candidates, labPosts] = await Promise.all([
       loadJson("content/site.json"),
       loadJson("content/projects.json"),
       loadJson("content/devlog.json"),
       loadJson("content/activity.json"),
-      loadJson("content/lab-candidates.json")
+      loadJson("content/lab-candidates.json"),
+      loadJson("content/lab-posts.json")
     ]);
 
     document.querySelectorAll("[data-site-name]").forEach(el => el.textContent = site.name);
@@ -256,6 +257,23 @@ async function boot() {
     if (activityCount) activityCount.textContent = playableCount;
     if (queueCount) queueCount.textContent = readableCount;
 
+    // Promote the most recently approved LAB post, not just RSS or brief devlogs.
+    // The static fallback link in index.html remains crawlable without JS.
+    const latestLabPost = [...labPosts]
+      .filter(post => post.slug && post.title && post.publishedAt)
+      .sort((a,b) => b.publishedAt.localeCompare(a.publishedAt))[0];
+    if (latestLabPost) {
+      const latestLink = document.querySelector("#home-featured-lab");
+      const latestTitle = document.querySelector("#home-featured-lab-title");
+      const latestDate = document.querySelector("#home-featured-lab-date");
+      if (latestLink) latestLink.href = "./lab/posts/" + encodeURIComponent(latestLabPost.slug) + "/";
+      if (latestTitle) latestTitle.textContent = latestLabPost.title;
+      if (latestDate) {
+        latestDate.dateTime = latestLabPost.publishedAt;
+        latestDate.textContent = latestLabPost.publishedAt;
+      }
+    }
+
     const shortcuts = document.querySelector("#home-project-shortcuts");
     if (shortcuts) {
       shortcuts.innerHTML = projects.map(raw => {
@@ -300,7 +318,20 @@ async function boot() {
         };
       });
 
-      const merged = [...activityItems, ...logItems]
+      const publishedItems = [...labPosts]
+        .filter(post => post.slug && post.title && post.publishedAt)
+        .slice(0, 4).map(post => ({
+          kind: "published",
+          sortDate: new Date(post.publishedAt + "T16:00:00").getTime(),
+          label: "BUILD LOG",
+          meta: "정식 제작 기록",
+          date: formatLogDate(post.publishedAt, language),
+          title: post.title,
+          href: "./lab/posts/" + encodeURIComponent(post.slug) + "/",
+          external: false
+        }));
+
+      const merged = [...publishedItems, ...activityItems, ...logItems]
         .sort((a, b) => b.sortDate - a.sortDate)
         .slice(0, 6);
 

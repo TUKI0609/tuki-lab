@@ -5690,3 +5690,73 @@ a.project-evidence-card:hover {
   height: 100%;
   object-fit: cover;
 }
+
+/* 2026-10: LAB article readability (previous title grew to 5.4rem). */
+.lab-article-head h1 {
+  max-width: 800px;
+  font-size: clamp(2rem, 4.1vw, 3.35rem);
+  line-height: 1.16;
+  letter-spacing: -.036em;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 600px) {
+  .lab-article { padding-top: 66px; }
+  .lab-article-head { padding-bottom: 32px; }
+  .lab-article-head h1 { font-size: clamp(1.8rem, 7vw, 2.35rem); }
+  .lab-article-summary { margin-top: 18px; font-size: .98rem; }
+}
+/* Latest approved LAB post: immediately discoverable after returning to home. */
+.home-featured-lab {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 20px;
+  padding: 18px 22px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(114,221,174,.22);
+  border-radius: 15px;
+  color: inherit;
+  background: linear-gradient(110deg,rgba(58,105,78,.21),rgba(16,28,23,.8));
+  transition: border-color .16s ease, background .16s ease;
+}
+.home-featured-lab:hover, .home-featured-lab:focus-visible {
+  border-color: rgba(114,221,174,.7);
+}
+.home-featured-lab-label {
+  flex: 0 0 auto;
+  font-size: .7rem;
+  color: #72ddae;
+  font-weight: 850;
+}
+.home-featured-lab > strong {
+  flex: 1 1 420px;
+  font-size: clamp(.94rem,1.35vw,1.15rem);
+  color: #e9f4ed;
+  line-height: 1.42;
+}
+.home-featured-lab-meta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  color: #a9bdb1;
+  font-size: .75rem;
+}
+.home-featured-lab-meta b { color: #72ddae; font-weight: 800; }
+.change-row.published .change-meta span { color: #72ddae; }
+@media (max-width:760px) {
+  .home-featured-lab { padding: 16px; gap: 9px; }
+  .home-featured-lab > strong { flex: 1 1 100%; }
+  .home-featured-lab-meta { width: 100%; justify-content: space-between; }
+}
+/* Search indexable static LAB article pages share the established design. */
+.lab-article-static .lab-article-head,
+.lab-article-static .lab-article-body,
+.lab-article-static .lab-sources { color: inherit; }
+.lab-article-static .lab-static-back {
+  display: inline-block;
+  margin: 20px 0 0;
+  color: #72ddae;
+  font-weight: 800;
+  font-size: .9rem;
+}
+.lab-static-source { color: inherit; }

@@ -239,7 +239,7 @@ export function renderLabPosts(posts, rootSelector = "#published-lab", base = ""
   }
 
   root.innerHTML = list.map(post => `
-    <a class="lab-post-card" href="${base}lab/article/?slug=${encodeURIComponent(post.slug)}">
+    <a class="lab-post-card" href="${base}lab/posts/${encodeURIComponent(post.slug)}/">
       <div class="lab-post-meta">
         <span>${term(post.type)}</span>
         <span>${post.project ? post.project.toUpperCase() : "TUKI"}</span>

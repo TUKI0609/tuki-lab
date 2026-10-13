@@ -1,5 +1,6 @@
 // Optional LAB gallery: use actual thumbnails of the creator's own, linked
-// gameplay Shorts. Never present these as before/after gameplay comparisons.
+// gameplay Shorts. The JPEG thumbnails are embedded in first-party local SVGs.
+// Never present these as before/after gameplay comparisons.
 const localeText = value => typeof value === "string" ? value : (value?.ko || value?.en || "");
 const trustedSource = value => {
   try {
@@ -12,7 +13,14 @@ const videoThumbnail = link => {
     const url = new URL(link);
     if (!["youtube.com", "www.youtube.com", "m.youtube.com"].includes(url.hostname) || url.protocol !== "https:") return null;
     const match = url.pathname.match(/^\/shorts\/([A-Za-z0-9_-]{11})\/?$/);
-    return match ? "https://i.ytimg.com/vi/" + match[1] + "/hqdefault.jpg" : null;
+    const localThumbnails = {
+      PrqgIoBEZoE: "w39-video-thumbnail.svg",
+      elhXFK08t7E: "w40-video-thumbnail.svg",
+      BrBawuxsBy0: "w41-video-thumbnail.svg"
+    };
+    return match && localThumbnails[match[1]]
+      ? "../../assets/projects/lutratide-survivors/" + localThumbnails[match[1]]
+      : null;
   } catch { return null; }
 };
 

@@ -1,0 +1,27 @@
+name: Verify unpublished LAB review draft
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "review/*.json"
+      - "scripts/verify-lab-review.mjs"
+      - ".github/workflows/lab-review-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  draft-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Check candidate evidence, slug and existing-publication duplicates
+        env:
+          LAB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: node scripts/verify-lab-review.mjs review/lutratide-w41.lab-draft.json

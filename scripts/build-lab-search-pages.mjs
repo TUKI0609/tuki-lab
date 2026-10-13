@@ -66,7 +66,7 @@ expected.push([sitemapPath, renderSitemap(await fs.readFile(sitemapPath,"utf8"),
 for (const [path,html] of expected) {
   if (check) {
     const actual=await fs.readFile(path,"utf8");
-    if(actual!==html)throw new Error("Static LAB SEO output outdated: "+path);
+    if(actual!==html){ const idx=[...html].findIndex((ch,i)=>ch!==actual[i]); throw new Error("Static LAB SEO output outdated: "+path+" first mismatch at "+idx+" expected="+JSON.stringify(html.slice(Math.max(0,idx-65),idx+65))+" actual="+JSON.stringify(actual.slice(Math.max(0,idx-65),idx+65))); }
   } else {
     await fs.mkdir(dirname(path),{recursive:true});
     await fs.writeFile(path,html,"utf8");

@@ -5673,3 +5673,20 @@ a.project-evidence-card:hover {
   .lab-evidence-grid { grid-template-columns: 1fr; }
   .lab-evidence-card { max-width: 500px; }
 }
+
+/* LAB evidence video-thumbnails: verified JPEG previews of TUKI's own public Shorts. */
+.lab-evidence-card .lab-evidence-picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 9px;
+  margin-bottom: 13px;
+  background: #101713;
+}
+.lab-evidence-card .lab-evidence-picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

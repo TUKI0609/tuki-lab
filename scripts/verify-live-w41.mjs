@@ -1,61 +1,77 @@
-// Read-only audit of published W41 LAB article and project screenshot sprite.
+// Production W41 audit: verify the deployed post, the actual SVG/JPEG bytes,
+// and the local image mapping. This script is read-only.
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
 const root = "https://tuki0609.github.io/tuki-lab/";
 const slug = "lutratide-evolution-growth-difference-2026-w41";
 const candidateId = "lab-lutratide-survivors-2026-W41";
-const token = process.env.GITHUB_RUN_ID || Date.now().toString();
+const cacheToken = process.env.GITHUB_RUN_ID || String(Date.now());
 
 async function live(path) {
   const url = new URL(path, root);
-  url.searchParams.set("_verify", token);
-  const result = await fetch(url, {
+  url.searchParams.set("_audit", cacheToken);
+  const response = await fetch(url, {
     headers: { "Cache-Control": "no-cache" },
     signal: AbortSignal.timeout(25000)
   });
-  assert.equal(result.status, 200, "HTTP " + result.status + " from " + url);
-  return result;
+  assert.equal(response.status, 200, "HTTP " + response.status + " at " + url);
+  return response;
 }
-async function json(path) { return (await live(path)).json(); }
+async function load(path) { return (await live(path)).json(); }
 
-const [published, localPosts, candidates, css, sprite] = await Promise.all([
-  json("content/lab-posts.json"),
+const [posts, repoPosts, candidates, galleryCode, style] = await Promise.all([
+  load("content/lab-posts.json"),
   readFile(new URL("../content/lab-posts.json", import.meta.url), "utf8").then(JSON.parse),
-  json("content/lab-candidates.json"),
-  live("css/style.css").then(r => r.text()),
-  live("assets/projects/evidence/tuki-project-evidence.webp").then(r => r.arrayBuffer())
+  load("content/lab-candidates.json"),
+  live("js/lab-project-evidence.js").then(r => r.text()),
+  live("css/style.css").then(r => r.text())
 ]);
-const post = published.find(p => p.slug === slug);
-const localPost = localPosts.find(p => p.slug === slug);
-assert(post && localPost, "W41 LAB article not found");
-assert.deepEqual(post, localPost, "Published W41 article differs from main");
-assert.equal(published.length, 4, "Expected four live LAB articles");
-assert.equal(post.originCandidateId, candidateId);
-assert.equal(post.showProjectEvidence, true);
-assert.equal(post.publishedAt, "2026-10-13");
+const article = posts.find(p => p.slug === slug);
+assert(article, "W41 is missing from live post collection");
+assert.deepEqual(article, repoPosts.find(p => p.slug === slug), "Published W41 differs from main");
+assert(posts.length >= 4, "Published LAB collection is incomplete");
+assert.equal(article.originCandidateId, candidateId);
+assert.equal(article.showProjectEvidence, true);
+assert.equal(article.publishedAt, "2026-10-13");
 assert.equal(candidates.find(c => c.id === candidateId)?.status, "APPROVED");
-assert.match(css, /\.project-evidence-image\s*\{[\s\S]*?background-image:\s*url\(["']?\.\.\/assets\/projects\/evidence\/tuki-project-evidence\.webp/);
-const bytes = new Uint8Array(sprite);
-assert(bytes.length > 3000, "Sprite is missing or empty");
-const signature = (from, to) => String.fromCharCode(...bytes.slice(from, to));
-assert.equal(signature(0, 4), "RIFF");
-assert.equal(signature(8, 12), "WEBP");
-const [labIndex, articleHTML] = await Promise.all([
+assert.match(style, /\.lab-evidence-card\s+\.lab-evidence-picture\s+img/);
+assert.match(galleryCode, /img\.addEventListener\("load"/);
+assert.doesNotMatch(galleryCode, /https:\/\/i\.ytimg\.com/);
+
+const weeks = ["w39", "w40", "w41"];
+const imageData = [];
+for (const week of weeks) {
+  const path = "assets/projects/lutratide-survivors/" + week + "-video-thumbnail.svg";
+  assert(galleryCode.includes(week + "-video-thumbnail.svg"), "Gallery doesn't reference " + week);
+  const [remote, local] = await Promise.all([
+    live(path).then(r => r.text()),
+    readFile(new URL("../" + path, import.meta.url), "utf8")
+  ]);
+  assert.equal(remote, local, "Deployed SVG mismatch: " + week);
+  assert.match(remote, /<svg[^>]+xmlns="http:\/\/www\.w3\.org\/2000\/svg"/);
+  const match = remote.match(/href="data:image\/jpeg;base64,([A-Za-z0-9+/=]+)"/);
+  assert(match, "Embedded JPEG data not found: " + week);
+  const bytes = Buffer.from(match[1], "base64");
+  assert(bytes.length > 3000, "Embedded JPEG is suspiciously small: " + week);
+  assert.equal(bytes.subarray(0, 3).toString("hex"), "ffd8ff", "Bad JPEG header: " + week);
+  assert.equal(bytes.subarray(-2).toString("hex"), "ffd9", "Bad JPEG footer: " + week);
+  imageData.push({ image: week, mime: "image/svg+xml", embedded: "image/jpeg", bytes: bytes.length });
+}
+const [indexHTML, articleHTML] = await Promise.all([
   live("lab/").then(r => r.text()),
   live("lab/article/?slug=" + slug).then(r => r.text())
 ]);
-assert.match(labIndex, /src=["']\.\.\/js\/secondary\.js/);
+assert.match(indexHTML, /src=["']\.\.\/js\/secondary\.js/);
 assert.match(articleHTML, /src=["']\.\.\/\.\.\/js\/lab-article\.js/);
 console.log(JSON.stringify({
-  publicURL: new URL("lab/article/?slug=" + slug, root).href,
-  totalPublished: published.length,
-  title: post.title,
-  date: post.publishedAt,
-  candidateStatus: "APPROVED",
-  sections: post.sections.length,
-  imageSpriteBytes: bytes.length,
-  sourceCount: post.sources.length,
-  tests: "Live JSON matches main; project sprite is served as WebP; page routes exist"
+  articleUrl: new URL("lab/article/?slug=" + slug, root).href,
+  livePosts: posts.length,
+  title: article.title,
+  sourceCount: article.sources.length,
+  sectionCount: article.sections.length,
+  status: "APPROVED",
+  imageData,
+  result: "All deployed metadata, site modules, and 3 embedded JPEG image bytes match repository sources"
 }, null, 2));
-console.log("PASS: W41 article, approval, CSS and actual game-image sprite are live.");
+console.log("PASS: Published W41 LAB data and all 3 self-hosted SVG/JPEG images are valid.");

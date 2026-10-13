@@ -33,6 +33,8 @@ jobs:
           node-version: "20"
       - name: Test candidate consistency, RSS outage recovery and saved approvals
         run: node --test tests/*.test.mjs
+      - name: Confirm pending LAB review queue (read only)
+        run: node scripts/lab-review.mjs queue
       - name: Inspect candidate/article linkage (read only)
         run: node scripts/audit-lab-pipeline.mjs
       - name: Validate new LAB publication has an approved candidate, evidence and devlog

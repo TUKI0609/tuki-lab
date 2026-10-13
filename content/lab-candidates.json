@@ -4,8 +4,8 @@
     "project": "lutratide-survivors",
     "projectName": "LUTRATIDE SURVIVORS",
     "period": "2026-W41",
-    "status": "PENDING",
-    "needsApproval": true,
+    "status": "APPROVED",
+    "needsApproval": false,
     "suggestedType": "BUILD LOG",
     "suggestedTitle": "LUTRATIDE SURVIVORS · GPT-6 Astra로 만든 게임, 이번엔 진화 차이를 키웠습니다",
     "suggestedSummary": "LUTRATIDE SURVIVORS와 연결된 최근 활동 1건을 하나의 BUILD LOG 후보로 묶었습니다. 출처: YouTube. 승인 전에는 TUKI LAB에 공개되지 않습니다.",
@@ -23,9 +23,10 @@
     ],
     "evidenceHash": "866b9009dcde",
     "generatedAt": "2026-10-07T07:08:21.547Z",
-    "updatedAt": "2026-10-13T10:38:22.934Z",
-    "approvedAt": null,
-    "rejectedAt": null
+    "updatedAt": "2026-10-13T13:30:44.262Z",
+    "approvedAt": "2026-10-13T13:30:44.262Z",
+    "rejectedAt": null,
+    "publishedSlug": "lutratide-evolution-growth-difference-2026-w41"
   },
   {
     "id": "lab-momo-2026-W40",

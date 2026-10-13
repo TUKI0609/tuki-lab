@@ -19,6 +19,23 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+      - name: Diagnose repository and live image file format
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "::group::Repository image"
+          file assets/projects/evidence/tuki-project-evidence.webp
+          xxd -l 24 assets/projects/evidence/tuki-project-evidence.webp
+          echo "::endgroup::"
+          echo "::group::Published image"
+          curl --silent --show-error --location --compressed --fail \
+            --dump-header "$RUNNER_TEMP/w41-image-headers.txt" \
+            --output "$RUNNER_TEMP/w41-image-response.bin" \
+            'https://tuki0609.github.io/tuki-lab/assets/projects/evidence/tuki-project-evidence.webp'
+          grep -Ei '^(content-type|content-encoding|content-length|HTTP/)' "$RUNNER_TEMP/w41-image-headers.txt" || true
+          file "$RUNNER_TEMP/w41-image-response.bin"
+          xxd -l 24 "$RUNNER_TEMP/w41-image-response.bin"
+          echo "::endgroup::"
       - name: Fetch real published JSON, metadata, styles, WebP bytes
         run: node scripts/verify-live-w41.mjs
       - name: Open public LAB pages in headless Chrome and verify screenshots appear in DOM

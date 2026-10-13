@@ -1,0 +1,49 @@
+name: Verify published Pages activity
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "scripts/verify-live-pages.mjs"
+      - ".github/workflows/verify-live-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Confirm deployed homepage, activity page and JSON match repository
+        run: node scripts/verify-live-pages.mjs
+      - name: Check rendered activity entries in headless Chrome
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          if [ -z "$CHROME" ]; then
+            echo "Headless Chrome is not available on this runner."
+            exit 1
+          fi
+          EXPECTED_TITLE="$(node -p 'JSON.parse(require("fs").readFileSync("content/activity.json","utf8"))[0].title')"
+          DOM_FILE="$RUNNER_TEMP/tuki-activity-dom.html"
+          timeout 55 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage \
+            --disable-gpu --virtual-time-budget=12000 --dump-dom \
+            "https://tuki0609.github.io/tuki-lab/activity/?tuki_audit=$GITHUB_RUN_ID" \
+            > "$DOM_FILE" 2> "$RUNNER_TEMP/tuki-chrome-stderr.log"
+          if ! grep -Fq "$EXPECTED_TITLE" "$DOM_FILE"; then
+            echo "Latest activity title is not visible in the rendered DOM."
+            sed -n '1,20p' "$RUNNER_TEMP/tuki-chrome-stderr.log" || true
+            exit 1
+          fi
+          if ! grep -Eq 'class="activity-item' "$DOM_FILE"; then
+            echo "No rendered activity cards detected in DOM."
+            exit 1
+          fi
+          echo "PASS: Headless Chrome rendered latest public activity in the live /activity/ page."

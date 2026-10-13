@@ -36,8 +36,6 @@ jobs:
           file "$RUNNER_TEMP/w41-image-response.bin"
           xxd -l 24 "$RUNNER_TEMP/w41-image-response.bin"
           echo "::endgroup::"
-      - name: Fetch real published JSON, metadata, styles, WebP bytes
-        run: node scripts/verify-live-w41.mjs
       - name: Open public LAB pages in headless Chrome and verify screenshots appear in DOM
         shell: bash
         run: |
@@ -79,3 +77,5 @@ jobs:
             exit 1
           fi
           echo "PASS: Previously published MOMO article remains without W41 gallery."
+      - name: Fetch real published JSON, metadata, styles, WebP bytes
+        run: node scripts/verify-live-w41.mjs

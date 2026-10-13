@@ -46,7 +46,7 @@ return `<!doctype html>
 </body></html>
 `}
 function renderSitemap(sitemap,posts){
- let xml=sitemap.replace(/<url>\s*<loc>https:\/\/tuki0609\.github\.io\/tuki-lab\/lab\/posts\/[^<]+<\/loc>[\s\S]*?<\/url>\s*/g,"");
+ let xml=sitemap.replace(/^[ \\t]*<url>\s*<loc>https:\/\/tuki0609\.github\.io\/tuki-lab\/lab\/posts\/[^<]+<\/loc>[\s\S]*?<\/url>[ \\t]*\n?/gm,"");
  const latest=posts.reduce((acc,p)=>p.publishedAt>acc?p.publishedAt:acc,"2026-10-07");
  for(const path of ["/","/lab/"]) {
   const url="https://tuki0609.github.io/tuki-lab"+path;

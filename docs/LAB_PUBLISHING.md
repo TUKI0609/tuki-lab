@@ -115,3 +115,28 @@ Manual confirmation is needed before adding an archival link.
 
 Existing RSS synchronization and PR #2's Pages verification are separate from this publishing process.
 No paid API, auto-posting, YouTube scraping, or X scraping is added here.
+
+## SEO and homepage discoverability (2026-10)
+
+Approved LAB articles are published as **pre-rendered, crawlable static HTML** as well as JSON data, so the title, description, article body and canonical address exist before JavaScript starts.
+
+When preparing a *new* LAB publication PR, after editing `content/lab-posts.json`, regenerate its independent page and the sitemap:
+
+```sh
+node scripts/build-lab-search-pages.mjs
+node scripts/build-lab-search-pages.mjs --check
+```
+
+Commit both `lab/posts/<slug>/index.html` and `sitemap.xml` in the **same approved publication PR**. The `Validate LAB discoverability and static SEO` check fails on a PR if the generated content is outdated. It does not publish or approve articles.
+
+Canonical public URL pattern:
+
+```
+https://tuki0609.github.io/tuki-lab/lab/posts/<slug>/
+```
+
+The former `/lab/article/?slug=<slug>` links continue to display content for backwards compatibility but are intentionally kept `noindex` to prevent duplicate indexing.
+
+The homepage includes a direct, crawlable latest-LAB link and updates it from approved `lab-posts.json` when JavaScript loads. Publication and being indexed by search engines are **separate outcomes**: Google Search Console and Naver Search Advisor may be used to inspect submission and indexing after deployment. Neither a sitemap nor meta tags guarantee search exposure or ranking.
+
+**Safety:** This script does not fetch private sources, does not use a paid API, does not bypass publishing approvals, and outputs only content already approved for the public LAB.

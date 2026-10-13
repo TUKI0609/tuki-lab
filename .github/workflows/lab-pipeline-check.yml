@@ -1,0 +1,29 @@
+name: Validate LAB pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "scripts/build-lab-candidates.mjs"
+      - "scripts/sync-activity.mjs"
+      - "scripts/audit-lab-pipeline.mjs"
+      - "tests/lab-candidates.test.mjs"
+      - "tests/activity-sync.test.mjs"
+      - ".github/workflows/lab-pipeline-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Test candidate consistency, RSS outage recovery and saved approvals
+        run: node --test tests/*.test.mjs
+      - name: Inspect candidate/article linkage (read only)
+        run: node scripts/audit-lab-pipeline.mjs

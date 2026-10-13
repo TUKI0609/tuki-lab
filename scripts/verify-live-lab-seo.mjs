@@ -16,7 +16,7 @@ assert.match(home,/href="\.\/lab\/posts\/lutratide-evolution-growth-difference-2
 assert.match(home,/src="js\/app\.js"/);
 assert.match(css,/\.lab-article-head h1\s*\{[^}]*font-size:\s*clamp\(2rem,\s*4\.1vw,\s*3\.35rem\)/);
 assert.match(labIndex,/id="published-lab"/);
-assert.match(sitemap,/<urlset xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9">/);
+assert.match(sitemap,/<urlset xmlns="http:\/\/www\.sitemaps\.org\/sitemap\/0\.9">/);
 const results=[];
 for(const post of localPosts){
   const path="lab/posts/"+post.slug+"/";

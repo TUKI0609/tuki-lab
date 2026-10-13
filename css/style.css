@@ -5615,3 +5615,61 @@ a.project-evidence-card:hover {
     align-self: center;
   }
 }
+
+/* LAB W41: optional reused in-game evidence gallery. All source captions are explicit. */
+.lab-article-evidence {
+  max-width: 920px;
+  margin: 0 auto 64px;
+  padding: 22px 0 48px;
+  border-top: 1px solid var(--line);
+}
+.lab-article-evidence h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.35rem,3vw,1.85rem);
+}
+.lab-article-evidence .lab-evidence-note {
+  max-width: 730px;
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.7;
+}
+.lab-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 14px;
+}
+.lab-evidence-card {
+  min-width: 0;
+  margin: 0;
+  padding: 9px 9px 15px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(26,35,31,.5);
+}
+.lab-evidence-card .project-evidence-image {
+  aspect-ratio: 150 / 86;
+  min-height: 0;
+  grid-row: auto;
+  margin-bottom: 13px;
+}
+.lab-evidence-card figcaption strong {
+  display: block;
+  color: #ecf2ef;
+  font-size: .87rem;
+}
+.lab-evidence-card figcaption p {
+  margin: 6px 0 9px;
+  color: var(--muted);
+  font-size: .76rem;
+  line-height: 1.55;
+}
+.lab-evidence-card figcaption a {
+  color: var(--accent);
+  font-size: .76rem;
+  font-weight: 700;
+}
+@media (max-width: 760px) {
+  .lab-evidence-grid { grid-template-columns: 1fr; }
+  .lab-evidence-card { max-width: 500px; }
+}

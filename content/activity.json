@@ -1,5 +1,24 @@
 [
   {
+    "id": "8d4fc99a1433d81f",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "AI로 만든 게임, 새로고침하면 기록이 사라진다면? 웹게임 저장 오류 해결법",
+    "summary": "AI를 활용해 웹게임을 만들었는데, 새로고침하거나 다시 접속했더니 게임 기록이 모두 사라진 경험 있으신가요? 열심히 모은 점수와 아이템, 캐릭터 성장 기록까지 처음 상태로 돌아간다면 당황스러울 수밖에 없습니다. 특히 바이브코딩으로 게임을 제작하다 보면 화면에서는 정상적으로 작동하지만, 정작 게임을 다시 실행했을 때 데이터",
+    "url": "https://blog.naver.com/ty_free/224440145257?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-13T04:05:26.000Z",
+    "detectedAt": "2026-10-13T10:38:21.883Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "96cc599d73ecbca8",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -238,25 +257,6 @@
     "summary": "AI가 원하는 결과를 만들어주지 않으면 이런 생각부터 들거든요. '내가 설명을 너무 짧게 했나?' 그래서 요구사항을 하나씩 추가합니다. 디자인도 설명하고, 버튼 위치도 설명하고, 기존 기능도 설명하고, 오류가 생기면 안 된다는 내용까지 넣습니다. 어느 순간 프롬프트 하나가 작은 기획서처럼 길어집니다. 그런데 직접 바이브코",
     "url": "https://blog.naver.com/ty_free/224430305987?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-03T05:37:03.000Z",
-    "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "32063d94e3643a7e",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "AI로 스프라이트 만들었는데 왜 움직임이 이상할까? 게임에 적용하기 전 체크할 것",
-    "summary": "AI에게 게임 캐릭터의 걷는 모습을 만들어달라고 했습니다. 한 장씩 볼 때는 정말 괜찮았습니다. 캐릭터도 귀엽고, 걷는 동작도 자연스러워 보였습니다. 그런데 게임에 적용해서 재생하는 순간 이상한 부분이 보이기 시작했습니다. 캐릭터가 위아래로 덜컹거리고, 어떤 프레임에서는 몸이 조금 더 커지고, 발 위치도 미묘하게 달라집니",
-    "url": "https://blog.naver.com/ty_free/224429372515?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-02T05:09:22.000Z",
     "detectedAt": "2026-10-06T08:57:11.322Z",
     "manual": false,
     "editorial": {

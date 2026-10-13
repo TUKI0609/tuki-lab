@@ -40,6 +40,21 @@ jobs:
           else
             echo "Game public page not accessible to CI"
           fi
+      - name: Preserve thumbnail bytes in audit output for self-hosted correction
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64, os
+          from pathlib import Path
+          for video in ("PrqgIoBEZoE","elhXFK08t7E","BrBawuxsBy0"):
+              data=(Path(os.environ["RUNNER_TEMP"])/f"{video}.jpg").read_bytes()
+              assert data[:3] == b"\xff\xd8\xff"
+              payload=base64.b64encode(data).decode("ascii")
+              print("THUMB-BEGIN|"+video+"|"+str(len(data)))
+              for i in range(0,len(payload),500):
+                  print("THUMB-CHUNK|"+video+"|"+str(i//500)+"|"+payload[i:i+500])
+              print("THUMB-END|"+video+"|"+str(len(payload)))
+          PY
       - name: Diagnose repository and live image file format
         shell: bash
         run: |

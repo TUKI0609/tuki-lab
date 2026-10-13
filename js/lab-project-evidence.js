@@ -40,7 +40,7 @@ export function renderLabProjectEvidence(articleRoot, post, project) {
     media.className = "lab-evidence-picture";
     const img = document.createElement("img");
     img.alt = title + " 관련 제작 영상 썸네일";
-    img.loading = "lazy";
+    img.loading = "eager";
     img.decoding = "async";
     img.referrerPolicy = "no-referrer";
     img.addEventListener("load", () => { img.dataset.loaded = "true"; });

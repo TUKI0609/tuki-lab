@@ -5462,10 +5462,10 @@ a.project-evidence-card:hover {
   margin-bottom: 11px;
   overflow: hidden;
   border-radius: 9px 9px 9px 3px;
-  background-image: url("../assets/projects/evidence/tuki-project-evidence.webp");
+  background-image: none; /* invalid historical WebP sprite, no longer referenced */
   background-repeat: no-repeat;
-  background-size: 300% 400%;
-  background-position: var(--evidence-x) var(--evidence-y);
+  background-size: cover;
+  background-position: center;
   background-color: #101713;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.035);
 }
@@ -5760,3 +5760,31 @@ a.project-evidence-card:hover {
   font-size: .9rem;
 }
 .lab-static-source { color: inherit; }
+
+/* Project evidence restoration: only actual creator-video thumbs are called
+   video thumbnails. All other first-party visuals are explicitly concept art. */
+.project-evidence-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-evidence-visual-kind {
+  display: block;
+  margin: 0 3px 7px;
+  color: #b4cabb;
+  font-size: .62rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+@media (min-width: 481px) and (max-width: 760px) {
+  .project-evidence-card {
+    grid-template-rows: auto auto auto 1fr auto;
+  }
+  .project-evidence-image { grid-row: 1 / span 5; }
+  .project-evidence-visual-kind { grid-column: 2; grid-row: 1; }
+  .project-evidence-type { grid-column: 2; grid-row: 2; }
+  .project-evidence-card > strong { grid-column: 2; grid-row: 3; }
+  .project-evidence-card > p { grid-column: 2; grid-row: 4; }
+  .project-evidence-card > small { grid-column: 2; grid-row: 5; }
+}

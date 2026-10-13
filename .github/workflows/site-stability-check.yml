@@ -1,0 +1,136 @@
+name: Validate LAB analytics consent and project evidence
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "js/core.js"
+      - "js/project-detail.js"
+      - "css/style.css"
+      - "lab/posts/**"
+      - "scripts/build-lab-search-pages.mjs"
+      - "tests/site-stability.test.mjs"
+      - ".github/workflows/site-stability-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Verify LAB generated pages and approved article/sitemap consistency
+        run: node scripts/build-lab-search-pages.mjs --check
+      - name: Run existing and new regression suites
+        run: |
+          node --check js/project-detail.js
+          node --check js/core.js
+          node --test tests/*.test.mjs
+      - name: Browser-test GA4 consent on all four static LAB articles
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME"
+          python3 -m http.server 8765 --bind 127.0.0.1 > "$RUNNER_TEMP/site-server.log" 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true; rm -f tests/__ga4_temp_consent.html' EXIT
+          for i in $(seq 1 20); do
+            curl -fsS http://127.0.0.1:8765/ >/dev/null && break
+            sleep 1
+          done
+          node --input-type=module <<'NODE' > "$RUNNER_TEMP/lab-slugs.txt"
+          import fs from "node:fs";
+          const posts=JSON.parse(fs.readFileSync("content/lab-posts.json","utf8"));
+          for(const p of posts)console.log(p.slug);
+          NODE
+          while IFS= read -r slug; do
+            timeout 55 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+              --virtual-time-budget=7000 --dump-dom \
+              "http://127.0.0.1:8765/lab/posts/$slug/" \
+              > "$RUNNER_TEMP/ga-$slug.html" 2> "$RUNNER_TEMP/chrome-$slug.log"
+            grep -Fq 'class="tuki-privacy-banner"' "$RUNNER_TEMP/ga-$slug.html"
+            grep -Fq 'data-tuki-consent="accepted"' "$RUNNER_TEMP/ga-$slug.html"
+            grep -Fq 'data-tuki-consent="rejected"' "$RUNNER_TEMP/ga-$slug.html"
+            grep -Fq '분석 설정' "$RUNNER_TEMP/ga-$slug.html"
+            grep -Fq 'privacy/' "$RUNNER_TEMP/ga-$slug.html"
+            if grep -Fq 'src="https://www.googletagmanager.com/gtag/js?id=' "$RUNNER_TEMP/ga-$slug.html"; then
+              echo "FAILED: GA4 loaded before visitor consent on $slug"
+              exit 1
+            fi
+            echo "PASS: $slug shows consent choices without loading GA4 before consent"
+          done < "$RUNNER_TEMP/lab-slugs.txt"
+
+          # Same-origin test fixture records an opt-in choice, then redirects to
+          # a real static article, exercising shared consent initialization.
+          cat > tests/__ga4_temp_consent.html <<'HTML'
+          <!doctype html><meta charset="utf-8"><title>GA4 opt-in test</title>
+          <script>
+          localStorage.setItem("tuki-world-analytics-consent-v1","accepted");
+          location.replace("../lab/posts/lutratide-evolution-growth-difference-2026-w41/");
+          </script>
+          HTML
+          timeout 55 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+            --host-resolver-rules="MAP www.googletagmanager.com ~NOTFOUND, MAP *.google-analytics.com ~NOTFOUND" \
+            --virtual-time-budget=8000 --dump-dom \
+            http://127.0.0.1:8765/tests/__ga4_temp_consent.html \
+            > "$RUNNER_TEMP/ga-opt-in.html" 2> "$RUNNER_TEMP/ga-opt-in.log"
+          grep -Fq 'src="https://www.googletagmanager.com/gtag/js?id=G-Q6JMT9XLVP"' "$RUNNER_TEMP/ga-opt-in.html"
+          test "$(grep -o 'src="https://www.googletagmanager.com/gtag/js?id=G-Q6JMT9XLVP"' "$RUNNER_TEMP/ga-opt-in.html" | wc -l)" -eq 1
+          echo "PASS: GA4 tag added exactly once when visitor has consented."
+
+          # Explicitly rejected consent never loads Google's script.
+          sed 's/"accepted"/"rejected"/' tests/__ga4_temp_consent.html > "$RUNNER_TEMP/rejected-fixture.html"
+          cp "$RUNNER_TEMP/rejected-fixture.html" tests/__ga4_temp_consent.html
+          timeout 55 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+            --virtual-time-budget=8000 --dump-dom \
+            http://127.0.0.1:8765/tests/__ga4_temp_consent.html \
+            > "$RUNNER_TEMP/ga-rejected.html" 2> "$RUNNER_TEMP/ga-rejected.log"
+          grep -Fq 'class="tuki-privacy-banner"' "$RUNNER_TEMP/ga-rejected.html"
+          if grep -Fq 'src="https://www.googletagmanager.com/gtag/js?id=' "$RUNNER_TEMP/ga-rejected.html"; then
+            echo "FAILED: GA4 loaded with rejected consent"
+            exit 1
+          fi
+          echo "PASS: Explicitly rejected visitors do not load GA4."
+
+      - name: Verify real loaded evidence images in all project detail pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          python3 -m http.server 8766 --bind 127.0.0.1 > "$RUNNER_TEMP/project-server.log" 2>&1 &
+          PID=$!
+          trap 'kill "$PID" 2>/dev/null || true' EXIT
+          for i in $(seq 1 20); do
+            curl -fsS http://127.0.0.1:8766/ >/dev/null && break
+            sleep 1
+          done
+          for project in crypto-saga momo lutratide-survivors aevowake; do
+            for viewport in desktop mobile; do
+              if [ "$viewport" = desktop ]; then SIZE="1280,900"; else SIZE="390,844"; fi
+              timeout 70 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+                --virtual-time-budget=18000 --window-size="$SIZE" --dump-dom \
+                "http://127.0.0.1:8766/projects/$project/" \
+                > "$RUNNER_TEMP/$project-$viewport.html" 2> "$RUNNER_TEMP/$project-$viewport.log"
+              DOM="$RUNNER_TEMP/$project-$viewport.html"
+              test "$(grep -o 'class="project-evidence-image"' "$DOM" | wc -l)" -eq 3
+              test "$(grep -o 'data-loaded="true"' "$DOM" | wc -l)" -eq 3
+              if grep -Fq 'data-loaded="error"' "$DOM"; then
+                echo "FAILED: broken media in $project ($viewport)"; exit 1
+              fi
+              if [ "$project" = "lutratide-survivors" ]; then
+                grep -Fq '제작 영상 썸네일' "$DOM"
+              else
+                grep -Fq '프로젝트 대표 이미지 · 실제 화면 아님' "$DOM"
+              fi
+              if grep -Fq 'tuki-project-evidence.webp' "$DOM"; then
+                echo "FAILED: invalid legacy sprite in $project ($viewport)"; exit 1
+              fi
+              echo "PASS: $project ($viewport) renders 3 non-broken, honestly labeled local evidence images"
+            done
+          done

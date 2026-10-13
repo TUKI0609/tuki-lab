@@ -19,6 +19,27 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+      - name: Check owner-published gameplay reference alternatives (diagnostic only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Checking only publicly accessible creator-owned video thumbnail endpoints; no media will be committed."
+          for id in PrqgIoBEZoE elhXFK08t7E BrBawuxsBy0; do
+            if curl --silent --show-error --location --compressed --fail --max-time 15 \
+              --output "$RUNNER_TEMP/$id.jpg" "https://i.ytimg.com/vi/$id/hqdefault.jpg"; then
+              echo "Video thumbnail $id:"
+              file "$RUNNER_TEMP/$id.jpg"
+            else
+              echo "Video thumbnail unavailable: $id"
+            fi
+          done
+          if curl --silent --show-error --location --fail --max-time 20 \
+            --output "$RUNNER_TEMP/lutratide-game.html" \
+            "https://lutra-tide-survivors.acc913473.chatgpt.site/play/"; then
+            echo "Game public page responds, bytes: $(wc -c < "$RUNNER_TEMP/lutratide-game.html")"
+          else
+            echo "Game public page not accessible to CI"
+          fi
       - name: Diagnose repository and live image file format
         shell: bash
         run: |

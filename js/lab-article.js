@@ -1,6 +1,7 @@
 import {
   loadJson, initI18n, t, term, renderNav, setYear
 } from "./core.js";
+import { renderLabProjectEvidence } from "./lab-project-evidence.js";
 
 const base = "../../";
 
@@ -92,6 +93,8 @@ async function boot() {
       </div>
     </aside>
   `;
+  // Only opted-in articles show existing, project-owned evidence captures.
+  renderLabProjectEvidence(root, post, project);
 }
 
 boot().catch(error => {

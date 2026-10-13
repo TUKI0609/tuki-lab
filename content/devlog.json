@@ -1,5 +1,14 @@
 [
   {
+    "id": 29,
+    "date": "2026-10-13",
+    "type": "BUILD LOG",
+    "project": "lutratide-survivors",
+    "title": "LUTRATIDE SURVIVORS · 진화와 성장 선택의 차이 개선 기록",
+    "summary": "W41 제작 쇼츠를 바탕으로 주력 무기 성장, 캐릭터별 전투 방향, 남은 검증 과제를 정리했다. 기존 프로젝트 기록의 실제 게임 화면 3개를 참고 이미지로 연결했으며 성능 향상은 확정적으로 주장하지 않는다.",
+    "originCandidateId": "lab-lutratide-survivors-2026-W41"
+  },
+  {
     "id": 28,
     "date": "2026-10-07",
     "type": "FIX",

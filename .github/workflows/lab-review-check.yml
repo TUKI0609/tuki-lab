@@ -32,15 +32,19 @@ jobs:
           LAB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: node scripts/verify-lab-review.mjs review/lutratide-w41.lab-draft.json
 
-      - name: Check W41 article and authentic creator-video JPEG previews in headless browser
+      - name: Check W41 article and self-hosted creator-video JPEG previews in headless browser
         shell: bash
         run: |
           set -euo pipefail
-          for id in PrqgIoBEZoE elhXFK08t7E BrBawuxsBy0; do
-            curl --silent --show-error --location --fail --max-time 15 \
-              --output "$RUNNER_TEMP/$id.jpg" "https://i.ytimg.com/vi/$id/hqdefault.jpg"
-            file "$RUNNER_TEMP/$id.jpg" | grep -Fq 'JPEG image data'
+          for week in w39 w40 w41; do
+            THUMB="assets/projects/lutratide-survivors/$week-video-thumbnail.svg"
+            test -s "$THUMB"
+            grep -Fq 'data:image/jpeg;base64,/9j/' "$THUMB"
           done
+          if grep -Fq 'https://i.ytimg.com' js/lab-project-evidence.js; then
+            echo "The page must not hotlink to a third-party image server."
+            exit 1
+          fi
           python3 -m http.server 8765 --bind 127.0.0.1 > "$RUNNER_TEMP/tuki-preview-server.log" 2>&1 &
           SERVER_PID=$!
           trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
@@ -71,4 +75,4 @@ jobs:
             echo "Previously published article unexpectedly gained the W41 gallery"
             exit 1
           fi
-          echo "PASS: W41 full article renders with 3 successfully loaded creator-video thumbnails; existing LAB articles keep old layout."
+          echo "PASS: W41 full article renders with 3 locally hosted, successfully loaded creator-video thumbnails; existing LAB articles keep old layout."

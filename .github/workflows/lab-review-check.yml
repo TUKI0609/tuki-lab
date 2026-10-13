@@ -32,11 +32,19 @@ jobs:
           LAB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: node scripts/verify-lab-review.mjs review/lutratide-w41.lab-draft.json
 
-      - name: Check W41 article and real reused screenshots render in headless browser
+      - name: Check W41 article and self-hosted creator-video JPEG previews in headless browser
         shell: bash
         run: |
           set -euo pipefail
-          test -s assets/projects/evidence/tuki-project-evidence.webp
+          for week in w39 w40 w41; do
+            THUMB="assets/projects/lutratide-survivors/$week-video-thumbnail.svg"
+            test -s "$THUMB"
+            grep -Fq 'data:image/jpeg;base64,/9j/' "$THUMB"
+          done
+          if grep -Fq 'https://i.ytimg.com' js/lab-project-evidence.js; then
+            echo "The page must not hotlink to a third-party image server."
+            exit 1
+          fi
           python3 -m http.server 8765 --bind 127.0.0.1 > "$RUNNER_TEMP/tuki-preview-server.log" 2>&1 &
           SERVER_PID=$!
           trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
@@ -51,12 +59,14 @@ jobs:
             'http://127.0.0.1:8765/lab/article/?slug=lutratide-evolution-growth-difference-2026-w41' \
             > "$RUNNER_TEMP/w41-preview.html" 2> "$RUNNER_TEMP/w41-browser.log"
           grep -Fq '진화했는데 손맛이 그대로라면' "$RUNNER_TEMP/w41-preview.html"
-          grep -Fq '기존 프로젝트에 등록된 플레이 참고 화면입니다' "$RUNNER_TEMP/w41-preview.html"
+          grep -Fq '본 이미지는 기존에 공개한 제작 영상 3편의 썸네일입니다' "$RUNNER_TEMP/w41-preview.html"
           for title in '성장 선택 화면' '전투 플레이 화면' '스킬 이펙트'; do
             grep -Fq "$title" "$RUNNER_TEMP/w41-preview.html"
           done
           CARD_COUNT=$(grep -o 'class="lab-evidence-card"' "$RUNNER_TEMP/w41-preview.html" | wc -l)
           test "$CARD_COUNT" -eq 3
+          LOADED_COUNT=$(grep -o 'data-loaded="true"' "$RUNNER_TEMP/w41-preview.html" | wc -l)
+          test "$LOADED_COUNT" -eq 3
           timeout 70 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
             --virtual-time-budget=12000 --dump-dom \
             'http://127.0.0.1:8765/lab/article/?slug=momo-public-launch-2026-10-07' \
@@ -65,4 +75,4 @@ jobs:
             echo "Previously published article unexpectedly gained the W41 gallery"
             exit 1
           fi
-          echo "PASS: W41 full article renders with 3 real project screenshots; earlier LAB articles keep the old layout."
+          echo "PASS: W41 full article renders with 3 locally hosted, successfully loaded creator-video thumbnails; existing LAB articles keep old layout."

@@ -25,15 +25,31 @@ try {
     loadBaseline("lab-candidates.json"),
     loadBaseline("lab-posts.json")
   ]);
-  const errors = checkDraft(payload,candidates,posts);
+  const priorCandidate = candidates.find(c => c.id === payload.originCandidateId);
+  let errors;
+  if (priorCandidate?.status === "APPROVED") {
+    // A published draft must still be traceable and identical to the released
+    // article. Do not misclassify every later CSS/media fix as duplicate content.
+    const official = posts.find(post =>
+      post.slug === payload.slug && post.originCandidateId === payload.originCandidateId);
+    errors = official ? [] : ["Approved candidate has no matching published article."];
+    const fields = ["originCandidateId","slug","project","type","title","summary","sections","sources"];
+    if (official) for (const key of fields) {
+      if (JSON.stringify(official[key]) !== JSON.stringify(payload[key]))
+        errors.push("Published article differs from reviewed draft: " + key);
+    }
+  } else {
+    errors = checkDraft(payload,candidates,posts);
+  }
   console.log(JSON.stringify({
     reviewedCandidate:payload.originCandidateId,
     proposedSlug:payload.slug,
     dataSource:"target-branch baseline",
     schemaValid:errors.length===0,
-    duplicateProtection:errors.length===0,
     errors,
-    notice:"Draft preview only. This does not approve or publish a LAB article."
+    notice: priorCandidate?.status === "APPROVED"
+      ? "Previously published review draft was compared against its live LAB article."
+      : "Draft preview only. This does not approve or publish a LAB article."
   },null,2));
   if(errors.length)process.exitCode=1;
 } catch(error) {

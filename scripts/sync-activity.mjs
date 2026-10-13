@@ -104,7 +104,11 @@ function youtubeItems(xml, source) {
 
 async function readJson(url, fallback) {
   try { return JSON.parse(await fs.readFile(url, "utf8")); }
-  catch { return fallback; }
+  catch (error) {
+    // A malformed JSON file must stop the run, never silently erase history.
+    if (error.code === "ENOENT") return fallback;
+    throw error;
+  }
 }
 
 function classify(item, rules) {
@@ -152,22 +156,29 @@ const config = await readJson(SOURCES_PATH, { sources: [] });
 const rules = await readJson(RULES_PATH, { projects:[], brandKeywords:[], sourcePolicies:{} });
 const existingRaw = await readJson(RAW_PATH, []);
 const incoming = [];
+const failedSources = new Set();
 
 for (const source of config.sources.filter(s => s.enabled)) {
   try {
     if (source.kind === "naver-rss") {
-      incoming.push(...naverItems(await fetchText(source.url), source));
+      const items = naverItems(await fetchText(source.url), source);
+      // An empty/unreadable feed must not delete previously captured posts.
+      if (items.length === 0) throw new Error("empty or unreadable RSS feed");
+      incoming.push(...items);
     } else {
-      console.warn(`[activity-sync] ${source.id}: unsupported adapter '${source.kind}', skipped`);
+      throw new Error(`unsupported adapter '${source.kind}'`);
     }
   } catch (error) {
-    console.warn(`[activity-sync] ${source.id}: ${error.message}`);
+    failedSources.add(source.id);
+    console.warn(`[activity-sync] ${source.id}: ${error.message}; preserving cached items`);
   }
 }
 
-// Keep existing public activity from disabled sources without contacting their services.
+// Keep existing public activity from disabled or temporarily unavailable sources.
 const disabledSources = new Set(config.sources.filter(s => !s.enabled).map(s => s.id));
-const manual = existingRaw.filter(item => item.manual === true || disabledSources.has(item.source));
+const manual = existingRaw.filter(item =>
+  item.manual === true || disabledSources.has(item.source) || failedSources.has(item.source)
+);
 const previousByUrl = new Map(existingRaw.map(item => [item.url, item]));
 const mergedByUrl = new Map();
 
@@ -197,4 +208,4 @@ await Promise.all([
   fs.writeFile(REVIEW_PATH, JSON.stringify(review, null, 2) + "\n")
 ]);
 
-console.log(`[activity-sync] raw=${classified.length} visible=${visible.length} review=${review.length} fetched=${incoming.length}`);
+console.log(`[activity-sync] raw=${classified.length} visible=${visible.length} review=${review.length} fetched=${incoming.length} failedSources=${failedSources.size}`);

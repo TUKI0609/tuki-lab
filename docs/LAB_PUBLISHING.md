@@ -60,3 +60,58 @@ Examples:
 - `AEVOWAKE 후보는 반려`
 
 ChatGPT should resolve the candidate, show ambiguity when necessary, then mutate GitHub only after clear approval.
+
+## LAB approval gate v1.1: prepare privately, publish only after explicit approval
+
+The CLI added by the TUKI operations automation project is **read-only**:
+
+```sh
+node scripts/lab-review.mjs queue
+node scripts/lab-review.mjs check-draft /outside-repository/my-lab-draft.json
+```
+
+It reads `content/lab-candidates.json` and `content/lab-posts.json`, lists PENDING candidates,
+and verifies that a draft has a distinct slug, plausible sections, and at least one URL from the
+specific candidate's evidence. It never approves, writes, or publishes anything.
+
+Keep unpublished draft text out of this **public repository and public PRs** until the author
+explicitly authorizes sharing that draft. Temporary drafts should stay in an untracked local
+location, a private user file, or the chat while being reviewed.
+
+### Required two-stage human approval
+
+1. **Editorial review**: identify the precise candidate ID, inspect the original evidence,
+   make a new and original draft, inspect duplication and factual accuracy. The user must
+   explicitly identify the candidate and approve moving that specific draft to the PR stage.
+2. **Public release**: submit a separate publication PR with a complete LAB article,
+   one matching devlog record, and updated candidate status `APPROVED` with `approvedAt`,
+   `publishedSlug`, and `needsApproval:false`.
+   The user must explicitly approve merging the final reviewed publication PR.
+   Generic commands such as "계속 진행" or "진행하자" are **not** approval to publish.
+
+The publication checker runs for PRs targeting `main`:
+
+```sh
+LAB_BASE_SHA=<40-character base commit SHA> node scripts/lab-review.mjs validate-publication
+```
+
+It verifies (a) no existing public LAB post/devlog is silently rewritten;
+(b) each new post originates from a previously PENDING candidate;
+(c) the proposed candidate has matching approval state and publication slug;
+(d) draft fields are complete, candidate evidence is referenced and not already used by another public LAB post;
+(e) exactly one new development record is linked to each new article.
+
+**Important**: a passing automated check proves structural consistency, **not** that the user
+gave approval. Human review and branch-protection settings remain necessary. The validator
+runs on PRs; it cannot prevent someone with write permissions from bypassing PRs and
+pushing directly to `main`. Configure the repository's branch protection / rulesets to
+require PR review and the `Validate LAB pipeline` check if stronger enforcement is desired.
+Never grant publication automation secrets or permission to push unreviewed posts.
+
+Preexisting published articles (3 at first audit) lack `originCandidateId` and are treated as
+historical exceptions; the script does not retroactively guess their matching candidates.
+The previously approved MOMO candidate may share a YouTube evidence link with an existing article.
+Manual confirmation is needed before adding an archival link.
+
+Existing RSS synchronization and PR #2's Pages verification are separate from this publishing process.
+No paid API, auto-posting, YouTube scraping, or X scraping is added here.

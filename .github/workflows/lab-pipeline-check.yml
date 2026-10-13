@@ -8,8 +8,14 @@ on:
       - "scripts/build-lab-candidates.mjs"
       - "scripts/sync-activity.mjs"
       - "scripts/audit-lab-pipeline.mjs"
+      - "scripts/lab-review.mjs"
+      - "scripts/lab-approval-core.mjs"
+      - "content/lab-candidates.json"
+      - "content/lab-posts.json"
+      - "content/devlog.json"
       - "tests/lab-candidates.test.mjs"
       - "tests/activity-sync.test.mjs"
+      - "tests/lab-approval.test.mjs"
       - ".github/workflows/lab-pipeline-check.yml"
 
 permissions:
@@ -20,10 +26,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
       - name: Test candidate consistency, RSS outage recovery and saved approvals
         run: node --test tests/*.test.mjs
+      - name: Confirm pending LAB review queue (read only)
+        run: node scripts/lab-review.mjs queue
       - name: Inspect candidate/article linkage (read only)
         run: node scripts/audit-lab-pipeline.mjs
+      - name: Validate new LAB publication has an approved candidate, evidence and devlog
+        env:
+          LAB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: node scripts/lab-review.mjs validate-publication

@@ -1,4 +1,5 @@
-import {loadJson,initI18n,renderNav,setYear,getLanguage} from "./core.js";
+import {loadJson,initI18n,renderNav,setYear} from "./core.js";
+import {GUILD_UI,detectGuildLanguage,normalizeXHandle,buildGuildPrompt} from "./guild-card.mjs";
 
 const BASE="../";
 const collection=document.querySelector("#prompt-grid");
@@ -14,6 +15,8 @@ let prompts=[];
 let selected="all";
 let searchTerm="";
 let statusTimeout;
+let guildHandle="";
+let guildLanguage=detectGuildLanguage(navigator.languages || [navigator.language]);
 
 function element(name,className,content){
   const el=document.createElement(name);
@@ -44,17 +47,17 @@ async function copyPrompt(prompt,button,kind="prompt"){
       field.remove();
       if(!copied)throw new Error("Clipboard permission unavailable");
     }
-    button.textContent="복사 완료 ✓";
+    button.textContent=kind.startsWith("guild") ? GUILD_UI[guildLanguage].copied : "복사 완료 ✓";
     button.dataset.copied="true";
-    announce(kind==="url" ? "공유 링크가 복사됐어요. X 게시물에 붙여넣어 보세요." : "프롬프트가 복사됐어요. 필요한 부분만 바꿔서 사용하세요.");
-    setTimeout(()=>{button.textContent=original;delete button.dataset.copied;},2300);
+    announce(kind==="guild" ? GUILD_UI[guildLanguage].copySuccess : kind==="guild-url" ? GUILD_UI[guildLanguage].linkCopied : kind==="url" ? "공유 링크가 복사됐어요. X 게시물에 붙여넣어 보세요." : "프롬프트가 복사됐어요. 필요한 부분만 바꿔서 사용하세요.");
+    setTimeout(()=>{button.textContent=kind.startsWith("guild") ? (kind==="guild-url" ? GUILD_UI[guildLanguage].link : GUILD_UI[guildLanguage].copy) : original;delete button.dataset.copied;},2300);
   }catch{
-    if(kind==="url"){
-      announce("자동 링크 복사가 제한됐어요. 주소창의 링크를 직접 복사해 주세요.");
+    if(kind==="url"||kind==="guild-url"){
+      announce(kind==="guild-url" ? GUILD_UI[guildLanguage].linkFail : "자동 링크 복사가 제한됐어요. 주소창의 링크를 직접 복사해 주세요.");
       const uri=new URL(prompt);
       location.hash=uri.hash;
     }else{
-      announce("자동 복사를 사용할 수 없어요. '프롬프트 내용 확인하기'에서 직접 선택해 복사해 주세요.");
+      announce(kind==="guild" ? GUILD_UI[guildLanguage].copyFail : "자동 복사를 사용할 수 없어요. 프롬프트 내용 확인하기에서 직접 선택해 복사해 주세요.");
       button.closest(".prompt-card")?.querySelector("details")?.setAttribute("open","");
     }
   }

@@ -61,5 +61,6 @@ test("prompt page retains existing GA4 consent, canonical and semantic controls"
   assert.match(js,/navigator\.clipboard\?\.writeText/);
   assert.match(js,/document\.execCommand\("copy"\)/);
   assert.match(js,/scrollToDeepLink/);
+  assert.match(js,/copyPrompt\(uri,link,"url"\)/);
   assert.doesNotMatch(js,/googletagmanager\.com|gtag\(/);
 });

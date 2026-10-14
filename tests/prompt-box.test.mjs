@@ -4,6 +4,7 @@ import {readFileSync,existsSync} from "node:fs";
 import {resolve,dirname} from "node:path";
 import {fileURLToPath} from "node:url";
 import {GUILD_UI,detectGuildLanguage,normalizeXHandle,buildGuildPrompt} from "../js/guild-card.mjs";
+import {PAGE_UI} from "../js/prompt-page-l10n.mjs";
 
 const root=resolve(dirname(fileURLToPath(import.meta.url)),"..");
 const read=path=>readFileSync(resolve(root,path),"utf8");
@@ -115,6 +116,31 @@ test("RPG card uses one safe core prompt with independently selected KO EN JA",(
   assert.match(ui,/from "\.\/guild-card\.mjs"/);
   assert.match(ui,/guildControls\(item,card,copy,link,details,code/);
   assert.match(ui,/copy\.disabled=!handle/);
-  assert.match(ui,/guildLanguage=lang/);
+  assert.match(ui,/setPromptLanguage\(lang,true\)/);
+  assert.match(ui,/setPromptLanguage\(next,focusGuild=false\)/);
+  assert.match(ui,/setupPageLanguageSelector\(\)/);
   assert.match(read("css/prompts.css"),/\.prompt-guild-languages/);
+});
+
+
+test("PROMPT BOX's entry path and all visible labels are localized",()=>{
+  for(const lang of ["ko","en","ja"]){
+    const ui=PAGE_UI[lang];
+    assert.equal(ui.nav.length,5);
+    assert(ui.heroLead.length>20);
+    assert(ui.jump.length>4);
+    assert.equal(Object.keys(ui.categories).length,5);
+    assert.equal(Object.keys(ui.cardLabels).length,4);
+    for(const p of data.prompts.filter(p=>p.id!=="pixel-guild-card")){
+      const labels=ui.cardLabels[p.id];
+      assert(labels && labels.length===5);
+      assert(labels[0].length>4&&labels[1].length>10&&labels[3].length>10);
+    }
+    assert.equal(ui.guildTags.length,4);
+  }
+  assert.match(read("prompts/index.html"),/class="prompt-box-jump" href="#pixel-guild-card"/);
+  const js=read("js/prompts.js");
+  assert.match(js,/document\.documentElement\.lang=guildLanguage/);
+  assert.match(js,/setPromptLanguage\(lang,true\)/);
+  assert.match(js,/renderNav\(site,BASE\)/);
 });

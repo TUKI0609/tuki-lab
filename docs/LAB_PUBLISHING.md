@@ -140,3 +140,37 @@ The former `/lab/article/?slug=<slug>` links continue to display content for bac
 The homepage includes a direct, crawlable latest-LAB link and updates it from approved `lab-posts.json` when JavaScript loads. Publication and being indexed by search engines are **separate outcomes**: Google Search Console and Naver Search Advisor may be used to inspect submission and indexing after deployment. Neither a sitemap nor meta tags guarantee search exposure or ranking.
 
 **Safety:** This script does not fetch private sources, does not use a paid API, does not bypass publishing approvals, and outputs only content already approved for the public LAB.
+
+## Static LAB analytics and project evidence media
+
+The four static `lab/posts/<slug>/index.html` pages are pre-rendered for SEO.
+They **must also import** the existing shared `js/core.js` module after the
+footer using the correct three-level relative path. It already implements
+consent-first GA4: do not insert a second unconditional Google tag, do not
+change the visitor's saved choice, and do not create analytics requests before
+`accepted`.
+
+The static article generator `scripts/build-lab-search-pages.mjs` owns this
+script tag for future approved publications. Check its generated output and
+run the `Validate LAB analytics consent and project evidence` workflow
+whenever that generator or those pages change.
+
+Project detail evidence cards formerly used a broken shared
+`assets/projects/evidence/tuki-project-evidence.webp` sprite. Their media now
+uses first-party project imagery, and is **explicitly labeled** according to
+its provenance:
+
+- LUTRATIDE SURVIVORS: locally hosted thumbnails of the creator's W39/W40/W41
+  published videos, **not** before/after gameplay comparisons.
+- MOMO, CRYPTO SAGA, AEVOWAKE: existing official project artwork
+  (representative images, **not** verified screenshots of those specific
+  evidence items).
+
+Cards retain their original titles and cited external references. If real
+verified gameplay captures become available, replace the representative
+images only with explicit provenance and creator review. The invalid legacy
+WebP remains in the repository for now but **must not** be referenced by
+the site CSS or project detail renderer.
+
+This maintenance change does **not** change the editorial approval policy,
+published LAB text, date, source links, or privacy policy.

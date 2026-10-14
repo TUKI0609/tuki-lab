@@ -62,6 +62,24 @@ async function boot() {
 
 
   const evidenceLang = document.documentElement.lang === "en" ? "en" : "ko";
+  // Old tuki-project-evidence.webp is not a valid image file. Show *verified*
+  // creator-video thumbnails where available; otherwise show existing project
+  // artwork with an explicit label. Never misrepresent artwork as a screenshot.
+  const verifiedVideoThumbnails = {
+    "lutratide-survivors": [
+      "assets/projects/lutratide-survivors/w39-video-thumbnail.svg",
+      "assets/projects/lutratide-survivors/w40-video-thumbnail.svg",
+      "assets/projects/lutratide-survivors/w41-video-thumbnail.svg"
+    ]
+  };
+  const artworkForProject = {
+    "crypto-saga": "assets/projects/crypto-saga/preview.svg",
+    "momo": "assets/brand/tuki/world-momo.svg",
+    "aevowake": "assets/brand/tuki/world-aevowake.svg"
+  };
+  const plain = value => String(value ?? "").replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
   const evidenceMarkup = project.evidence?.length ? `
     <section class="section wrap project-evidence-section" aria-label="${t("project.evidenceEyebrow")}">
       <div class="section-head project-evidence-head">
@@ -76,12 +94,16 @@ async function boot() {
           const title = entry.title?.[evidenceLang] || entry.title?.ko || "";
           const type = entry.type?.[evidenceLang] || entry.type?.ko || "";
           const note = entry.note?.[evidenceLang] || entry.note?.ko || "";
-          const col = Math.max(0, Math.min(2, Number(entry.sprite?.col) || 0));
-          const row = Math.max(0, Math.min(3, Number(entry.sprite?.row) || 0));
-          const x = [0, 50, 100][col];
-          const y = [0, 33.333, 66.667, 100][row];
+          const video = verifiedVideoThumbnails[project.id]?.[index];
+          const file = video || artworkForProject[project.id];
+          const imageKind = video
+            ? (evidenceLang === "en" ? "Creator-video thumbnail" : "제작 영상 썸네일")
+            : (evidenceLang === "en" ? "Project concept art, not a game capture" : "프로젝트 대표 이미지 · 실제 화면 아님");
           const cardInner = `
-            <span class="project-evidence-image" role="img" aria-label="${title}" style="--evidence-x:${x}%;--evidence-y:${y}%"></span>
+            <span class="project-evidence-image"><img src="${base}${file}"
+              alt="${plain(imageKind)}: ${plain(title)}" width="480" height="272"
+              loading="eager" decoding="async"></span>
+            <span class="project-evidence-visual-kind">${imageKind}</span>
             <span class="project-evidence-type">${type}</span>
             <strong>${title}</strong>
             <p>${note}</p>
@@ -196,6 +218,16 @@ async function boot() {
     </section>
   `;
 
+  // Testable image load state, including cached images: a rendered container
+  // does not count as a successfully decoded image.
+  root.querySelectorAll(".project-evidence-image img").forEach(img => {
+    const recordLoad = () => { img.dataset.loaded = img.naturalWidth > 0 ? "true" : "error"; };
+    if (img.complete) recordLoad();
+    else {
+      img.addEventListener("load", recordLoad, {once: true});
+      img.addEventListener("error", recordLoad, {once: true});
+    }
+  });
   renderLabPosts(projectPosts, "#project-lab-posts", base);
   renderActivityList(projectActivity, "#project-activity", 6);
   await hydrateAssets(document, base);

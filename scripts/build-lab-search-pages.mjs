@@ -43,6 +43,7 @@ return `<!doctype html>
   <aside class="lab-sources"><p class="eyebrow">REFERENCE</p><h2>관련 자료 및 출처</h2><div class="lab-source-list">${(post.sources||[]).map(s=>`<a class="lab-static-source" href="${safeUrl(s.url)}" target="_blank" rel="noopener noreferrer"><span>${escapeHtml(s.label||"출처")}</span><strong>${escapeHtml(s.title||s.url)}</strong><b>↗</b></a>`).join("")}</div></aside>
 </article></main>
 <footer><div class="wrap footer-inner"><strong>TUKI WORLD</strong><span>© 2026 TUKI.</span></div></footer>
+<script type="module" src="../../../js/core.js"></script>
 </body></html>
 `}
 function renderSitemap(sitemap,posts){

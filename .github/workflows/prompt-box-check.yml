@@ -53,4 +53,4 @@ jobs:
             if curl -fsS http://127.0.0.1:8765/prompts/ > /dev/null; then break; fi
             sleep 1
           done
-          node scripts/verify-prompt-box.mjs
+          CAPTURE_REVIEW=1 node scripts/verify-prompt-box.mjs

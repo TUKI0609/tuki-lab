@@ -1,0 +1,49 @@
+name: Validate multilingual Adventurer ID staging
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "content/prompts.json"
+      - "js/prompts.js"
+      - "js/adventurer-id.mjs"
+      - "css/prompts.css"
+      - "tests/adventurer-id.test.mjs"
+      - "scripts/verify-adventurer-id.mjs"
+      - ".github/workflows/adventurer-id-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  card-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 13
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: "Validate RPG copy, locale rules, handle safety and other prompt cards"
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check js/prompts.js
+          node --check js/adventurer-id.mjs
+          node --check scripts/verify-adventurer-id.mjs
+          node --test tests/*.test.mjs
+          node scripts/build-lab-search-pages.mjs --check
+      - name: "Verify KO EN JA UI and exact copied prompts in actual Chrome"
+        shell: bash
+        run: |
+          set -euo pipefail
+          export CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          python3 -m http.server 8765 --bind 127.0.0.1 > "$RUNNER_TEMP/adventurer-id-server.log" 2>&1 &
+          PID=$!
+          trap 'kill "$PID" 2>/dev/null || true' EXIT
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8765/prompts/ >/dev/null; then break; fi
+            sleep 0.4
+          done
+          node scripts/verify-adventurer-id.mjs
+          node scripts/verify-prompt-box.mjs

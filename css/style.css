@@ -5848,3 +5848,27 @@ a.project-evidence-card:hover {
   .nav > #main-nav a:nth-child(5) { display: none; }
   .nav > #main-nav a[href$="/prompts/"] { color: #95edc0; font-weight: 900; }
 }
+
+/* Home teaser for the new public prompt library. */
+.prompt-box-home {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 25px; margin-top: 30px; margin-bottom: 38px;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid rgba(114,221,174,.26); border-radius: 23px;
+  background: radial-gradient(circle at 95% 10%, rgba(114,221,174,.16), transparent 45%),
+    linear-gradient(110deg, #1b2e23, #112018);
+  color: #ecf6ef;
+}
+.prompt-box-home-copy > span { font-size: .72rem; font-weight: 900; letter-spacing: .13em; color: #91e8b9; }
+.prompt-box-home h2 { font-size: clamp(1.3rem, 2.4vw, 2rem); line-height: 1.28; letter-spacing: -.045em; margin: 12px 0 10px; }
+.prompt-box-home p { font-size: .88rem; line-height: 1.7; color: #b7cabe; max-width: 600px; margin: 0; }
+.prompt-box-home-link {
+  flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+  gap: 12px; padding: 14px 19px; border-radius: 13px; background: #72ddae;
+  color: #11291d; font-size: .88rem; font-weight: 900;
+}
+.prompt-box-home-link:hover { background: #a7ecc9; }
+@media (max-width: 760px) {
+  .prompt-box-home { flex-direction: column; align-items: stretch; margin-top: 22px; padding: 23px; gap: 20px; }
+  .prompt-box-home-link { width: 100%; }
+}

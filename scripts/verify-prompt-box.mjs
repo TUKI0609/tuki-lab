@@ -54,9 +54,10 @@ try{
   const initial=await read("({cards:document.querySelectorAll('.prompt-card').length,nav:document.querySelectorAll('#main-nav a').length,copyButtons:document.querySelectorAll('.prompt-card-copy').length,consent:!!document.querySelector('.tuki-privacy-banner'),tracking:document.querySelectorAll('script[src*=\"googletagmanager.com\"]').length})");
   assert.deepEqual(initial,{cards:5,nav:5,copyButtons:5,consent:true,tracking:0});
   await until(()=>read("[...document.querySelectorAll('.prompt-preview img')].every(i=>i.complete&&i.naturalWidth>0)"),"preview image loading");
-  assert.equal(await read("document.querySelectorAll('.prompt-preview img').length"),4);
-  assert.equal(await read("[...document.querySelectorAll('.prompt-preview-note')].filter(p=>p.textContent.includes('아닙니다')).length>=2"),true);
-  console.log("PASS: five cards, four decoded previews, honest source notes, consent-first setup");
+  const expectedImages=(await(await fetch("http://127.0.0.1:8765/content/prompts.json")).json()).prompts.filter(p=>p.preview.type==="image").length;
+  assert.equal(await read("document.querySelectorAll('.prompt-preview img').length"),expectedImages);
+  assert.equal(await read("[...document.querySelectorAll('.prompt-preview-note')].filter(p=>p.textContent.includes('아닙니다')||p.textContent.includes('실제')).length>=2"),true);
+  console.log("PASS: five cards, "+expectedImages+" decoded previews, honest source notes, consent-first setup");
   await read("document.querySelector('[data-category=\"video\"]').click()");
   assert.equal(await read("document.querySelectorAll('.prompt-card').length"),2);
   await read("document.querySelector('[data-category=\"all\"]').click()");

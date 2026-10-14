@@ -29,7 +29,8 @@ function announce(message){
   statusTimeout=setTimeout(()=>{status.textContent="";},3500);
 }
 
-async function copyPrompt(prompt,button,kind="prompt"){
+async function copyPrompt(prompt,button,kind="prompt",language=null){
+  const locale=language&&CARD_LOCALES[language];
   const original=button.textContent;
   try{
     if(navigator.clipboard?.writeText && window.isSecureContext){
@@ -46,9 +47,9 @@ async function copyPrompt(prompt,button,kind="prompt"){
       field.remove();
       if(!copied)throw new Error("Clipboard permission unavailable");
     }
-    button.textContent="복사 완료 ✓";
+    button.textContent=locale?.copied || "복사 완료 ✓";
     button.dataset.copied="true";
-    announce(kind==="url" ? "공유 링크가 복사됐어요. X 게시물에 붙여넣어 보세요." : "프롬프트가 복사됐어요. 필요한 부분만 바꿔서 사용하세요.");
+    announce(kind==="url" ? (locale?.linkCopied||"공유 링크가 복사됐어요. X 게시물에 붙여넣어 보세요.") : (locale?.success||"프롬프트가 복사됐어요. 필요한 부분만 바꿔서 사용하세요."));
     setTimeout(()=>{button.textContent=original;delete button.dataset.copied;},2300);
   }catch{
     if(kind==="url"){
@@ -155,7 +156,7 @@ function cardFor(item){
     input.type="text";
     input.autocomplete="off";
     input.spellcheck=false;
-    input.maxLength=17; // Accept leading @ and detect invalid input.
+    input.maxLength=16; // Optional @ plus the 15-character maximum X username.
     input.value=adventurerState.handle;
     panel.appendChild(input);
 
@@ -217,7 +218,7 @@ function cardFor(item){
         return;
       }
     }
-    copyPrompt(cardPrompt,copy);
+    copyPrompt(cardPrompt,copy,"prompt",isAdventurer?adventurerState.language:null);
   });
   actions.appendChild(copy);
   const link=element("button","prompt-card-permalink","링크 복사");
@@ -226,7 +227,7 @@ function cardFor(item){
   link.setAttribute("aria-label",item.title+" 공유 링크 복사");
   link.addEventListener("click",()=>{
     const uri=new URL("#"+item.id,location.href).href;
-    copyPrompt(uri,link,"url");
+    copyPrompt(uri,link,"url",isAdventurer?adventurerState.language:null);
   });
   actions.appendChild(link);
   body.appendChild(actions);
@@ -248,6 +249,9 @@ function cardFor(item){
       copy.textContent=t.copy;
       copy.setAttribute("aria-label",t.copy);
       copy.lang=t.htmlLang;
+      link.textContent=t.link;
+      link.lang=t.htmlLang;
+      link.setAttribute("aria-label",t.link);
       title.lang=t.htmlLang;
     };
     // Keep the input listener's closure updated after the details controls exist.

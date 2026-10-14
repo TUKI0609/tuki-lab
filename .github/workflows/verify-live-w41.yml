@@ -1,0 +1,71 @@
+name: Verify released W41 LAB page (read-only)
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "scripts/verify-live-w41.mjs"
+      - ".github/workflows/verify-live-w41.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  live-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Verify published LAB data and 3 actual self-hosted image payloads
+        run: node scripts/verify-live-w41.mjs
+      - name: Verify desktop, mobile, listing and existing article in real Chrome
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          if [ -z "$CHROME" ]; then echo "Headless Chrome not found"; exit 1; fi
+
+          URL="https://tuki0609.github.io/tuki-lab/lab/article/?slug=lutratide-evolution-growth-difference-2026-w41&_audit=$GITHUB_RUN_ID"
+
+          timeout 70 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+            --virtual-time-budget=14000 --window-size=1180,3000 --dump-dom "$URL" \
+            > "$RUNNER_TEMP/w41-desktop.html" 2> "$RUNNER_TEMP/w41-desktop.log"
+          grep -Fq '진화했는데 손맛이 그대로라면' "$RUNNER_TEMP/w41-desktop.html"
+          grep -Fq '이번 제작에서 남긴 기준' "$RUNNER_TEMP/w41-desktop.html"
+          grep -Fq '게임 제작 과정의 영상 미리보기' "$RUNNER_TEMP/w41-desktop.html"
+          grep -Fq '본 이미지는 기존에 공개한 제작 영상 3편의 썸네일입니다' "$RUNNER_TEMP/w41-desktop.html"
+          for title in '성장 선택 화면' '전투 플레이 화면' '스킬 이펙트'; do
+            grep -Fq "$title" "$RUNNER_TEMP/w41-desktop.html"
+          done
+          test "$(grep -o 'class="lab-evidence-card"' "$RUNNER_TEMP/w41-desktop.html" | wc -l)" -eq 3
+          test "$(grep -o 'data-loaded="true"' "$RUNNER_TEMP/w41-desktop.html" | wc -l)" -eq 3
+          if grep -Fq 'data-loaded="error"' "$RUNNER_TEMP/w41-desktop.html"; then
+            echo "FAIL: at least one published image failed to load"; exit 1
+          fi
+          echo "PASS: Published desktop W41 article renders complete text and 3 fully loaded images."
+
+          timeout 70 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+            --virtual-time-budget=14000 --window-size=390,844 --dump-dom "$URL" \
+            > "$RUNNER_TEMP/w41-mobile.html" 2> "$RUNNER_TEMP/w41-mobile.log"
+          test "$(grep -o 'class="lab-evidence-card"' "$RUNNER_TEMP/w41-mobile.html" | wc -l)" -eq 3
+          test "$(grep -o 'data-loaded="true"' "$RUNNER_TEMP/w41-mobile.html" | wc -l)" -eq 3
+          echo "PASS: Published mobile viewport renders 3 fully loaded images."
+
+          timeout 70 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+            --virtual-time-budget=12000 --dump-dom \
+            "https://tuki0609.github.io/tuki-lab/lab/?_audit=$GITHUB_RUN_ID" \
+            > "$RUNNER_TEMP/lab-index.html" 2> "$RUNNER_TEMP/lab-index.log"
+          grep -Fq 'lutratide-evolution-growth-difference-2026-w41' "$RUNNER_TEMP/lab-index.html"
+          echo "PASS: Published LAB listing contains W41."
+
+          timeout 70 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+            --virtual-time-budget=12000 --dump-dom \
+            "https://tuki0609.github.io/tuki-lab/lab/article/?slug=momo-public-launch-2026-10-07&_audit=$GITHUB_RUN_ID" \
+            > "$RUNNER_TEMP/old-article.html" 2> "$RUNNER_TEMP/old-article.log"
+          if grep -Fq 'class="lab-evidence-card"' "$RUNNER_TEMP/old-article.html"; then
+            echo "FAIL: Existing MOMO article unexpectedly received W41 image gallery"; exit 1
+          fi
+          echo "PASS: Existing MOMO LAB article has no W41 gallery."

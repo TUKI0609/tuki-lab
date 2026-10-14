@@ -54,6 +54,7 @@ try{
   for(const pathname of pages){
     const url=base+pathname;
     await browse(url);
+    await until(()=>read("document.querySelectorAll('#main-nav a').length===5"),pathname+" async site navigation");
     await until(()=>read("getComputedStyle(document.body).backgroundColor==='rgb(0, 0, 0)'"),pathname+" mint styles");
     const state=await read("(()=>{const body=document.body,head=document.querySelector('.site-header'),style=document.querySelector('link[href$=\"morphic-mint.css\"]');return {body:body.classList.contains('morphic-mint-site'),background:getComputedStyle(body).backgroundColor,styleLoaded:!!style&&!!style.sheet,nav:document.querySelectorAll('#main-nav a').length,headerBg:getComputedStyle(head).backgroundColor,tracking:document.querySelectorAll('script[src*=\"googletagmanager.com\"]').length,overflow:document.documentElement.scrollWidth>innerWidth+2}})()");
     assert.equal(state.body,true,pathname+" opted into new theme");
@@ -84,6 +85,7 @@ try{
   await command("Emulation.setDeviceMetricsOverride",{width:390,height:844,deviceScaleFactor:1,mobile:true});
   for(const pathname of pages){
     await browse(base+pathname);
+    await until(()=>read("document.querySelectorAll('#main-nav a').length===5"),pathname+" mobile navigation");
     const m=await read("(()=>({width:innerWidth,doc:document.documentElement.scrollWidth,nav:[...document.querySelectorAll('#main-nav a')].filter(e=>getComputedStyle(e).display!=='none').length}))()");
     assert.equal(m.width,390);
     assert(m.doc<=392,"390px horizontal overflow "+pathname+" "+JSON.stringify(m));

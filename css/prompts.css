@@ -99,3 +99,43 @@
  .prompt-card-copy{flex:1 1 170px}
  .prompt-box-guide{margin-top:32px}
 }
+
+
+/* X-informed RPG card builder: scoped to this card, not the global site language. */
+.prompt-guild-controls{
+  margin:0 0 18px;padding:17px;border:1px solid rgba(114,221,174,.25);
+  background:rgba(6,26,18,.47);border-radius:14px;min-width:0;
+}
+.prompt-guild-heading{
+  margin:0 0 7px;color:#e8f9ed;font-size:1.12rem;line-height:1.38;
+}
+.prompt-guild-intro{font-size:.86rem;color:#b6cbbd;line-height:1.65;margin:0 0 18px}
+.prompt-guild-label{
+  display:block;font-size:.82rem;font-weight:850;color:#dcefe2;margin:12px 0 8px;
+}
+.prompt-guild-input{
+  display:block;width:100%;box-sizing:border-box;border-radius:10px;
+  background:#101d16;color:#f0fff5;border:1px solid rgba(220,238,227,.29);
+  padding:12px;font:inherit;font-size:1rem;
+}
+.prompt-guild-input:focus-visible{outline:3px solid #72ddae;outline-offset:2px}
+.prompt-guild-validation{font-size:.75rem;line-height:1.5;color:#9fe0b9;min-height:18px;margin:7px 0 10px}
+.prompt-guild-validation.is-error{color:#ffbf9f}
+.prompt-guild-languages{display:flex;gap:8px;flex-wrap:wrap}
+.prompt-guild-languages button{
+  border:1px solid rgba(200,233,211,.24);border-radius:9px;
+  padding:9px 12px;background:rgba(255,255,255,.035);color:#cae6d3;
+  font:inherit;font-weight:800;font-size:.83rem;cursor:pointer;
+}
+.prompt-guild-languages button[aria-pressed=true]{
+  color:#0c2417;border-color:#72ddae;background:#72ddae;
+}
+.prompt-guild-hint{
+  color:#acc3b2;font-size:.76rem;line-height:1.58;margin:13px 0 0;
+  overflow-wrap:anywhere;
+}
+.prompt-card-copy:disabled{cursor:not-allowed;opacity:.48;filter:none}
+@media(max-width:560px){
+  .prompt-guild-controls{padding:13px}
+  .prompt-guild-languages button{flex:1 1 75px}
+}

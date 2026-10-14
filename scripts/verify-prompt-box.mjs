@@ -106,15 +106,6 @@ try{
     assert(await read("window.__copied.includes('Never invent X posts')"));
   }
   console.log("PASS: invalid handles blocked, browser-localized RPG card and three generated language variants");
-  if(process.env.CAPTURE_REVIEW==="1"){
-    await read("document.querySelector('#pixel-guild-card [data-card-language=\"en\"]').click()");
-    await read("document.querySelector('.tuki-privacy-banner button:last-child')?.click()");
-    await nap(120);
-    await read("document.querySelector('#pixel-guild-card').scrollIntoView({block:'start'})");
-    await nap(300);
-    const desktop=await command("Page.captureScreenshot",{format:"jpeg",quality:64});
-    console.log("REVIEW_DESKTOP_EN_BASE64:"+desktop.data);
-  }
 
   await command("Emulation.setDeviceMetricsOverride",{width:390,height:844,deviceScaleFactor:1,mobile:true});
   await nap(330);
@@ -124,15 +115,6 @@ try{
   assert.equal(mob.visible,5);
   assert(mob.right<=392,"Last nav item clipped: "+JSON.stringify(mob));
 
-  if(process.env.CAPTURE_REVIEW==="1"){
-    for(const lang of ["ja","ko"]){
-      await read("document.querySelector('#pixel-guild-card [data-card-language="+JSON.stringify(lang)+"]').click()");
-      await read("document.querySelector('#pixel-guild-card').scrollIntoView({block:'start'})");
-      await nap(200);
-      const img=await command("Page.captureScreenshot",{format:"jpeg",quality:65});
-      console.log("REVIEW_MOBILE_"+lang.toUpperCase()+"_BASE64:"+img.data);
-    }
-  }
   console.log("PASS: responsive 390px screen with all five tabs reachable and no overflow");
   console.log(JSON.stringify({cards:5,categories:5,search:"PASS",copy:"PASS",deepLink:"PASS",mobile:"PASS",images:"PASS",consent:"PASS"}));
 }finally{

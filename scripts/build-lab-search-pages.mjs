@@ -35,7 +35,7 @@ return `<!doctype html>
   <link rel="stylesheet" href="../../../css/style.css">
 </head>
 <body data-page="lab-article" class="lab-article-static">
-<header class="site-header"><div class="wrap nav"><a class="brand" href="../../../"><span>TUKI WORLD</span><small>TUKI LAB</small></a><nav id="main-nav" aria-label="주요 메뉴"><a href="../../../">홈</a><a href="../../../projects/">프로젝트</a><a href="../../">제작실</a><a href="../../../about/">소개</a></nav></div></header>
+<header class="site-header"><div class="wrap nav"><a class="brand" href="../../../"><span>TUKI WORLD</span><small>TUKI LAB</small></a><nav id="main-nav" aria-label="주요 메뉴"><a href="../../../">홈</a><a href="../../../projects/">프로젝트</a><a href="../../../prompts/">프롬프트</a><a href="../../">제작실</a><a href="../../../about/">소개</a></nav></div></header>
 <main><article class="lab-article wrap">
   <header class="lab-article-head"><div class="lab-article-labels"><span>${escapeHtml(post.type||"BUILD LOG")}</span>${projectLink}</div><h1>${escapeHtml(post.title)}</h1><p class="lab-article-summary">${escapeHtml(desc)}</p><div class="lab-article-date"><time datetime="${escapeHtml(post.publishedAt)}">${escapeHtml(post.publishedAt)}</time></div><a href="../../" class="lab-static-back">← 모든 제작 기록</a></header>
   <div class="lab-article-body">${(post.sections||[]).map(section=>`<section><h2>${escapeHtml(section.heading)}</h2>${(section.paragraphs||[]).map(p=>`<p>${escapeHtml(p)}</p>`).join("")}</section>`).join("")}</div>

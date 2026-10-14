@@ -43,7 +43,7 @@ jobs:
           if(data.prompts.length!==5)throw Error("PR #13 draft was unexpectedly deployed");
           console.log("PASS: six live routes, scoped mint CSS and original five prompt records");
           NODE
-      - name: Real Chrome verification: desktop, mobile, carousel, prompts, consent and copy
+      - name: "Real Chrome verification: desktop, mobile, carousel, prompts, consent and copy"
         shell: bash
         run: |
           set -euo pipefail

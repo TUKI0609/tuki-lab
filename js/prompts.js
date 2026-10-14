@@ -231,9 +231,43 @@ function cardFor(item){
 }
 
 
+function localizePrivacy(){
+  const ui=PAGE_UI[guildLanguage].privacy;
+  const settings=document.querySelector(".tuki-privacy-settings");
+  if(settings){
+    settings.textContent=ui.settings;
+    settings.setAttribute("aria-label",ui.aria);
+  }
+  const policy=document.querySelector('footer a[href$="/privacy/"]');
+  if(policy)policy.textContent=ui.policy;
+  const banner=document.querySelector(".tuki-privacy-banner");
+  if(!banner)return;
+  banner.setAttribute("aria-label",ui.aria);
+  const title=banner.querySelector("strong");
+  if(title)title.textContent=ui.title;
+  const paragraph=banner.querySelector("p");
+  if(paragraph){
+    const links=paragraph.querySelectorAll("a");
+    const google=links[0]||document.createElement("a");
+    google.href="https://policies.google.com/privacy?hl="+guildLanguage;
+    google.target="_blank";
+    google.rel="noopener noreferrer";
+    google.textContent=ui.google;
+    const local=links[1]||document.createElement("a");
+    if(!links[1])local.href=(location.pathname.includes("/tuki-lab/")?"/tuki-lab/":"/")+"privacy/";
+    local.textContent=ui.site;
+    paragraph.replaceChildren(document.createTextNode(ui.body+" "),google,document.createTextNode(" · "),local);
+  }
+  const accept=banner.querySelector('[data-tuki-consent="accepted"]');
+  const decline=banner.querySelector('[data-tuki-consent="rejected"]');
+  if(accept)accept.textContent=ui.accept;
+  if(decline)decline.textContent=ui.reject;
+}
+
 function applyPageLanguage(){
   const ui=PAGE_UI[guildLanguage];
   document.documentElement.lang=guildLanguage;
+  localizePrivacy();
   document.title=(guildLanguage==="ko"?"이미지·영상·글쓰기·게임 제작 프롬프트":guildLanguage==="en"?"AI prompts for images, video, writing and games":"画像・動画・文章・ゲーム制作のAIプロンプト")+" | TUKI PROMPT BOX";
   const description=document.querySelector('meta[name="description"]');
   if(description)description.content=ui.heroLead;
@@ -325,6 +359,7 @@ async function boot(){
   if(nav)nav.setAttribute("aria-current","page");
 
   setupPageLanguageSelector();
+  document.addEventListener("DOMContentLoaded",localizePrivacy,{once:true});
   const data=await loadJson(BASE+"content/prompts.json");
   if(!data||!Array.isArray(data.prompts))throw new Error("Prompt collection unavailable");
   prompts=data.prompts.filter(item=>item&&/^[a-z0-9-]+$/.test(item.id)&&categories.has(item.category)&&typeof item.prompt==="string");

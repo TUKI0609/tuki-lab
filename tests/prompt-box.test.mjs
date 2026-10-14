@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {readFileSync,existsSync} from "node:fs";
 import {resolve,dirname} from "node:path";
 import {fileURLToPath} from "node:url";
+import {GUILD_UI,detectGuildLanguage,normalizeXHandle,buildGuildPrompt} from "../js/guild-card.mjs";
 
 const root=resolve(dirname(fileURLToPath(import.meta.url)),"..");
 const read=path=>readFileSync(resolve(root,path),"utf8");
@@ -80,4 +81,39 @@ test("prompt page retains existing GA4 consent, canonical and semantic controls"
   assert.match(js,/scrollToDeepLink/);
   assert.match(js,/copyPrompt\(uri,link,"url"\)/);
   assert.doesNotMatch(js,/googletagmanager\.com|gtag\(/);
+});
+
+
+test("RPG card uses one safe core prompt with independently selected KO EN JA",()=>{
+  const guild=data.prompts.find(p=>p.id==="pixel-guild-card");
+  assert(guild && guild.prompt.includes("PUBLIC X ACTIVITY"));
+  assert.match(guild.prompt,/Never invent X posts/);
+  assert.match(guild.prompt,/guild name must be generated automatically/i);
+  assert.match(guild.prompt,/exactly THREE/);
+  assert.equal(detectGuildLanguage(["ko-KR","en-US"]),"ko");
+  assert.equal(detectGuildLanguage(["ja-JP","ko-KR"]),"ja");
+  assert.equal(detectGuildLanguage(["de-DE"]),"en");
+  assert.equal(normalizeXHandle(" Ty_Tuki0609 "),"@Ty_Tuki0609");
+  assert.equal(normalizeXHandle("@Ty_Tuki0609"),"@Ty_Tuki0609");
+  assert.equal(normalizeXHandle("@bad-handle"),"");
+  assert.equal(normalizeXHandle("@thishandleistoolong"),"");
+  assert.equal(normalizeXHandle(""),"");
+  const intro=["ko","en","ja"].map(lang=>{
+    const text=buildGuildPrompt(guild.prompt,"Ty_Tuki0609",lang);
+    assert(text.includes("X HANDLE: @Ty_Tuki0609"));
+    assert(text.includes("CARD LANGUAGE: "+lang.toUpperCase()));
+    assert(text.includes("X post language does not override"));
+    assert(text.includes("Do not infer sensitive personal attributes"));
+    assert(GUILD_UI[lang].heading && GUILD_UI[lang].image && GUILD_UI[lang].linkCopied);
+    return text;
+  });
+  assert.equal(new Set(intro).size,3);
+  assert.throws(()=>buildGuildPrompt(guild.prompt,"bad handle","en"));
+  assert.throws(()=>buildGuildPrompt(guild.prompt,"@good","fr"));
+  const ui=read("js/prompts.js");
+  assert.match(ui,/from "\.\/guild-card\.mjs"/);
+  assert.match(ui,/guildControls\(item,card,copy,link,details,code/);
+  assert.match(ui,/copy\.disabled=!handle/);
+  assert.match(ui,/guildLanguage=lang/);
+  assert.match(read("css/prompts.css"),/\.prompt-guild-languages/);
 });

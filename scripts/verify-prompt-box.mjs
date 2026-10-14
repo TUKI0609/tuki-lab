@@ -69,6 +69,10 @@ try{
   const copied=await read("({length:window.__copied.length,contents:window.__copied.includes('주제:'),feedback:document.querySelector('.prompt-card-copy').textContent,status:document.querySelector('#prompt-status').textContent})");
   assert(copied.length>300&&copied.contents&&copied.feedback.includes("복사 완료")&&copied.status.includes("복사"));
   console.log("PASS: category filter, search, full text clipboard and visible feedback");
+  await read("document.querySelector('.prompt-card-permalink').click()");
+  await until(()=>read("window.__copied?.includes('/prompts/#bookmark-x-post')"),"per-prompt link copy");
+  assert(await read("window.__copied.startsWith('http://127.0.0.1:8765/prompts/#bookmark-x-post')"));
+  console.log("PASS: one-click copy of exact X-shareable prompt URL");
   await browse("http://127.0.0.1:8765/prompts/#pixel-guild-card");
   await until(()=>read("document.querySelector('#pixel-guild-card')?.classList.contains('prompt-card-highlight')"),"deep link");
   console.log("PASS: direct deep-link to one individual prompt");

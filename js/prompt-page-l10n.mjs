@@ -3,6 +3,7 @@
 export const PAGE_UI={
   ko:{
     nav:["홈","프로젝트","프롬프트","제작실","소개"],
+    privacy:{settings:"분석 설정",aria:"방문 통계 수집 동의",title:"방문 통계 수집 안내",body:"사이트 개선을 위해 Google Analytics 4를 사용하려고 합니다. 동의하면 방문 및 이용 정보가 Google로 전송되고 쿠키나 식별자가 사용될 수 있습니다. 거부해도 사이트를 이용할 수 있습니다.",google:"Google 개인정보처리방침",site:"TUKI WORLD 개인정보처리방침",policy:"개인정보처리방침",accept:"분석 허용",reject:"거부"},
     heroTagline:"막힐 때 꺼내 쓰는 프롬프트 모음집.",
     heroLead:"글이 안 써질 때, 이미지가 필요할 때, 영상을 만들 때. 하고 싶은 작업을 고르고 프롬프트를 바로 복사하세요.",
     heroMeta:["목적별 분류","한 번에 복사","개인화해서 사용"],
@@ -36,6 +37,7 @@ export const PAGE_UI={
   },
   en:{
     nav:["Home","Projects","Prompts","Lab","About"],
+    privacy:{settings:"Analytics settings",aria:"Analytics consent",title:"Analytics privacy notice",body:"We would like to use Google Analytics 4 to improve this site. If you agree, visit and usage information may be sent to Google, and analytics cookies or identifiers may be used. You can use this site even if you decline.",google:"Google Privacy Policy",site:"TUKI WORLD Privacy Policy",policy:"Privacy Policy",accept:"Allow analytics",reject:"Decline"},
     heroTagline:"Ready-to-use prompts when you need a spark.",
     heroLead:"Choose a task, explore examples and copy a prompt. Start with the customizable RPG Adventurer ID below.",
     heroMeta:["Browse by purpose","One-click copy","Make it yours"],
@@ -69,6 +71,7 @@ export const PAGE_UI={
   },
   ja:{
     nav:["ホーム","プロジェクト","プロンプト","制作室","紹介"],
+    privacy:{settings:"アクセス解析の設定",aria:"アクセス解析の同意",title:"アクセス解析について",body:"サイト改善のためGoogle Analytics 4を利用したいと考えています。同意すると、訪問・利用情報がGoogleに送信され、解析用Cookieや識別子が使用される場合があります。同意しなくても利用できます。",google:"Googleプライバシーポリシー",site:"TUKI WORLDプライバシーポリシー",policy:"プライバシーポリシー",accept:"解析を許可",reject:"拒否"},
     heroTagline:"困ったときに使えるAIプロンプト集。",
     heroLead:"目的と作例を選び、プロンプトをコピー。まずは下の「冒険者登録証」から試せます。",
     heroMeta:["目的別に探す","ワンクリックでコピー","自分用にアレンジ"],

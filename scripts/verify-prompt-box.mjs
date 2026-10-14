@@ -96,6 +96,7 @@ try{
     await read("document.querySelector('#pixel-guild-card [data-card-language="+JSON.stringify(lang)+"]').click()");
     assert.equal(await read("document.querySelector('#pixel-guild-card').lang"),lang);
     assert.equal(await read("document.documentElement.lang"),lang);
+    assert.equal(await read("document.querySelector('.tuki-privacy-banner [data-tuki-consent=rejected]').textContent"),lang==="ja"?"拒否":lang==="en"?"Decline":"거부");
     assert.equal(await read("document.querySelector('.language-switch [data-language="+JSON.stringify(lang)+"]').getAttribute('aria-pressed')"),"true");
     assert.equal(await read("document.querySelector('.prompt-box-jump').textContent.trim().length>4"),true);
     assert.equal(await read("document.querySelector('#pixel-guild-card [data-card-language="+JSON.stringify(lang)+"]').getAttribute('aria-pressed')"),"true");

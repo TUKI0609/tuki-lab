@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-14",
+  "heading": "TUKI PROMPT BOX",
+  "description": "만들 때 꺼내 쓰는 공개용 프롬프트 보관함",
+  "categories": [
+    {
+      "id": "all",
+      "label": "전체"
+    },
+    {
+      "id": "image",
+      "label": "이미지"
+    },
+    {
+      "id": "video",
+      "label": "영상"
+    },
+    {
+      "id": "writing",
+      "label": "글쓰기"
+    },
+    {
+      "id": "game",
+      "label": "게임 제작"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "pixel-guild-card",
+      "category": "image",
+      "title": "도트 RPG 탐험가 등록증",
+      "summary": "내 프로필 사진을 활용해 판타지 게임의 길드 등록증 한 장으로 만드는 프롬프트.",
+      "tool": "이미지 생성 AI",
+      "preview": {
+        "type": "image",
+        "src": "assets/projects/crypto-saga/preview.svg",
+        "label": "CRYPTO SAGA 프로젝트 콘셉트 이미지",
+        "note": "대표 아트 예시입니다. 이 프롬프트로 만든 실제 등록증 결과물은 아닙니다."
+      },
+      "tags": [
+        "프로필 사진",
+        "16비트",
+        "길드 등록증"
+      ],
+      "prompt": "[16비트 이세계 탐험가 길드 등록증]\n첨부한 프로필 사진 1장을 바탕으로, 누구나 사용할 수 있는 오리지널 판타지 RPG 길드 등록증 이미지 1장을 만들어줘.\n\n목표: “내가 이세계 모험가 길드에 등록된다면?”이라는 콘셉트를 한 장의 완성도 높은 카드로 표현한다.\n- 최종 비율: 세로 2:3. 정돈된 16비트 픽셀 아트, 고급 게임 UI, 읽기 편한 구성.\n- 첨부 캐릭터의 주요 특징(표정, 헤어스타일/실루엣, 대표 색, 액세서리)은 식별 가능하게 유지하되 판타지 장비를 새롭게 디자인한다.\n- 상단은 길드 엠블럼과 “탐험가 등록증”, 중앙은 전신 픽셀 캐릭터, 하단은 등록 정보·고유 스킬·길드 도장으로 구성한다.\n- 길드 UI는 짙은 남색 바탕과 오래된 금속 장식, 은은하게 빛나는 보석을 사용한다.\n- 이름 또는 활동명: [이름을 입력]\n- 선택한 세계관: [세계관/길드명]\n- 가상 클래스와 고유 스킬, 칭호는 캐릭터 분위기를 참고해 창의적으로 창작한다. 모두 가상 설정임을 알 수 있게 한다.\n- X 핸들 등 실제 계정 정보는 사용자가 직접 제공한 경우에만 정확히 표기한다.\n- 실제 팔로워 수, 수상 이력, 공식 게임 계정, 보유 아이템, 검증되지 않은 사실은 만들지 않는다.\n- 한글은 작은 크기에서도 읽을 수 있게 또렷하게 배치하고, 잘못된 철자를 만들지 않는다.\n- 최종 결과물은 등록증 카드 1장. 별도 설명문, 여러 카드 콜라주, 워터마크는 넣지 않는다."
+    },
+    {
+      "id": "consistent-character-video",
+      "category": "video",
+      "title": "참고 이미지 한 장으로 10초 영상",
+      "summary": "캐릭터의 얼굴과 의상을 지키면서 행동·카메라·장면 전환까지 지시하는 영상용 프롬프트.",
+      "tool": "이미지→영상 AI",
+      "preview": {
+        "type": "image",
+        "src": "assets/brand/tuki/world-aevowake.svg",
+        "label": "AEVOWAKE 세계관 참고 이미지",
+        "note": "캐릭터 영상 제작 참고용 아트입니다. 실제 생성된 영상 프레임은 아닙니다."
+      },
+      "tags": [
+        "캐릭터 일관성",
+        "10초",
+        "시네마틱"
+      ],
+      "prompt": "Create a polished 10-second image-to-video scene using the uploaded image as the only visual identity reference.\n\nSubject: [캐릭터 이름/외형]\nLocation: [배경 및 공간]\nOne clear action: [캐릭터가 하는 핵심 행동]\nEmotion: [전달할 감정]\n\nTimeline:\n0–3s: Establish the exact location, character position and mood in a readable medium shot. Keep the camera steady enough for viewers to understand the situation.\n3–6s: The character notices [변화/사건] and performs the main action. Make the gaze and body reaction the reason for the movement.\n6–9s: Follow the character with a smooth camera move; reveal the environment through an elegant transition that follows the action.\n9–10s: Hold a clean, visually memorable final composition for the last second.\n\nMaintain the uploaded character's facial features, body proportions, outfit, colors and accessories in every frame.\nNatural anatomy, correct number of limbs, believable weight and contact with the floor, stable lighting and consistent spatial direction.\nUse no more than two motivated cuts. No sudden teleporting, unrelated scene changes, extra characters, text, subtitles, logos or watermarks.\nPrioritize a coherent single event over excessive effects. Output a single 10-second sequence."
+    },
+    {
+      "id": "gameplay-update-short",
+      "category": "video",
+      "title": "게임 업데이트 10초 쇼츠",
+      "summary": "실제 플레이 화면의 핵심 변화 하나를 짧은 영상으로 보여주는 연출 템플릿.",
+      "tool": "게임 영상 편집·AI 영상",
+      "preview": {
+        "type": "image",
+        "src": "assets/projects/lutratide-survivors/w41-video-thumbnail.svg",
+        "label": "LUTRATIDE 공개 제작 쇼츠 썸네일",
+        "note": "실제 공개한 제작 영상의 썸네일입니다. 아래 프롬프트와 정확히 동일하게 제작됐다는 뜻은 아닙니다.",
+        "sourceUrl": "https://www.youtube.com/shorts/BrBawuxsBy0",
+        "sourceLabel": "공개 제작 쇼츠 보기 ↗"
+      },
+      "tags": [
+        "게임 개발",
+        "업데이트",
+        "쇼츠"
+      ],
+      "prompt": "너는 짧은 게임 업데이트 영상의 연출 감독이다. 첨부한 실제 게임 플레이 자료를 기반으로 10초 안에 변화 한 가지를 알기 쉽게 보여줘.\n\n게임 이름: [게임명]\n이번 업데이트 핵심: [달라진 점 단 하나]\n전달할 체감: [플레이어가 느껴야 할 차이]\n자료: [업데이트 후 실제 화면/영상 또는 비교 자료]\n\n연출:\n0–2초: 설명보다 실제 플레이 상황을 먼저 보여준다. 한 화면만 보고 장르와 플레이 상황을 이해할 수 있어야 한다.\n2–6초: 달라진 기능이나 플레이 변화를 눈으로 확인할 수 있게 한 번 분명히 보여준다.\n6–9초: 변화가 플레이 결과에 미치는 차이를 보여준다. 확인할 자료가 없으면 비교를 연출하거나 개선 효과를 단정하지 않는다.\n9–10초: 가장 인상적인 실제 플레이 화면에서 마무리한다.\n\n주의:\n- 원본 게임의 HUD, 캐릭터, UI와 그래픽을 임의로 다른 게임처럼 변형하지 않는다.\n- 관찰한 변화와 아직 검증하지 못한 효과를 구분한다.\n- 화면을 가리는 과장된 자막, 불필요한 컷 전환, 의미 없는 줌을 피한다.\n- 비교할 실제 '이전' 영상이 없으면 가짜 전후 비교를 만들지 않는다.\n- 세로 9:16 또는 지정한 비율 [비율]에 맞춰 게임 화면을 잘리지 않게 구성한다.\n영상 끝에는 별도 설명보다 플레이 장면 자체가 남도록 한다."
+    },
+    {
+      "id": "bookmark-x-post",
+      "category": "writing",
+      "title": "북마크하고 싶은 X 정보 글",
+      "summary": "‘그래서 뭘 하면 되는데?’라는 질문에 답하는 짧고 실용적인 X 글 템플릿.",
+      "tool": "ChatGPT 등 글쓰기 AI",
+      "preview": {
+        "type": "text",
+        "label": "게시물 구성 예시",
+        "note": "실제 게시물이 아닌 구조 예시입니다.",
+        "lines": [
+          "이 기능, 어디에 쓰는 걸까?",
+          "문제 → 확인한 사실 → 따라 하기",
+          "주의점까지 한눈에."
+        ]
+      },
+      "tags": [
+        "X 운영",
+        "정보형",
+        "훅"
+      ],
+      "prompt": "아래 주제에 관한 X용 한국어 정보형 글을 작성해줘. 단순한 감상문이 아니라 사람들이 북마크하고 다음에 따라 할 수 있는 글이 목표야.\n\n주제: [제품·서비스·기능]\n누가 읽을까: [초보자/AI 창작자/게임 제작자 등]\n확인된 사실과 공식 링크: [내가 검증한 자료]\n직접 해본 경험: [실제 사용 경험만 적기, 없으면 없음]\n독자가 얻는 결과: [읽고 나서 할 수 있는 일]\n주의사항: [가격·제한·지역·저작권·오류 등]\n\n출력 기준:\n1. 첫 문장은 독자가 겪는 문제 또는 궁금증을 바로 찌르는 후킹 한 줄.\n2. 이어서 '무엇인지 → 왜 유용한지 → 바로 써먹는 순서'를 짧고 구체적으로 전달.\n3. 초보자도 따라 할 수 있는 실제 메뉴명, 조건, 사용 순서를 확인된 내용만 사용.\n4. 직접 확인한 사실과 의견을 분리. 모르는 가격·무료 크레딧·성과·지원 국가를 지어내지 말 것.\n5. 불필요한 과장, 장황한 자기소개, 뻔한 홍보 문구를 제거.\n6. 짧은 줄바꿈으로 모바일에서도 쉽게 읽히게 하고, 마지막에 저장할 이유 또는 확인할 사항 한 줄을 둔다.\n7. 링크가 주어졌다면 확인 가능한 원문 링크만 포함하고, 없는 링크는 만들지 않는다.\n\n먼저 최종 게시글 1개만 작성해. 독자가 '그래서 어쩌라고?'라고 묻지 않도록 실제 활용 정보를 중심에 둬."
+    },
+    {
+      "id": "mobile-game-screen",
+      "category": "game",
+      "title": "바이브코딩 PC·모바일 화면 수정",
+      "summary": "PC에서는 멀쩡한데 모바일에서 잘리는 게임 화면을 체계적으로 진단하는 프롬프트.",
+      "tool": "AI 코딩 도우미",
+      "preview": {
+        "type": "image",
+        "src": "assets/brand/tuki/world-lutratide.svg",
+        "label": "LUTRATIDE 프로젝트 대표 아트",
+        "note": "게임 프로젝트 참고 아트입니다. 이 프롬프트로 수정한 화면의 전후 비교가 아닙니다."
+      },
+      "tags": [
+        "반응형",
+        "게임 개발",
+        "오류 해결"
+      ],
+      "prompt": "현재 제작 중인 웹 게임의 PC/모바일 레이아웃 문제를 수정해줘. 기존 화면과 게임 플레이 기능은 유지하고 화면 크기 때문에 잘리는 부분만 최소한으로 고쳐줘.\n\n문제 증상: [예: PC에서는 정상, 모바일에서는 로비 버튼이 화면 아래로 잘림]\n사용 기술/파일: [HTML/CSS/JS 또는 프레임워크]\n화면 구성: [로비, 게임 화면, HUD, 설정, 결과창 등]\n검증할 뷰포트: 390×844 모바일, 768×1024 태블릿, 1280×800 PC\n\n수정 순서:\n1. 관련 레이아웃과 전역 스타일을 먼저 조사하고 문제가 생기는 DOM 및 CSS 규칙을 찾아줘.\n2. 고정 px, 100vh, overflow, safe-area, flex/grid 최소 크기, 이미지 비율, 터치 버튼, 브라우저 주소창으로 인한 높이 변화를 점검해줘.\n3. 필요할 때만 100dvh/100svh, max/min, clamp, aspect-ratio, CSS grid 또는 flex를 적용하고 모바일 스크롤과 상호작용이 깨지지 않게 해줘.\n4. 모바일에서 버튼과 글자가 겹치거나 잘리지 않고, 화면 밖으로 불필요한 가로 스크롤이 생기지 않도록 고쳐줘.\n5. PC 디자인, 게임 조작, 캐릭터 크기, 기존 동작과 설정값은 의도 없이 바꾸지 마.\n6. PC/모바일 두 환경에서 실제 렌더링 스크린샷 또는 브라우저 테스트로 점검해줘.\n7. 변경한 파일, 수정한 원인, 테스트 결과, 아직 확인할 사항을 간결하게 정리해줘.\n\n코드를 보기 전에는 문제가 해결됐다고 주장하지 말고, 먼저 현재 구조를 확인한 뒤 최소 변경안을 제안해줘."
+    }
+  ]
+}

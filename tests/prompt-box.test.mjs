@@ -34,6 +34,23 @@ test("five curated templates have copyable text, unique URLs and honest previews
     if(p.preview.sourceUrl) assert(p.preview.sourceUrl.startsWith("https://www.youtube.com/shorts/"));
   }
 });
+test("media upgrade staging cannot link nonexistent images and records verifiable provenance",()=>{
+  const manifest=JSON.parse(read("assets/prompts/results/preview-manifest.json"));
+  assert.equal(manifest.files.length,4);
+  const ids=new Set();
+  for(const item of manifest.files){
+    assert(!ids.has(item.id));
+    ids.add(item.id);
+    assert.match(item.sha256,/^[a-f0-9]{64}$/);
+    assert.match(item.filename,/^[a-z0-9-]+\.webp$/);
+    assert(["prior_real_result","real_prior_video_frame","illustrative_ai_mockup"].includes(item.kind));
+    assert(item.note.length>30 && item.label.length>10);
+    const existing=data.prompts.find(p=>p.id===item.id);
+    assert(existing,"Unknown prompt ID "+item.id);
+    assert(!existing.preview.src?.includes("assets/prompts/results/") ||
+      existsSync(resolve(root,existing.preview.src)), "Missing candidate referenced by live card");
+  }
+});
 test("new navigation is linked from the home and all existing LAB pages",()=>{
   assert(site.navigation.some(x=>x.href==="./prompts/"&&x.i18n==="nav.prompts"));
   assert.equal(i18n.strings.ko["nav.prompts"],"프롬프트");

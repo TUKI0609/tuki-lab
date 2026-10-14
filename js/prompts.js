@@ -27,7 +27,7 @@ function announce(message){
   statusTimeout=setTimeout(()=>{status.textContent="";},3500);
 }
 
-async function copyPrompt(prompt,button){
+async function copyPrompt(prompt,button,kind="prompt"){
   const original=button.textContent;
   try{
     if(navigator.clipboard?.writeText && window.isSecureContext){
@@ -46,11 +46,17 @@ async function copyPrompt(prompt,button){
     }
     button.textContent="복사 완료 ✓";
     button.dataset.copied="true";
-    announce("프롬프트가 복사됐어요. 필요한 부분만 바꿔서 사용하세요.");
+    announce(kind==="url" ? "공유 링크가 복사됐어요. X 게시물에 붙여넣어 보세요." : "프롬프트가 복사됐어요. 필요한 부분만 바꿔서 사용하세요.");
     setTimeout(()=>{button.textContent=original;delete button.dataset.copied;},2300);
   }catch{
-    announce("자동 복사를 사용할 수 없어요. '프롬프트 펼치기'에서 직접 선택해 복사해 주세요.");
-    button.closest(".prompt-card")?.querySelector("details")?.setAttribute("open","");
+    if(kind==="url"){
+      announce("자동 링크 복사가 제한됐어요. 주소창의 링크를 직접 복사해 주세요.");
+      const uri=new URL(prompt);
+      location.hash=uri.hash;
+    }else{
+      announce("자동 복사를 사용할 수 없어요. '프롬프트 내용 확인하기'에서 직접 선택해 복사해 주세요.");
+      button.closest(".prompt-card")?.querySelector("details")?.setAttribute("open","");
+    }
   }
 }
 function previewFor(item){
@@ -107,14 +113,13 @@ function cardFor(item){
   copy.setAttribute("aria-label",item.title+" 프롬프트 복사");
   copy.addEventListener("click",()=>copyPrompt(item.prompt,copy));
   actions.appendChild(copy);
-  const link=element("a","prompt-card-permalink","링크 공유 ↗");
-  link.href="#"+item.id;
-  link.title="이 프롬프트의 주소로 이동";
+  const link=element("button","prompt-card-permalink","링크 복사");
+  link.type="button";
+  link.title="X에 공유할 수 있는 이 프롬프트만의 링크 복사";
+  link.setAttribute("aria-label",item.title+" 공유 링크 복사");
   link.addEventListener("click",()=>{
-    const absolute=new URL(link.getAttribute("href"),location.href).href;
-    // Clicking the anchor stays on-site; the address may be shared on X.
-    announce("주소창의 링크를 공유하면 이 프롬프트로 바로 연결돼요.");
-    history.replaceState(null,"",absolute);
+    const uri=new URL("#"+item.id,location.href).href;
+    copyPrompt(uri,link,"url");
   });
   actions.appendChild(link);
   body.appendChild(actions);

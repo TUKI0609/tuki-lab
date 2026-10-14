@@ -53,6 +53,9 @@ try{
   await until(()=>read("document.querySelectorAll('.prompt-card').length===5"),"five cards");
   const initial=await read("({cards:document.querySelectorAll('.prompt-card').length,nav:document.querySelectorAll('#main-nav a').length,copyButtons:document.querySelectorAll('.prompt-card-copy').length,consent:!!document.querySelector('.tuki-privacy-banner'),tracking:document.querySelectorAll('script[src*=\"googletagmanager.com\"]').length})");
   assert.deepEqual(initial,{cards:5,nav:5,copyButtons:5,consent:true,tracking:0});
+  // This page now has a taller localized form; force below-the-fold lazy images
+  // to load before checking every rendered preview rather than timing out.
+  await read("[...document.querySelectorAll('.prompt-preview img')].forEach(i=>{i.loading='eager'})");
   await until(()=>read("[...document.querySelectorAll('.prompt-preview img')].every(i=>i.complete&&i.naturalWidth>0)"),"preview image loading");
   const expectedImages=(await(await fetch("http://127.0.0.1:8765/content/prompts.json")).json()).prompts.filter(p=>p.preview.type==="image").length;
   assert.equal(await read("document.querySelectorAll('.prompt-preview img').length"),expectedImages);

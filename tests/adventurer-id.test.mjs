@@ -32,7 +32,7 @@ test("language selection uses browser preference and supports direct overrides",
   }
 });
 test("X handle copied exactly, never scraped or transmitted by this generator",()=>{
-  for(const [input,expected] of [["@Ty_Tuki0609","@Ty_Tuki0609"],["tuki_09","@tuki_09"],["@A","@A"],["abc123_456789012","@abc123_456789012"]]){
+  for(const [input,expected] of [["@Ty_Tuki0609","@Ty_Tuki0609"],["tuki_09","@tuki_09"],["@A","@A"],["abc123_45678901","@abc123_45678901"]]){
     assert.equal(normalizeXHandle(input),expected);
     const one=buildAdventurerPrompt(card.prompt,{language:"KO",handle:input});
     assert(one.includes("X HANDLE: "+expected));

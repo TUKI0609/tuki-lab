@@ -114,6 +114,7 @@ function cardFor(item){
   const isAdventurer=item.id==="pixel-guild-card";
   let cardPrompt=item.prompt;
   let refreshAdventurer=()=>{};
+  let updateDetails=()=>{};
   let handleFeedback;
   if(isAdventurer){
     const panel=element("section","prompt-adventurer-form");
@@ -137,7 +138,7 @@ function cardFor(item){
       btn.setAttribute("aria-pressed",String(lang===adventurerState.language));
       btn.addEventListener("click",()=>{
         adventurerState.language=lang;
-        refreshAdventurer();
+        refreshAdventurer(updateDetails);
       });
       langButtons.set(lang,btn);
       langTabs.appendChild(btn);
@@ -241,7 +242,7 @@ function cardFor(item){
   body.appendChild(details);
   if(isAdventurer){
     const title=body.querySelector("h3");
-    const updateDetails=(prompt,t)=>{
+    updateDetails=(prompt,t)=>{
       codeText.textContent=prompt;
       summary.textContent=t.details;
       copy.textContent=t.copy;
@@ -251,11 +252,6 @@ function cardFor(item){
     };
     // Keep the input listener's closure updated after the details controls exist.
     refreshAdventurer(updateDetails);
-    const handleInput=body.querySelector(".prompt-adventurer-handle");
-    handleInput.addEventListener("input",()=>refreshAdventurer(updateDetails));
-    body.querySelectorAll(".prompt-adventurer-languages button").forEach(btn=>{
-      btn.addEventListener("click",()=>refreshAdventurer(updateDetails));
-    });
   }
 
   card.appendChild(body);

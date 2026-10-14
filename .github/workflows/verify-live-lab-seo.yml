@@ -1,0 +1,44 @@
+name: Verify live LAB discoverability after deployment
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "scripts/verify-live-lab-seo.mjs"
+      - ".github/workflows/verify-live-lab-seo.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  public-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Verify published HTML, sitemap and homepage source
+        run: node scripts/verify-live-lab-seo.mjs
+      - name: Verify rendered latest-LAB homepage link and article in Chrome
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME"
+          timeout 70 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+            --virtual-time-budget=14000 --window-size=1280,900 --dump-dom \
+            "https://tuki0609.github.io/tuki-lab/?_verify=$GITHUB_RUN_ID" \
+            > "$RUNNER_TEMP/home.html" 2> "$RUNNER_TEMP/home.log"
+          grep -Fq 'id="home-featured-lab"' "$RUNNER_TEMP/home.html"
+          grep -Fq '진화했는데 손맛이 그대로라면' "$RUNNER_TEMP/home.html"
+          grep -Fq 'href="./lab/posts/lutratide-evolution-growth-difference-2026-w41/"' "$RUNNER_TEMP/home.html"
+          echo "PASS: Real homepage shows featured W41 article link."
+          timeout 70 "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu \
+            --virtual-time-budget=14000 --window-size=390,844 --dump-dom \
+            "https://tuki0609.github.io/tuki-lab/lab/posts/lutratide-evolution-growth-difference-2026-w41/?_verify=$GITHUB_RUN_ID" \
+            > "$RUNNER_TEMP/mobile.html" 2> "$RUNNER_TEMP/mobile.log"
+          grep -Fq '이번 제작에서 남긴 기준' "$RUNNER_TEMP/mobile.html"
+          grep -Fq 'lab-evidence-grid' "$RUNNER_TEMP/mobile.html"
+          echo "PASS: Public W41 static article has full content and evidence on mobile."

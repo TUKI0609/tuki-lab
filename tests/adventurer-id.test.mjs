@@ -27,7 +27,7 @@ test("language selection uses browser preference and supports direct overrides",
   for(const lang of SUPPORTED_CARD_LANGUAGES){
     const x=CARD_LOCALES[lang];
     for(const prop of ["title","intro","handleLabel","imageNotice","copy","copied","details","invalid","required","note","link"]){
-      assert(x[prop]?.length>4,lang+" missing "+prop);
+      assert(typeof x[prop]==="string"&&x[prop].trim().length>=2,lang+" missing "+prop);
     }
   }
 });

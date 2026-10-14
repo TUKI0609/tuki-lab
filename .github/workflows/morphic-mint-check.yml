@@ -1,0 +1,50 @@
+name: Validate Morphic A Mint staging
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "css/morphic-mint.css"
+      - "index.html"
+      - "projects/index.html"
+      - "prompts/index.html"
+      - "lab/index.html"
+      - "about/index.html"
+      - "activity/index.html"
+      - "tests/morphic-mint.test.mjs"
+      - "scripts/verify-morphic-mint.mjs"
+      - ".github/workflows/morphic-mint-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run regression tests and static site checks
+        run: |
+          set -euo pipefail
+          node --check scripts/verify-morphic-mint.mjs
+          node --test tests/*.test.mjs
+          node scripts/build-lab-search-pages.mjs --check
+      - name: Verify actual browser design and existing features without GA4 sends
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          export CHROME_BIN
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/tuki-morphic-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" || true' EXIT
+          for i in $(seq 1 40); do
+            if curl -fsS http://127.0.0.1:8765/ >/dev/null; then break; fi
+            sleep 0.3
+          done
+          node scripts/verify-morphic-mint.mjs
+          node scripts/verify-prompt-box.mjs

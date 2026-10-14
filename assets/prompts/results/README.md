@@ -1,3 +1,33 @@
+## 1차 실제 연결 준비 (2026-10-14)
+
+**선별된 파일 4개가 체크섬과 함께 확정되었으며** 업로드만 남았습니다.
+이 문서와 `preview-manifest.json`은 PR #11의 feature 브랜치에 반영됐습니다.
+※ 이미지 바이너리는 아직 GitHub 브랜치에 없습니다. 기존 카드의 실제 파일 경로는 바꾸지 않았습니다.
+
+### 업로드 대상 (압축 파일 해제 후 이미지 4개만)
+
+| GitHub 업로드 경로 | 설명 |
+| --- | --- |
+| `assets/prompts/results/guild-actual-output.webp` | 2026-10-09에 만든 TUKI 개인화 CRYPTO SAGA 등록증 **실제 결과물**. 카드 안에 공개 X 핸들이 있음 |
+| `assets/prompts/results/video-hailuo-real-frame.webp` | Hailuo에서 실제 생성한 약 6.6초 영상의 **프레임**. 현재 10초 범용 프롬프트 그대로의 결과물은 아님 |
+| `assets/prompts/results/bookmark-x-post-result.webp` | **생성형 목업**. 실제 X 게시물 캡처가 아님 |
+| `assets/prompts/results/mobile-game-screen-example.webp` | **생성형 목업**. 실제 게임의 오류/수정 검증 스크린샷이 아님 |
+
+준비된 자료는 `tuki-prompt-box-pr11-upload-ready.zip`에 모았습니다. ZIP을 GitHub에 그대로 업로드하지 말고 압축을 풀어서 4개의 .webp 파일만 올리세요.
+
+### GitHub 웹 업로드
+
+1. [feature 브랜치](https://github.com/TUKI0609/tuki-lab/tree/feat/tuki-prompt-box-20261014/assets/prompts/results)에서 **브랜치가 `feat/tuki-prompt-box-20261014`인지 확인**합니다. `main`에서 업로드하면 즉시 공개되므로 안 됩니다.
+2. `assets/prompts/results` 폴더의 **Add file → Upload files**를 클릭합니다.
+3. 위 4개 WebP 파일을 드래그하고, 커밋 대상을 **feature 브랜치**로 지정합니다.
+4. 업로드 후 이 폴더에 정확히 4개 WebP가 표시되는지 확인합니다. (README와 manifest 외에)
+5. 같은 브랜치의 로컬 작업 복제본에서 `node scripts/activate-prompt-previews.mjs --strict`로 4개 원본의 WebP 헤더·바이트 크기·SHA-256를 검사한 후, `--write`로 카드의 `src`, `label`, `note`를 변경해 커밋합니다. 이를 위해 다른 파일을 변경할 필요가 없습니다. 이 작업은 나중에 ChatGPT에 재요청할 수 있습니다.
+6. `Validate TUKI PROMPT BOX staging`, LAB·W41 회귀 GitHub Actions를 재실행해 통과 여부를 확인합니다.
+
+**포함 파일 출처는 중요합니다.** '실제 생성 결과', '기존 영상의 한 프레임', '설명용 이미지'의 차이를 없애지 마세요.
+
+---
+
 # TUKI PROMPT BOX · 미리보기 후보 검증 (2026-10-14)
 
 이 폴더의 실제 미디어 파일은 **아직 feature 브랜치에 업로드되지 않았습니다.**

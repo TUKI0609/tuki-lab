@@ -5,7 +5,9 @@ import {tmpdir} from "node:os";
 import {join} from "node:path";
 const nap=ms=>new Promise(r=>setTimeout(r,ms));
 const profile=await mkdtemp(join(tmpdir(),"adventurer-id-qa-"));
-const chrome=spawn(process.env.CHROME_BIN||"/usr/bin/google-chrome",["--headless=new","--no-sandbox","--disable-dev-shm-usage","--disable-gpu","--no-first-run","--disable-background-networking","--remote-debugging-port=0","--user-data-dir="+profile,"about:blank"],{stdio:"ignore"});
+const chrome=spawn(process.env.CHROME_BIN||"/usr/bin/google-chrome",["--headless=new","--no-sandbox","--disable-dev-shm-usage","--disable-gpu","--no-first-run","--disable-background-networking","--remote-debugging-port=0","--user-data-dir="+profile,"about:blank"],{stdio:["ignore","ignore","pipe"]});
+let chromeStderr="";
+chrome.stderr?.on("data",buf=>{chromeStderr=(chromeStderr+String(buf)).slice(-3000)});
 let ws,seq=0;const pending=new Map();
 function command(method,params={}){
   const id=++seq;
@@ -31,12 +33,12 @@ async function browse(url){
 }
 try{
   let port;
-  for(let i=0;i<100;i++){
+  for(let i=0;i<260;i++){
     try{port=Number((await readFile(join(profile,"DevToolsActivePort"),"utf8")).split("\n")[0]);if(port)break}catch{}
     if(chrome.exitCode!==null)throw Error("Chrome exited: "+chrome.exitCode);
     await nap(130);
   }
-  assert(port);
+  if(!port)throw Error("Chrome remote-debugging port not ready after startup wait: "+chromeStderr);
   const tabs=await(await fetch("http://127.0.0.1:"+port+"/json/list")).json();
   ws=new WebSocket(tabs.find(x=>x.type==="page").webSocketDebuggerUrl);
   await new Promise((resolve,reject)=>{ws.onopen=resolve;ws.onerror=reject});

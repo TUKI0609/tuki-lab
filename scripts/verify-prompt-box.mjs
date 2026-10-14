@@ -53,7 +53,13 @@ try{
   await until(()=>read("document.querySelectorAll('.prompt-card').length===5"),"five cards");
   const initial=await read("({cards:document.querySelectorAll('.prompt-card').length,nav:document.querySelectorAll('#main-nav a').length,copyButtons:document.querySelectorAll('.prompt-card-copy').length,consent:!!document.querySelector('.tuki-privacy-banner'),tracking:document.querySelectorAll('script[src*=\"googletagmanager.com\"]').length})");
   assert.deepEqual(initial,{cards:5,nav:5,copyButtons:5,consent:true,tracking:0});
-  await until(()=>read("[...document.querySelectorAll('.prompt-preview img')].every(i=>i.complete&&i.naturalWidth>0)"),"preview image loading");
+  try{
+    await until(()=>read("[...document.querySelectorAll('.prompt-preview img')].every(i=>i.complete&&i.naturalWidth>0)"),"preview image loading");
+  }catch(error){
+    const images=await read("[...document.querySelectorAll('.prompt-preview img')].map(i=>({src:i.src,complete:i.complete,width:i.naturalWidth,height:i.naturalHeight}))");
+    console.error("Image decode diagnostics:",JSON.stringify(images));
+    throw error;
+  }
   const expectedImages=(await(await fetch("http://127.0.0.1:8765/content/prompts.json")).json()).prompts.filter(p=>p.preview.type==="image").length;
   assert.equal(await read("document.querySelectorAll('.prompt-preview img').length"),expectedImages);
   assert.equal(await read("[...document.querySelectorAll('.prompt-preview-note')].filter(p=>p.textContent.includes('아닙니다')||p.textContent.includes('실제')).length>=2"),true);

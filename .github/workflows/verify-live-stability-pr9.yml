@@ -1,0 +1,42 @@
+name: Verify live PR9 GA4 consent and project images (read-only)
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "scripts/verify-live-stability-pr9.mjs"
+      - ".github/workflows/verify-live-stability-pr9.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  live-production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Confirm deployed pages, sitemap and privacy script links
+        shell: bash
+        run: |
+          set -euo pipefail
+          HOME="https://tuki0609.github.io/tuki-lab"
+          curl --fail --silent --show-error --location "$HOME/" --output "$RUNNER_TEMP/prod-home.html"
+          curl --fail --silent --show-error --location "$HOME/sitemap.xml" --output "$RUNNER_TEMP/prod-sitemap.xml"
+          curl --fail --silent --show-error --location "$HOME/js/core.js" --output "$RUNNER_TEMP/prod-core.js"
+          curl --fail --silent --show-error --location "$HOME/js/project-detail.js" --output "$RUNNER_TEMP/prod-detail.js"
+          grep -Fq 'home-featured-lab' "$RUNNER_TEMP/prod-home.html"
+          grep -Fq 'lutratide-evolution-growth-difference-2026-w41/' "$RUNNER_TEMP/prod-sitemap.xml"
+          grep -Fq 'tuki-world-analytics-consent-v1' "$RUNNER_TEMP/prod-core.js"
+          grep -Fq 'verifiedVideoThumbnails' "$RUNNER_TEMP/prod-detail.js"
+          echo "PASS: Homepage, sitemap and GA4/project JS are deployed."
+      - name: Exercise real GA4 consent and real decoded images in public Chrome
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          export CHROME_BIN
+          node scripts/verify-live-stability-pr9.mjs

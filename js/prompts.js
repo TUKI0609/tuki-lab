@@ -227,7 +227,8 @@ function cardFor(item){
   link.setAttribute("aria-label",item.title+" 공유 링크 복사");
   link.addEventListener("click",()=>{
     const uri=new URL("#"+item.id,location.href).href;
-    copyPrompt(uri,link,"url",isAdventurer?adventurerState.language:null);
+    if(isAdventurer)copyPrompt(uri,link,"url",adventurerState.language);
+    else copyPrompt(uri,link,"url");
   });
   actions.appendChild(link);
   body.appendChild(actions);

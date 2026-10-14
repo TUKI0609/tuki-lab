@@ -46,6 +46,9 @@
 .prompt-card-highlight{box-shadow:0 0 0 2px rgba(114,221,174,.24)}
 .prompt-preview{position:relative;height:232px;overflow:hidden;background:#1b3026;border-bottom:1px solid rgba(255,255,255,.09)}
 .prompt-preview img{display:block;width:100%;height:100%;object-fit:cover}
+.prompt-preview-contain { background:radial-gradient(circle at 50% 24%,rgba(66,120,99,.22),#101a15 70%); }
+.prompt-preview-contain img { object-fit:contain; padding:9px 16px 5px; }
+.prompt-preview img { font-size:0; }
 .prompt-preview-stamp{position:absolute;left:15px;bottom:13px;border:1px solid rgba(238,248,241,.24);border-radius:99px;padding:6px 11px;background:rgba(10,23,17,.85);font-size:.72rem;font-weight:800;color:#e6f5ec;backdrop-filter:blur(12px)}
 .prompt-text-sample{height:100%;display:flex;flex-direction:column;justify-content:center;padding:32px;background:radial-gradient(circle at 90% 0%,rgba(114,221,174,.15),transparent 52%),#15251c}
 .prompt-text-sample p{color:#b6c8b9;font-size:clamp(.95rem,1.5vw,1.15rem);margin:5px 0;line-height:1.48;font-weight:650;word-break:keep-all}

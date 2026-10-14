@@ -1,4 +1,5 @@
 import {loadJson,initI18n,renderNav,setYear,getLanguage} from "./core.js";
+import {CARD_LOCALES,normalizeXHandle,resolveCardLanguage,buildAdventurerPrompt} from "./adventurer-id.mjs";
 
 const BASE="../";
 const collection=document.querySelector("#prompt-grid");
@@ -14,6 +15,7 @@ let prompts=[];
 let selected="all";
 let searchTerm="";
 let statusTimeout;
+const adventurerState={language:resolveCardLanguage(navigator.language),handle:""};
 
 function element(name,className,content){
   const el=document.createElement(name);
@@ -107,11 +109,115 @@ function cardFor(item){
   }
   body.appendChild(tags);
 
+  // Only the Adventurer ID card accepts a handle. The image is attached
+  // later in the AI chat, never transmitted or stored by this website.
+  const isAdventurer=item.id==="pixel-guild-card";
+  let cardPrompt=item.prompt;
+  let refreshAdventurer=()=>{};
+  let handleFeedback;
+  if(isAdventurer){
+    const panel=element("section","prompt-adventurer-form");
+    panel.setAttribute("aria-label","Adventurer ID / 冒険者登録証 / 탐험가 등록증");
+
+    const intro=element("p","prompt-adventurer-intro");
+    panel.appendChild(intro);
+
+    const langLabel=element("span","prompt-adventurer-label");
+    langLabel.id="adventurer-language-label";
+    panel.appendChild(langLabel);
+
+    const langTabs=element("div","prompt-adventurer-languages");
+    langTabs.setAttribute("role","group");
+    langTabs.setAttribute("aria-labelledby",langLabel.id);
+    const langButtons=new Map();
+    for(const [lang,display] of [["KO","한국어"],["EN","English"],["JA","日本語"]]){
+      const btn=element("button","",display);
+      btn.type="button";
+      btn.dataset.lang=lang;
+      btn.setAttribute("aria-pressed",String(lang===adventurerState.language));
+      btn.addEventListener("click",()=>{
+        adventurerState.language=lang;
+        refreshAdventurer();
+      });
+      langButtons.set(lang,btn);
+      langTabs.appendChild(btn);
+    }
+    panel.appendChild(langTabs);
+
+    const handleLabel=element("label","prompt-adventurer-label");
+    const handleId="adventurer-x-handle";
+    handleLabel.htmlFor=handleId;
+    panel.appendChild(handleLabel);
+
+    const input=element("input","prompt-adventurer-handle");
+    input.id=handleId;
+    input.type="text";
+    input.autocomplete="off";
+    input.spellcheck=false;
+    input.maxLength=17; // Accept leading @ and detect invalid input.
+    input.value=adventurerState.handle;
+    panel.appendChild(input);
+
+    handleFeedback=element("p","prompt-adventurer-feedback");
+    handleFeedback.setAttribute("role","status");
+    handleFeedback.setAttribute("aria-live","polite");
+    panel.appendChild(handleFeedback);
+
+    const imageNotice=element("p","prompt-adventurer-photo-note");
+    panel.appendChild(imageNotice);
+
+    const localizedSummary=body.querySelector(".prompt-card-summary");
+    const localizedTitle=body.querySelector("h3");
+
+    refreshAdventurer=(updateCode)=>{
+      const t=CARD_LOCALES[adventurerState.language];
+      panel.lang=t.htmlLang;
+      localizedTitle.textContent=t.title;
+      localizedSummary.textContent=t.summary;
+      intro.textContent=t.intro;
+      langLabel.textContent=t.languageLabel;
+      handleLabel.textContent=t.handleLabel;
+      input.placeholder=t.handlePlaceholder;
+      input.setAttribute("aria-label",t.handleLabel);
+      imageNotice.textContent=t.imageNotice;
+      for(const [lang,btn] of langButtons){
+        btn.setAttribute("aria-pressed",String(lang===adventurerState.language));
+        btn.classList.toggle("is-active",lang===adventurerState.language);
+      }
+      const value=normalizeXHandle(adventurerState.handle);
+      handleFeedback.textContent=value===null?t.invalid:"";
+      input.setAttribute("aria-invalid",String(value===null));
+      cardPrompt=buildAdventurerPrompt(item.prompt,{
+        language:adventurerState.language,
+        handle: value===null?"":adventurerState.handle
+      });
+      if(typeof updateCode==="function")updateCode(cardPrompt,t);
+    };
+    input.addEventListener("input",()=>{
+      adventurerState.handle=input.value;
+      refreshAdventurer(updateDetails);
+    });
+    body.appendChild(panel);
+  }
+
   const actions=element("div","prompt-card-actions");
   const copy=element("button","prompt-card-copy","프롬프트 복사");
   copy.type="button";
   copy.setAttribute("aria-label",item.title+" 프롬프트 복사");
-  copy.addEventListener("click",()=>copyPrompt(item.prompt,copy));
+  copy.addEventListener("click",()=>{
+    if(isAdventurer){
+      const t=CARD_LOCALES[adventurerState.language];
+      const handle=normalizeXHandle(adventurerState.handle);
+      if(!handle){
+        handleFeedback.textContent=handle===null?t.invalid:t.required;
+        const input=body.querySelector(".prompt-adventurer-handle");
+        input?.focus();
+        announce(handle===null?t.invalid:t.required);
+        return;
+      }
+    }
+    copyPrompt(cardPrompt,copy);
+  });
   actions.appendChild(copy);
   const link=element("button","prompt-card-permalink","링크 복사");
   link.type="button";
@@ -129,9 +235,28 @@ function cardFor(item){
   const summary=element("summary","","프롬프트 내용 확인하기");
   details.appendChild(summary);
   const code=element("pre","prompt-card-full");
-  code.appendChild(element("code","",item.prompt));
+  const codeText=element("code","",cardPrompt);
+  code.appendChild(codeText);
   details.appendChild(code);
   body.appendChild(details);
+  if(isAdventurer){
+    const title=body.querySelector("h3");
+    const updateDetails=(prompt,t)=>{
+      codeText.textContent=prompt;
+      summary.textContent=t.details;
+      copy.textContent=t.copy;
+      copy.setAttribute("aria-label",t.copy);
+      copy.lang=t.htmlLang;
+      title.lang=t.htmlLang;
+    };
+    // Keep the input listener's closure updated after the details controls exist.
+    refreshAdventurer(updateDetails);
+    const handleInput=body.querySelector(".prompt-adventurer-handle");
+    handleInput.addEventListener("input",()=>refreshAdventurer(updateDetails));
+    body.querySelectorAll(".prompt-adventurer-languages button").forEach(btn=>{
+      btn.addEventListener("click",()=>refreshAdventurer(updateDetails));
+    });
+  }
 
   card.appendChild(body);
   return card;

@@ -8,6 +8,7 @@
     "ko": {
       "nav.home": "홈",
       "nav.projects": "프로젝트",
+      "nav.prompts": "프롬프트",
       "nav.lab": "제작실",
       "nav.about": "소개",
       "language.switch": "EN",
@@ -37,6 +38,7 @@
       "hero.labQueue": "제작실 대기",
       "hero.enter": "프로젝트 보기",
       "hero.latest": "최근 제작 기록",
+      "hero.prompts": "프롬프트 모음집",
       "hero.note": "완성품보다 과정에 더 많은 흔적이 남습니다.",
       "showcase.now": "대표 프로젝트",
       "showcase.note": "시도 / 수정 / 제작",
@@ -183,6 +185,7 @@
     "en": {
       "nav.home": "Home",
       "nav.projects": "Projects",
+      "nav.prompts": "Prompts",
       "nav.lab": "Lab",
       "nav.about": "About",
       "language.switch": "한글",
@@ -212,6 +215,7 @@
       "hero.labQueue": "Lab queue",
       "hero.enter": "View projects",
       "hero.latest": "Recent build notes",
+      "hero.prompts": "Prompt box",
       "hero.note": "The process leaves more traces than the finished piece.",
       "showcase.now": "Featured projects",
       "showcase.note": "Try / Fix / Build",

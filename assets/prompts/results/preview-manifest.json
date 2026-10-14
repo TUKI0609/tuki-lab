@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "releaseStatus": "awaiting_binary_upload",
+  "description": "Only verified, appropriately labeled creator artifacts are activated once matching WebP files exist on the draft branch.",
+  "sourcePackage": "tuki-prompt-box-pr11-upload-ready.zip",
+  "files": [
+    {
+      "id": "pixel-guild-card",
+      "filename": "guild-actual-output.webp",
+      "sha256": "b1a26bd5591c85f2ac3601b6e0a3566e1a9e3b3a117eae362389deb499a6614a",
+      "bytes": 258024,
+      "width": 800,
+      "height": 1200,
+      "kind": "prior_real_result",
+      "label": "TUKI가 기존 개인화 프롬프트로 생성한 CRYPTO SAGA 등록증",
+      "note": "실제 과거 제작 결과입니다. 지금 공개하는 범용 템플릿과 입력·문구가 달라 동일한 결과를 보장하지 않습니다.",
+      "publicCheck": "X 공개 핸들 @Ty_Tuki0609 기재, 실제 게임 등록증으로 오인 금지"
+    },
+    {
+      "id": "consistent-character-video",
+      "filename": "video-hailuo-real-frame.webp",
+      "sha256": "5484b4424ff0ca6711daf2b1af7537bc9eadbd0e73f6af5e2ef93e76ebb66506",
+      "bytes": 41182,
+      "width": 892,
+      "height": 510,
+      "kind": "real_prior_video_frame",
+      "label": "실제 생성한 Hailuo 영상의 한 장면",
+      "note": "이전에 만든 약 6.6초 영상의 실제 프레임입니다. 카드의 범용 10초 프롬프트를 그대로 실행한 결과는 아닙니다."
+    },
+    {
+      "id": "bookmark-x-post",
+      "filename": "bookmark-x-post-result.webp",
+      "sha256": "d5fc422b37d6fcf8c918ce753600d84d1afa8a2e28d7b12edda2fed14a289ed9",
+      "bytes": 49020,
+      "width": 950,
+      "height": 713,
+      "kind": "illustrative_ai_mockup",
+      "label": "AI로 제작한 정보형 글 구성 예시",
+      "note": "설명을 돕는 생성형 목업입니다. 실제 X 게시물 화면이나 검증된 조회수·성과가 아닙니다."
+    },
+    {
+      "id": "mobile-game-screen",
+      "filename": "mobile-game-screen-example.webp",
+      "sha256": "f9b8f67eada2818b3cdcd56bc3fb2662dba66628b20cdc56b602d350c662a90d",
+      "bytes": 92856,
+      "width": 950,
+      "height": 713,
+      "kind": "illustrative_ai_mockup",
+      "label": "AI로 제작한 모바일 화면 수정 방향 예시",
+      "note": "설명을 돕는 가상 비교 이미지입니다. 실제 게임 화면이나 수정된 코드의 검증 결과가 아닙니다."
+    }
+  ]
+}

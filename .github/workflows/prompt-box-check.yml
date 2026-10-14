@@ -42,8 +42,6 @@ jobs:
           node --test tests/*.test.mjs
       - name: Verify static LAB articles and sitemap remain reproducible
         run: node scripts/build-lab-search-pages.mjs --check
-      - name: Install CJK fonts for tri-language visual review
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends fonts-noto-cjk
       - name: Exercise live browser clipboard, search and mobile navigation on staged site
         shell: bash
         run: |
@@ -57,4 +55,4 @@ jobs:
             if curl -fsS http://127.0.0.1:8765/prompts/ > /dev/null; then break; fi
             sleep 1
           done
-          CAPTURE_REVIEW=1 node scripts/verify-prompt-box.mjs
+          node scripts/verify-prompt-box.mjs

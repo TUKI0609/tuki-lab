@@ -5837,16 +5837,43 @@ a.project-evidence-card:hover {
   .site-header .nav > nav a { font-size: .69rem; }
 }
 
-/* TUKI PROMPT BOX: keep new nav item discoverable on narrow screens.
-   Preserve Home + Projects; show Prompts in place of hidden secondary tabs. */
+/* TUKI PROMPT BOX: the mobile header gives every tab a visible touch target.
+   Existing legacy nth-child rules formerly hid LAB/About on small screens. */
 @media (max-width: 760px) {
-  .nav > #main-nav { min-width: 0; overflow-x: auto; scrollbar-width: none; gap: 10px; }
-  .nav > #main-nav::-webkit-scrollbar { display: none; }
-  .nav > #main-nav a { flex-shrink: 0; white-space: nowrap; }
-  .nav > #main-nav a:nth-child(3) { display: inline-flex; }
-  .nav > #main-nav a:nth-child(4),
-  .nav > #main-nav a:nth-child(5) { display: none; }
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .nav > .brand { order: 1; min-width: 0; }
+  .nav > .language-switch { order: 2; margin-left: auto; }
+  .nav > #main-nav {
+    order: 3;
+    flex: 1 0 100%;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow: visible;
+    gap: 4px;
+  }
+  .nav > #main-nav a:nth-child(n) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 auto;
+    padding: 6px 3px;
+    white-space: nowrap;
+    font-size: clamp(.68rem, 2.6vw, .78rem);
+  }
   .nav > #main-nav a[href$="/prompts/"] { color: #95edc0; font-weight: 900; }
+  .home-v4 .live-banner { top: 102px; }
 }
 
 /* Home teaser for the new public prompt library. */

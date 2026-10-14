@@ -1,5 +1,43 @@
 [
   {
+    "id": "63a1214cbbd50dfb",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "GitHub Pages 이미지 안 나올 때? AI로 만든 홈페이지 이미지 깨짐 해결법",
+    "summary": "AI로 홈페이지를 만들었는데, 미리보기에서는 멀쩡했던 이미지가 실제 홈페이지에서는 보이지 않는 경험 있으신가요? * 무료 홈페이지 제작 도전해보고 싶다면 제가 X에서 포스팅한 내용 참고하시면 쉽게 생성할 수 있을 거에요 : https://x.com/Ty_Tuki0609/status/2107689599137107968?s=",
+    "url": "https://blog.naver.com/ty_free/224441299453?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-14T03:42:54.000Z",
+    "detectedAt": "2026-10-14T08:45:17.900Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "tuki-brand",
+      "score": 95
+    }
+  },
+  {
+    "id": "908d31a58f11bf5d",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "배그 벤틀리 어떤 차에 적용될까? 가격·얻는법·플라잉 스퍼·GTC 총정리",
+    "summary": "배틀그라운드에 벤틀리가 들어옵니다. 배그 차량을 기다리신 분들께는 정말 반가운 소식이겠네요!! 2026년 10월 14일 PC 43.2 업데이트를 통해 PUBG x Bentley 콜라보레이션이 적용되는데요. 단순히 로비 장식용 차량이 아니라 실제 게임 내 기존 차량 외형을 벤틀리 모델로 바꾸는 스페셜 차량 스킨 방식입니다.",
+    "url": "https://blog.naver.com/abb7664/224441287850?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-14T03:30:10.000Z",
+    "detectedAt": "2026-10-14T08:45:19.085Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "8d4fc99a1433d81f",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -361,25 +399,6 @@
     }
   },
   {
-    "id": "ff6806f53a976c56",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "서든어택 16:9 해상도 어떻게 바뀌나? 4:3 차이부터 베타 참여 방법까지",
-    "summary": "서든어택이 드디어!!!!!! 16:9 화면비를 테스트하고 있습니다. 기존 서든어택은 4:3 화면비를 중심으로 플레이하는 경우가 많았는데요. 이번 베타 테스트에서는 최대 2560×1440 해상도의 16:9 환경을 직접 사용할 수 있습니다. 결론부터 말하면 지금 당장 정식 서버 전체가 16:9로 바뀐 것은 아닙니다. 10월 ",
-    "url": "https://blog.naver.com/abb7664/224433252234?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-06T09:41:55.000Z",
-    "detectedAt": "2026-10-06T15:58:19.719Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "bf8b90b413231cf9",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -472,25 +491,6 @@
       "decision": "include",
       "reason": "project:momo",
       "score": 100
-    }
-  },
-  {
-    "id": "8824bedd4d5a4163",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "바이브코딩을 하다 보면 프롬프트가 점점 길어질 때가 있습니다.",
-    "summary": "AI가 원하는 결과를 만들어주지 않으면 이런 생각부터 들거든요. '내가 설명을 너무 짧게 했나?' 그래서 요구사항을 하나씩 추가합니다. 디자인도 설명하고, 버튼 위치도 설명하고, 기존 기능도 설명하고, 오류가 생기면 안 된다는 내용까지 넣습니다. 어느 순간 프롬프트 하나가 작은 기획서처럼 길어집니다. 그런데 직접 바이브코",
-    "url": "https://blog.naver.com/ty_free/224430305987?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-03T05:37:03.000Z",
-    "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
     }
   },
   {

@@ -1,5 +1,24 @@
 [
   {
+    "id": "63a1214cbbd50dfb",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "GitHub Pages 이미지 안 나올 때? AI로 만든 홈페이지 이미지 깨짐 해결법",
+    "summary": "AI로 홈페이지를 만들었는데, 미리보기에서는 멀쩡했던 이미지가 실제 홈페이지에서는 보이지 않는 경험 있으신가요? * 무료 홈페이지 제작 도전해보고 싶다면 제가 X에서 포스팅한 내용 참고하시면 쉽게 생성할 수 있을 거에요 : https://x.com/Ty_Tuki0609/status/2107689599137107968?s=",
+    "url": "https://blog.naver.com/ty_free/224441299453?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-14T03:42:54.000Z",
+    "detectedAt": "2026-10-14T08:45:17.900Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "tuki-brand",
+      "score": 95
+    }
+  },
+  {
     "id": "8d4fc99a1433d81f",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -244,25 +263,6 @@
       "decision": "include",
       "reason": "project:momo",
       "score": 100
-    }
-  },
-  {
-    "id": "8824bedd4d5a4163",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "바이브코딩을 하다 보면 프롬프트가 점점 길어질 때가 있습니다.",
-    "summary": "AI가 원하는 결과를 만들어주지 않으면 이런 생각부터 들거든요. '내가 설명을 너무 짧게 했나?' 그래서 요구사항을 하나씩 추가합니다. 디자인도 설명하고, 버튼 위치도 설명하고, 기존 기능도 설명하고, 오류가 생기면 안 된다는 내용까지 넣습니다. 어느 순간 프롬프트 하나가 작은 기획서처럼 길어집니다. 그런데 직접 바이브코",
-    "url": "https://blog.naver.com/ty_free/224430305987?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-03T05:37:03.000Z",
-    "detectedAt": "2026-10-06T08:57:11.322Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
     }
   },
   {

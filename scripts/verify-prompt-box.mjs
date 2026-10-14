@@ -64,7 +64,7 @@ try{
   }
   const expectedImages=(await(await fetch("http://127.0.0.1:8765/content/prompts.json")).json()).prompts.filter(p=>p.preview.type==="image").length;
   assert.equal(await read("document.querySelectorAll('.prompt-preview img').length"),expectedImages);
-  assert.equal(await read("[...document.querySelectorAll('.prompt-preview-note')].filter(p=>p.textContent.includes('아닙니다')||p.textContent.includes('실제')).length>=2"),true);
+  assert.equal(await read("[...document.querySelectorAll('.prompt-preview-note')].filter(p=>/아닙니다|실제|not an actual|not a verified|not a before|not a screenshot|ではありません|ではなく|限りません/.test(p.textContent)).length>=2"),true);
   console.log("PASS: five cards, "+expectedImages+" decoded previews, honest source notes, consent-first setup");
   await read("document.querySelector('[data-category=\"video\"]').click()");
   assert.equal(await read("document.querySelectorAll('.prompt-card').length"),2);
@@ -76,7 +76,7 @@ try{
   await read("document.querySelector('.prompt-card-copy').click()");
   await until(()=>read("typeof window.__copied==='string'"),"clipboard copy");
   const copied=await read("({length:window.__copied.length,contents:window.__copied.includes('주제:'),feedback:document.querySelector('.prompt-card-copy').textContent,status:document.querySelector('#prompt-status').textContent})");
-  assert(copied.length>300&&copied.contents&&copied.feedback.includes("복사 완료")&&copied.status.includes("복사"));
+  assert(copied.length>300&&copied.contents&&/Copied|복사|コピー/.test(copied.feedback)&&/copied|복사|コピー/i.test(copied.status));
   console.log("PASS: category filter, search, full text clipboard and visible feedback");
   await read("document.querySelector('.prompt-card-permalink').click()");
   await until(()=>read("window.__copied?.includes('/prompts/#bookmark-x-post')"),"per-prompt link copy");
@@ -95,6 +95,9 @@ try{
   for(const lang of ["ko","en","ja"]){
     await read("document.querySelector('#pixel-guild-card [data-card-language="+JSON.stringify(lang)+"]').click()");
     assert.equal(await read("document.querySelector('#pixel-guild-card').lang"),lang);
+    assert.equal(await read("document.documentElement.lang"),lang);
+    assert.equal(await read("document.querySelector('.language-switch [data-language="+JSON.stringify(lang)+"]').getAttribute('aria-pressed')"),"true");
+    assert.equal(await read("document.querySelector('.prompt-box-jump').textContent.trim().length>4"),true);
     assert.equal(await read("document.querySelector('#pixel-guild-card [data-card-language="+JSON.stringify(lang)+"]').getAttribute('aria-pressed')"),"true");
     await read("document.querySelector('#pixel-guild-card .prompt-card-copy').click()");
     await until(()=>read("window.__copied?.includes('CARD LANGUAGE: "+lang.toUpperCase()+"')"),"language copy "+lang);
@@ -104,6 +107,8 @@ try{
   console.log("PASS: invalid handles blocked, browser-localized RPG card and three generated language variants");
   if(process.env.CAPTURE_REVIEW==="1"){
     await read("document.querySelector('#pixel-guild-card [data-card-language=\"en\"]').click()");
+    await read("document.querySelector('.tuki-privacy-banner button:last-child')?.click()");
+    await nap(120);
     await read("document.querySelector('#pixel-guild-card').scrollIntoView({block:'start'})");
     await nap(300);
     const desktop=await command("Page.captureScreenshot",{format:"jpeg",quality:64});

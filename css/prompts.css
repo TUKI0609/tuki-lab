@@ -139,3 +139,32 @@
   .prompt-guild-controls{padding:13px}
   .prompt-guild-languages button{flex:1 1 75px}
 }
+
+
+/* Three-language PROMPT BOX interface without changing the rest of TUKI WORLD. */
+.prompt-box-page .language-switch{
+  grid-template-columns:repeat(3,minmax(0,max-content));
+  gap:3px;
+}
+.prompt-box-page .language-switch button{
+  min-width:0;padding:0 9px;white-space:nowrap;font-size:.76rem;font-weight:750;
+}
+.prompt-box-jump{
+  display:inline-flex;align-items:center;justify-content:center;
+  max-width:100%;min-height:42px;box-sizing:border-box;
+  margin-top:18px;padding:10px 15px;
+  border:1px solid rgba(114,221,174,.35);
+  border-radius:11px;background:rgba(114,221,174,.13);
+  color:#adf2cb;font-size:.88rem;font-weight:900;text-decoration:none;
+}
+.prompt-box-jump:hover{background:rgba(114,221,174,.22)}
+.prompt-original-language-note{
+  color:#aabcae;font-size:.78rem;line-height:1.55;
+  padding-top:8px;
+}
+@media(max-width:560px){
+  .prompt-box-page .language-switch button{
+    padding:0 6px;font-size:.68rem;
+  }
+  .prompt-box-jump{width:100%}
+}

@@ -99,3 +99,100 @@
  .prompt-card-copy{flex:1 1 170px}
  .prompt-box-guide{margin-top:32px}
 }
+
+
+/* X activity-based Adventurer ID: standalone multilingual controls.
+ * No upload form: users attach the source image in their AI chat. */
+.prompt-card .prompt-adventurer-form{
+  display:grid;
+  gap:10px;
+  padding:16px;
+  margin:2px 0 18px;
+  background:#1b1b1b;
+  border:1px solid rgba(229,231,235,.17);
+  border-radius:10px;
+  min-width:0;
+}
+.prompt-card .prompt-adventurer-intro{
+  margin:0 0 3px;
+  color:#f0f5f1;
+  font-size:.9rem;
+  line-height:1.55;
+  font-weight:700;
+  overflow-wrap:anywhere;
+}
+.prompt-card .prompt-adventurer-label{
+  display:block;
+  color:#d7e6dc;
+  font-size:.8rem;
+  font-weight:700;
+  line-height:1.4;
+  margin-top:5px;
+}
+.prompt-card .prompt-adventurer-languages{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:6px;
+}
+.prompt-card .prompt-adventurer-languages button{
+  min-width:0;
+  min-height:42px;
+  border:1px solid rgba(229,231,235,.19);
+  background:#292929;
+  color:#d9e3dc;
+  border-radius:7px;
+  padding:9px 6px;
+  font:inherit;
+  font-size:.79rem;
+  font-weight:600;
+  cursor:pointer;
+  white-space:nowrap;
+}
+.prompt-card .prompt-adventurer-languages button[aria-pressed="true"]{
+  border-color:#7ce5be;
+  color:#08160f;
+  background:#7ce5be;
+}
+.prompt-card .prompt-adventurer-handle{
+  display:block;
+  box-sizing:border-box;
+  min-width:0;
+  width:100%;
+  min-height:46px;
+  padding:10px 13px;
+  background:#101010;
+  color:#f3faf5;
+  border:1px solid rgba(229,231,235,.3);
+  border-radius:7px;
+  font:inherit;
+  font-size:1rem;
+}
+.prompt-card .prompt-adventurer-handle:focus-visible{
+  outline:2px solid #7ce5be;
+  outline-offset:2px;
+}
+.prompt-card .prompt-adventurer-handle[aria-invalid="true"]{
+  border-color:#f5acac;
+}
+.prompt-card .prompt-adventurer-feedback{
+  margin:0;
+  color:#ffbabb;
+  font-size:.79rem;
+  line-height:1.4;
+  min-height:0;
+}
+.prompt-card .prompt-adventurer-feedback:empty{display:none}
+.prompt-card .prompt-adventurer-photo-note{
+  margin:2px 0 0;
+  padding-left:12px;
+  border-left:2px solid #7ce5be;
+  font-size:.77rem;
+  line-height:1.65;
+  color:#bdcfc2;
+  overflow-wrap:anywhere;
+}
+.prompt-card .prompt-card-full code{overflow-wrap:anywhere}
+@media(max-width:420px){
+ .prompt-card .prompt-adventurer-form{padding:12px}
+ .prompt-card .prompt-adventurer-languages button{font-size:.73rem}
+}

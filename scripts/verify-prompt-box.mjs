@@ -77,6 +77,24 @@ try{
   await browse("http://127.0.0.1:8765/prompts/#pixel-guild-card");
   await until(()=>read("document.querySelector('#pixel-guild-card')?.classList.contains('prompt-card-highlight')"),"deep link");
   console.log("PASS: direct deep-link to one individual prompt");
+
+  assert.equal(await read("document.querySelector('#pixel-guild-card .prompt-card-copy').disabled"),true);
+  await read("(()=>{const i=document.querySelector('#guild-x-handle');i.value='bad handle!';i.dispatchEvent(new Event('input',{bubbles:true}))})()");
+  assert.equal(await read("document.querySelector('#pixel-guild-card .prompt-card-copy').disabled"),true);
+  await read("(()=>{const i=document.querySelector('#guild-x-handle');i.value='Ty_Tuki0609';i.dispatchEvent(new Event('input',{bubbles:true}))})()");
+  assert.equal(await read("document.querySelector('#pixel-guild-card .prompt-card-copy').disabled"),false);
+  await read("Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async s=>{window.__copied=s}}})");
+  for(const lang of ["ko","en","ja"]){
+    await read("document.querySelector('#pixel-guild-card [data-card-language="+JSON.stringify(lang)+"]').click()");
+    assert.equal(await read("document.querySelector('#pixel-guild-card').lang"),lang);
+    assert.equal(await read("document.querySelector('#pixel-guild-card [data-card-language="+JSON.stringify(lang)+"]').getAttribute('aria-pressed')"),"true");
+    await read("document.querySelector('#pixel-guild-card .prompt-card-copy').click()");
+    await until(()=>read("window.__copied?.includes('CARD LANGUAGE: "+lang.toUpperCase()+"')"),"language copy "+lang);
+    assert(await read("window.__copied.includes('X HANDLE: @Ty_Tuki0609')"));
+    assert(await read("window.__copied.includes('Never invent X posts')"));
+  }
+  console.log("PASS: invalid handles blocked, browser-localized RPG card and three generated language variants");
+
   await command("Emulation.setDeviceMetricsOverride",{width:390,height:844,deviceScaleFactor:1,mobile:true});
   await nap(330);
   const mob=await read("(()=>{const n=[...document.querySelectorAll('#main-nav a')];return {width:innerWidth,doc:document.documentElement.scrollWidth,visible:n.filter(x=>getComputedStyle(x).display!=='none').length,right:n.at(-1).getBoundingClientRect().right}})()");

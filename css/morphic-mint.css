@@ -285,6 +285,26 @@ body.morphic-mint-site {
 }
 .morphic-mint-site.prompt-box-page .prompt-box-guide { border-color:rgba(229,231,235,.15); }
 
+/* Long third-party activity titles are not guaranteed to contain spaces.
+ * Constrain the content's intrinsic width instead of hiding horizontal overflow. */
+.morphic-mint-site[data-page="activity"] .activity-grid-full {
+  min-width:0;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.morphic-mint-site[data-page="activity"] .activity-item {
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+.morphic-mint-site[data-page="activity"] .activity-item :is(a,strong,p,span) {
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+@media(max-width:720px) {
+  .morphic-mint-site[data-page="activity"] .activity-grid-full {
+    grid-template-columns:minmax(0,1fr);
+  }
+}
+
 /* Do not break narrow-screen top navigation or hide existing tab labels. */
 @media(max-width:900px){
   .morphic-mint-site.home-v4 .hero-v4 {

@@ -53,6 +53,8 @@ try{
   await until(()=>read("document.querySelectorAll('.prompt-card').length===5"),"five cards");
   const initial=await read("({cards:document.querySelectorAll('.prompt-card').length,nav:document.querySelectorAll('#main-nav a').length,copyButtons:document.querySelectorAll('.prompt-card-copy').length,consent:!!document.querySelector('.tuki-privacy-banner'),tracking:document.querySelectorAll('script[src*=\"googletagmanager.com\"]').length})");
   assert.deepEqual(initial,{cards:5,nav:5,copyButtons:5,consent:true,tracking:0});
+  // Force off-screen lazy images to load in QA; production keeps native lazy loading.
+  await read("[...document.querySelectorAll('.prompt-preview img')].forEach(i=>i.loading='eager')");
   try{
     await until(()=>read("[...document.querySelectorAll('.prompt-preview img')].every(i=>i.complete&&i.naturalWidth>0)"),"preview image loading");
   }catch(error){

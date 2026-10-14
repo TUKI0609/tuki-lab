@@ -24,10 +24,14 @@ jobs:
         run: |
           set -euo pipefail
           HOME="https://tuki0609.github.io/tuki-lab"
-          curl --fail --silent --show-error --location "$HOME/" | grep -Fq 'home-featured-lab'
-          curl --fail --silent --show-error --location "$HOME/sitemap.xml" | grep -Fq 'lutratide-evolution-growth-difference-2026-w41/'
-          curl --fail --silent --show-error --location "$HOME/js/core.js" | grep -Fq 'tuki-world-analytics-consent-v1'
-          curl --fail --silent --show-error --location "$HOME/js/project-detail.js" | grep -Fq 'verifiedVideoThumbnails'
+          curl --fail --silent --show-error --location "$HOME/" --output "$RUNNER_TEMP/prod-home.html"
+          curl --fail --silent --show-error --location "$HOME/sitemap.xml" --output "$RUNNER_TEMP/prod-sitemap.xml"
+          curl --fail --silent --show-error --location "$HOME/js/core.js" --output "$RUNNER_TEMP/prod-core.js"
+          curl --fail --silent --show-error --location "$HOME/js/project-detail.js" --output "$RUNNER_TEMP/prod-detail.js"
+          grep -Fq 'home-featured-lab' "$RUNNER_TEMP/prod-home.html"
+          grep -Fq 'lutratide-evolution-growth-difference-2026-w41/' "$RUNNER_TEMP/prod-sitemap.xml"
+          grep -Fq 'tuki-world-analytics-consent-v1' "$RUNNER_TEMP/prod-core.js"
+          grep -Fq 'verifiedVideoThumbnails' "$RUNNER_TEMP/prod-detail.js"
           echo "PASS: Homepage, sitemap and GA4/project JS are deployed."
       - name: Exercise real GA4 consent and real decoded images in public Chrome
         shell: bash

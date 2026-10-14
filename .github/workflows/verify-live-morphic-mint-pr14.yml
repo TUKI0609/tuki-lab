@@ -1,0 +1,54 @@
+name: Verify deployed Morphic A mint (read-only)
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "scripts/verify-live-morphic-mint-pr14.mjs"
+      - "scripts/verify-live-prompt-box-pr14.mjs"
+      - ".github/workflows/verify-live-morphic-mint-pr14.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-public-github-pages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Read-only public HTML, CSS, JSON and asset availability
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="https://tuki0609.github.io/tuki-lab"
+          for PAGE in / /projects/ /prompts/ /lab/ /about/ /activity/; do
+            echo "Checking public $BASE$PAGE"
+            FILE="$RUNNER_TEMP/route-$(printf '%s' "$PAGE" | tr -cd '[:alnum:]' | head -c 48).html"
+            curl --fail --silent --show-error --location --retry 4 --retry-delay 2 "$BASE$PAGE" --output "$FILE"
+            grep -Fq "morphic-mint-site" "$FILE"
+            grep -Fq "morphic-mint.css" "$FILE"
+          done
+          curl --fail --silent --show-error --location --retry 4 "$BASE/css/morphic-mint.css" --output "$RUNNER_TEMP/morphic-mint.css"
+          curl --fail --silent --show-error --location --retry 4 "$BASE/content/prompts.json" --output "$RUNNER_TEMP/prompts.json"
+          curl --fail --silent --show-error --location --retry 4 "$BASE/assets/projects/crypto-saga/preview.svg" --output "$RUNNER_TEMP/original-prompt-preview.svg"
+          grep -Fq -- "--accent: #7ce5be" "$RUNNER_TEMP/morphic-mint.css"
+          grep -Fq ".morphic-mint-site" "$RUNNER_TEMP/morphic-mint.css"
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+          const data=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+"/prompts.json","utf8"));
+          if(data.prompts.length!==5)throw Error("PR #13 draft was unexpectedly deployed");
+          console.log("PASS: six live routes, scoped mint CSS and original five prompt records");
+          NODE
+      - name: Real Chrome verification: desktop, mobile, carousel, prompts, consent and copy
+        shell: bash
+        run: |
+          set -euo pipefail
+          export CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          node --check scripts/verify-live-morphic-mint-pr14.mjs
+          node --check scripts/verify-live-prompt-box-pr14.mjs
+          node scripts/verify-live-morphic-mint-pr14.mjs
+          node scripts/verify-live-prompt-box-pr14.mjs

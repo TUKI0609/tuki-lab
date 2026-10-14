@@ -83,6 +83,84 @@ function previewFor(item){
   return box;
 }
 
+function guildControls(item,card,copy,link,details,code,title,description,tool,note,stamp){
+  const panel=element("div","prompt-guild-controls");
+  const headline=element("h4","prompt-guild-heading");
+  const intro=element("p","prompt-guild-intro");
+  panel.append(headline,intro);
+  const handleLabel=element("label","prompt-guild-label");
+  const input=element("input","prompt-guild-input");
+  input.id="guild-x-handle";
+  input.type="text";
+  input.autocomplete="off";
+  input.spellcheck=false;
+  input.maxLength=16;
+  input.value=guildHandle;
+  handleLabel.htmlFor=input.id;
+  panel.append(handleLabel,input);
+  const validation=element("p","prompt-guild-validation");
+  validation.setAttribute("aria-live","polite");
+  panel.appendChild(validation);
+  const languageLabel=element("p","prompt-guild-label");
+  const languages=element("div","prompt-guild-languages");
+  languages.setAttribute("role","group");
+  const buttons=new Map();
+  for(const [lang,label] of [["ko","한국어"],["en","English"],["ja","日本語"]]){
+    const button=element("button","",label);
+    button.type="button";
+    button.dataset.cardLanguage=lang;
+    button.addEventListener("click",()=>{
+      guildLanguage=lang;
+      refresh();
+    });
+    languages.appendChild(button);
+    buttons.set(lang,button);
+  }
+  panel.append(languageLabel,languages);
+  const imageHint=element("p","prompt-guild-hint");
+  const browseHint=element("p","prompt-guild-hint");
+  panel.append(imageHint,browseHint);
+
+  function refresh(){
+    const ui=GUILD_UI[guildLanguage];
+    const handle=normalizeXHandle(guildHandle);
+    card.lang=guildLanguage;
+    title.textContent=ui.title;
+    description.textContent=ui.summary;
+    tool.textContent=ui.tool;
+    note.textContent=ui.note;
+    if(stamp)stamp.textContent=ui.previewLabel;
+    headline.textContent=ui.heading;
+    intro.textContent=ui.intro;
+    handleLabel.textContent=ui.handle;
+    input.placeholder=ui.placeholder;
+    input.setAttribute("aria-label",ui.handle);
+    languageLabel.textContent=ui.language;
+    languages.setAttribute("aria-label",ui.language);
+    for(const [lang,button] of buttons){
+      button.setAttribute("aria-pressed",String(lang===guildLanguage));
+      button.classList.toggle("is-active",lang===guildLanguage);
+    }
+    imageHint.textContent=ui.image;
+    browseHint.textContent=ui.browsing;
+    validation.textContent=handle ? ui.ready : guildHandle.trim() ? ui.invalid : "";
+    validation.classList.toggle("is-error",!!guildHandle.trim()&&!handle);
+    copy.disabled=!handle;
+    copy.textContent=ui.copy;
+    copy.setAttribute("aria-label",ui.copy);
+    link.textContent=ui.link;
+    link.setAttribute("aria-label",ui.link);
+    details.querySelector("summary").textContent=ui.details;
+    code.textContent=handle ? buildGuildPrompt(item.prompt,guildHandle,guildLanguage) : ui.preview;
+  }
+  input.addEventListener("input",()=>{
+    guildHandle=input.value;
+    refresh();
+  });
+  refresh();
+  return panel;
+}
+
 function cardFor(item){
   const card=element("article","prompt-card");
   card.id=item.id;
@@ -92,11 +170,13 @@ function cardFor(item){
   const body=element("div","prompt-card-body");
   const meta=element("div","prompt-card-meta");
   meta.appendChild(element("span","prompt-card-category",categories.get(item.category)||item.category));
-  meta.appendChild(element("span","prompt-card-tool",item.tool));
+  const tool=element("span","prompt-card-tool",item.tool);
+  meta.appendChild(tool);
   body.appendChild(meta);
-  body.appendChild(element("h3","",item.title));
-  body.appendChild(element("p","prompt-card-summary",item.summary));
-  body.appendChild(element("p","prompt-preview-note",item.preview.note));
+  const title=element("h3","",item.title);
+  const description=element("p","prompt-card-summary",item.summary);
+  const note=element("p","prompt-preview-note",item.preview.note);
+  body.append(title,description,note);
   if(item.preview.sourceUrl && /^https:\/\/(www\.)?youtube\.com\//.test(item.preview.sourceUrl)){
     const source=element("a","prompt-preview-source",item.preview.sourceLabel||"제작 영상 보기 ↗");
     source.href=item.preview.sourceUrl;
@@ -114,7 +194,12 @@ function cardFor(item){
   const copy=element("button","prompt-card-copy","프롬프트 복사");
   copy.type="button";
   copy.setAttribute("aria-label",item.title+" 프롬프트 복사");
-  copy.addEventListener("click",()=>copyPrompt(item.prompt,copy));
+  copy.addEventListener("click",()=>{
+    if(item.id==="pixel-guild-card"){
+      if(!normalizeXHandle(guildHandle))return;
+      copyPrompt(buildGuildPrompt(item.prompt,guildHandle,guildLanguage),copy,"guild");
+    }else copyPrompt(item.prompt,copy);
+  });
   actions.appendChild(copy);
   const link=element("button","prompt-card-permalink","링크 복사");
   link.type="button";
@@ -122,7 +207,7 @@ function cardFor(item){
   link.setAttribute("aria-label",item.title+" 공유 링크 복사");
   link.addEventListener("click",()=>{
     const uri=new URL("#"+item.id,location.href).href;
-    copyPrompt(uri,link,"url");
+    copyPrompt(uri,link,item.id==="pixel-guild-card" ? "guild-url" : "url");
   });
   actions.appendChild(link);
   body.appendChild(actions);
@@ -134,6 +219,10 @@ function cardFor(item){
   const code=element("pre","prompt-card-full");
   code.appendChild(element("code","",item.prompt));
   details.appendChild(code);
+  if(item.id==="pixel-guild-card"){
+    const stamp=preview.querySelector(".prompt-preview-stamp");
+    body.insertBefore(guildControls(item,card,copy,link,details,code,title,description,tool,note,stamp),actions);
+  }
   body.appendChild(details);
 
   card.appendChild(body);

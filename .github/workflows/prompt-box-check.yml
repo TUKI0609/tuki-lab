@@ -33,6 +33,8 @@ jobs:
         run: |
           node --check js/prompts.js
           node --check scripts/verify-prompt-box.mjs
+          node --check scripts/activate-prompt-previews.mjs
+          node scripts/activate-prompt-previews.mjs --check
           node --test tests/*.test.mjs
       - name: Verify static LAB articles and sitemap remain reproducible
         run: node scripts/build-lab-search-pages.mjs --check

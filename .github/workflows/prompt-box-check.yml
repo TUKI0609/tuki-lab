@@ -11,6 +11,7 @@ on:
       - "index.html"
       - "js/prompts.js"
       - "js/guild-card.mjs"
+      - "js/prompt-page-l10n.mjs"
       - "css/prompts.css"
       - "css/style.css"
       - "scripts/verify-prompt-box.mjs"
@@ -34,12 +35,15 @@ jobs:
         run: |
           node --check js/prompts.js
           node --check js/guild-card.mjs
+          node --check js/prompt-page-l10n.mjs
           node --check scripts/verify-prompt-box.mjs
           node --check scripts/activate-prompt-previews.mjs
           node scripts/activate-prompt-previews.mjs --check
           node --test tests/*.test.mjs
       - name: Verify static LAB articles and sitemap remain reproducible
         run: node scripts/build-lab-search-pages.mjs --check
+      - name: Install CJK fonts for tri-language visual review
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends fonts-noto-cjk
       - name: Exercise live browser clipboard, search and mobile navigation on staged site
         shell: bash
         run: |

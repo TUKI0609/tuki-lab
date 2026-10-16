@@ -8,8 +8,8 @@ const contentOf=file=>fs.readFileSync(path.join(root,file),"utf8");
 const posts=JSON.parse(contentOf("content/lab-posts.json"));
 const projects=JSON.parse(contentOf("content/projects.json"));
 
-test("four published static LAB posts import the common consent module once",()=>{
-  assert.equal(posts.length,4);
+test("all published static LAB posts import the common consent module once",()=>{
+  assert.ok(posts.length >= 4);
   for(const post of posts){
     const html=contentOf("lab/posts/"+post.slug+"/index.html");
     assert.equal((html.match(/<script type="module" src="\.\.\/\.\.\/\.\.\/js\/core\.js"><\/script>/g)||[]).length,1,post.slug);

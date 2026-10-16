@@ -93,3 +93,18 @@ test("existing approved unlinked articles remain grandfathered", () => {
   const f=JSON.parse(JSON.stringify(b));
   assert.deepEqual(checkPublicationChange(b,f),[]);
 });
+
+test("approved editorial revision can update public how-to text without changing article identity",()=>{
+  const old=prior();const f=JSON.parse(JSON.stringify(old));
+  const s=JSON.stringify(old.posts[0]);let h=2166136261;for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619);
+  f.posts[0]={...f.posts[0],title:"쉽게 따라 하는 영상 제작",summary:"초보자 제작 방법",updatedAt:"2026-10-16",
+    editorialRevision:{version:2,approvedBy:"TUKI",approvedAt:"2026-10-16T08:00:00Z",
+      reason:"사용자 승인한 공개 글 사용법 개선",previousFingerprint:s.length+":"+(h>>>0).toString(16)}};
+  assert.deepEqual(checkPublicationChange(old,f),[]);
+  const unsafe=JSON.parse(JSON.stringify(f));unsafe.posts[0].project="unrelated";
+  assert(checkPublicationChange(old,unsafe).length>0);
+  const missing=JSON.parse(JSON.stringify(f));missing.posts[0].editorialRevision.previousFingerprint="invalid";
+  assert(checkPublicationChange(old,missing).length>0);
+  const replaced=JSON.parse(JSON.stringify(f));replaced.posts[0].sources=[{label:"evil",title:"oops",url:"https://example.org"}];
+  assert(checkPublicationChange(old,replaced).length>0);
+});

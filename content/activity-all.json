@@ -1,5 +1,43 @@
 [
   {
+    "id": "db3ed81604d2a44f",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "구글 Flow 캐릭터 얼굴이 계속 바뀐다면? 일관성 유지하는 3가지 방법",
+    "summary": "AI로 같은 캐릭터 영상을 만들었는데, 장면마다 얼굴이 달라진다면 어떻게 해야 할까요? 첫 번째 영상에서는 분명 같은 캐릭터였는데 두 번째 영상에서는 눈 모양이 달라지고, 세 번째 영상에서는 옷이나 체형까지 바뀌는 일이 생깁니다. 특히 AI 애니메이션이나 숏폼을 여러 장면으로 제작할 때 이런 문제가 발생하면 영상들을 자연",
+    "url": "https://blog.naver.com/ty_free/224443783782?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-16T06:21:57.000Z",
+    "detectedAt": "2026-10-16T11:26:44.243Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "e603e8773db315b1",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "드래곤소드 라이자 무료로 얻는법｜1.1 업데이트·지옥 난이도·토벌 랭크 총정리",
+    "summary": "드래곤소드: 어웨이크닝 1.1 업데이트가 적용됐습니다. 이번 업데이트에서 가장 눈에 띄는 변화는 신규 캐릭터 '라이자' 추가입니다. 그런데 라이자는 별도 유료 DLC 캐릭터가 아닙니다. 결론부터 말하면 메인 퀘스트 '재회'를 통해 무료로 획득할 수 있습니다. 이미 해당 퀘스트를 완료한 유저는 별도로 다시 진행할 필요 없이",
+    "url": "https://blog.naver.com/abb7664/224443729434?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-16T05:36:24.000Z",
+    "detectedAt": "2026-10-16T11:26:45.227Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "f1b04335925987e1",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -361,25 +399,6 @@
     }
   },
   {
-    "id": "e0ab04e8946cf7fe",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "롤 26.20 패치 뭐가 바뀌었나? 버프·너프 챔피언과 로켓벨트 변경 총정리",
-    "summary": "리그 오브 레전드 26.20 패치가 적용됐습니다. 이번 패치가 평소보다 조금 더 중요한 이유가 있는데요. 바로 2026 월드 챔피언십에서 사용되는 패치이기 때문입니다. 결론부터 보면 암베사, 애쉬, 크산테 등 프로 경기에서 자주 등장했던 챔피언은 하향됐고, 킨드레드와 케넨, 릴리아, 모데카이저처럼 상대적으로 힘이 부족했던",
-    "url": "https://blog.naver.com/abb7664/224434250173?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-07T07:20:33.000Z",
-    "detectedAt": "2026-10-07T09:48:07.905Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "61fb93622b6dd6a8",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -453,25 +472,6 @@
       "decision": "include",
       "reason": "project:lutratide-survivors",
       "score": 100
-    }
-  },
-  {
-    "id": "59179aaed90c0d55",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "AI 웹툰, 왜 완성하면 화질이 깨질까? 이미지 크기부터 잘못됐을 수 있습니다",
-    "summary": "AI로 웹툰 이미지를 만들었습니다. 생성된 이미지를 크게 열어봤을 때는 꽤 괜찮았습니다. 캐릭터 얼굴도 선명하고 선도 깔끔합니다. 그런데 컷을 조립하고, 웹툰 크기에 맞추고, JPG로 저장해서 최종본을 확인하니 뭔가 이상합니다. 선이 흐려지고, 작게 들어간 얼굴은 뭉개지고, 글자가 많은 컷은 읽기도 불편해집니다. 그래서 ",
-    "url": "https://blog.naver.com/ty_free/224431969533?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-05T06:37:47.000Z",
-    "detectedAt": "2026-10-06T08:57:11.321Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
     }
   },
   {

@@ -1,5 +1,24 @@
 [
   {
+    "id": "db3ed81604d2a44f",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "구글 Flow 캐릭터 얼굴이 계속 바뀐다면? 일관성 유지하는 3가지 방법",
+    "summary": "AI로 같은 캐릭터 영상을 만들었는데, 장면마다 얼굴이 달라진다면 어떻게 해야 할까요? 첫 번째 영상에서는 분명 같은 캐릭터였는데 두 번째 영상에서는 눈 모양이 달라지고, 세 번째 영상에서는 옷이나 체형까지 바뀌는 일이 생깁니다. 특히 AI 애니메이션이나 숏폼을 여러 장면으로 제작할 때 이런 문제가 발생하면 영상들을 자연",
+    "url": "https://blog.naver.com/ty_free/224443783782?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-16T06:21:57.000Z",
+    "detectedAt": "2026-10-16T11:26:44.243Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "f1b04335925987e1",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -225,25 +244,6 @@
       "decision": "include",
       "reason": "project:lutratide-survivors",
       "score": 100
-    }
-  },
-  {
-    "id": "59179aaed90c0d55",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "AI 웹툰, 왜 완성하면 화질이 깨질까? 이미지 크기부터 잘못됐을 수 있습니다",
-    "summary": "AI로 웹툰 이미지를 만들었습니다. 생성된 이미지를 크게 열어봤을 때는 꽤 괜찮았습니다. 캐릭터 얼굴도 선명하고 선도 깔끔합니다. 그런데 컷을 조립하고, 웹툰 크기에 맞추고, JPG로 저장해서 최종본을 확인하니 뭔가 이상합니다. 선이 흐려지고, 작게 들어간 얼굴은 뭉개지고, 글자가 많은 컷은 읽기도 불편해집니다. 그래서 ",
-    "url": "https://blog.naver.com/ty_free/224431969533?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-05T06:37:47.000Z",
-    "detectedAt": "2026-10-06T08:57:11.321Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
     }
   },
   {

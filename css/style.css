@@ -5899,3 +5899,32 @@ a.project-evidence-card:hover {
   .prompt-box-home { flex-direction: column; align-items: stretch; margin-top: 22px; padding: 23px; gap: 20px; }
   .prompt-box-home-link { width: 100%; }
 }
+
+/* Published how-to prompts in TUKI LAB. Only rendered when an article has examples. */
+.lab-article-body .lab-prompt-block {
+  margin: 22px 0 28px;
+  padding: clamp(14px,3vw,22px);
+  border: 1px solid rgba(114,221,174,.28);
+  border-radius: 16px;
+  background: rgba(12,28,30,.6);
+}
+.lab-prompt-head {
+  display: flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:12px;margin-bottom:14px;
+}
+.lab-prompt-head h3 {margin:0;color:#e9f7ee;font-size:1rem;line-height:1.4}
+.lab-prompt-head button {
+  border:1px solid rgba(114,221,174,.4);border-radius:10px;
+  background:#72ddae;color:#0e2520;padding:9px 13px;
+  font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;
+}
+.lab-prompt-head button:hover,.lab-prompt-head button:focus-visible {
+  background:#a4f3d0;outline:2px solid #72ddae;outline-offset:2px;
+}
+.lab-prompt-block pre {
+  margin:0;padding:16px;
+  background:#0c1822;color:#e0eee8;border-radius:10px;
+  font-family:inherit;font-size:.94rem;line-height:1.8;
+  white-space:pre-wrap;overflow-wrap:anywhere;user-select:text;
+}
+@media(max-width:600px){.lab-prompt-head{align-items:flex-start}.lab-prompt-block pre{font-size:.9rem}}

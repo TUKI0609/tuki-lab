@@ -11,6 +11,37 @@ const isWebURL = value => {
 };
 const unchanged = (oldValue, newValue) => JSON.stringify(oldValue) === JSON.stringify(newValue);
 
+function fingerprint(value) {
+  const s=JSON.stringify(value);
+  let h=2166136261;
+  for(let i=0;i<s.length;i++) h=Math.imul(h^s.charCodeAt(i),16777619);
+  return s.length+":"+(h>>>0).toString(16);
+}
+// Public LAB articles are immutable unless a creator-approved editorial revision
+// explicitly identifies the previous exact content and preserves their identity.
+function approvedEditorialRevision(prior,current) {
+  const rev=current?.editorialRevision;
+  if (!rev || rev.version !== (prior.editorialRevision?.version ?? 1)+1 ||
+      rev.approvedBy !== "TUKI" || !validTimestamp(rev.approvedAt) ||
+      !present(rev.reason) || rev.previousFingerprint !== fingerprint(prior) ||
+      !validDate(current.updatedAt) || current.updatedAt < prior.publishedAt) return false;
+  const editable=new Set(["title","summary","sections","sources","updatedAt","editorialRevision"]);
+  for (const field of new Set([...Object.keys(prior),...Object.keys(current)])) {
+    if (!editable.has(field) && !unchanged(prior[field],current[field])) return false;
+  }
+  if (!present(current.title) || !present(current.summary) ||
+      !Array.isArray(current.sections) || current.sections.length===0 ||
+      current.sections.some(s=>!present(s.heading) || !Array.isArray(s.paragraphs) ||
+        !s.paragraphs.length || s.paragraphs.some(p=>!present(p)) ||
+        (s.prompts!=null && (!Array.isArray(s.prompts) ||
+          s.prompts.some(q=>!present(q.title)||!present(q.text)))))) return false;
+  if (!Array.isArray(current.sources) ||
+      !unchanged(prior.sources,current.sources.slice(0,prior.sources.length)) ||
+      current.sources.some(s=>!present(s.label)||!present(s.title)||!isWebURL(s.url))) return false;
+  return true;
+}
+
+
 export function reviewQueue(candidates, posts) {
   const used = new Set(posts.flatMap(p => (p.sources || []).map(s => s.url)));
   return candidates.filter(c => c.status === "PENDING").map(c => ({
@@ -70,8 +101,8 @@ export function checkPublicationChange(before, after) {
   if (new Set(logIds).size !== logIds.length) errors.push("Duplicate devlog id.");
   for (const prior of posts0) {
     const current = posts1.find(p => p.slug === prior.slug);
-    if (!current || !unchanged(prior, current))
-      errors.push("Existing published article was modified or deleted: " + prior.slug + ". Use a separate editorial review.");
+    if (!current || (!unchanged(prior, current) && !approvedEditorialRevision(prior,current)))
+      errors.push("Existing published article was modified or deleted without a verified editorial review: " + prior.slug + ".");
   }
   for (const prior of before.devlog) {
     const current = after.devlog.find(l => l.id === prior.id);

@@ -1,5 +1,14 @@
 [
   {
+    "id": 30,
+    "date": "2026-10-16",
+    "type": "BUILD LOG",
+    "project": null,
+    "originCandidateId": "lab-tuki-video-maker-2026-W42",
+    "title": "TUKI VIDEO MAKER · 오늘의 AI 소식 30초 제작 구조 공개",
+    "summary": "Suno 뉴스 실험부터 음성 우선 제작, 에픽게임즈 EP.01, 모션·자막·X UI 피드백, 원글과 심화 댓글 구성까지 반복 가능한 제작 워크플로를 TUKI LAB에 기록했다."
+  },
+  {
     "id": 29,
     "date": "2026-10-13",
     "type": "BUILD LOG",

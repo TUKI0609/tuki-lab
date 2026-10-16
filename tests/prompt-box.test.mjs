@@ -51,14 +51,14 @@ test("media upgrade staging cannot link nonexistent images and records verifiabl
       existsSync(resolve(root,existing.preview.src)), "Missing candidate referenced by live card");
   }
 });
-test("new navigation is linked from the home and all existing LAB pages",()=>{
+test("new navigation is linked from the home and every published LAB page",()=>{
   assert(site.navigation.some(x=>x.href==="./prompts/"&&x.i18n==="nav.prompts"));
   assert.equal(i18n.strings.ko["nav.prompts"],"프롬프트");
   assert.equal(i18n.strings.en["nav.prompts"],"Prompts");
   assert.match(read("index.html"),/href="\.\/prompts\/" data-i18n="hero\.prompts"/);
   assert.match(read("sitemap.xml"),/https:\/\/tuki0609\.github\.io\/tuki-lab\/prompts\/<\/loc>/);
   const posts=JSON.parse(read("content/lab-posts.json"));
-  assert.equal(posts.length,4);
+  assert.ok(posts.length >= 4);
   for(const p of posts){
     assert.match(read("lab/posts/"+p.slug+"/index.html"),/href="\.\.\/\.\.\/\.\.\/prompts\/"/);
   }

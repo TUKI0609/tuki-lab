@@ -1,5 +1,34 @@
 [
   {
+    "id": "lab-tuki-video-maker-2026-W42",
+    "project": null,
+    "projectName": "TUKI VIDEO MAKER",
+    "period": "2026-W42",
+    "status": "PENDING",
+    "needsApproval": true,
+    "suggestedType": "BUILD LOG",
+    "suggestedTitle": "AI 뉴스 30초 하나 만들려다, 영상 제작 플러그인까지 만든 기록",
+    "suggestedSummary": "ChatGPT와 Clipchamp로 AI 소식 영상을 제작하며 뉴스 선정, 원고, 음성, 영상, 자막, X 게시글 흐름을 반복 개선한 실전 제작 기록.",
+    "confidence": 100,
+    "evidenceCount": 1,
+    "evidence": [
+      {
+        "activityId": "tuki-video-maker-v163",
+        "source": "plugin",
+        "sourceLabel": "TUKI VIDEO MAKER · 개인용 플러그인",
+        "title": "TUKI VIDEO MAKER v1.6.3 (계정 접근 제한)",
+        "url": "https://chatgpt.com/plugins/plugins_6ad0918f9e0081919ea09ff5d44d3d25",
+        "publishedAt": "2026-10-16T07:30:54.803Z"
+      }
+    ],
+    "evidenceHash": "tuki-video-maker-v163",
+    "generatedAt": "2026-10-16T07:30:54.803Z",
+    "updatedAt": "2026-10-16T07:30:54.803Z",
+    "approvedAt": null,
+    "rejectedAt": null,
+    "publishedSlug": null
+  },
+  {
     "id": "lab-lutratide-survivors-2026-W41",
     "project": "lutratide-survivors",
     "projectName": "LUTRATIDE SURVIVORS",

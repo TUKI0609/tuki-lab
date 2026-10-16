@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "updatedAt": "2026-10-14",
+  "policy": "Only prior actual creator results or real footage; no simulated before/after or unrelated brand artwork.",
+  "publicPrompts": [
+    {
+      "id": "pixel-guild-card",
+      "category": "image",
+      "path": "assets/prompts/results/guild-actual-output.avif",
+      "githubBlob": "0a391e3b16644c5f1bdaa26b1c193fd2d4818f10",
+      "type": "prior-creation",
+      "origin": "TUKI's personal CRYPTO SAGA guild image produced by older personalized prompt v1.0",
+      "dimensions": "190x285",
+      "disclaimer": "Not generated with the exact public generic prompt; filename does not imply identical results."
+    },
+    {
+      "id": "consistent-character-video",
+      "category": "video",
+      "path": "assets/prompts/results/video-hailuo-real-frame.avif",
+      "githubBlob": "e828b4372e7838e821182c59cffc0830a6e4182f",
+      "type": "prior-creation",
+      "origin": "Actual frame from prior Hailuo AI video experiment of about 6.6 seconds",
+      "dimensions": "300x172",
+      "disclaimer": "Not generated with the exact public 10-second generic prompt."
+    },
+    {
+      "id": "gameplay-update-short",
+      "category": "game",
+      "path": "assets/projects/lutratide-survivors/w41-video-thumbnail.svg",
+      "type": "published-creator-video",
+      "origin": "W41 LUTRATIDE creator's publicly posted actual gameplay-development short",
+      "disclaimer": "Actual video thumbnail, not proof that the generic downloadable template generated it."
+    }
+  ],
+  "archivedPrompts": [
+    "bookmark-x-post",
+    "mobile-game-screen"
+  ],
+  "mediaStandards": [
+    "Never present reference art or AI mockups as real outcomes",
+    "Do not publish a coding before/after without real screenshots",
+    "Keep stable prompt IDs and links for future publication",
+    "Use direct, locally hosted assets; do not hotlink unverified sources"
+  ]
+}

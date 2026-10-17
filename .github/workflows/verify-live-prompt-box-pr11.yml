@@ -1,0 +1,54 @@
+name: Verify public TUKI PROMPT BOX (read-only)
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "scripts/verify-live-prompt-box-pr11.mjs"
+      - ".github/workflows/verify-live-prompt-box-pr11.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  public-browser-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check production pages, metadata, assets and navigation
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="https://tuki0609.github.io/tuki-lab"
+          curl --fail --silent --show-error --location --retry 3 "$BASE/" --output "$RUNNER_TEMP/home.html"
+          curl --fail --silent --show-error --location --retry 3 "$BASE/prompts/" --output "$RUNNER_TEMP/prompts.html"
+          curl --fail --silent --show-error --location --retry 3 "$BASE/content/prompts.json" --output "$RUNNER_TEMP/prompts.json"
+          curl --fail --silent --show-error --location --retry 3 "$BASE/js/prompts.js" --output "$RUNNER_TEMP/prompts.js"
+          curl --fail --silent --show-error --location --retry 3 "$BASE/sitemap.xml" --output "$RUNNER_TEMP/sitemap.xml"
+          curl --fail --silent --show-error --location --retry 3 "$BASE/assets/projects/crypto-saga/preview.svg" --output "$RUNNER_TEMP/preview.svg"
+          grep -Fq 'href="./prompts/"' "$RUNNER_TEMP/home.html"
+          grep -Fq 'TUKI PROMPT BOX' "$RUNNER_TEMP/prompts.html"
+          grep -Fq 'rel="canonical" href="https://tuki0609.github.io/tuki-lab/prompts/"' "$RUNNER_TEMP/prompts.html"
+          grep -Fq '"pixel-guild-card"' "$RUNNER_TEMP/prompts.json"
+          grep -Fq '"mobile-game-screen"' "$RUNNER_TEMP/prompts.json"
+          grep -Fq 'async function copyPrompt' "$RUNNER_TEMP/prompts.js"
+          grep -Fq 'https://tuki0609.github.io/tuki-lab/prompts/' "$RUNNER_TEMP/sitemap.xml"
+          grep -Fq '<svg' "$RUNNER_TEMP/preview.svg"
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+          const data=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+"/prompts.json","utf8"));
+          if(data.prompts.length!==5)throw Error("Expected five published prompts");
+          if(data.prompts.some(p=>(p.preview.src||"").includes("assets/prompts/results/")))throw Error("Unapproved pending previews were unexpectedly published");
+          console.log("PASS: homepage link, SEO, sitemap, exact five prompts, JS, existing image and deferred binaries verified");
+          NODE
+      - name: Exercise live Chrome copying, filtering, image loading, deep links, consent and mobile navigation
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          export CHROME_BIN
+          node scripts/verify-live-prompt-box-pr11.mjs

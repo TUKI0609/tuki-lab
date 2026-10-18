@@ -1,5 +1,24 @@
 [
   {
+    "id": "9d1fd33349a77fe7",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "GitHub Pages에서 새로고침하면 404 오류? AI로 만든 웹사이트 해결 방법",
+    "summary": "AI에게 웹사이트를 만들어 달라고 요청하고 GitHub Pages에 올렸는데, 이상한 문제가 생겼나요? 처음 접속할 때는 정상적으로 열립니다. 그런데 메뉴를 눌러 다른 페이지로 이동한 다음 새로고침하면 갑자기 404 오류가 나타납니다. 홈페이지는 잘 되는데 특정 주소에서만 오류가 발생하니 당황스럽죠. 이런 문제는 Reac",
+    "url": "https://blog.naver.com/ty_free/224445642265?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-18T08:30:17.000Z",
+    "detectedAt": "2026-10-18T11:08:21.671Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "0a900b4bde2c44dc",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -201,25 +220,6 @@
     "url": "https://blog.naver.com/ty_free/224434209760?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-07T06:46:03.000Z",
     "detectedAt": "2026-10-07T07:08:20.128Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "c635c88a09fdd4a0",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "AI로 만든 효과음, 게임에 써도 될까? 상업적 이용 전 꼭 확인할 것",
-    "summary": "게임을 만들다 보면 생각보다 '소리'가 정말 많이 필요합니다. 버튼을 누를 때 나는 소리부터 아이템을 먹는 소리, 발소리, 공격음, 바람 소리까지. 직접 녹음하기는 어렵고 무료 효과음을 하나씩 찾자니 원하는 소리가 잘 나오지 않죠. 그래서 요즘은 AI로 효과음을 만드는 방법도 꽤 매력적입니다. \"나무 바닥을 천천히 걷는 ",
-    "url": "https://blog.naver.com/ty_free/224434101912?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-07T05:17:08.000Z",
-    "detectedAt": "2026-10-07T05:35:38.187Z",
     "manual": false,
     "editorial": {
       "decision": "include",

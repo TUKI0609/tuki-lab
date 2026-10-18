@@ -1,5 +1,43 @@
 [
   {
+    "id": "9d1fd33349a77fe7",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "GitHub Pages에서 새로고침하면 404 오류? AI로 만든 웹사이트 해결 방법",
+    "summary": "AI에게 웹사이트를 만들어 달라고 요청하고 GitHub Pages에 올렸는데, 이상한 문제가 생겼나요? 처음 접속할 때는 정상적으로 열립니다. 그런데 메뉴를 눌러 다른 페이지로 이동한 다음 새로고침하면 갑자기 404 오류가 나타납니다. 홈페이지는 잘 되는데 특정 주소에서만 오류가 발생하니 당황스럽죠. 이런 문제는 Reac",
+    "url": "https://blog.naver.com/ty_free/224445642265?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-18T08:30:17.000Z",
+    "detectedAt": "2026-10-18T11:08:21.671Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "97ce7fc6670e7804",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "도깨비의세계 장비 추가 효과 왜 하향됐을까? 영웅 장비 복구·거래소 주의점 총정리",
+    "summary": "도깨비의세계에서 10월 14일 추가된 장비 '추가 효과'가 하루 만에 크게 조정됐습니다. 처음 업데이트 직후에는 희귀·영웅·전설 장비에 붙는 추가 효과 수치가 예상보다 너무 높게 적용되면서 장비 가치와 성장 밸런스에 큰 영향을 줬는데요. 운영진은 긴급 라이브 방송을 진행한 뒤 10월 15일 임시점검을 통해 추가 효과 수치",
+    "url": "https://blog.naver.com/abb7664/224445613353?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-18T07:54:35.000Z",
+    "detectedAt": "2026-10-18T11:08:22.710Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "0a900b4bde2c44dc",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -380,25 +418,6 @@
     }
   },
   {
-    "id": "69bfff0f6e3c90dc",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "도깨비의세계 초반 공략｜도술 강화·문파·승천의 탑, 초보가 놓치기 쉬운 팁 7가지 (10시 추가 쿠폰)",
-    "summary": "도깨비의세계가 10월 8일 정식 출시했죠, 이전 글에서 쿠폰과 적용 방식을 정리했었습니다. * 이전 글 보기 : https://blog.naver.com/abb7664/224435202668 게임에 처음 접속하면 메인 퀘스트를 따라가며 자연스럽게 성장할 수 있지만, 게임을 조금 진행하다 보면 장비, 도술, 문파, 승천의 ",
-    "url": "https://blog.naver.com/abb7664/224435701360?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-08T13:34:17.000Z",
-    "detectedAt": "2026-10-08T18:52:08.812Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "fc01eb3c6991a658",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -429,25 +448,6 @@
     "url": "https://blog.naver.com/ty_free/224434209760?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-07T06:46:03.000Z",
     "detectedAt": "2026-10-07T07:08:20.128Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "c635c88a09fdd4a0",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "AI로 만든 효과음, 게임에 써도 될까? 상업적 이용 전 꼭 확인할 것",
-    "summary": "게임을 만들다 보면 생각보다 '소리'가 정말 많이 필요합니다. 버튼을 누를 때 나는 소리부터 아이템을 먹는 소리, 발소리, 공격음, 바람 소리까지. 직접 녹음하기는 어렵고 무료 효과음을 하나씩 찾자니 원하는 소리가 잘 나오지 않죠. 그래서 요즘은 AI로 효과음을 만드는 방법도 꽤 매력적입니다. \"나무 바닥을 천천히 걷는 ",
-    "url": "https://blog.naver.com/ty_free/224434101912?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-07T05:17:08.000Z",
-    "detectedAt": "2026-10-07T05:35:38.187Z",
     "manual": false,
     "editorial": {
       "decision": "include",

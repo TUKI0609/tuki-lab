@@ -1,5 +1,43 @@
 [
   {
+    "id": "a65df8303dc95150",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "Google AI Studio 무료 API인데 429 오류? Gemini API 할당량 초과 해결 방법",
+    "summary": "Google AI Studio에서 API 키를 발급받아 AI 웹사이트나 프로그램을 만들었는데 갑자기 오류가 발생하나요? 분명 무료로 사용할 수 있다고 해서 시작했는데, AI가 답변하지 않고 이런 문구가 나타나는 경우가 있습니다. 429 RESOURCE_EXHAUSTED 또는 You exceeded your current ",
+    "url": "https://blog.naver.com/ty_free/224446292884?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-19T01:37:11.000Z",
+    "detectedAt": "2026-10-19T04:42:52.752Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "c15d5ef79f1fcadb",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "도깨비의세계 10월 21일 업데이트 총정리｜캐릭터명 경매장·만귀비경·도술 초기화까지",
+    "summary": "도깨비의세계가 10월 21일 또 한 번 큰 업데이트를 준비하고 있습니다. 이번에는 단순 밸런스 조정이 아니라 신규 콘텐츠와 성장 시스템 변화가 한꺼번에 들어오는 업데이트에 가깝습니다. 특히 캐릭터명 경매장, 신규 파티 콘텐츠 만귀비경, 1대1 친선전이 추가될 예정이고, 기존 유저에게 직접 영향을 주는 장비 추가 효과 변경",
+    "url": "https://blog.naver.com/abb7664/224446258549?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-19T01:06:18.000Z",
+    "detectedAt": "2026-10-19T04:42:53.728Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "9d1fd33349a77fe7",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -399,25 +437,6 @@
     }
   },
   {
-    "id": "244813cc5e1d0199",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "도깨비의세계 오프라인 사냥 어떻게 쓰나? 8시간 자동사냥·효율 높이는 법 총정리",
-    "summary": "도깨비의세계를 플레이하다 보면 가장 궁금해지는 기능 중 하나가 자동사냥입니다. 특히 게임을 계속 켜둘 수 없는 분들은 \"게임을 꺼도 사냥이 계속되나?\", \"오프라인 사냥은 몇 시간까지 가능한가?\"가 궁금할 텐데요. 결론부터 말하면 도깨비의세계는 게임에 접속하지 않은 상태에서도 최대 8시간 동안 필드 사냥을 이어갈 수 있는",
-    "url": "https://blog.naver.com/abb7664/224435971080?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-08T23:23:49.000Z",
-    "detectedAt": "2026-10-09T01:14:12.075Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "fc01eb3c6991a658",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -429,25 +448,6 @@
     "url": "https://blog.naver.com/ty_free/224435234651?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-08T05:30:27.000Z",
     "detectedAt": "2026-10-08T10:37:10.177Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "61fb93622b6dd6a8",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "Verse8, 접속해도 될까? 직접 게임을 만들며 확인한 것들(바이브코딩, 게임 제작 플랫폼)",
-    "summary": "요즘 제가 X나 블로그에 올리는 게임을 보다 보면 조금 생소한 이름이 하나 보일 겁니다. Verse8 저도 처음에는 비슷한 생각을 했습니다. “여기서 게임을 만들어도 되는 건가?” “내가 만든 게임을 다른 사람에게 공유해도 괜찮을까?” “결제나 개인정보가 들어가면 안전한가?” “그리고 이걸 정말 게임 제작 플랫폼이라고 불",
-    "url": "https://blog.naver.com/ty_free/224434209760?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-07T06:46:03.000Z",
-    "detectedAt": "2026-10-07T07:08:20.128Z",
     "manual": false,
     "editorial": {
       "decision": "include",

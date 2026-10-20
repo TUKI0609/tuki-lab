@@ -1,5 +1,24 @@
 [
   {
+    "id": "500c8f73d5177fa1",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "GitHub Pages HTTPS 적용 안 될 때? 도메인 연결·DNS 오류 해결 방법",
+    "summary": "AI로 홈페이지를 만들고 GitHub Pages에 배포하는 것까지 성공했는데, 개인 도메인을 연결하자 문제가 생겼나요? 주소를 입력하면 사이트가 열리지 않거나, 브라우저에 '안전하지 않음'이라는 경고가 표시되기도 하고, GitHub 저장소의 Settings → Pages에 들어가 보면 Enforce HTTPS 항목을 선택",
+    "url": "https://blog.naver.com/ty_free/224447680055?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-20T04:42:40.000Z",
+    "detectedAt": "2026-10-20T08:34:28.518Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "a65df8303dc95150",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -201,25 +220,6 @@
     "url": "https://blog.naver.com/ty_free/224435988795?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-08T23:55:08.000Z",
     "detectedAt": "2026-10-09T01:14:10.856Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "fc01eb3c6991a658",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "AI로 만든 웹게임, 모바일에서 화면이 잘린다면? 스크롤·100vh 문제 해결법",
-    "summary": "AI로 게임을 만들었는데 PC에서는 멀쩡하던 화면이 스마트폰에서 갑자기 잘리는 경우가 있습니다. 시작 버튼이 화면 아래로 내려가거나, 게임인데도 스크롤을 해야 하는 상황이 생기기도 하죠. 결론부터 말하면 모바일 브라우저의 화면 높이 계산과 게임 UI 배치가 맞지 않아서 발생하는 문제일 수 있습니다. 특히 CSS의 `100",
-    "url": "https://blog.naver.com/ty_free/224435234651?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-08T05:30:27.000Z",
-    "detectedAt": "2026-10-08T10:37:10.177Z",
     "manual": false,
     "editorial": {
       "decision": "include",

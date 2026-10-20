@@ -1,5 +1,43 @@
 [
   {
+    "id": "500c8f73d5177fa1",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "GitHub Pages HTTPS 적용 안 될 때? 도메인 연결·DNS 오류 해결 방법",
+    "summary": "AI로 홈페이지를 만들고 GitHub Pages에 배포하는 것까지 성공했는데, 개인 도메인을 연결하자 문제가 생겼나요? 주소를 입력하면 사이트가 열리지 않거나, 브라우저에 '안전하지 않음'이라는 경고가 표시되기도 하고, GitHub 저장소의 Settings → Pages에 들어가 보면 Enforce HTTPS 항목을 선택",
+    "url": "https://blog.naver.com/ty_free/224447680055?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-20T04:42:40.000Z",
+    "detectedAt": "2026-10-20T08:34:28.518Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "5b895818bce12c67",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "메이플M 10주년 보상 뭐부터 챙길까? 우르스·10주년 코인·경험치 이벤트 총정리",
+    "summary": "메이플스토리M이 서비스 10주년을 맞아 대규모 기념 업데이트와 이벤트를 시작했습니다. 이번 업데이트는 단순히 신규 지역과 스킬만 추가된 것이 아니라, 대부분의 유저가 참여할 수 있는 10주년 이벤트가 함께 진행된다는 점이 핵심입니다. 특히 100레벨 이상 캐릭터라면 우르스 토벌대와 경험치 던전에 참여할 수 있고, 10주년",
+    "url": "https://blog.naver.com/abb7664/224447661408?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-20T04:24:39.000Z",
+    "detectedAt": "2026-10-20T08:34:29.635Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "a65df8303dc95150",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -399,25 +437,6 @@
     }
   },
   {
-    "id": "8ea96b9372d65e1b",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "도깨비의세계 보물찾기 꼭 해야 할까? 타바로성 보물상자 12개와 초반 활용법",
-    "summary": "도깨비의세계를 플레이하다 보면 메뉴에서 '보물찾기'라는 콘텐츠를 확인할 수 있습니다. 처음에는 메인 퀘스트와 크게 상관없는 수집 콘텐츠처럼 보일 수 있는데요. 결론부터 말하면 초반부터 모든 보물상자를 억지로 찾아다닐 필요는 없지만, 이동 중 발견한 상자는 반드시 열어두는 것을 추천합니다. 특히 메인 퀘스트와 성장 콘텐츠를",
-    "url": "https://blog.naver.com/abb7664/224436313858?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-09T07:10:05.000Z",
-    "detectedAt": "2026-10-09T10:36:04.092Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "84b15d52855e4aeb",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -429,25 +448,6 @@
     "url": "https://blog.naver.com/ty_free/224435988795?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-08T23:55:08.000Z",
     "detectedAt": "2026-10-09T01:14:10.856Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "fc01eb3c6991a658",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "AI로 만든 웹게임, 모바일에서 화면이 잘린다면? 스크롤·100vh 문제 해결법",
-    "summary": "AI로 게임을 만들었는데 PC에서는 멀쩡하던 화면이 스마트폰에서 갑자기 잘리는 경우가 있습니다. 시작 버튼이 화면 아래로 내려가거나, 게임인데도 스크롤을 해야 하는 상황이 생기기도 하죠. 결론부터 말하면 모바일 브라우저의 화면 높이 계산과 게임 UI 배치가 맞지 않아서 발생하는 문제일 수 있습니다. 특히 CSS의 `100",
-    "url": "https://blog.naver.com/ty_free/224435234651?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-08T05:30:27.000Z",
-    "detectedAt": "2026-10-08T10:37:10.177Z",
     "manual": false,
     "editorial": {
       "decision": "include",

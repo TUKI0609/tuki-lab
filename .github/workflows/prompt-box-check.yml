@@ -10,6 +10,8 @@ on:
       - "content/i18n.json"
       - "index.html"
       - "js/prompts.js"
+      - "js/guild-card.mjs"
+      - "js/prompt-page-l10n.mjs"
       - "css/prompts.css"
       - "css/style.css"
       - "scripts/verify-prompt-box.mjs"
@@ -32,6 +34,8 @@ jobs:
       - name: Validate JS syntax and structured prompt metadata
         run: |
           node --check js/prompts.js
+          node --check js/guild-card.mjs
+          node --check js/prompt-page-l10n.mjs
           node --check scripts/verify-prompt-box.mjs
           node --check scripts/activate-prompt-previews.mjs
           node scripts/activate-prompt-previews.mjs --check

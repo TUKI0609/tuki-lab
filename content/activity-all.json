@@ -1,5 +1,43 @@
 [
   {
+    "id": "6fd437ab394b29d9",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "무료 ChatGPT로 AI 쇼츠 만들기｜플러그인 제작부터 영상 완성까지 직접 해봤습니다 (방법 공유)",
+    "summary": "무료 ChatGPT로 AI 영상까지 만들 수 있을까? 이 궁금증 하나 때문에 생각보다 많은 시간을 썼습니다. 플러그인도 만들어보고, 다른 AI 도구도 연결해보고, 결과물이 마음에 들지 않아 다시 시도하기도 했습니다. 솔직히 처음에는 이렇게까지 복잡하게 진행할 생각이 없었는데요. 이왕 시작한 거 무료 사용자도 한 번쯤 경험",
+    "url": "https://blog.naver.com/ty_free/224448062543?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-20T10:05:46.000Z",
+    "detectedAt": "2026-10-20T14:19:35.066Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "8679afdeac1e3ece",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "배그 PC방 G코인 최대 3,600 받는법｜금토일 30분·보급 토큰 이벤트 총정리",
+    "summary": "특급 소식!! 배틀그라운드에서 G-COIN을 받을 수 있는 새로운 PC방 이벤트가 시작됩니다. 이번 이벤트 이름은 '프리미엄 보급 파밍 PC방 웹 이벤트'인데요. 결론부터 말하면 금요일, 토요일, 일요일에 제휴 PC방에서 배틀그라운드에 접속하고 30분만 플레이하면 하루 최대 600 G-COIN을 받을 수 있습니다. 이 이",
+    "url": "https://blog.naver.com/abb7664/224448029086?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-20T09:30:10.000Z",
+    "detectedAt": "2026-10-20T14:19:36.005Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "500c8f73d5177fa1",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -410,44 +448,6 @@
     "url": "https://blog.naver.com/ty_free/224437131420?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-10T05:53:46.000Z",
     "detectedAt": "2026-10-10T09:52:33.875Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "3d0855e00dd4520e",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "도깨비의세계 신규 쿠폰 3종 공개｜도깨비의다짐·약속·마음 보상과 10월 10일 개선 총정리",
-    "summary": "도깨비의세계가 10월 9일 라이브 방송을 통해 신규 감사 쿠폰 3종을 공개했습니다. 이번 쿠폰은 `도깨비의다짐`, `도깨비의약속`, `도깨비의마음` 총 3개입니다. 결론부터 말하면 세 쿠폰 모두 계정당 1회 사용할 수 있고, 공식 공지 기준 별도의 사용 가능 기간이 정해져 있지 않습니다. 출시 초반에 필요한 엽전, 요혼석",
-    "url": "https://blog.naver.com/abb7664/224437096033?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-10T05:07:48.000Z",
-    "detectedAt": "2026-10-10T09:52:34.738Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
-    "id": "84b15d52855e4aeb",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "AI 웹툰 만들기, 직접 해보니 연재를 멈춘 이유? 그림보다 어려운 컷 간격과 여백",
-    "summary": "AI로 웹툰을 만들 수 있을까요? 직접 웹소설을 쓰고 있다면 그 이야기를 웹툰으로 옮기는 것도 가능할까요? 저 역시 이런 궁금증에서 시작했습니다. 직접 집필한 웹소설을 바탕으로 캐릭터를 만들고, 배경을 제작하고, 실제 네이버 웹툰 형식에 맞춰 한 회차를 구성하는 작업까지 진행했는데요. 결론부터 말하면 AI를 활용한 웹툰 ",
-    "url": "https://blog.naver.com/ty_free/224435988795?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-08T23:55:08.000Z",
-    "detectedAt": "2026-10-09T01:14:10.856Z",
     "manual": false,
     "editorial": {
       "decision": "include",

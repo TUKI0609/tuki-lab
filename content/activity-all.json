@@ -1,5 +1,43 @@
 [
   {
+    "id": "5fa07d61decae4cf",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "제미나이가 내 브랜드 스타일을 기억한다고? 구글이 발표한 새로운 AI 업무 기능 총정리",
+    "summary": "AI로 SNS 게시물이나 블로그 이미지를 만들 때 가장 귀찮은 점이 뭘까요? 개인적으로 눈여겨보는 문제는 매번 같은 설명을 반복해야 한다는 점입니다. \"배경은 짙은 남색으로 해줘.\" \"민트색을 강조해 줘.\" \"지난번 캐릭터와 디자인 분위기를 유지해 줘.\" 브랜드의 일관성을 유지하려면 이런 조건을 계속 전달해야 하죠. 그런",
+    "url": "https://blog.naver.com/ty_free/224450027469?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-22T03:58:28.000Z",
+    "detectedAt": "2026-10-22T04:49:53.009Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "b59ecfbceb709eda",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "던파모바일 이누야샤 콜라보 총정리｜무료 크리쳐·아바타·요기 교환소·삭룡 갈리아드까지",
+    "summary": "던전앤파이터 모바일에 이누야샤 콜라보가 정식으로 시작됐습니다. 이번 콜라보는 단순 아바타 판매로 끝나는 이벤트가 아닙니다. 출석만 해도 SD 이누야샤 크리쳐와 테마 배경을 받을 수 있고, 피로도를 사용하면서 모은 재화로 이누야샤 관련 아바타와 스킬 컷 씬도 교환할 수 있습니다. 여기에 신규 정벌 던전 '삭룡 갈리아드'와 ",
+    "url": "https://blog.naver.com/abb7664/224450013565?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-22T03:44:25.000Z",
+    "detectedAt": "2026-10-22T04:49:54.357Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "f29adf3b3467056b",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -410,44 +448,6 @@
     "url": "https://blog.naver.com/ty_free/224438938775?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-12T04:18:24.000Z",
     "detectedAt": "2026-10-12T10:52:44.838Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "f5feeb0ad66e92df",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "FC온라인 10월 쿠폰 언제 나오나? FC PRO 챔피언스컵 생중계 쿠폰·접속 보상 총정리",
-    "summary": "FC온라인에서 새로운 생중계 쿠폰 이벤트가 시작됩니다. 2026 FC PRO CHAMPIONS CUP이 10월 13일부터 18일까지 진행되는데요. 이번 대회 기간에는 단순 경기 시청뿐 아니라 매일 생중계 쉐어쿠폰과 접속 보상까지 함께 받을 수 있습니다. 결론부터 말하면 생중계 쿠폰은 10월 13일부터 18일까지 매일 오후",
-    "url": "https://blog.naver.com/abb7664/224438927013?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-12T04:07:41.000Z",
-    "detectedAt": "2026-10-12T10:52:46.126Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
-    "id": "90588de55d76db85",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "AI로 만든 게임, 픽셀아트가 흐릿하다면? 이미지 깨짐 해결하는 방법",
-    "summary": "AI를 이용해 게임을 만들었는데, 이상하게 캐릭터 이미지가 흐릿하게 보인 적 있으신가요? 원본 이미지는 분명 선명했는데 게임에 적용하니 테두리가 뭉개지거나, 캐릭터를 확대했더니 픽셀이 흐려지는 상황 말이죠. 이럴 때 무조건 고해상도 이미지를 다시 만들 필요는 없습니다. 이미지를 확대하는 방식부터 확인해 보세요. 오늘은 픽",
-    "url": "https://blog.naver.com/ty_free/224437927258?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-11T04:55:14.000Z",
-    "detectedAt": "2026-10-11T05:49:15.463Z",
     "manual": false,
     "editorial": {
       "decision": "include",

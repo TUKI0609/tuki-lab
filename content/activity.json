@@ -1,5 +1,24 @@
 [
   {
+    "id": "5fa07d61decae4cf",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "제미나이가 내 브랜드 스타일을 기억한다고? 구글이 발표한 새로운 AI 업무 기능 총정리",
+    "summary": "AI로 SNS 게시물이나 블로그 이미지를 만들 때 가장 귀찮은 점이 뭘까요? 개인적으로 눈여겨보는 문제는 매번 같은 설명을 반복해야 한다는 점입니다. \"배경은 짙은 남색으로 해줘.\" \"민트색을 강조해 줘.\" \"지난번 캐릭터와 디자인 분위기를 유지해 줘.\" 브랜드의 일관성을 유지하려면 이런 조건을 계속 전달해야 하죠. 그런",
+    "url": "https://blog.naver.com/ty_free/224450027469?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-22T03:58:28.000Z",
+    "detectedAt": "2026-10-22T04:49:53.009Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "f29adf3b3467056b",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -201,25 +220,6 @@
     "url": "https://blog.naver.com/ty_free/224438938775?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-12T04:18:24.000Z",
     "detectedAt": "2026-10-12T10:52:44.838Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "90588de55d76db85",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "AI로 만든 게임, 픽셀아트가 흐릿하다면? 이미지 깨짐 해결하는 방법",
-    "summary": "AI를 이용해 게임을 만들었는데, 이상하게 캐릭터 이미지가 흐릿하게 보인 적 있으신가요? 원본 이미지는 분명 선명했는데 게임에 적용하니 테두리가 뭉개지거나, 캐릭터를 확대했더니 픽셀이 흐려지는 상황 말이죠. 이럴 때 무조건 고해상도 이미지를 다시 만들 필요는 없습니다. 이미지를 확대하는 방식부터 확인해 보세요. 오늘은 픽",
-    "url": "https://blog.naver.com/ty_free/224437927258?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-11T04:55:14.000Z",
-    "detectedAt": "2026-10-11T05:49:15.463Z",
     "manual": false,
     "editorial": {
       "decision": "include",

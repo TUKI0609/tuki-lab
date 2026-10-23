@@ -1,5 +1,24 @@
 [
   {
+    "id": "9ddd23c51a633b00",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "캔바 Craft 출시! 무료 사용 가능할까? Dream Lab AI 이미지 만드는 방법",
+    "summary": "캔바(Canva)에서 새로운 AI 이미지 모델이 나왔다는 소식, 알고 계셨나요? 2026년 10월 22일, Canva가 자체 개발한 이미지 생성 모델 'Canva Craft'를 공개했습니다. 기존에도 캔바에서 AI 이미지를 만들 수 있었지만, 이번에는 이미지의 구도와 글자 배치를 미리 계획하는 방식이 특징이라고 합니다. ",
+    "url": "https://blog.naver.com/ty_free/224451442968?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-23T07:52:20.000Z",
+    "detectedAt": "2026-10-23T11:41:23.954Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "5fa07d61decae4cf",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -187,44 +206,6 @@
       "decision": "include",
       "reason": "tuki-brand",
       "score": 95
-    }
-  },
-  {
-    "id": "8d4fc99a1433d81f",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "AI로 만든 게임, 새로고침하면 기록이 사라진다면? 웹게임 저장 오류 해결법",
-    "summary": "AI를 활용해 웹게임을 만들었는데, 새로고침하거나 다시 접속했더니 게임 기록이 모두 사라진 경험 있으신가요? 열심히 모은 점수와 아이템, 캐릭터 성장 기록까지 처음 상태로 돌아간다면 당황스러울 수밖에 없습니다. 특히 바이브코딩으로 게임을 제작하다 보면 화면에서는 정상적으로 작동하지만, 정작 게임을 다시 실행했을 때 데이터",
-    "url": "https://blog.naver.com/ty_free/224440145257?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-13T04:05:26.000Z",
-    "detectedAt": "2026-10-13T10:38:21.883Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "96cc599d73ecbca8",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "AI로 만든 게임, 모바일에서 소리가 안 난다면? 웹게임 배경음악 오류 해결법",
-    "summary": "AI로 웹게임을 만들었는데 PC에서는 정상적으로 나오던 배경음악이 스마트폰에서는 들리지 않는 경험, 혹시 있으신가요? 게임은 정상적으로 실행되고 캐릭터도 움직이는데, 이상하게 배경음악이나 효과음만 나오지 않는 상황입니다. 이럴 때 사운드 파일이 잘못됐다고 생각하거나 AI에게 음악을 다시 넣어달라고 요청하기 쉽습니다. 그런",
-    "url": "https://blog.naver.com/ty_free/224438938775?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-12T04:18:24.000Z",
-    "detectedAt": "2026-10-12T10:52:44.838Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
     }
   },
   {

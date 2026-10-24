@@ -1,5 +1,24 @@
 [
   {
+    "id": "d66af9defc766c89",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "니케 4주년 오늘 공개｜특별 방송 시간·신규 니케·보상 발표 전 총정리",
+    "summary": "승리의 여신: 니케 4주년 특별 방송이 오늘 진행됩니다. 이번 4주년은 단순한 기념 이벤트가 아니라 지금까지 이어진 지상 탈환 스토리의 큰 전환점이 될 가능성이 높습니다. 특별 방송은 10월 24일 오후 7시 니케 공식 유튜브 채널에서 진행될 예정이며, 3차 지상 탈환전과 랩처 퀸을 향한 최종 결전, 신규 니케와 스토리 ",
+    "url": "https://blog.naver.com/abb7664/224452188568?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-24T04:36:34.000Z",
+    "detectedAt": "2026-10-24T04:38:59.269Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "9ddd23c51a633b00",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -434,25 +453,6 @@
       "decision": "include",
       "reason": "tuki-brand",
       "score": 95
-    }
-  },
-  {
-    "id": "908d31a58f11bf5d",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "배그 벤틀리 어떤 차에 적용될까? 가격·얻는법·플라잉 스퍼·GTC 총정리",
-    "summary": "배틀그라운드에 벤틀리가 들어옵니다. 배그 차량을 기다리신 분들께는 정말 반가운 소식이겠네요!! 2026년 10월 14일 PC 43.2 업데이트를 통해 PUBG x Bentley 콜라보레이션이 적용되는데요. 단순히 로비 장식용 차량이 아니라 실제 게임 내 기존 차량 외형을 벤틀리 모델로 바꾸는 스페셜 차량 스킨 방식입니다.",
-    "url": "https://blog.naver.com/abb7664/224441287850?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-14T03:30:10.000Z",
-    "detectedAt": "2026-10-14T08:45:19.085Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
     }
   },
   {

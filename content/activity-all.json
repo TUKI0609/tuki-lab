@@ -1,5 +1,43 @@
 [
   {
+    "id": "d6b1479086459e26",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "메이플스토리 10월 25일 썬데이 메이플 혜택 총정리, 룬 경험치 +200%? 공식 정정 주의!",
+    "summary": "10월 25일 메이플스토리에서 사냥하거나 HEXA 스탯을 강화할 계획이라면 이번 썬데이 메이플 혜택부터 확인해 보세요. 특히 룬 경험치 버프 혜택을 +200%로 알고 있다면 주의가 필요합니다. 넥슨이 공식 공지의 잘못된 수치를 +100%로 정정했기 때문인데요. 이번에는 이벤트 기간부터 핵심 혜택 4가지, 실제 활용할 때 ",
+    "url": "https://blog.naver.com/abb7664/224452236936?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-24T05:43:36.000Z",
+    "detectedAt": "2026-10-24T11:03:49.552Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
+    "id": "d2cff5ca8d4d387b",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "NotebookLM 이제 제미나이에서 바로 사용? Gemini Notebook 무료 연결·사용법",
+    "summary": "노트북LM(NotebookLM)에 자료를 모아두고, 제미나이(Gemini)에서 다시 질문하려면 두 서비스를 오가야 해서 번거로웠던 적 있나요? 이제는 제미나이 대화창에서 노트북을 만들거나 기존 자료를 찾아볼 수 있는 기능이 추가됐습니다. 2026년 10월 23일, 구글이 'Gemini Notebook 연결 앱' 기능을 공",
+    "url": "https://blog.naver.com/ty_free/224452222012?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-24T05:23:33.000Z",
+    "detectedAt": "2026-10-24T11:03:48.158Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "d66af9defc766c89",
     "source": "naver-game",
     "sourceLabel": "Naver Blog · 게임",
@@ -415,44 +453,6 @@
       "decision": "include",
       "reason": "maker-content",
       "score": 80
-    }
-  },
-  {
-    "id": "309e0cd70586f1cb",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "배그 벤틀리 가성비로 뽑는 법｜BP 50장 + 패스 + 이벤트로 85회 확정 GTC",
-    "summary": "배틀그라운드에 벤틀리가 출시되면서 가장 궁금한 것 중 하나가 있습니다. \"그래서 벤틀리 차량 스킨을 가장 적게 쓰고 얻으려면 어떻게 해야 할까?\" 무작정 G-Coin으로 벤틀리 화물을 열기 전에 반드시 확인해야 할 방법이 있습니다. 결론부터 말하면, BP로 구매할 수 있는 화물 티켓 50장 + 제작소 패스에서 얻는 화물 ",
-    "url": "https://blog.naver.com/abb7664/224442521934?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-15T04:49:18.000Z",
-    "detectedAt": "2026-10-15T11:31:51.274Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
-    "id": "63a1214cbbd50dfb",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "GitHub Pages 이미지 안 나올 때? AI로 만든 홈페이지 이미지 깨짐 해결법",
-    "summary": "AI로 홈페이지를 만들었는데, 미리보기에서는 멀쩡했던 이미지가 실제 홈페이지에서는 보이지 않는 경험 있으신가요? * 무료 홈페이지 제작 도전해보고 싶다면 제가 X에서 포스팅한 내용 참고하시면 쉽게 생성할 수 있을 거에요 : https://x.com/Ty_Tuki0609/status/2107689599137107968?s=",
-    "url": "https://blog.naver.com/ty_free/224441299453?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-14T03:42:54.000Z",
-    "detectedAt": "2026-10-14T08:45:17.900Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "tuki-brand",
-      "score": 95
     }
   },
   {

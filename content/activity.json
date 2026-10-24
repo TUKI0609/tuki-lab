@@ -1,5 +1,24 @@
 [
   {
+    "id": "d2cff5ca8d4d387b",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "NotebookLM 이제 제미나이에서 바로 사용? Gemini Notebook 무료 연결·사용법",
+    "summary": "노트북LM(NotebookLM)에 자료를 모아두고, 제미나이(Gemini)에서 다시 질문하려면 두 서비스를 오가야 해서 번거로웠던 적 있나요? 이제는 제미나이 대화창에서 노트북을 만들거나 기존 자료를 찾아볼 수 있는 기능이 추가됐습니다. 2026년 10월 23일, 구글이 'Gemini Notebook 연결 앱' 기능을 공",
+    "url": "https://blog.naver.com/ty_free/224452222012?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-24T05:23:33.000Z",
+    "detectedAt": "2026-10-24T11:03:48.158Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "9ddd23c51a633b00",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -187,25 +206,6 @@
       "decision": "include",
       "reason": "maker-content",
       "score": 80
-    }
-  },
-  {
-    "id": "63a1214cbbd50dfb",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "GitHub Pages 이미지 안 나올 때? AI로 만든 홈페이지 이미지 깨짐 해결법",
-    "summary": "AI로 홈페이지를 만들었는데, 미리보기에서는 멀쩡했던 이미지가 실제 홈페이지에서는 보이지 않는 경험 있으신가요? * 무료 홈페이지 제작 도전해보고 싶다면 제가 X에서 포스팅한 내용 참고하시면 쉽게 생성할 수 있을 거에요 : https://x.com/Ty_Tuki0609/status/2107689599137107968?s=",
-    "url": "https://blog.naver.com/ty_free/224441299453?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-14T03:42:54.000Z",
-    "detectedAt": "2026-10-14T08:45:17.900Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "tuki-brand",
-      "score": 95
     }
   },
   {

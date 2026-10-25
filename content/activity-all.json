@@ -1,5 +1,43 @@
 [
   {
+    "id": "e877cb1a0a3fb7ef",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "GitHub Copilot 모델이 사라졌다면? 10월 19일 종료 모델과 무료 계정 확인법",
+    "summary": "평소 쓰던 AI 코딩 모델이 갑자기 선택 목록에서 보이지 않는다면 오류부터 의심하기 쉽습니다. 그런데 이번에는 실제로 일부 모델의 지원이 종료됐습니다. GitHub는 2026년 10월 19일부터 Copilot에서 여섯 종류의 기존 AI 모델을 지원 종료했다고 공지했습니다. 어떤 모델이 바뀌었고 무료 사용자라면 무엇을 확인",
+    "url": "https://blog.naver.com/ty_free/224453069751?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-25T05:30:32.000Z",
+    "detectedAt": "2026-10-25T11:32:27.392Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "possible-maker-content",
+      "score": 50
+    }
+  },
+  {
+    "id": "855ee3e93e6188af",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "FC온라인 10월 25일 버닝 오늘 종료! 25PL 11강 받는 조건과 보상 수령 기간 정리",
+    "summary": "FC온라인에서 25PL 11강 선수팩을 받으려면 집에서 3시간만 접속하면 될까요? 이번 로스터 웜업 버닝에서는 그렇지 않습니다. 집 누적 3시간과 프리미엄 PC방 누적 3시간의 확정 보상이 서로 다르기 때문입니다. 게다가 이벤트 참여는 오늘 10월 25일 끝나지만 보상 수령은 28일까지 가능합니다. 놓치기 쉬운 조건부터 ",
+    "url": "https://blog.naver.com/abb7664/224453067787?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-25T05:27:43.000Z",
+    "detectedAt": "2026-10-25T11:32:28.567Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "d6b1479086459e26",
     "source": "naver-game",
     "sourceLabel": "Naver Blog · 게임",
@@ -410,44 +448,6 @@
     "url": "https://blog.naver.com/ty_free/224443783782?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-16T06:21:57.000Z",
     "detectedAt": "2026-10-16T11:26:44.243Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "e603e8773db315b1",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "드래곤소드 라이자 무료로 얻는법｜1.1 업데이트·지옥 난이도·토벌 랭크 총정리",
-    "summary": "드래곤소드: 어웨이크닝 1.1 업데이트가 적용됐습니다. 이번 업데이트에서 가장 눈에 띄는 변화는 신규 캐릭터 '라이자' 추가입니다. 그런데 라이자는 별도 유료 DLC 캐릭터가 아닙니다. 결론부터 말하면 메인 퀘스트 '재회'를 통해 무료로 획득할 수 있습니다. 이미 해당 퀘스트를 완료한 유저는 별도로 다시 진행할 필요 없이",
-    "url": "https://blog.naver.com/abb7664/224443729434?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-16T05:36:24.000Z",
-    "detectedAt": "2026-10-16T11:26:45.227Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
-    "id": "f1b04335925987e1",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "X 동영상 업로드 안 될 때? AI 영상 MP4 오류와 무료 변환 방법",
-    "summary": "AI로 영상을 만들고 MP4 파일까지 저장했는데, X(구 트위터)에 올리려고 하니 업로드가 실패한다면 어떻게 해야 할까요? 분명 컴퓨터에서는 정상적으로 재생되는 영상인데 SNS에 올리려고 하면 지원하지 않는 형식이라는 메시지가 나오거나 업로드가 완료되지 않는 경우가 있습니다. 이럴 때 영상을 처음부터 다시 제작해야 하나 ",
-    "url": "https://blog.naver.com/ty_free/224442565187?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-15T05:26:19.000Z",
-    "detectedAt": "2026-10-15T11:31:50.214Z",
     "manual": false,
     "editorial": {
       "decision": "include",

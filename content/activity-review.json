@@ -1,5 +1,24 @@
 [
   {
+    "id": "e877cb1a0a3fb7ef",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "GitHub Copilot 모델이 사라졌다면? 10월 19일 종료 모델과 무료 계정 확인법",
+    "summary": "평소 쓰던 AI 코딩 모델이 갑자기 선택 목록에서 보이지 않는다면 오류부터 의심하기 쉽습니다. 그런데 이번에는 실제로 일부 모델의 지원이 종료됐습니다. GitHub는 2026년 10월 19일부터 Copilot에서 여섯 종류의 기존 AI 모델을 지원 종료했다고 공지했습니다. 어떤 모델이 바뀌었고 무료 사용자라면 무엇을 확인",
+    "url": "https://blog.naver.com/ty_free/224453069751?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-25T05:30:32.000Z",
+    "detectedAt": "2026-10-25T11:32:27.392Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "possible-maker-content",
+      "score": 50
+    }
+  },
+  {
     "id": "dc96322e5a3f6250",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",

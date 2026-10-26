@@ -1,5 +1,24 @@
 [
   {
+    "id": "4ad6d792d69a29c3",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": "aevowake",
+    "title": "니케 4주년 쿠폰 5종 총정리! 10월 29일 마리안 퀸·무료 라푼젤·259회 모집 혜택",
+    "summary": "승리의 여신: 니케 4주년 방송을 놓쳤다면 먼저 쿠폰부터 확인해 보세요. 10월 24일 기념 방송을 통해 쿠폰 코드 5개가 소개됐고, 10월 29일에는 대규모 4주년 업데이트가 예정되어 있습니다. 특히 신규 마리안과 홍련, 무료로 획득할 수 있는 라푼젤, 최대 259회 모집 기회까지 발표됐는데요. 지금 확인할 수 있는 정",
+    "url": "https://blog.naver.com/abb7664/224454231684?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-26T06:32:56.000Z",
+    "detectedAt": "2026-10-26T13:06:12.651Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "project:aevowake",
+      "score": 100
+    }
+  },
+  {
     "id": "d2cff5ca8d4d387b",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -163,25 +182,6 @@
     "url": "https://blog.naver.com/ty_free/224444505536?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-17T01:27:37.000Z",
     "detectedAt": "2026-10-17T04:29:09.194Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "db3ed81604d2a44f",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "구글 Flow 캐릭터 얼굴이 계속 바뀐다면? 일관성 유지하는 3가지 방법",
-    "summary": "AI로 같은 캐릭터 영상을 만들었는데, 장면마다 얼굴이 달라진다면 어떻게 해야 할까요? 첫 번째 영상에서는 분명 같은 캐릭터였는데 두 번째 영상에서는 눈 모양이 달라지고, 세 번째 영상에서는 옷이나 체형까지 바뀌는 일이 생깁니다. 특히 AI 애니메이션이나 숏폼을 여러 장면으로 제작할 때 이런 문제가 발생하면 영상들을 자연",
-    "url": "https://blog.naver.com/ty_free/224443783782?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-16T06:21:57.000Z",
-    "detectedAt": "2026-10-16T11:26:44.243Z",
     "manual": false,
     "editorial": {
       "decision": "include",

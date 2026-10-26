@@ -1,5 +1,24 @@
 [
   {
+    "id": "2152eae2286c1062",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "Google Vids 무료로 영상 소리 분리할 수 있을까? 새 오디오 트랙 기능과 사용법",
+    "summary": "영상에서 소리만 따로 움직이거나, 장면이 바뀌어도 같은 오디오를 이어서 재생하고 싶었던 적 있나요? 예전에는 영상에 붙어 있는 소리를 음소거하는 정도로 편집해야 했지만, Google Vids에 새로운 기능이 추가됐습니다. 2026년 10월 23일 구글이 영상 클립의 오디오를 별도 트랙으로 분리하는 기능을 공식 발표했기 때",
+    "url": "https://blog.naver.com/ty_free/224454234684?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-26T06:35:05.000Z",
+    "detectedAt": "2026-10-26T13:06:11.459Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "source-default:review",
+      "score": 30
+    }
+  },
+  {
     "id": "e877cb1a0a3fb7ef",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",

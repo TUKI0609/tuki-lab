@@ -1,5 +1,33 @@
 [
   {
+    "id": "lab-aevowake-2026-W44",
+    "project": "aevowake",
+    "projectName": "AEVOWAKE",
+    "period": "2026-W44",
+    "status": "PENDING",
+    "needsApproval": true,
+    "suggestedType": "BUILD LOG",
+    "suggestedTitle": "AEVOWAKE · 니케 4주년 쿠폰 5종 총정리! 10월 29일 마리안 퀸·무료 라푼젤·259회 모집 혜택",
+    "suggestedSummary": "AEVOWAKE와 연결된 최근 활동 1건을 하나의 BUILD LOG 후보로 묶었습니다. 출처: Naver Blog · 게임. 승인 전에는 TUKI LAB에 공개되지 않습니다.",
+    "confidence": 70,
+    "evidenceCount": 1,
+    "evidence": [
+      {
+        "activityId": "4ad6d792d69a29c3",
+        "source": "naver-game",
+        "sourceLabel": "Naver Blog · 게임",
+        "title": "니케 4주년 쿠폰 5종 총정리! 10월 29일 마리안 퀸·무료 라푼젤·259회 모집 혜택",
+        "url": "https://blog.naver.com/abb7664/224454231684?fromRss=true&trackingCode=rss",
+        "publishedAt": "2026-10-26T06:32:56.000Z"
+      }
+    ],
+    "evidenceHash": "ac880c4f6d02",
+    "generatedAt": "2026-10-26T13:06:12.707Z",
+    "updatedAt": "2026-10-26T13:06:12.707Z",
+    "approvedAt": null,
+    "rejectedAt": null
+  },
+  {
     "id": "lab-tuki-video-maker-2026-W42",
     "project": null,
     "projectName": "TUKI VIDEO MAKER",

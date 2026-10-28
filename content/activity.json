@@ -1,5 +1,24 @@
 [
   {
+    "id": "f33fb2bbb826f06a",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "구글 지니4(Genie 4) 공개! AI 가상 세계 생성, 무료 사용 가능할까?",
+    "summary": "사진 한 장이나 짧은 설명으로 만든 가상 세계 안을 직접 돌아다닐 수 있다면 어떨까요? 단순히 영상을 재생하는 것이 아니라 날씨를 바꾸고, 카메라를 움직이고, 등장인물의 반응까지 살펴보는 방식입니다. 구글 딥마인드가 2026년 10월 27일 새로운 AI 월드 모델 '지니 4(Genie 4)'를 공식 발표했습니다. 그런데 ",
+    "url": "https://blog.naver.com/ty_free/224456591137?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-28T04:48:08.000Z",
+    "detectedAt": "2026-10-28T05:44:25.581Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "6e0634acda80ee32",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -163,25 +182,6 @@
     "url": "https://blog.naver.com/ty_free/224446292884?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-19T01:37:11.000Z",
     "detectedAt": "2026-10-19T04:42:52.752Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "9d1fd33349a77fe7",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "GitHub Pages에서 새로고침하면 404 오류? AI로 만든 웹사이트 해결 방법",
-    "summary": "AI에게 웹사이트를 만들어 달라고 요청하고 GitHub Pages에 올렸는데, 이상한 문제가 생겼나요? 처음 접속할 때는 정상적으로 열립니다. 그런데 메뉴를 눌러 다른 페이지로 이동한 다음 새로고침하면 갑자기 404 오류가 나타납니다. 홈페이지는 잘 되는데 특정 주소에서만 오류가 발생하니 당황스럽죠. 이런 문제는 Reac",
-    "url": "https://blog.naver.com/ty_free/224445642265?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-18T08:30:17.000Z",
-    "detectedAt": "2026-10-18T11:08:21.671Z",
     "manual": false,
     "editorial": {
       "decision": "include",

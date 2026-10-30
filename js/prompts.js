@@ -1,4 +1,5 @@
 import {loadJson,initI18n,renderNav,setYear,getLanguage} from "./core.js";
+import {CARD_LOCALES,normalizeXHandle,resolveCardLanguage,buildAdventurerPrompt} from "./adventurer-id.mjs";
 
 const BASE="../";
 const collection=document.querySelector("#prompt-grid");
@@ -14,6 +15,7 @@ let prompts=[];
 let selected="all";
 let searchTerm="";
 let statusTimeout;
+const adventurerState={language:resolveCardLanguage(navigator.language),handle:""};
 
 function element(name,className,content){
   const el=document.createElement(name);
@@ -27,7 +29,8 @@ function announce(message){
   statusTimeout=setTimeout(()=>{status.textContent="";},3500);
 }
 
-async function copyPrompt(prompt,button,kind="prompt"){
+async function copyPrompt(prompt,button,kind="prompt",language=null){
+  const locale=language&&CARD_LOCALES[language];
   const original=button.textContent;
   try{
     if(navigator.clipboard?.writeText && window.isSecureContext){
@@ -44,9 +47,9 @@ async function copyPrompt(prompt,button,kind="prompt"){
       field.remove();
       if(!copied)throw new Error("Clipboard permission unavailable");
     }
-    button.textContent="복사 완료 ✓";
+    button.textContent=locale?.copied || "복사 완료 ✓";
     button.dataset.copied="true";
-    announce(kind==="url" ? "공유 링크가 복사됐어요. X 게시물에 붙여넣어 보세요." : "프롬프트가 복사됐어요. 필요한 부분만 바꿔서 사용하세요.");
+    announce(kind==="url" ? (locale?.linkCopied||"공유 링크가 복사됐어요. X 게시물에 붙여넣어 보세요.") : (locale?.success||"프롬프트가 복사됐어요. 필요한 부분만 바꿔서 사용하세요."));
     setTimeout(()=>{button.textContent=original;delete button.dataset.copied;},2300);
   }catch{
     if(kind==="url"){
@@ -107,11 +110,116 @@ function cardFor(item){
   }
   body.appendChild(tags);
 
+  // Only the Adventurer ID card accepts a handle. The image is attached
+  // later in the AI chat, never transmitted or stored by this website.
+  const isAdventurer=item.id==="pixel-guild-card";
+  let cardPrompt=item.prompt;
+  let refreshAdventurer=()=>{};
+  let updateDetails=()=>{};
+  let handleFeedback;
+  if(isAdventurer){
+    const panel=element("section","prompt-adventurer-form");
+    panel.setAttribute("aria-label","Adventurer ID / 冒険者登録証 / 탐험가 등록증");
+
+    const intro=element("p","prompt-adventurer-intro");
+    panel.appendChild(intro);
+
+    const langLabel=element("span","prompt-adventurer-label");
+    langLabel.id="adventurer-language-label";
+    panel.appendChild(langLabel);
+
+    const langTabs=element("div","prompt-adventurer-languages");
+    langTabs.setAttribute("role","group");
+    langTabs.setAttribute("aria-labelledby",langLabel.id);
+    const langButtons=new Map();
+    for(const [lang,display] of [["KO","한국어"],["EN","English"],["JA","日本語"]]){
+      const btn=element("button","",display);
+      btn.type="button";
+      btn.dataset.lang=lang;
+      btn.setAttribute("aria-pressed",String(lang===adventurerState.language));
+      btn.addEventListener("click",()=>{
+        adventurerState.language=lang;
+        refreshAdventurer(updateDetails);
+      });
+      langButtons.set(lang,btn);
+      langTabs.appendChild(btn);
+    }
+    panel.appendChild(langTabs);
+
+    const handleLabel=element("label","prompt-adventurer-label");
+    const handleId="adventurer-x-handle";
+    handleLabel.htmlFor=handleId;
+    panel.appendChild(handleLabel);
+
+    const input=element("input","prompt-adventurer-handle");
+    input.id=handleId;
+    input.type="text";
+    input.autocomplete="off";
+    input.spellcheck=false;
+    input.maxLength=16; // Optional @ plus the 15-character maximum X username.
+    input.value=adventurerState.handle;
+    panel.appendChild(input);
+
+    handleFeedback=element("p","prompt-adventurer-feedback");
+    handleFeedback.setAttribute("role","status");
+    handleFeedback.setAttribute("aria-live","polite");
+    panel.appendChild(handleFeedback);
+
+    const imageNotice=element("p","prompt-adventurer-photo-note");
+    panel.appendChild(imageNotice);
+
+    const localizedSummary=body.querySelector(".prompt-card-summary");
+    const localizedTitle=body.querySelector("h3");
+
+    refreshAdventurer=(updateCode)=>{
+      const t=CARD_LOCALES[adventurerState.language];
+      panel.lang=t.htmlLang;
+      localizedTitle.textContent=t.title;
+      localizedSummary.textContent=t.summary;
+      intro.textContent=t.intro;
+      langLabel.textContent=t.languageLabel;
+      handleLabel.textContent=t.handleLabel;
+      input.placeholder=t.handlePlaceholder;
+      input.setAttribute("aria-label",t.handleLabel);
+      imageNotice.textContent=t.imageNotice;
+      for(const [lang,btn] of langButtons){
+        btn.setAttribute("aria-pressed",String(lang===adventurerState.language));
+        btn.classList.toggle("is-active",lang===adventurerState.language);
+      }
+      const value=normalizeXHandle(adventurerState.handle);
+      handleFeedback.textContent=value===null?t.invalid:"";
+      input.setAttribute("aria-invalid",String(value===null));
+      cardPrompt=buildAdventurerPrompt(item.prompt,{
+        language:adventurerState.language,
+        handle: value===null?"":adventurerState.handle
+      });
+      if(typeof updateCode==="function")updateCode(cardPrompt,t);
+    };
+    input.addEventListener("input",()=>{
+      adventurerState.handle=input.value;
+      refreshAdventurer(updateDetails);
+    });
+    body.appendChild(panel);
+  }
+
   const actions=element("div","prompt-card-actions");
   const copy=element("button","prompt-card-copy","프롬프트 복사");
   copy.type="button";
   copy.setAttribute("aria-label",item.title+" 프롬프트 복사");
-  copy.addEventListener("click",()=>copyPrompt(item.prompt,copy));
+  copy.addEventListener("click",()=>{
+    if(isAdventurer){
+      const t=CARD_LOCALES[adventurerState.language];
+      const handle=normalizeXHandle(adventurerState.handle);
+      if(!handle){
+        handleFeedback.textContent=handle===null?t.invalid:t.required;
+        const input=body.querySelector(".prompt-adventurer-handle");
+        input?.focus();
+        announce(handle===null?t.invalid:t.required);
+        return;
+      }
+    }
+    copyPrompt(cardPrompt,copy,"prompt",isAdventurer?adventurerState.language:null);
+  });
   actions.appendChild(copy);
   const link=element("button","prompt-card-permalink","링크 복사");
   link.type="button";
@@ -119,7 +227,8 @@ function cardFor(item){
   link.setAttribute("aria-label",item.title+" 공유 링크 복사");
   link.addEventListener("click",()=>{
     const uri=new URL("#"+item.id,location.href).href;
-    copyPrompt(uri,link,"url");
+    if(isAdventurer)copyPrompt(uri,link,"url",adventurerState.language);
+    else copyPrompt(uri,link,"url");
   });
   actions.appendChild(link);
   body.appendChild(actions);
@@ -129,9 +238,26 @@ function cardFor(item){
   const summary=element("summary","","프롬프트 내용 확인하기");
   details.appendChild(summary);
   const code=element("pre","prompt-card-full");
-  code.appendChild(element("code","",item.prompt));
+  const codeText=element("code","",cardPrompt);
+  code.appendChild(codeText);
   details.appendChild(code);
   body.appendChild(details);
+  if(isAdventurer){
+    const title=body.querySelector("h3");
+    updateDetails=(prompt,t)=>{
+      codeText.textContent=prompt;
+      summary.textContent=t.details;
+      copy.textContent=t.copy;
+      copy.setAttribute("aria-label",t.copy);
+      copy.lang=t.htmlLang;
+      link.textContent=t.link;
+      link.lang=t.htmlLang;
+      link.setAttribute("aria-label",t.link);
+      title.lang=t.htmlLang;
+    };
+    // Keep the input listener's closure updated after the details controls exist.
+    refreshAdventurer(updateDetails);
+  }
 
   card.appendChild(body);
   return card;

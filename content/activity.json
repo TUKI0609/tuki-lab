@@ -1,5 +1,24 @@
 [
   {
+    "id": "e6f9bc34c7f5f73c",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "GitHub Copilot 이미지 생성 기능 공개! 무료 계정도 될까? 사용법과 AI 크레딧 정리",
+    "summary": "코딩하다가 앱 아이콘이나 웹사이트에 넣을 이미지가 필요하면 어떻게 하시나요? 별도의 이미지 생성 사이트를 열고 결과를 다운로드한 뒤 다시 프로젝트에 넣는 과정이 번거로울 수 있습니다. 2026년 10월 28일, GitHub가 Copilot 대화 안에서 이미지를 만들고 수정하는 기능을 공식 발표했습니다. 그런데 이 기능은 ",
+    "url": "https://blog.naver.com/ty_free/224461086309?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-01T05:20:08.000Z",
+    "detectedAt": "2026-11-01T06:08:27.818Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "99e7f368559ebc82",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -163,25 +182,6 @@
     "url": "https://blog.naver.com/ty_free/224450027469?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-22T03:58:28.000Z",
     "detectedAt": "2026-10-22T04:49:53.009Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "f29adf3b3467056b",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "ChatGPT 이미지 2.5 사용법 총정리! 무료로 이미지 만들고 수정·저장하는 방법",
-    "summary": "ChatGPT로 이미지를 만들어 본 적 있나요? 이전에는 AI에게 그림을 만들어 달라고 요청하고 마음에 들지 않으면 처음부터 다시 생성하는 일이 많았습니다. 하지만 이제는 기존 이미지를 수정하거나, 특정 부분만 바꾸거나, 참고 사진을 활용해 새로운 이미지를 만드는 등 다양한 작업을 할 수 있습니다. 바로 ChatGPT I",
-    "url": "https://blog.naver.com/ty_free/224448904742?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-21T04:36:34.000Z",
-    "detectedAt": "2026-10-21T04:50:55.964Z",
     "manual": false,
     "editorial": {
       "decision": "include",

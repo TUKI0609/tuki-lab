@@ -1,5 +1,24 @@
 [
   {
+    "id": "cd08e2788ff277f9",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "챗GPT 계정 2개 동시에 로그인? 모바일 계정 전환 방법과 Plus 주의사항",
+    "summary": "챗GPT를 개인용과 업무용으로 나눠 쓰려면 매번 로그아웃해야 할까요? 이제 모바일 앱에서도 두 계정을 로그인 상태로 유지하고 전환할 수 있는 기능이 배포되고 있습니다. OpenAI는 2026년 10월 30일 iOS와 안드로이드 앱의 계정 전환 기능을 공식 발표했습니다. 무료 계정으로도 시작할 수 있지만 대화 기록과 유료 ",
+    "url": "https://blog.naver.com/ty_free/224462405198?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-02T07:30:05.000Z",
+    "detectedAt": "2026-11-02T11:11:09.947Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "possible-maker-content",
+      "score": 50
+    }
+  },
+  {
     "id": "2152eae2286c1062",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",

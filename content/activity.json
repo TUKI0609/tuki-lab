@@ -171,25 +171,6 @@
     }
   },
   {
-    "id": "5fa07d61decae4cf",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "제미나이가 내 브랜드 스타일을 기억한다고? 구글이 발표한 새로운 AI 업무 기능 총정리",
-    "summary": "AI로 SNS 게시물이나 블로그 이미지를 만들 때 가장 귀찮은 점이 뭘까요? 개인적으로 눈여겨보는 문제는 매번 같은 설명을 반복해야 한다는 점입니다. \"배경은 짙은 남색으로 해줘.\" \"민트색을 강조해 줘.\" \"지난번 캐릭터와 디자인 분위기를 유지해 줘.\" 브랜드의 일관성을 유지하려면 이런 조건을 계속 전달해야 하죠. 그런",
-    "url": "https://blog.naver.com/ty_free/224450027469?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-22T03:58:28.000Z",
-    "detectedAt": "2026-10-22T04:49:53.009Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
     "id": "a0491d60ef6a6e52",
     "source": "youtube",
     "sourceLabel": "YouTube",

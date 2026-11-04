@@ -1,5 +1,43 @@
 [
   {
+    "id": "06393cf948fd306e",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "메이플스토리 월드 리프 11월 5일 마감! 엘리시움·크로아 조기 종료, 이동 전 필수 확인",
+    "summary": "메이플스토리 월드 리프가 11월 5일까지라고 해서 모든 월드로 이동할 수 있는 건 아닙니다. 엘리시움과 크로아로 향하는 월드 리프는 이미 조기 종료됐다는 사실, 알고 계셨나요? 특히 처음 이동할 월드를 선택하면 메이플ID 전체에 적용되고, 이동 신청도 마음대로 취소할 수 없습니다. 이번에는 남은 이벤트 기간과 월드별 이동",
+    "url": "https://blog.naver.com/abb7664/224464966148?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-04T09:01:44.000Z",
+    "detectedAt": "2026-11-04T17:16:13.286Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
+    "id": "4418e5cf12a1491b",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "구글 시트 Gemini, AI가 채운 셀마다 출처 표시! 무료 사용과 확인 방법",
+    "summary": "AI가 표를 대신 채워 줬는데, 그 숫자가 어디서 나온 것인지 궁금했던 적 있나요? 이제 구글 스프레드시트에서는 AI가 웹 정보를 참고해 만든 셀의 출처를 셀별로 확인할 수 있습니다. 구글은 2026년 10월 28일 ‘Fill with Gemini’의 웹 출처 표시와 처리 규모 확대를 공식 발표했습니다. 다만 일반 무료 ",
+    "url": "https://blog.naver.com/ty_free/224464962258?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-04T08:58:02.000Z",
+    "detectedAt": "2026-11-04T17:16:12.158Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "possible-maker-content",
+      "score": 50
+    }
+  },
+  {
     "id": "0474c0d1ce4961b7",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -410,44 +448,6 @@
     "url": "https://blog.naver.com/ty_free/224452222012?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-24T05:23:33.000Z",
     "detectedAt": "2026-10-24T11:03:48.158Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "d66af9defc766c89",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "니케 4주년 오늘 공개｜특별 방송 시간·신규 니케·보상 발표 전 총정리",
-    "summary": "승리의 여신: 니케 4주년 특별 방송이 오늘 진행됩니다. 이번 4주년은 단순한 기념 이벤트가 아니라 지금까지 이어진 지상 탈환 스토리의 큰 전환점이 될 가능성이 높습니다. 특별 방송은 10월 24일 오후 7시 니케 공식 유튜브 채널에서 진행될 예정이며, 3차 지상 탈환전과 랩처 퀸을 향한 최종 결전, 신규 니케와 스토리 ",
-    "url": "https://blog.naver.com/abb7664/224452188568?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-24T04:36:34.000Z",
-    "detectedAt": "2026-10-24T04:38:59.269Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
-    "id": "9ddd23c51a633b00",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "캔바 Craft 출시! 무료 사용 가능할까? Dream Lab AI 이미지 만드는 방법",
-    "summary": "캔바(Canva)에서 새로운 AI 이미지 모델이 나왔다는 소식, 알고 계셨나요? 2026년 10월 22일, Canva가 자체 개발한 이미지 생성 모델 'Canva Craft'를 공개했습니다. 기존에도 캔바에서 AI 이미지를 만들 수 있었지만, 이번에는 이미지의 구도와 글자 배치를 미리 계획하는 방식이 특징이라고 합니다. ",
-    "url": "https://blog.naver.com/ty_free/224451442968?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-23T07:52:20.000Z",
-    "detectedAt": "2026-10-23T11:41:23.954Z",
     "manual": false,
     "editorial": {
       "decision": "include",

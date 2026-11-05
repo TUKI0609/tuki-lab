@@ -1,5 +1,43 @@
 [
   {
+    "id": "3754343c3cf37353",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "구글 시트 Gemini, AI가 채운 셀마다 출처 표시! 무료 사용과 확인 방법",
+    "summary": "AI가 표를 대신 채워 줬는데, 그 숫자가 어디서 나온 것인지 궁금했던 적 있나요? 이제 구글 스프레드시트에서는 AI가 웹 정보를 참고해 만든 셀의 출처를 셀별로 확인할 수 있습니다. 구글은 2026년 10월 28일 ‘Fill with Gemini’의 웹 출처 표시와 처리 규모 확대를 공식 발표했습니다. 다만 일반 무료 ",
+    "url": "https://blog.naver.com/ty_free/224466208808?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-05T08:31:28.000Z",
+    "detectedAt": "2026-11-05T17:25:25.541Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "possible-maker-content",
+      "score": 50
+    }
+  },
+  {
+    "id": "e060377c0a83b3be",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "원신 7.2 업데이트 총정리! 미탸·발레리 신규 캐릭터, 스네즈나야 지역과 원석 600개 보상",
+    "summary": "원신 7.2 버전이 드디어 업데이트됐습니다. 신규 캐릭터 미탸와 발레리, 스네즈나야의 새로운 지역 2곳, 추가 마신 임무까지 등장했는데요. 특히 이번 업데이트에서는 조건을 충족한 이용자에게 점검 보상과 오류 수정 보상을 합쳐 원석 600개가 지급됩니다. 하지만 보상마다 확인해야 할 수령 조건이 다르다는 점은 알고 계셨나요",
+    "url": "https://blog.naver.com/abb7664/224466206293?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-05T08:29:30.000Z",
+    "detectedAt": "2026-11-05T17:25:26.522Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "06393cf948fd306e",
     "source": "naver-game",
     "sourceLabel": "Naver Blog · 게임",
@@ -415,44 +453,6 @@
       "decision": "exclude",
       "reason": "source-default:exclude",
       "score": 0
-    }
-  },
-  {
-    "id": "d6b1479086459e26",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "메이플스토리 10월 25일 썬데이 메이플 혜택 총정리, 룬 경험치 +200%? 공식 정정 주의!",
-    "summary": "10월 25일 메이플스토리에서 사냥하거나 HEXA 스탯을 강화할 계획이라면 이번 썬데이 메이플 혜택부터 확인해 보세요. 특히 룬 경험치 버프 혜택을 +200%로 알고 있다면 주의가 필요합니다. 넥슨이 공식 공지의 잘못된 수치를 +100%로 정정했기 때문인데요. 이번에는 이벤트 기간부터 핵심 혜택 4가지, 실제 활용할 때 ",
-    "url": "https://blog.naver.com/abb7664/224452236936?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-24T05:43:36.000Z",
-    "detectedAt": "2026-10-24T11:03:49.552Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
-    "id": "d2cff5ca8d4d387b",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "NotebookLM 이제 제미나이에서 바로 사용? Gemini Notebook 무료 연결·사용법",
-    "summary": "노트북LM(NotebookLM)에 자료를 모아두고, 제미나이(Gemini)에서 다시 질문하려면 두 서비스를 오가야 해서 번거로웠던 적 있나요? 이제는 제미나이 대화창에서 노트북을 만들거나 기존 자료를 찾아볼 수 있는 기능이 추가됐습니다. 2026년 10월 23일, 구글이 'Gemini Notebook 연결 앱' 기능을 공",
-    "url": "https://blog.naver.com/ty_free/224452222012?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-24T05:23:33.000Z",
-    "detectedAt": "2026-10-24T11:03:48.158Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
     }
   },
   {

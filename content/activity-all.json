@@ -1,21 +1,40 @@
 [
   {
-    "id": "3754343c3cf37353",
+    "id": "de11e9aa7728d125",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
     "kind": "POST",
     "route": "BUILD",
     "project": null,
-    "title": "구글 시트 Gemini, AI가 채운 셀마다 출처 표시! 무료 사용과 확인 방법",
-    "summary": "AI가 표를 대신 채워 줬는데, 그 숫자가 어디서 나온 것인지 궁금했던 적 있나요? 이제 구글 스프레드시트에서는 AI가 웹 정보를 참고해 만든 셀의 출처를 셀별로 확인할 수 있습니다. 구글은 2026년 10월 28일 ‘Fill with Gemini’의 웹 출처 표시와 처리 규모 확대를 공식 발표했습니다. 다만 일반 무료 ",
-    "url": "https://blog.naver.com/ty_free/224466208808?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-11-05T08:31:28.000Z",
-    "detectedAt": "2026-11-05T17:25:25.541Z",
+    "title": "챗GPT 이미지 2.6 출시! 무료 AI 이미지 생성부터 움직이는 GIF 만들기까지",
+    "summary": "AI로 만든 캐릭터를 움직이는 GIF로 바꿀 수 있다면 어떨까요? 이제 별도의 영상 편집 프로그램 없이도 ChatGPT에 움직임을 설명해 GIF 제작을 요청할 수 있게 됐습니다. OpenAI는 2026년 11월 4일 새로운 이미지 생성 모델 Images 2.6을 공식 발표했습니다. 무료 계정에서도 이미지 생성이 가능하지만",
+    "url": "https://blog.naver.com/ty_free/224467385183?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-06T07:48:10.000Z",
+    "detectedAt": "2026-11-06T16:46:41.119Z",
     "manual": false,
     "editorial": {
-      "decision": "review",
-      "reason": "possible-maker-content",
-      "score": 50
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "93fa3a36b6964c11",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "테일즈위버 11월 업데이트 총정리! 버닝 러시·에타 1+1·주말 경험치 5배 혜택",
+    "summary": "테일즈위버 복귀를 고민하고 있다면 이번 11월 업데이트는 확인해 볼 만합니다. 11월 5일 패치로 New 버닝 러시와 에타 레벨업 지원 이벤트가 동시에 시작됐고, 이번 주말부터는 룬 경험치 5배 혜택까지 적용됩니다. 그런데 두 성장 이벤트 모두 참여 캐릭터 선택에 주의해야 한다는 사실, 알고 계셨나요? 잘못 등록하면 다른",
+    "url": "https://blog.naver.com/abb7664/224467368056?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-06T07:34:22.000Z",
+    "detectedAt": "2026-11-06T16:46:42.440Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
     }
   },
   {
@@ -54,25 +73,6 @@
       "decision": "exclude",
       "reason": "source-default:exclude",
       "score": 0
-    }
-  },
-  {
-    "id": "4418e5cf12a1491b",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "구글 시트 Gemini, AI가 채운 셀마다 출처 표시! 무료 사용과 확인 방법",
-    "summary": "AI가 표를 대신 채워 줬는데, 그 숫자가 어디서 나온 것인지 궁금했던 적 있나요? 이제 구글 스프레드시트에서는 AI가 웹 정보를 참고해 만든 셀의 출처를 셀별로 확인할 수 있습니다. 구글은 2026년 10월 28일 ‘Fill with Gemini’의 웹 출처 표시와 처리 규모 확대를 공식 발표했습니다. 다만 일반 무료 ",
-    "url": "https://blog.naver.com/ty_free/224464962258?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-11-04T08:58:02.000Z",
-    "detectedAt": "2026-11-04T17:16:12.158Z",
-    "manual": false,
-    "editorial": {
-      "decision": "review",
-      "reason": "possible-maker-content",
-      "score": 50
     }
   },
   {
@@ -437,22 +437,22 @@
     }
   },
   {
-    "id": "855ee3e93e6188af",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
+    "id": "d2cff5ca8d4d387b",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
     "kind": "POST",
-    "route": "PLAY",
+    "route": "BUILD",
     "project": null,
-    "title": "FC온라인 10월 25일 버닝 오늘 종료! 25PL 11강 받는 조건과 보상 수령 기간 정리",
-    "summary": "FC온라인에서 25PL 11강 선수팩을 받으려면 집에서 3시간만 접속하면 될까요? 이번 로스터 웜업 버닝에서는 그렇지 않습니다. 집 누적 3시간과 프리미엄 PC방 누적 3시간의 확정 보상이 서로 다르기 때문입니다. 게다가 이벤트 참여는 오늘 10월 25일 끝나지만 보상 수령은 28일까지 가능합니다. 놓치기 쉬운 조건부터 ",
-    "url": "https://blog.naver.com/abb7664/224453067787?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-25T05:27:43.000Z",
-    "detectedAt": "2026-10-25T11:32:28.567Z",
+    "title": "NotebookLM 이제 제미나이에서 바로 사용? Gemini Notebook 무료 연결·사용법",
+    "summary": "노트북LM(NotebookLM)에 자료를 모아두고, 제미나이(Gemini)에서 다시 질문하려면 두 서비스를 오가야 해서 번거로웠던 적 있나요? 이제는 제미나이 대화창에서 노트북을 만들거나 기존 자료를 찾아볼 수 있는 기능이 추가됐습니다. 2026년 10월 23일, 구글이 'Gemini Notebook 연결 앱' 기능을 공",
+    "url": "https://blog.naver.com/ty_free/224452222012?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-10-24T05:23:33.000Z",
+    "detectedAt": "2026-11-06T16:46:41.119Z",
     "manual": false,
     "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
     }
   },
   {

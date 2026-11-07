@@ -1,5 +1,24 @@
 [
   {
+    "id": "546d1782a0140079",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "아이폰 앱도 AI로 코딩? GitHub Copilot Xcode 통합, 무료 사용법과 설치 조건",
+    "summary": "아이폰 앱을 만들려면 코드를 처음부터 전부 직접 작성해야 할까요? 이제 애플의 앱 개발 프로그램인 Xcode 안에서도 GitHub Copilot을 기본 코딩 도우미로 연결할 수 있게 됐습니다. GitHub는 2026년 11월 4일 새로운 통합 기능을 공식 발표했고, 11월 6일 주간 업데이트에서도 이를 소개했습니다. 무료",
+    "url": "https://blog.naver.com/ty_free/224468417042?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-07T08:20:51.000Z",
+    "detectedAt": "2026-11-07T13:03:54.029Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "de11e9aa7728d125",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -125,44 +144,6 @@
     "url": "https://blog.naver.com/ty_free/224455166501?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-27T02:16:37.000Z",
     "detectedAt": "2026-10-27T09:01:53.051Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "4ad6d792d69a29c3",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": "aevowake",
-    "title": "니케 4주년 쿠폰 5종 총정리! 10월 29일 마리안 퀸·무료 라푼젤·259회 모집 혜택",
-    "summary": "승리의 여신: 니케 4주년 방송을 놓쳤다면 먼저 쿠폰부터 확인해 보세요. 10월 24일 기념 방송을 통해 쿠폰 코드 5개가 소개됐고, 10월 29일에는 대규모 4주년 업데이트가 예정되어 있습니다. 특히 신규 마리안과 홍련, 무료로 획득할 수 있는 라푼젤, 최대 259회 모집 기회까지 발표됐는데요. 지금 확인할 수 있는 정",
-    "url": "https://blog.naver.com/abb7664/224454231684?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-26T06:32:56.000Z",
-    "detectedAt": "2026-10-26T13:06:12.651Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "project:aevowake",
-      "score": 100
-    }
-  },
-  {
-    "id": "d2cff5ca8d4d387b",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "NotebookLM 이제 제미나이에서 바로 사용? Gemini Notebook 무료 연결·사용법",
-    "summary": "노트북LM(NotebookLM)에 자료를 모아두고, 제미나이(Gemini)에서 다시 질문하려면 두 서비스를 오가야 해서 번거로웠던 적 있나요? 이제는 제미나이 대화창에서 노트북을 만들거나 기존 자료를 찾아볼 수 있는 기능이 추가됐습니다. 2026년 10월 23일, 구글이 'Gemini Notebook 연결 앱' 기능을 공",
-    "url": "https://blog.naver.com/ty_free/224452222012?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-24T05:23:33.000Z",
-    "detectedAt": "2026-11-06T16:46:41.119Z",
     "manual": false,
     "editorial": {
       "decision": "include",

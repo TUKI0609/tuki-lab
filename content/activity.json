@@ -1,5 +1,24 @@
 [
   {
+    "id": "7365f50b20ea6dc9",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "바이브코딩 API 키 유출 막는 법! GitHub 무료 보안 설정과 .env 파일 관리",
+    "summary": "AI에게 코딩을 맡겼는데 내 API 키까지 인터넷에 공개된다면 어떨까요? 앱을 실행할 때 필요한 비밀번호나 인증키를 코드에 넣은 채 GitHub에 올리는 실수는 생각보다 위험합니다. 특히 바이브코딩을 처음 시작했다면 코드는 잘 작동해도 어떤 파일을 공개하면 안 되는지 놓치기 쉽습니다. 오늘은 GitHub 공식 문서를 기준",
+    "url": "https://blog.naver.com/ty_free/224469318573?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-08T08:43:55.000Z",
+    "detectedAt": "2026-11-08T10:25:54.820Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "546d1782a0140079",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",

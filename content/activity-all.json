@@ -1,5 +1,43 @@
 [
   {
+    "id": "7365f50b20ea6dc9",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "바이브코딩 API 키 유출 막는 법! GitHub 무료 보안 설정과 .env 파일 관리",
+    "summary": "AI에게 코딩을 맡겼는데 내 API 키까지 인터넷에 공개된다면 어떨까요? 앱을 실행할 때 필요한 비밀번호나 인증키를 코드에 넣은 채 GitHub에 올리는 실수는 생각보다 위험합니다. 특히 바이브코딩을 처음 시작했다면 코드는 잘 작동해도 어떤 파일을 공개하면 안 되는지 놓치기 쉽습니다. 오늘은 GitHub 공식 문서를 기준",
+    "url": "https://blog.naver.com/ty_free/224469318573?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-08T08:43:55.000Z",
+    "detectedAt": "2026-11-08T10:25:54.820Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "75bb7c6bd96d197b",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "씨앗이 내려앉는 곳 출시! 3시간짜리 신작인데 클리어 후가 진짜 시작? 한국어·플랫폼·공략 팁",
+    "summary": "게임 하나를 시작하는 데 수십 시간이 부담스러웠다면 이번 신작은 눈여겨볼 만합니다. 사이게임즈의 새로운 브랜드 CygamesEdge가 선보인 '씨앗이 내려앉는 곳(Where the Seeds Fall)'은 약 3시간 분량의 이야기를 담은 액션 어드벤처 게임입니다. 그런데 단순히 짧은 스토리 게임이라고 생각하면 조금 다릅니",
+    "url": "https://blog.naver.com/abb7664/224469300792?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-08T08:21:23.000Z",
+    "detectedAt": "2026-11-08T10:25:56.077Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "546d1782a0140079",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -399,25 +437,6 @@
     }
   },
   {
-    "id": "809576d37eb3c2e5",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "메이플 이스케이프 2챕터 왜 안 열릴까? 10월 29일 공개 시간·보상·재입장 총정리",
-    "summary": "메이플스토리 ‘사라진 네미’ 이벤트에서 1챕터를 끝냈는데 2챕터가 잠겨 있나요? 아직 오류라고 판단할 필요는 없습니다. 2챕터는 10월 29일 목요일 오전 10시에 공개될 예정이기 때문입니다. 지금부터 챕터별 해금 일정과 보상, 60분 제한시간이 끝났을 때 다시 입장하는 방법까지 공식 공지 기준으로 정리해 보겠습니다. 1",
-    "url": "https://blog.naver.com/abb7664/224455158231?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-27T02:10:18.000Z",
-    "detectedAt": "2026-10-27T09:01:54.032Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "2152eae2286c1062",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -434,25 +453,6 @@
       "decision": "review",
       "reason": "source-default:review",
       "score": 30
-    }
-  },
-  {
-    "id": "e877cb1a0a3fb7ef",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "GitHub Copilot 모델이 사라졌다면? 10월 19일 종료 모델과 무료 계정 확인법",
-    "summary": "평소 쓰던 AI 코딩 모델이 갑자기 선택 목록에서 보이지 않는다면 오류부터 의심하기 쉽습니다. 그런데 이번에는 실제로 일부 모델의 지원이 종료됐습니다. GitHub는 2026년 10월 19일부터 Copilot에서 여섯 종류의 기존 AI 모델을 지원 종료했다고 공지했습니다. 어떤 모델이 바뀌었고 무료 사용자라면 무엇을 확인",
-    "url": "https://blog.naver.com/ty_free/224453069751?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-25T05:30:32.000Z",
-    "detectedAt": "2026-10-25T11:32:27.392Z",
-    "manual": false,
-    "editorial": {
-      "decision": "review",
-      "reason": "possible-maker-content",
-      "score": 50
     }
   },
   {

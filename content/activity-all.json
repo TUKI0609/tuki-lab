@@ -1,5 +1,24 @@
 [
   {
+    "id": "5a6798b8148ea14e",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "뱀파이어 서바이버즈 개발사도 참여했다? 워해머 서바이버즈 11월 10일 출시, 무료 데모·한국어 총정리",
+    "summary": "뱀파이어 서바이버즈를 재미있게 즐겼다면 이번 신작을 눈여겨볼 만합니다. 워해머 세계관을 활용한 생존 액션 게임 '워해머 서바이버즈(Warhammer Survivors)'가 11월 10일 출시를 앞두고 있기 때문인데요. 특히 뱀파이어 서바이버즈의 개발사 poncle이 협력에 참여했고, 40명이 넘는 캐릭터와 75종 이상의 ",
+    "url": "https://blog.naver.com/abb7664/224470482203?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-09T07:35:40.000Z",
+    "detectedAt": "2026-11-09T19:50:12.919Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "bea9bd1a56d07751",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -396,25 +415,6 @@
       "decision": "include",
       "reason": "maker-content",
       "score": 80
-    }
-  },
-  {
-    "id": "b2720004d1356980",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "마비노기 모바일 할로윈 온타임 4회 보상 총정리! 최대 20만 골드·랫맨 변신·우편 만료일",
-    "summary": "마비노기 모바일 할로윈 선물, 접속만 하면 받을 수 있지만 우편함이 가득 차 있으면 놓칠 수 있다는 사실 알고 계셨나요? 10월 29일 점검 후 시작된 할로윈 온타임 이벤트는 11월 1일까지 네 차례 선물을 지급합니다. 오늘 10월 30일에는 2차 선물 지급이 시작됐고, 네 회차의 골드를 모두 받으면 합계 20만 골드입니",
-    "url": "https://blog.naver.com/abb7664/224460241181?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-31T08:03:44.000Z",
-    "detectedAt": "2026-10-31T12:33:43.062Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
     }
   },
   {

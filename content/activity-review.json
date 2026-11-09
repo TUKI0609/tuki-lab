@@ -1,5 +1,24 @@
 [
   {
+    "id": "dca3bf4408245add",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "구글 설문지에 Gemini AI 추가! 설문 응답 자동 분석 방법과 무료·유료 조건",
+    "summary": "설문조사 응답이 수십 개씩 쌓이면 결과를 정리하는 데 시간이 꽤 걸립니다. 만족도는 높은데 재참여 의사는 낮다면, 그 이유를 어떻게 찾아야 할까요? 구글이 설문 응답을 AI로 분석하고 다음 행동까지 제안하는 새로운 기능을 공개했습니다. 2026년 11월 5일 발표된 Google Forms의 Gemini 기능을 중심으로 사",
+    "url": "https://blog.naver.com/ty_free/224469931576?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-09T00:31:32.000Z",
+    "detectedAt": "2026-11-09T06:34:00.438Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "possible-maker-content",
+      "score": 50
+    }
+  },
+  {
     "id": "0474c0d1ce4961b7",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -35,25 +54,6 @@
       "decision": "review",
       "reason": "possible-maker-content",
       "score": 50
-    }
-  },
-  {
-    "id": "2152eae2286c1062",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "Google Vids 무료로 영상 소리 분리할 수 있을까? 새 오디오 트랙 기능과 사용법",
-    "summary": "영상에서 소리만 따로 움직이거나, 장면이 바뀌어도 같은 오디오를 이어서 재생하고 싶었던 적 있나요? 예전에는 영상에 붙어 있는 소리를 음소거하는 정도로 편집해야 했지만, Google Vids에 새로운 기능이 추가됐습니다. 2026년 10월 23일 구글이 영상 클립의 오디오를 별도 트랙으로 분리하는 기능을 공식 발표했기 때",
-    "url": "https://blog.naver.com/ty_free/224454234684?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-26T06:35:05.000Z",
-    "detectedAt": "2026-10-26T13:06:11.459Z",
-    "manual": false,
-    "editorial": {
-      "decision": "review",
-      "reason": "source-default:review",
-      "score": 30
     }
   }
 ]

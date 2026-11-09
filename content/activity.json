@@ -1,5 +1,24 @@
 [
   {
+    "id": "bea9bd1a56d07751",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "구글 AI 영상, 이제 15초까지 만든다? 무료 사용법과 생성 제한 총정리",
+    "summary": "AI로 짧은 영상을 만들다 보면 가장 아쉬운 부분 중 하나가 영상 길이입니다. 캐릭터가 움직이기 시작했는데 장면이 끝나거나, 원하는 동작을 표현하기 전에 영상이 끊기기도 하죠. 그런데 구글이 AI 영상 생성 길이를 최대 15초까지 늘리는 업데이트를 발표했습니다. 무료 계정에서도 사용할 수 있는지, 실제 제작 방법과 제한사",
+    "url": "https://blog.naver.com/ty_free/224470154652?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-09T03:23:17.000Z",
+    "detectedAt": "2026-11-09T06:34:00.438Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "7365f50b20ea6dc9",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -144,25 +163,6 @@
     "url": "https://blog.naver.com/ty_free/224456591137?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-28T04:48:08.000Z",
     "detectedAt": "2026-10-28T05:44:25.581Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "6e0634acda80ee32",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "Gemini 스킬 무료로 만들기, 반복 프롬프트 저장하고 다시 쓰는 방법",
-    "summary": "AI에게 매번 같은 말투와 글 형식을 설명하고 있나요? 블로그 글을 쓸 때마다 문단 길이, 제목 방식, 주의사항을 다시 입력한다면 제미나이의 '스킬(Skills)' 기능을 살펴볼 만합니다. 구글은 2026년 10월 21일, Gemini 앱의 맞춤설정 메뉴에서 스킬과 연결된 앱을 관리하는 새 화면을 공식 안내했습니다. 무료",
-    "url": "https://blog.naver.com/ty_free/224455166501?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-27T02:16:37.000Z",
-    "detectedAt": "2026-10-27T09:01:53.051Z",
     "manual": false,
     "editorial": {
       "decision": "include",

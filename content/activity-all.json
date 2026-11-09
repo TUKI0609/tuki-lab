@@ -1,5 +1,100 @@
 [
   {
+    "id": "bea9bd1a56d07751",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "구글 AI 영상, 이제 15초까지 만든다? 무료 사용법과 생성 제한 총정리",
+    "summary": "AI로 짧은 영상을 만들다 보면 가장 아쉬운 부분 중 하나가 영상 길이입니다. 캐릭터가 움직이기 시작했는데 장면이 끝나거나, 원하는 동작을 표현하기 전에 영상이 끊기기도 하죠. 그런데 구글이 AI 영상 생성 길이를 최대 15초까지 늘리는 업데이트를 발표했습니다. 무료 계정에서도 사용할 수 있는지, 실제 제작 방법과 제한사",
+    "url": "https://blog.naver.com/ty_free/224470154652?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-09T03:23:17.000Z",
+    "detectedAt": "2026-11-09T06:34:00.438Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "e449482b7b044c9f",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "워프레임 개발사의 신작 소울프레임, 이제 누구나 무료 플레이? 설치 방법부터 알파 테스트까지",
+    "summary": "워프레임 개발사가 만든 신작 판타지 게임을 이제 초대장 없이 무료로 즐길 수 있습니다. 바로 소울프레임(Soulframe) 이야기인데요. 11월 6일 공개 테스트가 시작되면서 누구나 PC에서 직접 체험할 수 있게 됐습니다. 그런데 공식 한국어 홈페이지에는 여전히 초대장을 기다리라는 문구가 남아 있어 헷갈릴 수 있습니다. ",
+    "url": "https://blog.naver.com/abb7664/224470124207?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-09T02:58:04.000Z",
+    "detectedAt": "2026-11-09T06:34:01.361Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
+    "id": "1bd15f182d81d6b5",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "도깨비의세계 초보자 꿀팁 5가지! 자동사냥·거래소·제작 오류, 설정 하나로 해결?",
+    "summary": "도깨비의세계에서 원거리 도술을 사용하는데 캐릭터가 몬스터에게 달려가거나, 제작 도안을 가지고 있는데도 재료가 없다고 표시된 적 있으신가요? 거래소에 아이템을 등록할 때도 표시된 가격과 실제 판매 가격이 달라 주의가 필요한 상황이 있습니다. 그런데 이런 문제 중 일부는 게임 설정이나 아이템 잠금 상태를 확인하면 해결할 수 ",
+    "url": "https://blog.naver.com/abb7664/224470022465?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-09T01:44:24.000Z",
+    "detectedAt": "2026-11-09T06:34:01.361Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
+    "id": "dca3bf4408245add",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "구글 설문지에 Gemini AI 추가! 설문 응답 자동 분석 방법과 무료·유료 조건",
+    "summary": "설문조사 응답이 수십 개씩 쌓이면 결과를 정리하는 데 시간이 꽤 걸립니다. 만족도는 높은데 재참여 의사는 낮다면, 그 이유를 어떻게 찾아야 할까요? 구글이 설문 응답을 AI로 분석하고 다음 행동까지 제안하는 새로운 기능을 공개했습니다. 2026년 11월 5일 발표된 Google Forms의 Gemini 기능을 중심으로 사",
+    "url": "https://blog.naver.com/ty_free/224469931576?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-09T00:31:32.000Z",
+    "detectedAt": "2026-11-09T06:34:00.438Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "possible-maker-content",
+      "score": 50
+    }
+  },
+  {
+    "id": "a853dcae95d72f80",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "아이온2 11월 11일 대규모 업데이트! 55레벨 확장·하우징·1인 던전·무료 서버 이전 총정리",
+    "summary": "아이온2가 1주년을 맞아 대규모 업데이트를 예고했습니다. 최대 레벨이 50에서 55로 확장되고, 천족과 마족의 신규 지역이 열리며, 드디어 개인 영지를 꾸미는 하우징까지 등장합니다. 특히 파티 모집이 부담스러웠던 이용자라면 일부 던전의 1인 플레이 지원도 눈여겨볼 만한데요. 11월 8일 공개된 1주년 발표를 바탕으로, 1",
+    "url": "https://blog.naver.com/abb7664/224469924792?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-09T00:25:26.000Z",
+    "detectedAt": "2026-11-09T06:34:01.361Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "7365f50b20ea6dc9",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -323,25 +418,6 @@
     }
   },
   {
-    "id": "6862e23cadf7c4c0",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "명일방주 엔드필드 10월 31일 신규 이벤트 시작! 오로베릴 300개 보상·참여 방법·종료 시간",
-    "summary": "명일방주: 엔드필드에서 오늘 새 이벤트가 열린다는 사실, 알고 계셨나요? 10월 31일 오후 1시부터 '모든 영혼에 바치는 새로운 빛과 그림자'가 시작됩니다. 배우와 아이템을 조합해 이야기를 촬영하고 여러 결말을 해금하는 웹 이벤트로, 공식 안내에는 오로베릴 300개와 탈로시안 화폐 보상이 명시되어 있습니다. 접속만 하면",
-    "url": "https://blog.naver.com/abb7664/224460206973?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-31T07:21:24.000Z",
-    "detectedAt": "2026-10-31T12:33:43.062Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "bcb31ff27bb5396d",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -361,25 +437,6 @@
     }
   },
   {
-    "id": "94e89097e7427d9f",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "로스트아크 10월 29일 라이브 오후 7시! 쿠폰 여부와 미지급 보상 확인 방법",
-    "summary": "로스트아크 라이브 방송, 오늘 몇 시에 시작할까요? 공식 발표에 따르면 10월 29일 목요일 오후 7시입니다. 그런데 방송 쿠폰이나 특별 보상이 이미 확정됐다는 이야기는 주의해서 볼 필요가 있습니다. 현재 사전 공지에서 확인되는 것은 방송 날짜와 시간, 공식 유튜브 채널이며, 어제 점검에서는 종언의 잔영 미지급 보상도 지",
-    "url": "https://blog.naver.com/abb7664/224457711773?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-29T04:06:38.000Z",
-    "detectedAt": "2026-10-29T09:59:47.037Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "f33fb2bbb826f06a",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -396,63 +453,6 @@
       "decision": "include",
       "reason": "maker-content",
       "score": 80
-    }
-  },
-  {
-    "id": "8ce5377e618a6638",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "아크 레이더스 11월 PC방 이벤트 시작! 무료 플레이·경험치 10%·보상 수령 주의사항",
-    "summary": "아크 레이더스를 구매하지 않았어도 PC방에서는 무료로 플레이할 수 있다는 사실, 알고 계셨나요? 넥슨 공식 홈페이지에 10월 27일부터 ‘11월 꼬꼬의 PC방 보급 미션’이 새로 올라왔습니다. PC방에서는 경험치와 꼬꼬 재료 추가 혜택도 제공되지만, 미션 보상을 제때 받지 않으면 놓칠 수 있다는 점이 중요합니다. 오늘은 ",
-    "url": "https://blog.naver.com/abb7664/224456588754?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-28T04:45:51.000Z",
-    "detectedAt": "2026-10-28T05:44:26.747Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
-    "id": "6e0634acda80ee32",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "Gemini 스킬 무료로 만들기, 반복 프롬프트 저장하고 다시 쓰는 방법",
-    "summary": "AI에게 매번 같은 말투와 글 형식을 설명하고 있나요? 블로그 글을 쓸 때마다 문단 길이, 제목 방식, 주의사항을 다시 입력한다면 제미나이의 '스킬(Skills)' 기능을 살펴볼 만합니다. 구글은 2026년 10월 21일, Gemini 앱의 맞춤설정 메뉴에서 스킬과 연결된 앱을 관리하는 새 화면을 공식 안내했습니다. 무료",
-    "url": "https://blog.naver.com/ty_free/224455166501?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-27T02:16:37.000Z",
-    "detectedAt": "2026-10-27T09:01:53.051Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "2152eae2286c1062",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "Google Vids 무료로 영상 소리 분리할 수 있을까? 새 오디오 트랙 기능과 사용법",
-    "summary": "영상에서 소리만 따로 움직이거나, 장면이 바뀌어도 같은 오디오를 이어서 재생하고 싶었던 적 있나요? 예전에는 영상에 붙어 있는 소리를 음소거하는 정도로 편집해야 했지만, Google Vids에 새로운 기능이 추가됐습니다. 2026년 10월 23일 구글이 영상 클립의 오디오를 별도 트랙으로 분리하는 기능을 공식 발표했기 때",
-    "url": "https://blog.naver.com/ty_free/224454234684?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-26T06:35:05.000Z",
-    "detectedAt": "2026-10-26T13:06:11.459Z",
-    "manual": false,
-    "editorial": {
-      "decision": "review",
-      "reason": "source-default:review",
-      "score": 30
     }
   },
   {

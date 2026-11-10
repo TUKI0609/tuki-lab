@@ -152,25 +152,6 @@
     }
   },
   {
-    "id": "f33fb2bbb826f06a",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "구글 지니4(Genie 4) 공개! AI 가상 세계 생성, 무료 사용 가능할까?",
-    "summary": "사진 한 장이나 짧은 설명으로 만든 가상 세계 안을 직접 돌아다닐 수 있다면 어떨까요? 단순히 영상을 재생하는 것이 아니라 날씨를 바꾸고, 카메라를 움직이고, 등장인물의 반응까지 살펴보는 방식입니다. 구글 딥마인드가 2026년 10월 27일 새로운 AI 월드 모델 '지니 4(Genie 4)'를 공식 발표했습니다. 그런데 ",
-    "url": "https://blog.naver.com/ty_free/224456591137?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-28T04:48:08.000Z",
-    "detectedAt": "2026-10-28T05:44:25.581Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
     "id": "a0491d60ef6a6e52",
     "source": "youtube",
     "sourceLabel": "YouTube",

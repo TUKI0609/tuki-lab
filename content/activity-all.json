@@ -1,5 +1,43 @@
 [
   {
+    "id": "1c8b73a71ddf114c",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "클로드 새 AI 2종 공개, GPT보다 강할까? 성능·가격·무료 사용 조건 총정리",
+    "summary": "AI 모델 경쟁이 또 한 번 뜨거워졌습니다. 챗GPT와 제미나이뿐 아니라 클로드를 사용하는 분들도 많아졌는데요. 이번에는 클로드 개발사 앤트로픽이 새로운 고성능 AI 모델 2종을 동시에 공개했습니다. 단순히 숫자만 바뀐 업데이트가 아니라 코딩, 복잡한 문제 해결, 연구 능력과 가격까지 달라졌다고 합니다. 그렇다면 기존 클",
+    "url": "https://blog.naver.com/ty_free/224471990070?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-10T09:58:15.000Z",
+    "detectedAt": "2026-11-10T14:55:05.392Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "possible-maker-content",
+      "score": 50
+    }
+  },
+  {
+    "id": "2db6cba6bb1e9384",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "RF 온라인 넥스트 노바 서버 성장 공략, 7일 출석 보상과 아케인의 시련 총정리",
+    "summary": "RF 온라인 넥스트 노바 서버에서 성장 중이라면 지금 확인해야 할 보상이 있습니다. 11월 4일부터 새로운 출석 이벤트와 아케인의 시련 미션이 진행되고 있는데요. 특히 소환권과 크레딧, 성장 재료를 얻을 수 있어 어떤 콘텐츠부터 진행할지 고민하는 이용자라면 주목할 만합니다. 오늘은 공식 공지를 기준으로 보상과 참여 기간,",
+    "url": "https://blog.naver.com/abb7664/224471915328?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-10T08:47:55.000Z",
+    "detectedAt": "2026-11-10T14:55:06.576Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "5a6798b8148ea14e",
     "source": "naver-game",
     "sourceLabel": "Naver Blog · 게임",
@@ -361,25 +399,6 @@
     }
   },
   {
-    "id": "8c7cad89d80511d2",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "메이플스토리 11월 1일 샤이닝 스타포스! 오늘 종료 전 확인할 강화·자동강화·파괴 복구 팁",
-    "summary": "메이플스토리에서 오늘 장비 강화를 계획하고 있다면, 무작정 스타포스 버튼부터 누르지 마세요. 11월 1일 단 하루 '스페셜 썬데이 메이플'이 열리고, 공식 이벤트 페이지에는 '샤이닝 스타포스 타임'이 안내되어 있습니다. 그런데 예전 강화 공략을 그대로 따라 하면 놓칠 부분이 있습니다. 2026년에는 스타캐치와 파괴 흔적 ",
-    "url": "https://blog.naver.com/abb7664/224461084756?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-11-01T05:18:22.000Z",
-    "detectedAt": "2026-11-01T06:08:28.803Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "99e7f368559ebc82",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -429,25 +448,6 @@
     "url": "https://blog.naver.com/ty_free/224457714365?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-29T04:09:04.000Z",
     "detectedAt": "2026-10-29T09:59:45.717Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "f33fb2bbb826f06a",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "구글 지니4(Genie 4) 공개! AI 가상 세계 생성, 무료 사용 가능할까?",
-    "summary": "사진 한 장이나 짧은 설명으로 만든 가상 세계 안을 직접 돌아다닐 수 있다면 어떨까요? 단순히 영상을 재생하는 것이 아니라 날씨를 바꾸고, 카메라를 움직이고, 등장인물의 반응까지 살펴보는 방식입니다. 구글 딥마인드가 2026년 10월 27일 새로운 AI 월드 모델 '지니 4(Genie 4)'를 공식 발표했습니다. 그런데 ",
-    "url": "https://blog.naver.com/ty_free/224456591137?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-28T04:48:08.000Z",
-    "detectedAt": "2026-10-28T05:44:25.581Z",
     "manual": false,
     "editorial": {
       "decision": "include",

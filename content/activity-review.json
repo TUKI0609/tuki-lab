@@ -1,5 +1,24 @@
 [
   {
+    "id": "1c8b73a71ddf114c",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "클로드 새 AI 2종 공개, GPT보다 강할까? 성능·가격·무료 사용 조건 총정리",
+    "summary": "AI 모델 경쟁이 또 한 번 뜨거워졌습니다. 챗GPT와 제미나이뿐 아니라 클로드를 사용하는 분들도 많아졌는데요. 이번에는 클로드 개발사 앤트로픽이 새로운 고성능 AI 모델 2종을 동시에 공개했습니다. 단순히 숫자만 바뀐 업데이트가 아니라 코딩, 복잡한 문제 해결, 연구 능력과 가격까지 달라졌다고 합니다. 그렇다면 기존 클",
+    "url": "https://blog.naver.com/ty_free/224471990070?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-10T09:58:15.000Z",
+    "detectedAt": "2026-11-10T14:55:05.392Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "possible-maker-content",
+      "score": 50
+    }
+  },
+  {
     "id": "dca3bf4408245add",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",

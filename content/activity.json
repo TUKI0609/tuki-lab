@@ -1,5 +1,24 @@
 [
   {
+    "id": "a1cae15a9916c511",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "챗GPT에도 우리 가게 등록한다? 새로 나온 사업자 기능과 한국 사용 조건",
+    "summary": "요즘 맛집이나 제품을 찾을 때 검색창 대신 챗GPT에 질문하는 사람들이 있습니다. 그런데 이제는 가게를 운영하는 사장님도 챗GPT에서 자기 업체 정보를 직접 관리할 수 있는 길이 열렸습니다. 2026년 11월 10일, OpenAI가 'Businesses in ChatGPT'라는 새로운 기능을 발표했기 때문인데요. 우리 가",
+    "url": "https://blog.naver.com/ty_free/224473421948?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-11T12:03:00.000Z",
+    "detectedAt": "2026-11-11T17:09:29.803Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "bea9bd1a56d07751",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -125,25 +144,6 @@
     "url": "https://blog.naver.com/ty_free/224460243323?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-31T08:06:23.000Z",
     "detectedAt": "2026-10-31T12:33:41.772Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "bcb31ff27bb5396d",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "제미나이 무료 몰입형 탐험 사용법, 한국어 지원은? 10월 28일 새 기능 정리",
-    "summary": "AI에게 어려운 개념을 물어보면 긴 설명부터 읽어야 해서 아쉬웠던 적 있나요? 이제 제미나이(Gemini)에서 화면 속 요소를 직접 눌러가며 주제를 살펴보는 새로운 학습 기능이 등장했습니다. 구글은 2026년 10월 28일 '몰입형 탐험(Immersive Explorations)' 라이브러리를 공식 발표했습니다. 개인 구",
-    "url": "https://blog.naver.com/ty_free/224457714365?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-29T04:09:04.000Z",
-    "detectedAt": "2026-10-29T09:59:45.717Z",
     "manual": false,
     "editorial": {
       "decision": "include",

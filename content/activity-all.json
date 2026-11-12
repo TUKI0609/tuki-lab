@@ -1,5 +1,43 @@
 [
   {
+    "id": "103fff839c8e9963",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "제미나이, 매번 설명 안 해도 된다? 구글 AI 스킬 사용법과 무료 조건",
+    "summary": "AI에게 보고서를 작성해 달라고 할 때마다 같은 설명을 반복한 적 있으신가요? 문체는 어떻게 할지, 표는 어떤 순서로 만들지, 마지막에는 무엇을 확인해야 할지 매번 입력하는 일이 생각보다 번거롭습니다. 그런데 구글이 이런 반복 작업을 줄일 수 있는 새로운 AI 기능을 본격적으로 확대하고 있습니다. 바로 Google Wor",
+    "url": "https://blog.naver.com/ty_free/224474971415?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-12T15:00:16.000Z",
+    "detectedAt": "2026-11-12T19:55:33.791Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "5405196b0746e8a5",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "마블 라이벌즈 시즌11 나이트크롤러 등장! 출시 시간부터 순간이동 능력까지 총정리",
+    "summary": "순간이동으로 아군을 구하고, 적진 한가운데서 전투의 흐름까지 바꾸는 영웅이 등장합니다. 마블 라이벌즈 시즌11 '둠스데이(Doomsday)'의 새로운 영웅은 엑스맨의 나이트크롤러인데요. 단순히 빠르게 이동하는 캐릭터가 아니라 아군을 지원하고 위험한 상황에서 탈출시키는 전략가로 합류합니다. 한국 시간 기준 출시 일정과 공개",
+    "url": "https://blog.naver.com/abb7664/224474939581?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-12T14:31:35.000Z",
+    "detectedAt": "2026-11-12T19:55:34.731Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "a1cae15a9916c511",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -361,25 +399,6 @@
     }
   },
   {
-    "id": "3a0a3bab848081e7",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "메이플스토리 월드 리프 11월 5일 마감! 엘리시움·크로아 조기 종료, 이동 전 필수 확인",
-    "summary": "메이플스토리 월드 리프가 11월 5일까지라고 해서 모든 월드로 이동할 수 있는 건 아닙니다. 엘리시움과 크로아로 향하는 월드 리프는 이미 조기 종료됐다는 사실, 알고 계셨나요? 특히 처음 이동할 월드를 선택하면 메이플ID 전체에 적용되고, 이동 신청도 마음대로 취소할 수 없습니다. 이번에는 남은 이벤트 기간과 월드별 이동",
-    "url": "https://blog.naver.com/abb7664/224463617670?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-11-03T07:14:38.000Z",
-    "detectedAt": "2026-11-03T17:04:26.015Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "cd08e2788ff277f9",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -428,25 +447,6 @@
     "summary": "AI가 만들어 준 PDF나 문서를 수정하려고 다른 프로그램으로 옮긴 적 있나요? 이제 제미나이(Gemini) 대화창에서 파일을 만들고, 내용을 미리 보고, 필요한 부분을 직접 고칠 수 있게 됐습니다. 구글은 2026년 10월 29일 PDF와 문서, 스프레드시트, 발표 자료 등을 채팅 안에서 편집하는 기능을 공식 발표했습니",
     "url": "https://blog.naver.com/ty_free/224460244661?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-31T11:10:00.000Z",
-    "detectedAt": "2026-10-31T12:33:41.772Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "763e6b9afaf37dda",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "깃허브 Replica 무료 오픈소스 공개! AI로 앱 화면 시제품 만드는 방법과 설치 조건",
-    "summary": "코딩을 잘 몰라도 앱 화면을 미리 만들어 보고 싶었던 적 있나요? 아이디어를 말로 설명하면 실제로 눌러 볼 수 있는 화면이 만들어지는 도구가 공개됐습니다. 깃허브는 2026년 10월 28일 AI 시제품 제작 도구 Replica(레플리카)를 오픈소스로 공개했습니다. 다만 프로그램이 무료로 공개됐다는 사실과 AI 사용까지 무",
-    "url": "https://blog.naver.com/ty_free/224460243323?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-31T08:06:23.000Z",
     "detectedAt": "2026-10-31T12:33:41.772Z",
     "manual": false,
     "editorial": {

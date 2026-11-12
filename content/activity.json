@@ -1,5 +1,24 @@
 [
   {
+    "id": "103fff839c8e9963",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "제미나이, 매번 설명 안 해도 된다? 구글 AI 스킬 사용법과 무료 조건",
+    "summary": "AI에게 보고서를 작성해 달라고 할 때마다 같은 설명을 반복한 적 있으신가요? 문체는 어떻게 할지, 표는 어떤 순서로 만들지, 마지막에는 무엇을 확인해야 할지 매번 입력하는 일이 생각보다 번거롭습니다. 그런데 구글이 이런 반복 작업을 줄일 수 있는 새로운 AI 기능을 본격적으로 확대하고 있습니다. 바로 Google Wor",
+    "url": "https://blog.naver.com/ty_free/224474971415?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-12T15:00:16.000Z",
+    "detectedAt": "2026-11-12T19:55:33.791Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "a1cae15a9916c511",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -124,25 +143,6 @@
     "summary": "AI가 만들어 준 PDF나 문서를 수정하려고 다른 프로그램으로 옮긴 적 있나요? 이제 제미나이(Gemini) 대화창에서 파일을 만들고, 내용을 미리 보고, 필요한 부분을 직접 고칠 수 있게 됐습니다. 구글은 2026년 10월 29일 PDF와 문서, 스프레드시트, 발표 자료 등을 채팅 안에서 편집하는 기능을 공식 발표했습니",
     "url": "https://blog.naver.com/ty_free/224460244661?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-10-31T11:10:00.000Z",
-    "detectedAt": "2026-10-31T12:33:41.772Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "763e6b9afaf37dda",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "깃허브 Replica 무료 오픈소스 공개! AI로 앱 화면 시제품 만드는 방법과 설치 조건",
-    "summary": "코딩을 잘 몰라도 앱 화면을 미리 만들어 보고 싶었던 적 있나요? 아이디어를 말로 설명하면 실제로 눌러 볼 수 있는 화면이 만들어지는 도구가 공개됐습니다. 깃허브는 2026년 10월 28일 AI 시제품 제작 도구 Replica(레플리카)를 오픈소스로 공개했습니다. 다만 프로그램이 무료로 공개됐다는 사실과 AI 사용까지 무",
-    "url": "https://blog.naver.com/ty_free/224460243323?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-31T08:06:23.000Z",
     "detectedAt": "2026-10-31T12:33:41.772Z",
     "manual": false,
     "editorial": {

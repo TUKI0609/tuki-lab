@@ -1,5 +1,24 @@
 [
   {
+    "id": "37c9da1f92f894ad",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "챗GPT가 대신 결제한다? 새로 나온 AI 지갑, 한국에서도 쓸 수 있을까",
+    "summary": "챗GPT에게 상품을 추천받는 일은 이제 익숙합니다. 그런데 앞으로는 추천받은 상품을 AI가 직접 구매하는 모습도 볼 수 있을 것 같습니다. 2026년 11월 13일, OpenAI가 새로운 결제 기능인 ChatGPT Wallet을 공식 발표했습니다. 사용자가 구매를 승인하면 AI 에이전트가 실제 결제 절차까지 진행할 수 있",
+    "url": "https://blog.naver.com/ty_free/224478004801?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-15T08:14:09.000Z",
+    "detectedAt": "2026-11-15T16:22:42.502Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "103fff839c8e9963",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -125,25 +144,6 @@
     "url": "https://blog.naver.com/ty_free/224461086309?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-11-01T05:20:08.000Z",
     "detectedAt": "2026-11-01T06:08:27.818Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "99e7f368559ebc82",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "제미나이 무료로 PDF·문서 직접 수정? 10월 29일 새 기능 사용법 총정리",
-    "summary": "AI가 만들어 준 PDF나 문서를 수정하려고 다른 프로그램으로 옮긴 적 있나요? 이제 제미나이(Gemini) 대화창에서 파일을 만들고, 내용을 미리 보고, 필요한 부분을 직접 고칠 수 있게 됐습니다. 구글은 2026년 10월 29일 PDF와 문서, 스프레드시트, 발표 자료 등을 채팅 안에서 편집하는 기능을 공식 발표했습니",
-    "url": "https://blog.naver.com/ty_free/224460244661?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-10-31T11:10:00.000Z",
-    "detectedAt": "2026-10-31T12:33:41.772Z",
     "manual": false,
     "editorial": {
       "decision": "include",

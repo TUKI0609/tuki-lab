@@ -1,5 +1,24 @@
 [
   {
+    "id": "f60b686bb6cf37d4",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "전 세계 34시간 먹통? 아웃룩·팀즈·코파일럿 장애 원인과 대처법",
+    "summary": "어느 날 갑자기 회사 이메일이 열리지 않는다면 어떨까요? 회의 일정도 확인할 수 없고, 업무용 메신저까지 제대로 작동하지 않는다면 하루 업무가 상당히 혼란스러워질 겁니다. 그런데 이런 일이 실제로 발생했습니다. 2026년 11월 12일부터 마이크로소프트의 주요 클라우드 서비스에서 대규모 장애가 발생했고, 전 세계 기업과 ",
+    "url": "https://blog.naver.com/ty_free/224478900636?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-16T02:44:21.000Z",
+    "detectedAt": "2026-11-16T06:32:30.018Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "source-default:review",
+      "score": 30
+    }
+  },
+  {
     "id": "1c8b73a71ddf114c",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",

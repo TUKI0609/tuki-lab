@@ -133,25 +133,6 @@
     }
   },
   {
-    "id": "e6f9bc34c7f5f73c",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "GitHub Copilot 이미지 생성 기능 공개! 무료 계정도 될까? 사용법과 AI 크레딧 정리",
-    "summary": "코딩하다가 앱 아이콘이나 웹사이트에 넣을 이미지가 필요하면 어떻게 하시나요? 별도의 이미지 생성 사이트를 열고 결과를 다운로드한 뒤 다시 프로젝트에 넣는 과정이 번거로울 수 있습니다. 2026년 10월 28일, GitHub가 Copilot 대화 안에서 이미지를 만들고 수정하는 기능을 공식 발표했습니다. 그런데 이 기능은 ",
-    "url": "https://blog.naver.com/ty_free/224461086309?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-11-01T05:20:08.000Z",
-    "detectedAt": "2026-11-01T06:08:27.818Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
     "id": "a0491d60ef6a6e52",
     "source": "youtube",
     "sourceLabel": "YouTube",

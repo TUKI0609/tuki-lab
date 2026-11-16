@@ -1,5 +1,43 @@
 [
   {
+    "id": "f60b686bb6cf37d4",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "전 세계 34시간 먹통? 아웃룩·팀즈·코파일럿 장애 원인과 대처법",
+    "summary": "어느 날 갑자기 회사 이메일이 열리지 않는다면 어떨까요? 회의 일정도 확인할 수 없고, 업무용 메신저까지 제대로 작동하지 않는다면 하루 업무가 상당히 혼란스러워질 겁니다. 그런데 이런 일이 실제로 발생했습니다. 2026년 11월 12일부터 마이크로소프트의 주요 클라우드 서비스에서 대규모 장애가 발생했고, 전 세계 기업과 ",
+    "url": "https://blog.naver.com/ty_free/224478900636?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-16T02:44:21.000Z",
+    "detectedAt": "2026-11-16T06:32:30.018Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "source-default:review",
+      "score": 30
+    }
+  },
+  {
+    "id": "a2925be4cc23edc4",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "이환 픽셀 대방출 시작! 본성 픽셀 2배 보상, 하루 120 한도와 파밍 방법 총정리",
+    "summary": "이환 1.5 버전에서 성장 재화를 모으고 있다면 이번 주는 본성 픽셀 사용처를 확인할 때입니다. 11월 16일부터 픽셀 대방출 이벤트가 시작되면서 지정 콘텐츠의 보상이 2배로 늘어납니다. 하루 적용 한도는 120이며, 사용하지 않은 한도는 누적될 수 있습니다. 어떤 콘텐츠가 대상이고 어떻게 활용하면 좋은지 공식 공지를 기",
+    "url": "https://blog.naver.com/abb7664/224478861848?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-16T02:18:44.000Z",
+    "detectedAt": "2026-11-16T06:32:31.321Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "37c9da1f92f894ad",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -380,25 +418,6 @@
     }
   },
   {
-    "id": "e060377c0a83b3be",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "원신 7.2 업데이트 총정리! 미탸·발레리 신규 캐릭터, 스네즈나야 지역과 원석 600개 보상",
-    "summary": "원신 7.2 버전이 드디어 업데이트됐습니다. 신규 캐릭터 미탸와 발레리, 스네즈나야의 새로운 지역 2곳, 추가 마신 임무까지 등장했는데요. 특히 이번 업데이트에서는 조건을 충족한 이용자에게 점검 보상과 오류 수정 보상을 합쳐 원석 600개가 지급됩니다. 하지만 보상마다 확인해야 할 수령 조건이 다르다는 점은 알고 계셨나요",
-    "url": "https://blog.naver.com/abb7664/224466206293?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-11-05T08:29:30.000Z",
-    "detectedAt": "2026-11-05T17:25:26.522Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "0474c0d1ce4961b7",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -434,25 +453,6 @@
       "decision": "review",
       "reason": "possible-maker-content",
       "score": 50
-    }
-  },
-  {
-    "id": "e6f9bc34c7f5f73c",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "GitHub Copilot 이미지 생성 기능 공개! 무료 계정도 될까? 사용법과 AI 크레딧 정리",
-    "summary": "코딩하다가 앱 아이콘이나 웹사이트에 넣을 이미지가 필요하면 어떻게 하시나요? 별도의 이미지 생성 사이트를 열고 결과를 다운로드한 뒤 다시 프로젝트에 넣는 과정이 번거로울 수 있습니다. 2026년 10월 28일, GitHub가 Copilot 대화 안에서 이미지를 만들고 수정하는 기능을 공식 발표했습니다. 그런데 이 기능은 ",
-    "url": "https://blog.naver.com/ty_free/224461086309?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-11-01T05:20:08.000Z",
-    "detectedAt": "2026-11-01T06:08:27.818Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
     }
   },
   {

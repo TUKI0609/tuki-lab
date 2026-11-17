@@ -1,5 +1,43 @@
 [
   {
+    "id": "1d93263d440d2406",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "나노 바나나 2.1 등장! AI 이미지 수정·글자 표현 개선, 무료로 쓸 수 있을까?",
+    "summary": "AI로 이미지를 만들다 보면 답답한 순간이 있습니다. 배경 색상 하나만 바꿔 달라고 했는데 캐릭터 얼굴까지 달라지거나, 이미지 안에 넣은 한글이 이상하게 표현되는 경우입니다. 그런데 구글이 이런 문제를 개선하는 새로운 이미지 모델 업데이트를 발표했습니다. 2026년 11월 16일, Google Pics에 Nano Bana",
+    "url": "https://blog.naver.com/ty_free/224480902829?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-17T09:59:18.000Z",
+    "detectedAt": "2026-11-17T16:02:02.357Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
+    "id": "7b98c7c3769c1777",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "몬스터 헌터 나우 강화 러쉬 시작! 표류석 확정 획득부터 소재 2배·진오우거 준비까지",
+    "summary": "몬스터 헌터 나우에서 장비를 강화할 계획이라면 이번 주 이벤트를 확인할 필요가 있습니다. 11월 16일부터 강화 러쉬 퀘스트가 시작되면서 특정 몬스터의 출현이 활발해지고 소재 보수도 증가했습니다. 특히 대형 몬스터 토벌 시 표류석을 확정 획득할 수 있는 특별 보너스가 적용됩니다. 어떤 몬스터를 사냥하고 무엇부터 준비해야 ",
+    "url": "https://blog.naver.com/abb7664/224480825562?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-17T08:49:23.000Z",
+    "detectedAt": "2026-11-17T16:02:03.545Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "f60b686bb6cf37d4",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -399,25 +437,6 @@
     }
   },
   {
-    "id": "93fa3a36b6964c11",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "테일즈위버 11월 업데이트 총정리! 버닝 러시·에타 1+1·주말 경험치 5배 혜택",
-    "summary": "테일즈위버 복귀를 고민하고 있다면 이번 11월 업데이트는 확인해 볼 만합니다. 11월 5일 패치로 New 버닝 러시와 에타 레벨업 지원 이벤트가 동시에 시작됐고, 이번 주말부터는 룬 경험치 5배 혜택까지 적용됩니다. 그런데 두 성장 이벤트 모두 참여 캐릭터 선택에 주의해야 한다는 사실, 알고 계셨나요? 잘못 등록하면 다른",
-    "url": "https://blog.naver.com/abb7664/224467368056?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-11-06T07:34:22.000Z",
-    "detectedAt": "2026-11-06T16:46:42.440Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "0474c0d1ce4961b7",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -429,25 +448,6 @@
     "url": "https://blog.naver.com/ty_free/224463619965?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-11-03T07:16:25.000Z",
     "detectedAt": "2026-11-03T17:04:25.103Z",
-    "manual": false,
-    "editorial": {
-      "decision": "review",
-      "reason": "possible-maker-content",
-      "score": 50
-    }
-  },
-  {
-    "id": "cd08e2788ff277f9",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "챗GPT 계정 2개 동시에 로그인? 모바일 계정 전환 방법과 Plus 주의사항",
-    "summary": "챗GPT를 개인용과 업무용으로 나눠 쓰려면 매번 로그아웃해야 할까요? 이제 모바일 앱에서도 두 계정을 로그인 상태로 유지하고 전환할 수 있는 기능이 배포되고 있습니다. OpenAI는 2026년 10월 30일 iOS와 안드로이드 앱의 계정 전환 기능을 공식 발표했습니다. 무료 계정으로도 시작할 수 있지만 대화 기록과 유료 ",
-    "url": "https://blog.naver.com/ty_free/224462405198?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-11-02T07:30:05.000Z",
-    "detectedAt": "2026-11-02T11:11:09.947Z",
     "manual": false,
     "editorial": {
       "decision": "review",

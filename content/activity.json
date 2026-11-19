@@ -1,5 +1,24 @@
 [
   {
+    "id": "b15bb216e918de1e",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "글만 썼는데 게임 속으로 들어간다? 구글 Genie 4 공개, 무료 사용 가능할까",
+    "summary": "AI에게 숲속 마을을 그려 달라고 요청하면 멋진 그림을 만들어 줍니다. 그런데 그 그림 속으로 직접 들어가 돌아다닐 수 있다면 어떨까요? 2026년 11월 18일, 구글이 Project Genie의 새로운 업데이트와 Genie 4를 공개했습니다. 글로 가상 세계를 만들고, 그 안을 탐험하면서 날씨나 등장인물을 바꾸는 기술",
+    "url": "https://blog.naver.com/ty_free/224483701096?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-19T09:06:06.000Z",
+    "detectedAt": "2026-11-19T11:42:12.151Z",
+    "manual": false,
+    "editorial": {
+      "decision": "include",
+      "reason": "maker-content",
+      "score": 80
+    }
+  },
+  {
     "id": "1d93263d440d2406",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -125,25 +144,6 @@
     "url": "https://blog.naver.com/ty_free/224468417042?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-11-07T08:20:51.000Z",
     "detectedAt": "2026-11-07T13:03:54.029Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "de11e9aa7728d125",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "챗GPT 이미지 2.6 출시! 무료 AI 이미지 생성부터 움직이는 GIF 만들기까지",
-    "summary": "AI로 만든 캐릭터를 움직이는 GIF로 바꿀 수 있다면 어떨까요? 이제 별도의 영상 편집 프로그램 없이도 ChatGPT에 움직임을 설명해 GIF 제작을 요청할 수 있게 됐습니다. OpenAI는 2026년 11월 4일 새로운 이미지 생성 모델 Images 2.6을 공식 발표했습니다. 무료 계정에서도 이미지 생성이 가능하지만",
-    "url": "https://blog.naver.com/ty_free/224467385183?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-11-06T07:48:10.000Z",
-    "detectedAt": "2026-11-06T16:46:41.119Z",
     "manual": false,
     "editorial": {
       "decision": "include",

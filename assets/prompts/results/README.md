@@ -1,3 +1,18 @@
+# CURRENT v2: actual creator results gallery (2026-10-14)
+
+**This folder now contains two REAL, previous creator outputs**, not generic placeholder art:
+
+- `guild-actual-output.avif`: actual earlier CRYPTO SAGA personal guild card created by TUKI (190 × 285 thumbnail). This is NOT the exact output of the public general-purpose prompt.
+- `video-hailuo-real-frame.avif`: frame from TUKI's earlier real Hailuo AI video (~6.6 seconds), rather than the exact new 10-second prompt.
+- Game category uses `assets/projects/lutratide-survivors/w41-video-thumbnail.svg`, a verified actual video thumbnail.
+
+These two AVIF files are **low-resolution, browser-ready previews**, intentionally optimized to avoid bloating the static site. Full-resolution original files remain in creator working assets, not published by this PR.
+
+Published content and source records: `content/prompts.json` (`visibility: "published"`) and `published-results.json`.
+Two old cards (X writing and mobile layout) remain archived, not deleted. The archived original WebP upgrade plan that follows is **historical** and is NOT approved for the current site. In particular `scripts/activate-prompt-previews.mjs --write` must never overwrite the vetted media before a new editorial review.
+
+---
+
 ## 1차 실제 연결 준비 (2026-10-14)
 
 **선별된 파일 4개가 체크섬과 함께 확정되었으며** 업로드만 남았습니다.

@@ -7,8 +7,7 @@ const status=document.querySelector("#prompt-status");
 const filters=document.querySelector("#prompt-categories");
 const search=document.querySelector("#prompt-search");
 const categories=new Map([
-  ["all","전체"],["image","이미지"],["video","영상"],
-  ["writing","글쓰기"],["game","게임 제작"]
+  ["all","전체"],["image","이미지"],["video","영상"],["game","게임"]
 ]);
 let prompts=[];
 let selected="all";
@@ -62,7 +61,8 @@ async function copyPrompt(prompt,button,kind="prompt"){
 function previewFor(item){
   const box=element("div","prompt-preview");
   const preview=item.preview;
-  if(preview?.type==="image" && /^assets\/[a-z0-9/_-]+\.(svg|png|jpe?g|webp)$/i.test(preview.src)){
+  if(preview?.fit==="contain")box.classList.add("prompt-preview-contain");
+  if(preview?.type==="image" && /^assets\/[a-z0-9/_-]+\.(svg|png|jpe?g|webp|avif)$/i.test(preview.src)){
     const image=document.createElement("img");
     image.src=new URL("../"+preview.src,import.meta.url).href;
     image.alt=preview.label || item.title+"의 참고 이미지";
@@ -76,7 +76,7 @@ function previewFor(item){
     }
     box.appendChild(sample);
   }
-  box.appendChild(element("span","prompt-preview-stamp",preview?.type==="text"?"구성 미리보기":"이미지 미리보기"));
+  box.appendChild(element("span","prompt-preview-stamp",preview?.evidence==="published-creator-video"?"실제 공개 쇼츠":preview?.evidence==="prior-creation"?"기존 실제 제작물":"이미지 미리보기"));
   return box;
 }
 
@@ -177,7 +177,8 @@ async function boot(){
 
   const data=await loadJson(BASE+"content/prompts.json");
   if(!data||!Array.isArray(data.prompts))throw new Error("Prompt collection unavailable");
-  prompts=data.prompts.filter(item=>item&&/^[a-z0-9-]+$/.test(item.id)&&categories.has(item.category)&&typeof item.prompt==="string");
+  // Archive-only entries stay in JSON, but never appear as unverified results.
+  prompts=data.prompts.filter(item=>item&&item.visibility==="published"&&/^[a-z0-9-]+$/.test(item.id)&&categories.has(item.category)&&item.category!=="all"&&item.preview?.evidence&&typeof item.prompt==="string");
   filters.addEventListener("click",event=>{
     const btn=event.target.closest("button[data-category]");
     if(!btn||!filters.contains(btn))return;

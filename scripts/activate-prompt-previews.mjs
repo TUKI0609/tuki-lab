@@ -17,6 +17,11 @@ const collection=JSON.parse(fs.readFileSync(jsonPath,"utf8"));
 const modes=new Set(["--check","--strict","--write"]);
 const mode=process.argv[2]||"--check";
 assert(modes.has(mode),"Use --check, --strict, or --write");
+// V1's historical upload job contains illustrative UI mockups and must not
+// overwrite v2's real-creator-result gallery, even if these files later appear.
+if(mode==="--write" && collection.version>=2){
+  throw new Error("Historical preview migration cannot overwrite result-first v2 gallery. Review and edit content/prompts.json explicitly.");
+}
 assert(manifest.files.length===4);
 let found=0,missing=[];
 for (const entry of manifest.files){

@@ -12,9 +12,16 @@ const i18n=JSON.parse(read("content/i18n.json"));
 
 test("five curated templates have copyable text, unique URLs and honest previews",()=>{
   assert(data.prompts.length>=5);
+  const published=data.prompts.filter(p=>p.visibility==="published");
+  const archived=data.prompts.filter(p=>p.visibility==="draft");
+  assert.equal(published.length,3);
+  assert.equal(archived.length,2);
+  assert.deepEqual(data.categories.map(c=>c.id),["all","image","video","game"]);
+  assert.deepEqual(published.map(p=>p.category),["image","video","game"]);
+  assert(!published.some(p=>p.id==="bookmark-x-post"||p.id==="mobile-game-screen"));
   const ids=new Set();
   const categories=new Set(data.categories.map(x=>x.id));
-  for(const p of data.prompts){
+  for(const p of published){
     assert.match(p.id,/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
     assert(!ids.has(p.id),"Duplicate prompt "+p.id);
     ids.add(p.id);
@@ -24,14 +31,27 @@ test("five curated templates have copyable text, unique URLs and honest previews
     assert(p.prompt.length>300 && p.prompt.includes("["),"Full usable prompt and customizable fields required");
     assert(p.preview && p.preview.note.length>20);
     if(p.preview.type==="image"){
-      assert.match(p.preview.src,/^assets\/[a-z0-9/_-]+\.(?:svg|png|webp|jpg|jpeg)$/i);
+      assert.match(p.preview.src,/^assets\/[a-z0-9/_-]+\.(?:svg|png|webp|avif|jpg|jpeg)$/i);
       assert(existsSync(resolve(root,p.preview.src)),"Missing local first-party image "+p.preview.src);
       assert(/참고|실제|썸네일/.test(p.preview.note),"Clearly disclose preview provenance");
+      assert(["prior-creation","published-creator-video"].includes(p.preview.evidence),"Only actual creator-output previews can be published");
+      assert(!/참고 이미지/.test(p.preview.label),"Reference art cannot be represented as a finished result");
     }else{
       assert.equal(p.preview.type,"text");
       assert(Array.isArray(p.preview.lines) && p.preview.lines.length>0);
     }
     if(p.preview.sourceUrl) assert(p.preview.sourceUrl.startsWith("https://www.youtube.com/shorts/"));
+  }
+});
+test("verified AVIF outputs are actual committed media with expected headers",()=>{
+  const images=[
+    "assets/prompts/results/guild-actual-output.avif",
+    "assets/prompts/results/video-hailuo-real-frame.avif"
+  ];
+  for(const file of images){
+    const bytes=readFileSync(resolve(root,file));
+    assert(bytes.length>2500,"The real creator still is absent or implausibly short");
+    assert.equal(bytes.toString("ascii",4,12),"ftypavif", "Invalid AVIF image magic");
   }
 });
 test("media upgrade staging cannot link nonexistent images and records verifiable provenance",()=>{

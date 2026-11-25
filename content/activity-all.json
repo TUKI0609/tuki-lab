@@ -1,5 +1,43 @@
 [
   {
+    "id": "9f243c99ab1eceba",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "챗GPT 스페이스 사용법 총정리, 무료는 안 되고 한국에서는 쓸 수 있을까?",
+    "summary": "챗GPT로 자료를 정리하다 보면, 대화 창만으로는 문서를 다루기 어려울 때가 있습니다. 그런데 2026년 11월 20일, OpenAI가 챗GPT 스페이스를 만 18세 이상 Plus 사용자에게 전 세계적으로 순차 제공하기 시작했습니다. 이 글은 공식 릴리스 노트와 도움말을 기준으로 기능을 정리했습니다. 무료 계정에서도 가능",
+    "url": "https://blog.naver.com/ty_free/224491635042?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-25T06:59:28.000Z",
+    "detectedAt": "2026-11-25T08:37:06.669Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "possible-maker-content",
+      "score": 50
+    }
+  },
+  {
+    "id": "4dea372db77e8da5",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "“쿠폰 코드 찾다가 마감 놓친다?” 템빨 오버기어드 사전등록 오늘 23시 59분 종료! 0시 출시 전 보상·쿠폰 총정리",
+    "summary": "넥슨 신작 MMORPG 템빨: 오버기어드가 오늘 밤 자정, 그러니까 26일 0시에 문을 엽니다. 근데 오픈 1분 전인 오늘 밤 11시 59분에 사전등록이랑 SNS 보상이 같이 끝나요. 다들 '쿠폰 코드'부터 찾는데, 정작 놓치기 쉬운 건 이쪽입니다. 저도 아직 플레이 전이라, 이 글은 공식 공지와 공식 이미지에 적힌 숫자",
+    "url": "https://blog.naver.com/abb7664/224491557445?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-25T06:12:10.000Z",
+    "detectedAt": "2026-11-25T08:37:07.896Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "b15bb216e918de1e",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -399,25 +437,6 @@
     }
   },
   {
-    "id": "a853dcae95d72f80",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "아이온2 11월 11일 대규모 업데이트! 55레벨 확장·하우징·1인 던전·무료 서버 이전 총정리",
-    "summary": "아이온2가 1주년을 맞아 대규모 업데이트를 예고했습니다. 최대 레벨이 50에서 55로 확장되고, 천족과 마족의 신규 지역이 열리며, 드디어 개인 영지를 꾸미는 하우징까지 등장합니다. 특히 파티 모집이 부담스러웠던 이용자라면 일부 던전의 1인 플레이 지원도 눈여겨볼 만한데요. 11월 8일 공개된 1주년 발표를 바탕으로, 1",
-    "url": "https://blog.naver.com/abb7664/224469924792?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-11-09T00:25:26.000Z",
-    "detectedAt": "2026-11-09T06:34:01.361Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "7365f50b20ea6dc9",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -429,25 +448,6 @@
     "url": "https://blog.naver.com/ty_free/224469318573?fromRss=true&trackingCode=rss",
     "publishedAt": "2026-11-08T08:43:55.000Z",
     "detectedAt": "2026-11-08T10:25:54.820Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
-    }
-  },
-  {
-    "id": "546d1782a0140079",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "아이폰 앱도 AI로 코딩? GitHub Copilot Xcode 통합, 무료 사용법과 설치 조건",
-    "summary": "아이폰 앱을 만들려면 코드를 처음부터 전부 직접 작성해야 할까요? 이제 애플의 앱 개발 프로그램인 Xcode 안에서도 GitHub Copilot을 기본 코딩 도우미로 연결할 수 있게 됐습니다. GitHub는 2026년 11월 4일 새로운 통합 기능을 공식 발표했고, 11월 6일 주간 업데이트에서도 이를 소개했습니다. 무료",
-    "url": "https://blog.naver.com/ty_free/224468417042?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-11-07T08:20:51.000Z",
-    "detectedAt": "2026-11-07T13:03:54.029Z",
     "manual": false,
     "editorial": {
       "decision": "include",

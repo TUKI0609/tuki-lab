@@ -1,5 +1,24 @@
 [
   {
+    "id": "9f243c99ab1eceba",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "챗GPT 스페이스 사용법 총정리, 무료는 안 되고 한국에서는 쓸 수 있을까?",
+    "summary": "챗GPT로 자료를 정리하다 보면, 대화 창만으로는 문서를 다루기 어려울 때가 있습니다. 그런데 2026년 11월 20일, OpenAI가 챗GPT 스페이스를 만 18세 이상 Plus 사용자에게 전 세계적으로 순차 제공하기 시작했습니다. 이 글은 공식 릴리스 노트와 도움말을 기준으로 기능을 정리했습니다. 무료 계정에서도 가능",
+    "url": "https://blog.naver.com/ty_free/224491635042?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-25T06:59:28.000Z",
+    "detectedAt": "2026-11-25T08:37:06.669Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "possible-maker-content",
+      "score": 50
+    }
+  },
+  {
     "id": "cae450d32fa8c61c",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",

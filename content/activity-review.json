@@ -1,5 +1,24 @@
 [
   {
+    "id": "77f08c447149154e",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "제미나이 대화, AI 학습에 쓰인다? 기록은 남기고 학습만 끄는 법 총정리 (무료 계정 OK)",
+    "summary": "제미나이에 업무 메모, 사진, 파일까지 자주 올리고 계신가요? 그동안은 대화 기록을 남기려면, AI 학습에 쓰이는 것도 같이 감수해야 했습니다. 그런데 11월 16일 구글이 이 설정을 둘로 나눈다고 발표했고, 11월 24일부터 웹에서 본격적으로 적용되기 시작했습니다. 이 글은 협찬 없이 구글 공식 블로그와 고객센터 내용을",
+    "url": "https://blog.naver.com/ty_free/224493879060?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-26T15:54:16.000Z",
+    "detectedAt": "2026-11-26T16:55:44.693Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "possible-maker-content",
+      "score": 50
+    }
+  },
+  {
     "id": "9f243c99ab1eceba",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",

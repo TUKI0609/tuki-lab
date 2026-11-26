@@ -1,5 +1,43 @@
 [
   {
+    "id": "77f08c447149154e",
+    "source": "naver-ai",
+    "sourceLabel": "Naver Blog · AI / 제작",
+    "kind": "POST",
+    "route": "BUILD",
+    "project": null,
+    "title": "제미나이 대화, AI 학습에 쓰인다? 기록은 남기고 학습만 끄는 법 총정리 (무료 계정 OK)",
+    "summary": "제미나이에 업무 메모, 사진, 파일까지 자주 올리고 계신가요? 그동안은 대화 기록을 남기려면, AI 학습에 쓰이는 것도 같이 감수해야 했습니다. 그런데 11월 16일 구글이 이 설정을 둘로 나눈다고 발표했고, 11월 24일부터 웹에서 본격적으로 적용되기 시작했습니다. 이 글은 협찬 없이 구글 공식 블로그와 고객센터 내용을",
+    "url": "https://blog.naver.com/ty_free/224493879060?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-26T15:54:16.000Z",
+    "detectedAt": "2026-11-26T16:55:44.693Z",
+    "manual": false,
+    "editorial": {
+      "decision": "review",
+      "reason": "possible-maker-content",
+      "score": 50
+    }
+  },
+  {
+    "id": "76495f9f1dcfcc5b",
+    "source": "naver-game",
+    "sourceLabel": "Naver Blog · 게임",
+    "kind": "POST",
+    "route": "PLAY",
+    "project": null,
+    "title": "“사전등록 안 했는데 보상이 왔다?” 템빨 오버기어드 출시 첫날 우편함 12월 2일 마감, 선점·출석부·과금 총정리",
+    "summary": "템빨: 오버기어드가 오늘 0시에 정식 오픈했어요. 사전등록 보상도 벌써 우편함에 들어와 있고요. 근데 공지를 읽다 보니 반전이 두 개 있더라고요. 사전등록을 안 했어도 받을 수 있고, 대신 우편함 기한이 짧아요. 저도 아직 본격적으로 플레이하기 전이라, 오늘 올라온 공식 공지에 적힌 숫자만 모아서 정리했어요. 첫날 뭘 먼",
+    "url": "https://blog.naver.com/abb7664/224493877645?fromRss=true&trackingCode=rss",
+    "publishedAt": "2026-11-26T15:51:58.000Z",
+    "detectedAt": "2026-11-26T16:55:46.014Z",
+    "manual": false,
+    "editorial": {
+      "decision": "exclude",
+      "reason": "source-default:exclude",
+      "score": 0
+    }
+  },
+  {
     "id": "9f243c99ab1eceba",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -399,25 +437,6 @@
     }
   },
   {
-    "id": "1bd15f182d81d6b5",
-    "source": "naver-game",
-    "sourceLabel": "Naver Blog · 게임",
-    "kind": "POST",
-    "route": "PLAY",
-    "project": null,
-    "title": "도깨비의세계 초보자 꿀팁 5가지! 자동사냥·거래소·제작 오류, 설정 하나로 해결?",
-    "summary": "도깨비의세계에서 원거리 도술을 사용하는데 캐릭터가 몬스터에게 달려가거나, 제작 도안을 가지고 있는데도 재료가 없다고 표시된 적 있으신가요? 거래소에 아이템을 등록할 때도 표시된 가격과 실제 판매 가격이 달라 주의가 필요한 상황이 있습니다. 그런데 이런 문제 중 일부는 게임 설정이나 아이템 잠금 상태를 확인하면 해결할 수 ",
-    "url": "https://blog.naver.com/abb7664/224470022465?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-11-09T01:44:24.000Z",
-    "detectedAt": "2026-11-09T06:34:01.361Z",
-    "manual": false,
-    "editorial": {
-      "decision": "exclude",
-      "reason": "source-default:exclude",
-      "score": 0
-    }
-  },
-  {
     "id": "dca3bf4408245add",
     "source": "naver-ai",
     "sourceLabel": "Naver Blog · AI / 제작",
@@ -434,25 +453,6 @@
       "decision": "review",
       "reason": "possible-maker-content",
       "score": 50
-    }
-  },
-  {
-    "id": "7365f50b20ea6dc9",
-    "source": "naver-ai",
-    "sourceLabel": "Naver Blog · AI / 제작",
-    "kind": "POST",
-    "route": "BUILD",
-    "project": null,
-    "title": "바이브코딩 API 키 유출 막는 법! GitHub 무료 보안 설정과 .env 파일 관리",
-    "summary": "AI에게 코딩을 맡겼는데 내 API 키까지 인터넷에 공개된다면 어떨까요? 앱을 실행할 때 필요한 비밀번호나 인증키를 코드에 넣은 채 GitHub에 올리는 실수는 생각보다 위험합니다. 특히 바이브코딩을 처음 시작했다면 코드는 잘 작동해도 어떤 파일을 공개하면 안 되는지 놓치기 쉽습니다. 오늘은 GitHub 공식 문서를 기준",
-    "url": "https://blog.naver.com/ty_free/224469318573?fromRss=true&trackingCode=rss",
-    "publishedAt": "2026-11-08T08:43:55.000Z",
-    "detectedAt": "2026-11-08T10:25:54.820Z",
-    "manual": false,
-    "editorial": {
-      "decision": "include",
-      "reason": "maker-content",
-      "score": 80
     }
   },
   {
